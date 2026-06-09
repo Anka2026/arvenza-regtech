@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import { setRequestLocale } from "next-intl/server";
 import { redirect, type Locale } from "@/i18n/routing";
 

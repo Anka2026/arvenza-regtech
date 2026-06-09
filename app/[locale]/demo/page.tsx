@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { DemoPage } from "@/components/pages/demo-page";

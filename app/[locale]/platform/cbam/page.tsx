@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { CbamPlatformPage } from "@/components/platform/cbam/cbam-platform-page";
