@@ -5,8 +5,8 @@
       "description": "Arvenza RegTech levert CBAM Calculation Engine voor exporteurs. Verzamel leveranciersdata, bereken embedded emissions en bereid declaratieklare, auditklare CBAM-bewijzen voor in één gestructureerde workflow."
     },
     "platform": {
-      "title": "Arvenza RegTech | EU-duurzaamheidscomplianceplatform",
-      "description": "CBAM-first platform hub met leveranciersgegevens, ingebedde emissieberekening en uitbreidende EU-duurzaamheidsmodules."
+      "title": "Arvenza RegTech Platform | Modulaire EU-duurzaamheidscompliance-architectuur",
+      "description": "Ontdek de modulaire Arvenza RegTech-platformarchitectuur die leveranciersbewijs, productdata, berekeningsinput en documentatieworkflows verbindt voor CBAM en aankomende EU-duurzaamheidsvereisten."
     },
     "regulations": {
       "title": "EU-duurzaamheidsregelgeving | CBAM, PPWR, EUDR — Arvenza RegTech",
@@ -17,24 +17,24 @@
       "description": "Praktische bronnen, gidsen en regelgevingsupdates voor CBAM, PPWR, EUDR en Digital Product Passport."
     },
     "about": {
-      "title": "Over ons | Arvenza RegTech",
-      "description": "Arvenza RegTech is het EU Sustainability Compliance Platform — een productmerk beheerd door Anka Sustainability B.V., Nederland."
+      "title": "Arvenza RegTech Bedrijf | Productmerk beheerd door Anka Sustainability B.V.",
+      "description": "Lees hoe Arvenza RegTech, beheerd door Anka Sustainability B.V. in Nederland, leveranciersbewijs, CBAM-berekening en EU-duurzaamheidscompliance-workflows structureert."
     },
     "contact": {
-      "title": "Contact | Arvenza RegTech",
-      "description": "Neem contact op met het ARVENZA-team. Kantoren in Nederland en Türkiye."
+      "title": "Demo aanvragen | Arvenza RegTech",
+      "description": "Vraag een walkthrough van Arvenza RegTech aan om CBAM Calculation Engine, leveranciersbewijsworkflows en roadmapmodules voor EU-duurzaamheidscompliance te verkennen."
     },
     "demo": {
       "title": "Demo aanvragen | Arvenza RegTech",
-      "description": "Ontdek CBAM Calculation Engine en het EU sustainability compliance platform in een demo op maat van uw organisatie."
+      "description": "Vraag een walkthrough van Arvenza RegTech aan om CBAM Calculation Engine, leveranciersbewijsworkflows en roadmapmodules voor EU-duurzaamheidscompliance te verkennen."
     },
     "cbamPlatform": {
       "title": "CBAM Calculation Engine | Van Leveranciersdata tot Aangifteklare Bewijslast",
       "description": "CBAM Calculation Engine — leveranciersgegevens, ingebedde emissieberekening en declaratieklare bewijsvoering in één gestructureerde workflow."
     },
     "solutions": {
-      "title": "Arvenza RegTech Oplossingen | CBAM, PPWR, EUDR en DPP Roadmap",
-      "description": "Gestructureerde CBAM-compliance vandaag met een bredere EU-duurzaamheidsroadmap voor PPWR, EUDR en Digital Product Passport."
+      "title": "Arvenza RegTech Oplossingen | CBAM, PPWR, EUDR en productdata-workflows",
+      "description": "Ontdek Arvenza-oplossingen voor CBAM-workflows, leveranciersbewijs, PPWR-verpakkingsdata, EUDR due diligence en Digital Product Passport-voorbereiding."
     },
     "industries": {
       "title": "Arvenza RegTech Sectoren | Sectorworkflows voor EU-regelgeving",
@@ -42,7 +42,7 @@
     },
     "company": {
       "title": "Arvenza RegTech Bedrijf | Productmerk beheerd door Anka Sustainability B.V.",
-      "description": "Arvenza RegTech is een productmerk beheerd door Anka Sustainability B.V., gericht op gestructureerde EU-duurzaamheidsworkflows."
+      "description": "Lees hoe Arvenza RegTech, beheerd door Anka Sustainability B.V. in Nederland, leveranciersbewijs, CBAM-berekening en EU-duurzaamheidscompliance-workflows structureert."
     },
     "regulationsCbam": {
       "title": "CBAM / SKDM Gids | Leveranciersgegevens en Ingebedde Emissieberekening",
@@ -82,29 +82,29 @@
     "brandAriaLabel": "Arvenza RegTech — Home",
     "status": {
       "available": "Beschikbaar",
+      "ready": "Gereed",
+      "coreProduct": "Kernproduct",
       "pilot": "Pilot",
       "comingSoon": "Binnenkort",
-      "roadmap": "Roadmap",
-      "availableNow": "Nu beschikbaar",
-      "flagship": "Vlaggenschip"
+      "roadmap": "Roadmap"
     },
     "platformMenu": {
       "featuredLabel": "Uitgelichte oplossing",
       "featuredTitle": "CBAM Calculation Engine",
-      "featuredBadge": "Vlaggenschip",
-      "featuredStatus": "Live",
-      "featuredDescription": "Leveranciersgegevens, ingebedde emissieberekening en declaratieklare bewijsworkflows in één gestructureerde engine.",
-      "featuredCta": "CBAM Calculation Engine verkennen",
+      "featuredBadge": "Kernproduct",
+      "featuredStatus": "Gereed",
+      "featuredDescription": "Gereedstaande productcapaciteit voor leveranciersdata, berekening van ingebedde emissies, methodologische traceerbaarheid en CBAM-bewijsdossiers.",
+      "featuredCta": "Product bekijken",
       "modulesLabel": "Platformmodules",
       "modules": {
-        "supplierEvidence": {
-          "title": "Supplier Evidence Hub"
-        },
-        "pcf": {
-          "title": "Product Carbon / LCA Workflows"
+        "cbamComplianceConsole": {
+          "title": "CBAM Compliance Console"
         },
         "ppwr": {
-          "title": "PPWR & Packaging BOM"
+          "title": "PPWR / verpakkingscompliance"
+        },
+        "agriClimate": {
+          "title": "Agri-Climate Platform"
         },
         "eudr": {
           "title": "EUDR Due Diligence"
@@ -112,28 +112,29 @@
         "dpp": {
           "title": "Digital Product Passport"
         },
-        "auditEvidence": {
-          "title": "Audit-Ready Evidence Packs"
+        "supplierEvidence": {
+          "title": "Leveranciersbewijsworkflow"
         },
-        "regulatoryReporting": {
-          "title": "Regulatory Reporting Dashboard"
+        "esgReporting": {
+          "title": "ESG-bewijs & rapportagewerkruimte"
         }
       }
     },
     "solutionsMenu": {
       "featuredLabel": "Uitgelicht",
       "featuredTitle": "CBAM Calculation Engine",
-      "featuredBadge": "Vlaggenschip",
-      "featuredStatus": "Live",
+      "featuredBadge": "Kernproduct",
+      "featuredStatus": "Gereed",
       "areasLabel": "Oplossingsgebieden",
       "areas": {
-        "cbam": "CBAM Compliance",
-        "supplierEvidence": "Supplier Evidence Workflows",
-        "pcf": "Product Carbon / LCA Workflows",
-        "ppwr": "Packaging & PPWR Readiness",
-        "eudr": "EUDR Due Diligence",
-        "dpp": "Digital Product Passport",
-        "reporting": "Regulatory Reporting Dashboard"
+        "cbam": "CBAM Calculation Engine",
+        "cbamComplianceConsole": "CBAM Compliance Console",
+        "ppwr": "PPWR / Verpakkingscompliance",
+        "agriClimate": "Agri-Climate Platform",
+        "eudr": "EUDR Due Diligence & Traceerbaarheid",
+        "dpp": "Digital Product Passport Platform",
+        "supplierEvidence": "Leveranciersdata & Bewijsworkflow",
+        "esgReporting": "ESG-bewijs & Rapportagewerkruimte"
       }
     },
     "industriesMenu": {
@@ -227,21 +228,21 @@
       }
     },
     "platformOverview": {
-      "eyebrow": "Vlaggenschipproduct",
+      "eyebrow": "Kernproduct",
       "title": "CBAM Calculation Engine",
-      "description": "Van leveranciersdataverzameling tot embedded emissions berekening, bewijsworkflows en declaratieklare outputs—gestructureerde CBAM-voorbereiding met methodologie audit trail.",
-      "cta": "CBAM Calculation Engine verkennen",
+      "description": "Gereedstaande productcapaciteit voor leveranciersdata, berekening van ingebedde emissies, methodologische traceerbaarheid en CBAM-bewijsdossiers — in één gecontroleerde workflow.",
+      "cta": "Product bekijken",
       "screenshotAlt": "CBAM Calculation Engine dashboard"
     },
     "platformRoadmap": {
       "eyebrow": "Platform Roadmap",
-      "title": "CBAM vandaag. Bredere EU-compliance morgen",
-      "description": "Arvenza RegTech bouwt een bredere platformvisie op CBAM Calculation Engine — het vlaggenschipproduct — met PPWR, EUDR, Digital Product Passport en supplier evidence workflows.",
-      "flagshipLabel": "Vlaggenschip",
-      "flagshipStatus": "Nu beschikbaar",
-      "flagshipTitle": "CBAM Calculation Engine",
-      "flagshipDescription": "Leveranciersdataverzameling, embedded emissions berekening, bewijsworkflows en declaratieklare CBAM-voorbereiding — in één platform.",
-      "flagshipCta": "CBAM Calculation Engine verkennen",
+      "title": "Van een gereedstaande CBAM-engine naar een bredere complianceroadmap",
+      "description": "Arvenza RegTech begint met CBAM Calculation Engine als gereedstaand operationeel product en breidt hetzelfde leveranciersbewijsmodel uit naar pilot- en roadmapmodules.",
+      "coreProductLabel": "Kernproduct",
+      "coreProductStatus": "Gereed",
+      "coreProductTitle": "CBAM Calculation Engine",
+      "coreProductDescription": "Gereedstaande productcapaciteit voor leveranciersdata, berekening van ingebedde emissies, methodologische traceerbaarheid en CBAM-bewijsdossiers.",
+      "coreProductCta": "Product bekijken",
       "modulesLabel": "Platformmodules",
       "status": {
         "available": "Beschikbaar",
@@ -249,33 +250,33 @@
         "comingSoon": "Binnenkort"
       },
       "items": {
-        "supplier": {
-          "title": "Supplier Evidence Hub",
-          "description": "Gecentraliseerd leveranciersbewijsbeheer en validatie across compliance workflows."
-        },
-        "pcf": {
-          "title": "Product Carbon / LCA Workflows",
-          "description": "Gestructureerde product carbon footprint en lifecycle assessment data workflows."
+        "cbamComplianceConsole": {
+          "title": "CBAM Compliance Console",
+          "description": "Pilotcoördinatielaag voor CBAM-bewijsstatus, leveranciersopvolging en rapportagevoorbereiding."
         },
         "ppwr": {
-          "title": "PPWR & Packaging BOM",
-          "description": "Verpakkingsdatamanagement aligned met PPWR-vereisten en recyclagedoelen."
+          "title": "PPWR / verpakkingscompliance",
+          "description": "Pilotmodule voor verpakking-BOM's, leveranciersbewijs en PPWR-gerichte verpakkingsdata."
+        },
+        "agriClimate": {
+          "title": "Agri-Climate Platform",
+          "description": "Pilotproduct voor agrarische klimaatdata, bedrijfsniveau-registraties en bewijsvoorbereiding."
         },
         "eudr": {
           "title": "EUDR Due Diligence",
-          "description": "Geolocatie, risicobeoordeling en traceerbaarheidsbewijs voor EU Ontbossingsverordening compliance."
+          "description": "Geplande due-diligence-workflows voor geolocatiebewijs, leveranciersverklaringen en traceerbaarheidsdocumentatie."
         },
         "dpp": {
           "title": "Digital Product Passport",
-          "description": "Gestructureerde productdata voor Digital Product Passport en ESPR-compliance."
+          "description": "Geplande productdatastructuren, leveranciersbewijslagen en documentatietraceerbaarheid voor DPP-vereisten."
         },
-        "auditEvidence": {
-          "title": "Audit-Ready Evidence Packs",
-          "description": "Gestructureerde bewijsassemblage met kwaliteitsvlaggen en methodologienotities."
+        "supplier": {
+          "title": "Leveranciersbewijsworkflow",
+          "description": "Geplande leverancierscommunicatie, dataverzoeken, bewijsuploads en opvolging gedeeld over modules."
         },
-        "regulatoryReporting": {
-          "title": "Regulatory Reporting Dashboard",
-          "description": "Compliance dashboards, gap tracking en gestructureerde regulatory reporting outputs."
+        "esgReporting": {
+          "title": "ESG-bewijs & rapportagewerkruimte",
+          "description": "Geplande ESG-bewijscoördinatie, rapportage-inputs en documentatietraceerbaarheid."
         }
       }
     },
@@ -338,11 +339,31 @@
       "ui": {
         "title": "Leveranciersworkflow",
         "steps": {
-          "item1": { "label": "Leveranciersverzoek verzonden", "status": "Voltooid", "state": "done" },
-          "item2": { "label": "Data-invoer in afwachting", "status": "3 leveranciers", "state": "active" },
-          "item3": { "label": "Bewijs geüpload", "status": "12 documenten", "state": "done" },
-          "item4": { "label": "Volledigheid gecontroleerd", "status": "9/12", "state": "active" },
-          "item5": { "label": "Review vereist", "status": "2 items", "state": "pending" }
+          "item1": {
+            "label": "Leveranciersverzoek verzonden",
+            "status": "Voltooid",
+            "state": "done"
+          },
+          "item2": {
+            "label": "Data-invoer in afwachting",
+            "status": "3 leveranciers",
+            "state": "active"
+          },
+          "item3": {
+            "label": "Bewijs geüpload",
+            "status": "12 documenten",
+            "state": "done"
+          },
+          "item4": {
+            "label": "Volledigheid gecontroleerd",
+            "status": "9/12",
+            "state": "active"
+          },
+          "item5": {
+            "label": "Review vereist",
+            "status": "2 items",
+            "state": "pending"
+          }
         }
       }
     },
@@ -376,10 +397,26 @@
         "title": "Bewijspakket",
         "badge": "Reviewklaar",
         "items": {
-          "item1": { "label": "Leveranciersverklaringen", "meta": "8 leveranciers · Q2", "status": "Geverifieerd" },
-          "item2": { "label": "Ondersteunende documenten", "meta": "24 documenten", "status": "Geverifieerd" },
-          "item3": { "label": "Kwaliteitsindicatoren", "meta": "2 flags", "status": "In review" },
-          "item4": { "label": "Methodologienotities", "meta": "v3.2", "status": "Concept" }
+          "item1": {
+            "label": "Leveranciersverklaringen",
+            "meta": "8 leveranciers · Q2",
+            "status": "Geverifieerd"
+          },
+          "item2": {
+            "label": "Ondersteunende documenten",
+            "meta": "24 documenten",
+            "status": "Geverifieerd"
+          },
+          "item3": {
+            "label": "Kwaliteitsindicatoren",
+            "meta": "2 flags",
+            "status": "In review"
+          },
+          "item4": {
+            "label": "Methodologienotities",
+            "meta": "v3.2",
+            "status": "Concept"
+          }
         },
         "readinessLabel": "Bewijsgereedheid",
         "readinessHint": "3 items te voltooien vóór aangiftetijdvenster"
@@ -392,7 +429,7 @@
       "legalNote": "Arvenza RegTech is een productmerk beheerd door Anka Sustainability B.V. KvK: 99787784.",
       "items": {
         "expertise": "20+ jaar EU sustainability en regulatory implementation ervaring",
-        "engine": "CBAM Calculation Engine — nu beschikbaar",
+        "engine": "CBAM Calculation Engine — Gereed",
         "output": "Kwartaal declaratieklare output",
         "anka": "Gebouwd door Anka Sustainability B.V. expertise",
         "languages": "EN / TR / NL platformtalen"
@@ -535,100 +572,6 @@
       "primary": "Demo plannen"
     }
   },
-  "platform": {
-    "hero": {
-      "eyebrow": "Platform",
-      "title": "Het EU Sustainability Compliance Platform",
-      "description": "Acht regelgeving-specifieke modules verenigd in één intelligent platform — ontworpen voor exporteurs, fabrikanten en supply chain operators."
-    },
-    "modules": {
-      "cbamCalc": {
-        "title": "CBAM Calculation Engine",
-        "description": "Geautomatiseerde embedded emissions berekening met officiële methodologieën. Bereid CBAM-declaraties voor met gevalideerde data, audit trails en gestructureerde outputs afgestemd op EU-vereisten.",
-        "features": [
-          "Embedded emissions berekening",
-          "Methodologie-aligned outputs",
-          "Auditklare data trails",
-          "Multi-product ondersteuning"
-        ]
-      },
-      "cbamConsole": {
-        "title": "CBAM Compliance Console",
-        "description": "Beheer de volledige CBAM lifecycle — van importeurregistratie en kwartaalrapportage tot verificatie en indiening — in één gestructureerde workflow.",
-        "features": [
-          "Kwartaaldeclaratie management",
-          "Verificatie workflow",
-          "Documentcontrole",
-          "Status tracking"
-        ]
-      },
-      "eudr": {
-        "title": "EUDR Due Diligence & Traceability Platform",
-        "description": "Voer due diligence assessments uit, beheer geolocatiedata en onderhoud traceerbaarheidsbewijs voor grondstoffen onder de EU Ontbossingsverordening.",
-        "features": [
-          "Geolocatie mapping",
-          "Risicobeoordeling",
-          "Traceerbaarheidsketens",
-          "Bewijsbeheer"
-        ]
-      },
-      "ppwr": {
-        "title": "PPWR & Packaging Compliance Platform",
-        "description": "Structureer verpakkingsdata, volg recycleerbaarheidsmetrics en beheer PPWR-compliancevereisten across uw productportfolio.",
-        "features": [
-          "Verpakkingsdata register",
-          "Recycleerbaarheid tracking",
-          "Compliance dashboards",
-          "Rapportage outputs"
-        ]
-      },
-      "dpp": {
-        "title": "Digital Product Passport Platform",
-        "description": "Creëer en beheer gestructureerde productpaspoortdata afgestemd op ESPR en Digital Product Passport vereisten voor duurzaam productdesign.",
-        "features": [
-          "Productdata structuring",
-          "Paspoort generatie",
-          "ESPR alignment",
-          "Lifecycle data"
-        ]
-      },
-      "supplier": {
-        "title": "Supplier Data Collection & Evidence Workflow",
-        "description": "Automatiseer leveranciersdataverzoeken, valideer binnenkomend bewijs en onderhoud complete audit trails across uw supply chain.",
-        "features": [
-          "Geautomatiseerde outreach",
-          "Bewijsvalidatie",
-          "Leveranciersportalen",
-          "Chain of custody"
-        ]
-      },
-      "esg": {
-        "title": "ESG Evidence & Reporting Workspace",
-        "description": "Centraliseer ESG-dataverzameling, sla ondersteunend bewijs op en genereer gestructureerde rapportage-outputs voor disclosure vereisten.",
-        "features": [
-          "ESG data hub",
-          "Bewijsrepository",
-          "Rapportagetemplates",
-          "Disclosure workflows"
-        ]
-      },
-      "agri": {
-        "title": "Agri-Climate Platform",
-        "description": "Beheer klimaat- en duurzaamheidsdata across agrarische supply chains — van boerderijniveau inputs tot exportklare compliance outputs.",
-        "features": [
-          "Boerderijdata verzameling",
-          "Klimaatmetrics",
-          "Supply chain mapping",
-          "Compliance outputs"
-        ]
-      }
-    },
-    "cta": {
-      "title": "Klaar om het platform te verkennen?",
-      "description": "Plan een demo om te zien hoe ARVENZA modules samenwerken in uw compliance workflows.",
-      "button": "Demo aanvragen"
-    }
-  },
   "cbamPlatform": {
     "hero": {
       "eyebrow": "CBAM Calculation Engine",
@@ -720,11 +663,31 @@
       "ui": {
         "title": "Controlelaag",
         "queue": {
-          "item1": { "label": "Reviewwachtrij", "value": "4 open", "state": "active" },
-          "item2": { "label": "Bewijsgereedheid", "value": "68%", "state": "active" },
-          "item3": { "label": "Controlechecklist", "value": "11/14", "state": "done" },
-          "item4": { "label": "Audit-ondersteuning", "value": "Gereed", "state": "done" },
-          "item5": { "label": "Cyclusstatus", "value": "Q2 actief", "state": "pending" }
+          "item1": {
+            "label": "Reviewwachtrij",
+            "value": "4 open",
+            "state": "active"
+          },
+          "item2": {
+            "label": "Bewijsgereedheid",
+            "value": "68%",
+            "state": "active"
+          },
+          "item3": {
+            "label": "Controlechecklist",
+            "value": "11/14",
+            "state": "done"
+          },
+          "item4": {
+            "label": "Audit-ondersteuning",
+            "value": "Gereed",
+            "state": "done"
+          },
+          "item5": {
+            "label": "Cyclusstatus",
+            "value": "Q2 actief",
+            "state": "pending"
+          }
         }
       }
     },
@@ -743,11 +706,31 @@
       "ui": {
         "title": "Leveranciersworkflow",
         "steps": {
-          "item1": { "label": "Leveranciersverzoek verzonden", "status": "Voltooid", "state": "done" },
-          "item2": { "label": "Data-invoer in afwachting", "status": "3 leveranciers", "state": "active" },
-          "item3": { "label": "Bewijs geüpload", "status": "12 documenten", "state": "done" },
-          "item4": { "label": "Volledigheid gecontroleerd", "status": "9/12", "state": "active" },
-          "item5": { "label": "Review vereist", "status": "2 items", "state": "pending" }
+          "item1": {
+            "label": "Leveranciersverzoek verzonden",
+            "status": "Voltooid",
+            "state": "done"
+          },
+          "item2": {
+            "label": "Data-invoer in afwachting",
+            "status": "3 leveranciers",
+            "state": "active"
+          },
+          "item3": {
+            "label": "Bewijs geüpload",
+            "status": "12 documenten",
+            "state": "done"
+          },
+          "item4": {
+            "label": "Volledigheid gecontroleerd",
+            "status": "9/12",
+            "state": "active"
+          },
+          "item5": {
+            "label": "Review vereist",
+            "status": "2 items",
+            "state": "pending"
+          }
         }
       }
     },
@@ -781,10 +764,26 @@
         "title": "Bewijspakket",
         "badge": "Reviewklaar",
         "items": {
-          "item1": { "label": "Leveranciersverklaringen", "meta": "8 leveranciers · Q2", "status": "Geverifieerd" },
-          "item2": { "label": "Ondersteunende documenten", "meta": "24 documenten", "status": "Geverifieerd" },
-          "item3": { "label": "Kwaliteitsindicatoren", "meta": "2 flags", "status": "In review" },
-          "item4": { "label": "Methodologienotities", "meta": "v3.2", "status": "Concept" }
+          "item1": {
+            "label": "Leveranciersverklaringen",
+            "meta": "8 leveranciers · Q2",
+            "status": "Geverifieerd"
+          },
+          "item2": {
+            "label": "Ondersteunende documenten",
+            "meta": "24 documenten",
+            "status": "Geverifieerd"
+          },
+          "item3": {
+            "label": "Kwaliteitsindicatoren",
+            "meta": "2 flags",
+            "status": "In review"
+          },
+          "item4": {
+            "label": "Methodologienotities",
+            "meta": "v3.2",
+            "status": "Concept"
+          }
         },
         "readinessLabel": "Bewijsgereedheid",
         "readinessHint": "3 items te voltooien vóór aangiftetijdvenster"
@@ -805,11 +804,31 @@
       "ui": {
         "title": "Gereedheidssamenvatting",
         "metrics": {
-          "item1": { "label": "Bewijsgereedheid", "value": "68%", "hint": "3 items open" },
-          "item2": { "label": "Outputgereedheid", "value": "82%", "hint": "Q2 periode" },
-          "item3": { "label": "Aandachtswachtrij", "value": "5", "hint": "2 hoge prioriteit" },
-          "item4": { "label": "Leveranciersstatus", "value": "9/12", "hint": "Voltooid" },
-          "item5": { "label": "Deadline alerts", "value": "2", "hint": "Binnen 14 dagen" }
+          "item1": {
+            "label": "Bewijsgereedheid",
+            "value": "68%",
+            "hint": "3 items open"
+          },
+          "item2": {
+            "label": "Outputgereedheid",
+            "value": "82%",
+            "hint": "Q2 periode"
+          },
+          "item3": {
+            "label": "Aandachtswachtrij",
+            "value": "5",
+            "hint": "2 hoge prioriteit"
+          },
+          "item4": {
+            "label": "Leveranciersstatus",
+            "value": "9/12",
+            "hint": "Voltooid"
+          },
+          "item5": {
+            "label": "Deadline alerts",
+            "value": "2",
+            "hint": "Binnen 14 dagen"
+          }
         },
         "alert": "2 leveranciers wachten op data-invoer — voltooien vóór aangiftetijdvenster"
       }
@@ -928,150 +947,8 @@
     },
     "cta": {
       "title": "Gestructureerde compliance nodig voor deze regelgeving?",
-      "description": "Ontdek hoe ARVENZA regulatory vereisten mapt naar actionable platform workflows.",
+      "description": "Ontdek hoe Arvenza RegTech regelgevingsvereisten omzet in actionable platform workflows.",
       "button": "CBAM Calculation Engine verkennen"
-    }
-  },
-  "resources": {
-    "hero": {
-      "eyebrow": "Resources",
-      "title": "Inzichten & Regulatory Intelligence",
-      "description": "Blijf geïnformeerd met regelgevingsupdates, compliance gidsen en platform inzichten van het ARVENZA-team."
-    },
-    "categories": {
-      "blog": "Blog",
-      "updates": "Regelgevingsupdates",
-      "guides": "Gidsen"
-    },
-    "items": {
-      "item1": {
-        "category": "blog",
-        "title": "CBAM Rapportagevereisten begrijpen voor Q1 2026",
-        "excerpt": "Een gestructureerd overzicht van CBAM kwartaalrapportageverplichtingen en hoe u uw embedded emissions data voorbereidt.",
-        "date": "Mei 2026"
-      },
-      "item2": {
-        "category": "updates",
-        "title": "EUDR Implementatietimeline: Belangrijke data voor operators",
-        "excerpt": "Bijgewerkte timeline en compliance milestones voor de EU Ontbossingsverordening across grondstofcategorieën.",
-        "date": "April 2026"
-      },
-      "item3": {
-        "category": "guides",
-        "title": "Digital Product Passport: Een praktische gids voor fabrikanten",
-        "excerpt": "Stap-voor-stap begeleiding voor het structureren van productdata voor Digital Product Passport compliance onder ESPR.",
-        "date": "April 2026"
-      },
-      "item4": {
-        "category": "blog",
-        "title": "PPWR Recycleerbaarheidsdoelen: Wat exporteurs moeten weten",
-        "excerpt": "Hoe PPWR recycleerbaarheidsvereisten verpakkingsdesign en exportcompliance beïnvloeden voor niet-EU fabrikanten.",
-        "date": "Maart 2026"
-      },
-      "item5": {
-        "category": "updates",
-        "title": "CSRD Fase-in: Rapportagevereisten voor FY2026",
-        "excerpt": "Overzicht van CSRD rapportage fase-in schema's en ESRS dataverzamelingsvereisten voor in-scope bedrijven.",
-        "date": "Maart 2026"
-      },
-      "item6": {
-        "category": "guides",
-        "title": "Supplier Evidence Management Best Practices",
-        "excerpt": "Auditklare leveranciersbewijsketens opbouwen voor multi-regulation compliance across uw supply network.",
-        "date": "Februari 2026"
-      }
-    },
-    "cta": {
-      "title": "Gepersonaliseerde regulatory guidance gewenst?",
-      "description": "Spreek met ons team over uw specifieke compliance vereisten.",
-      "button": "Neem contact op"
-    }
-  },
-  "about": {
-    "hero": {
-      "eyebrow": "Over ons",
-      "title": "EU Sustainability Compliance, Engineered as a Platform",
-      "description": "Arvenza RegTech is het EU Sustainability Compliance Platform — een productmerk beheerd door Anka Sustainability B.V., Nederland."
-    },
-    "positioning": {
-      "title": "Onze Positionering",
-      "description": "ARVENZA is geen consultancy. Het is een doelgericht RegTech platform dat EU-duurzaamheidsregelgeving omzet in gestructureerde, schaalbare, auditklare digitale workflows. We bedienen exporteurs, fabrikanten en supply chain operators die intelligente compliance infrastructuur nodig hebben — geen presentaties."
-    },
-    "expertise": {
-      "title": "Diepte van Expertise",
-      "description": "Gebouwd op meer dan 20 jaar duurzaamheids- en regulatory expertise, combineert ARVENZA diep domeinkennis met moderne platformarchitectuur. Onze modules zijn regelgeving-specifiek, workflow-driven en ontworpen voor de complexiteit van EU-handelscompliance."
-    },
-    "pillars": {
-      "title": "Trust Pillars",
-      "items": {
-        "platform": {
-          "title": "Platform-First",
-          "description": "Compliance geleverd via schaalbare software — geen eenmalige engagements."
-        },
-        "regulatory": {
-          "title": "Regulation-Specific",
-          "description": "Doelgerichte modules afgestemd op CBAM, PPWR, EUDR, DPP en beyond."
-        },
-        "audit": {
-          "title": "Audit-Ready by Design",
-          "description": "Elke workflow produceert traceerbaar bewijs en gestructureerde outputs."
-        },
-        "eu": {
-          "title": "EU-Aligned",
-          "description": "Nederlands gebaseerde operating entity met diepe EU regulatory alignment."
-        }
-      }
-    },
-    "entity": {
-      "title": "Operating Entity",
-      "description": "Arvenza RegTech is een productmerk dat wordt beheerd door Anka Sustainability B.V., geregistreerd in Nederland. Alle platformdiensten worden geleverd door Anka Sustainability B.V.",
-      "location": "Utrecht, Nederland"
-    },
-    "cta": {
-      "title": "Ervaar het platform",
-      "description": "Zie hoe ARVENZA regulatory complexity transformeert tot gestructureerde compliance workflows.",
-      "button": "Demo aanvragen"
-    }
-  },
-  "contact": {
-    "hero": {
-      "eyebrow": "Contact",
-      "title": "Neem contact op",
-      "description": "Bereik ons team voor platformvragen, partnership discussies of algemene vragen over EU-duurzaamheidscompliance."
-    },
-    "form": {
-      "name": "Volledige Naam",
-      "namePlaceholder": "Uw naam",
-      "email": "E-mailadres",
-      "emailPlaceholder": "u@bedrijf.com",
-      "company": "Bedrijf",
-      "companyPlaceholder": "Uw bedrijfsnaam",
-      "subject": "Onderwerp",
-      "subjectPlaceholder": "Hoe kunnen we helpen?",
-      "message": "Bericht",
-      "messagePlaceholder": "Vertel ons over uw compliance behoeften...",
-      "submit": "Bericht verzenden",
-      "successTitle": "Bedankt",
-      "successMessage": "Uw bericht is ontvangen. We nemen spoedig contact met u op."
-    },
-    "offices": {
-      "title": "Onze Kantoren",
-      "netherlands": {
-        "title": "Nederlands Kantoor",
-        "address": "Newtonlaan 115,\n3584 BH Utrecht, Hollanda"
-      },
-      "turkey": {
-        "title": "Türkiye Kantoor",
-        "address": "Atakent Mah. / Mithatpaşa Cad.\nÇağla Plaza No: 116 İç Kapı No: 18\nÜmraniye / İstanbul / Türkiye"
-      },
-      "digital": {
-        "title": "Digital Solution Center",
-        "address": "Üniversite Mah. / Sangül Sk. No: 35/1\nAvcılar / İstanbul / Türkiye"
-      }
-    },
-    "direct": {
-      "title": "Direct Contact",
-      "emailLabel": "E-mail"
     }
   },
   "demo": {
@@ -1088,9 +965,9 @@
       "statValue": "CBAM Calculation Engine · EU compliance platform"
     },
     "preview": {
-      "flagshipBadge": "Vlaggenschip",
-      "flagshipTitle": "CBAM Calculation Engine",
-      "status": "Live",
+      "coreProductBadge": "Kernproduct",
+      "coreProductTitle": "CBAM Calculation Engine",
+      "status": "Gereed",
       "workflowLabel": "Demoworkflow",
       "steps": {
         "step1": "Leveranciersgegevens verzamelen",
@@ -1099,9 +976,18 @@
       },
       "metricsLabel": "Demoscope",
       "metrics": {
-        "module1": { "value": "Data", "label": "Leverancier" },
-        "module2": { "value": "Calc", "label": "Emissie" },
-        "module3": { "value": "Bewijs", "label": "Declaratie" }
+        "module1": {
+          "value": "Data",
+          "label": "Leverancier"
+        },
+        "module2": {
+          "value": "Calc",
+          "label": "Emissie"
+        },
+        "module3": {
+          "value": "Bewijs",
+          "label": "Declaratie"
+        }
       },
       "modulesLabel": "Gerelateerde modules",
       "modules": {
@@ -1162,7 +1048,7 @@
         },
         "item2": {
           "title": "CBAM Calculation Engine walkthrough",
-          "description": "De vlaggenschipworkflow van leveranciersdata tot bewijspakketten wordt in productcontext getoond."
+          "description": "De kernproductworkflow van leveranciersdata tot bewijspakketten wordt in productcontext getoond."
         },
         "item3": {
           "title": "Beoordeling van data, berekening en bewijs",
@@ -1198,7 +1084,7 @@
       "items": {
         "engine": {
           "title": "CBAM Calculation Engine",
-          "description": "Leveranciersdata, ingebedde emissieberekening en declaratieklare bewijsworkflows — de belangrijkste productlaag."
+          "description": "Leveranciersdata, ingebedde emissieberekening en declaratieklare bewijsworkflows — de gestructureerde kernproductlaag."
         },
         "compliance": {
           "title": "CBAM Compliance Tool",
@@ -1288,214 +1174,288 @@
     "openMenu": "Navigatiemenu openen",
     "closeMenu": "Navigatiemenu sluiten",
     "languageMenu": "Selecteer taal",
-    "dashboardPreview": "ARVENZA compliance dashboard preview"
+    "dashboardPreview": "Arvenza RegTech compliance dashboard preview"
   },
   "platformHub": {
     "eyebrow": "Platform",
-    "title": "Een gestructureerd digitaal platform voor EU-duurzaamheidscompliance",
-    "description": "Arvenza RegTech biedt een modulaire platformarchitectuur gebouwd op CBAM Calculation Engine — het vlaggenschipproduct — uitbreidend naar leveranciersbewijs, productcarbon workflows, PPWR, EUDR en Digital Product Passport.",
-    "flagship": {
-      "badge": "Vlaggenschip",
-      "title": "CBAM Calculation Engine",
-      "description": "Leveranciersgegevens, ingebedde emissieberekening en declaratieklare bewijsworkflows in één gestructureerde engine.",
-      "cta": "CBAM Calculation Engine verkennen",
-      "screenshotAlt": "CBAM Calculation Engine dashboard"
-    },
-    "capabilities": {
-      "title": "Platform capability-lagen",
-      "items": {
-        "supplierData": {
-          "title": "Leveranciersgegevens",
-          "description": "Gestructureerde inzameling van leveranciersgegevens en bewijs in de supply chain."
+    "title": "Een modulaire RegTech-platformarchitectuur voor EU-duurzaamheidscompliance",
+    "description": "Arvenza RegTech verbindt leveranciersbewijs, productdata, berekeningsinput en documentatietraceerbaarheid via een modulaire platformarchitectuur — beginnend met de gereedstaande CBAM Calculation Engine en uitbreidend naar pilot- en roadmapmodules.",
+    "architecture": {
+      "title": "Eén operationeel model voor meerdere regelgevingsworkflows",
+      "body": "Het platform is opgebouwd rond terugkerende regelgevingspatronen: leverancierscommunicatie, dataverzameling, berekeningsinput, kwaliteitscontrole van bewijs, documentatietraceerbaarheid en rapportagevoorbereiding.",
+      "layers": {
+        "supplierEvidence": {
+          "title": "Leveranciersbewijslaag",
+          "description": "Gestructureerde leverancierscommunicatie, dataverzoeken, bewijsuploads en kwaliteitsmarkering in compliance-workflows."
         },
-        "emissions": {
-          "title": "Ingebedde Emissieberekening",
-          "description": "Emissieberekening met methodologie audit trail en traceerbare inputs."
+        "productData": {
+          "title": "Productdatalaag",
+          "description": "Productscope, BOM-structuren, installatiereferenties en productfamilielogica gekoppeld aan regelgevingsvereisten."
         },
-        "evidence": {
-          "title": "Bewijs & Documentatie",
-          "description": "Auditklare documentatie en declaratieklare bewijsvoering per workflow."
+        "calculationMethodology": {
+          "title": "Berekenings- en methodologielaag",
+          "description": "Berekeningsinput, methodologienotities, default-value-vergelijking en traceerbaarheid van data naar outputs."
         },
-        "reporting": {
-          "title": "Rapportage & Monitoring",
-          "description": "Regulatory reporting dashboards en monitoring voor compliance-teams."
+        "documentationReporting": {
+          "title": "Documentatie- en rapportagelaag",
+          "description": "Documentatietraceerbaarheid, bewijsdossiers, rapportagecyclusvoorbereiding en reviewklare workflow-outputs."
         }
       }
     },
-    "roadmap": {
-      "title": "Platform roadmap",
-      "description": "Uitbreidende modules naast CBAM — met duidelijke beschikbaarheidsstatus per gebied.",
-      "items": {
-        "supplierEvidence": {
-          "title": "Supplier Evidence Hub",
-          "description": "Gecentraliseerd leveranciersbewijs en gestructureerde intake workflows."
-        },
-        "pcf": {
-          "title": "Product Carbon / LCA Workflows",
-          "description": "Product carbon footprint en LCA workflow-ondersteuning."
-        },
-        "ppwr": {
-          "title": "PPWR & Packaging BOM",
-          "description": "Packaging Bill of Materials en PPWR-gereedheid workflows."
-        },
-        "eudr": {
-          "title": "EUDR Due Diligence",
-          "description": "Due diligence workflows voor EU Deforestation Regulation."
-        },
-        "dpp": {
-          "title": "Digital Product Passport",
-          "description": "Digital Product Passport datastructuur en bewijsvoorbereiding."
-        },
-        "auditPacks": {
-          "title": "Audit-Ready Evidence Packs",
-          "description": "Gestructureerde bewijspakketten voor audit en review."
-        },
-        "reporting": {
-          "title": "Regulatory Reporting Dashboard",
-          "description": "Dashboardweergaven voor regulatory reporting en compliance monitoring."
-        }
+    "sections": {
+      "ready": {
+        "title": "Gereed"
+      },
+      "pilot": {
+        "title": "Pilotmodules",
+        "description": "Pilotmodules in gestructureerde toegang — operationele monitoring en uitgebreide compliance-workflows zonder volledige productbeschikbaarheid te impliceren."
+      },
+      "comingSoon": {
+        "title": "Binnenkort modules",
+        "description": "Roadmapmodules gepland op hetzelfde leveranciersbewijs-, productdata- en documentatietraceerbaarheidsmodel."
+      }
+    },
+    "readyModule": {
+      "badge": "Kernproduct",
+      "title": "CBAM Calculation Engine",
+      "description": "Gereedstaande productcapaciteit voor leveranciersdata, berekening van ingebedde emissies, methodologische traceerbaarheid en CBAM-bewijsdossiers.",
+      "exploreCta": "Product bekijken",
+      "demoCta": "Demo aanvragen",
+      "screenshotAlt": "CBAM Calculation Engine dashboard"
+    },
+    "modules": {
+      "cbamConsole": {
+        "title": "CBAM Compliance Console",
+        "description": "Pilotcoördinatielaag voor CBAM-bewijsstatus, leveranciersopvolging, berekeningsgereedheid en voortgang per rapportagecyclus."
+      },
+      "ppwr": {
+        "title": "PPWR / verpakkingscompliance",
+        "description": "Pilotmodule voor verpakking-BOM's, leveranciersbewijs en PPWR-gerichte verpakkingsdata."
+      },
+      "agriClimate": {
+        "title": "Agri-Climate Platform",
+        "description": "Pilotproduct voor agrarische klimaatdata, bedrijfsniveau-registraties en bewijsvoorbereidingsworkflows."
+      },
+      "eudr": {
+        "title": "EUDR Due Diligence",
+        "description": "Geplande due-diligence-workflows voor geolocatiebewijs, leveranciersverklaringen en traceerbaarheidsdocumentatie."
+      },
+      "dpp": {
+        "title": "Digital Product Passport",
+        "description": "Geplande productdatastructuren, leveranciersbewijslagen en documentatietraceerbaarheid voor Digital Product Passport-vereisten."
+      },
+      "supplierEvidence": {
+        "title": "Leveranciersbewijsworkflow",
+        "description": "Geplande leverancierscommunicatie, dataverzoeken, bewijsuploads en opvolging gedeeld over modules."
+      },
+      "esgReporting": {
+        "title": "ESG-bewijs & rapportagewerkruimte",
+        "description": "Geplande ESG-bewijscoördinatie, rapportage-inputs en documentatietraceerbaarheid."
       }
     },
     "cta": {
-      "title": "Ontdek hoe Arvenza uw CBAM-voorbereiding ondersteunt",
-      "primary": "Demo plannen"
+      "title": "Ontdek het gereedstaande CBAM-product en de bredere platformroadmap",
+      "primary": "CBAM Calculation Engine bekijken",
+      "secondary": "Demo aanvragen"
     }
   },
   "solutionsPage": {
     "eyebrow": "Oplossingen",
-    "title": "Van CBAM naar een bredere EU-duurzaamheidscompliance roadmap",
-    "description": "Arvenza RegTech structureert CBAM-compliance vandaag en biedt een bredere platformarchitectuur voor PPWR, EUDR, Digital Product Passport en leveranciersbewijs workflows.",
-    "flagship": {
-      "badge": "Vlaggenschip",
-      "title": "CBAM Calculation Engine",
-      "description": "Leveranciersgegevens, ingebedde emissieberekening en declaratieklare bewijsworkflows in één gestructureerde engine.",
-      "cta": "CBAM Calculation Engine verkennen",
-      "screenshotAlt": "CBAM Calculation Engine dashboard"
+    "title": "Oplossingen die EU-regeldruk omzetten in gestructureerde workflows",
+    "description": "Arvenza RegTech organiseert leveranciersdata, productbewijs, berekeningsinput en documentatieworkflows rond praktische regelgevingsscenario's — beginnend met CBAM Calculation Engine en uitbreidend naar pilot- en roadmapmodules.",
+    "fields": {
+      "problem": "Het probleem",
+      "approach": "Arvenza-aanpak",
+      "capability": "Relevante capaciteit"
     },
-    "items": {
-      "cbam": {
-        "title": "CBAM Compliance",
-        "description": "Gestructureerde CBAM-voorbereiding van leveranciersgegevens tot declaratieklare berekeningen."
+    "sections": {
+      "pilot": {
+        "title": "Pilot-oplossingsworkflows",
+        "description": "Uitgebreide use cases in gestructureerde pilottoegang — operationele monitoring, verpakkingscompliance en agrarische klimaatdata-workflows."
       },
-      "supplierEvidence": {
-        "title": "Supplier Evidence Workflows",
-        "description": "Leveranciersgegevens en bewijsbeheer in de supply chain."
-      },
-      "pcf": {
-        "title": "Product Carbon / LCA Workflows",
-        "description": "Product carbon footprint workflows voor uitbreidende regulatory scope."
-      },
-      "ppwr": {
-        "title": "Packaging & PPWR Readiness",
-        "description": "Packaging BOM en PPWR-gereedheid workflows."
-      },
-      "eudr": {
-        "title": "EUDR Due Diligence",
-        "description": "Due diligence workflows voor EU Deforestation Regulation."
-      },
-      "dpp": {
-        "title": "Digital Product Passport",
-        "description": "Digital Product Passport datastructuur en bewijsvoorbereiding."
-      },
-      "reporting": {
-        "title": "Regulatory Reporting Dashboard",
-        "description": "Dashboardweergaven voor regulatory reporting en compliance monitoring."
+      "roadmap": {
+        "title": "Roadmap-oplossingsworkflows",
+        "description": "Geplande use cases die voortbouwen op dezelfde leveranciersbewijs- en documentatielogica binnen het platform."
       }
     },
+    "solutions": {
+      "cbamWorkflows": {
+        "title": "CBAM-complianceworkflows",
+        "problem": "Kwartaalvoorbereiding voor CBAM vraagt om leveranciersdata over ingebedde emissies, installatie-informatie, methodologische traceerbaarheid en kwaliteitscontrole van bewijs — vaak nog verspreid over spreadsheets en e-mails.",
+        "approach": "CBAM Calculation Engine structureert leveranciersdata, berekening van ingebedde emissies, methodologische notities en aangifteklare bewijsdossiers in één gecontroleerde workflow.",
+        "capability": "CBAM Calculation Engine",
+        "cta": "CBAM Calculation Engine bekijken"
+      },
+      "cbamConsole": {
+        "title": "CBAM Compliance Console",
+        "problem": "Zodra leveranciersdata wordt verzameld, hebben teams een duidelijk operationeel overzicht nodig van bewijsstatus, opvolgacties, berekeningsgereedheid en voortgang per rapportagecyclus.",
+        "approach": "De CBAM Compliance Console pilot is gepositioneerd als monitorings- en coördinatielaag voor leveranciersbewijs, berekeningsgereedheid en rapportagevoorbereiding binnen CBAM-cycli.",
+        "capability": "CBAM Compliance Console",
+        "cta": "Pilottoegang bespreken"
+      },
+      "ppwr": {
+        "title": "PPWR / verpakkingscompliance",
+        "problem": "Verpakkingsteams moeten materiaalniveau-BOM's, leveranciersdocumentatie, bewijs voor gerecyclede inhoud en productfamilielogica organiseren voordat PPWR-vereisten operationeel bindend worden.",
+        "approach": "De PPWR / Packaging Compliance pilot structureert verpakking-BOM's, leveranciersbewijs en voorbereiding van verpakkingsdata rond een herhaalbare bewijsworkflow.",
+        "capability": "PPWR / Packaging Compliance",
+        "cta": "Pilottoegang bespreken"
+      },
+      "agriClimate": {
+        "title": "Agrarische klimaatdata-workflows",
+        "problem": "Agrarische en grondstofgerelateerde ketens vragen steeds vaker om producentniveau-registraties, geolocatiebewijs, bedrijfsdata en traceerbaarheidsdocumentatie.",
+        "approach": "Agri-Climate Platform is gepositioneerd als pilotproduct voor het structureren van agrarische klimaatdata, bedrijfsniveau-registraties en bewijsvoorbereidingsworkflows.",
+        "capability": "Agri-Climate Platform",
+        "cta": "Pilottoegang bespreken"
+      },
+      "eudr": {
+        "title": "EUDR due-diligence-workflows",
+        "problem": "Grondstofgerelateerde ketens moeten zich voorbereiden op geolocatiedata, leveranciersverklaringen, risicoclassificatie en traceerbaarheidsdocumentatie.",
+        "approach": "De EUDR Due Diligence roadmapmodule is gepland om voort te bouwen op dezelfde logica voor leveranciersbewijs en documentatie als het bredere platform.",
+        "capability": "EUDR Due Diligence",
+        "cta": "Roadmap volgen"
+      },
+      "dpp": {
+        "title": "Digital Product Passport-voorbereiding",
+        "problem": "Producenten hebben productniveau-datastructuren, bewijslagen, componentdocumentatie en traceerbaarheidslogica nodig voordat DPP-vereisten een praktisch datavraagstuk worden.",
+        "approach": "De Digital Product Passport roadmapmodule is gepland rond productdatastructuren, leveranciersbewijslagen en documentatietraceerbaarheid.",
+        "capability": "Digital Product Passport",
+        "cta": "Roadmap volgen"
+      }
+    },
+    "maturity": {
+      "title": "Van een gereedstaande CBAM-engine naar een bredere complianceroadmap",
+      "description": "Arvenza begint met CBAM Calculation Engine als gereedstaand operationeel product en breidt dezelfde leveranciersbewijs- en datastructureringslogica uit naar pilot- en roadmapmodules."
+    },
     "cta": {
-      "title": "Plan een demo voor uw compliance roadmap",
-      "primary": "Demo plannen"
+      "title": "Bespreek uw compliance-workflow met ons team",
+      "primary": "Demo plannen",
+      "secondary": "Resources bekijken"
     }
   },
   "industriesPage": {
     "eyebrow": "Sectoren",
-    "title": "EU-duurzaamheidscompliance verschilt per supply chain realiteit",
-    "description": "Arvenza RegTech is ontworpen voor sectoren die CBAM en toekomstige EU-regelgeving moeten beheren over producten, leveranciers, data en bewijsstructuren.",
+    "title": "RegTech-workflows voor sectoren die te maken hebben met EU-duurzaamheidsregelgeving",
+    "description": "Arvenza RegTech helpt exporteurs, producenten en supply-chain teams bij het structureren van leveranciersbewijs, productdata en berekeningsworkflows voor CBAM en aankomende EU-duurzaamheidsvereisten.",
+    "fields": {
+      "operationalChallenge": "Operationele uitdaging",
+      "arvenzaWorkflow": "Arvenza-workflow",
+      "relevantCapability": "Relevante capability"
+    },
+    "products": {
+      "cbamEngine": "CBAM Calculation Engine",
+      "cbamConsole": "CBAM Compliance Console",
+      "ppwr": "PPWR / Verpakkingscompliance",
+      "dpp": "Digital Product Passport",
+      "agriClimate": "Agri-Climate Platform",
+      "eudr": "EUDR Due Diligence"
+    },
     "items": {
       "steelAluminium": {
         "title": "Staal & Aluminium",
-        "focus": "CBAM",
-        "description": "Emissieberekening en leveranciersdata workflows voor CBAM-goederen."
+        "regulatoryPressure": "CBAM definitieve fase",
+        "operationalChallenge": "CN-code mapping, leveranciersdata op installatieniveau, directe en indirecte emissies, elektriciteitsfactoren en bewijskwaliteit moeten per rapportagecyclus worden beheerd.",
+        "arvenzaWorkflow": "CBAM Calculation Engine structureert leveranciersdata, berekening van ingebedde emissies, methodologische traceerbaarheid en aangifteklare bewijsdossiers in één gecontroleerde workflow."
+      },
+      "automotive": {
+        "title": "Automotive toeleveringsketens",
+        "regulatoryPressure": "CBAM, DPP en leveranciersbewijs",
+        "operationalChallenge": "Automotive ketens werken met meerdere leverancierslagen, hoge componentvolumes en materiaalstromen waarin staal, aluminium, batterijen en productdata-verplichtingen steeds vaker samenkomen.",
+        "arvenzaWorkflow": "Arvenza structureert leverancierscommunicatie, bewijsverzameling en productdata-workflows zodat teams vandaag CBAM-bewijs kunnen voorbereiden en hetzelfde model later kunnen uitbreiden naar DPP-vereisten."
       },
       "packagingFmcg": {
         "title": "Verpakking & FMCG",
-        "focus": "PPWR",
-        "description": "Packaging BOM en PPWR-gereedheid voor fast-moving consumer goods."
-      },
-      "automotive": {
-        "title": "Automotive Supply Chains",
-        "focus": "CBAM / DPP / Supplier Evidence",
-        "description": "Multi-regulation workflows voor CBAM, DPP en leveranciersbewijs."
+        "regulatoryPressure": "PPWR en voorbereiding van verpakkingsdata",
+        "operationalChallenge": "Verpakkingsteams hebben materiaalniveau-BOM's, bewijs voor gerecyclede inhoud, leveranciersdocumentatie en productfamilielogica nodig voordat PPWR-verplichtingen operationeel bindend worden.",
+        "arvenzaWorkflow": "De PPWR / Verpakkingscompliance pilot is ontworpen om verpakking-BOM's, leveranciersbewijs en productniveau-verpakkingsdata te structureren rond dezelfde bewijsworkflow als het bredere platform."
       },
       "electronicsBatteries": {
         "title": "Elektronica & Batterijen",
-        "focus": "DPP / Supplier Evidence",
-        "description": "DPP-data en leveranciersbewijs voor complexe supply chains."
+        "regulatoryPressure": "Digital Product Passport en productniveau-bewijs",
+        "operationalChallenge": "Elektronica- en batterijtoeleveringsketens vragen om gestructureerde productdata, componentbewijs, levenscycluskenmerken en traceerbaarheidslagen die consistent blijven over leveranciers en productfamilies.",
+        "arvenzaWorkflow": "Arvenza's roadmap voor Digital Product Passport-workflows richt zich op productdatastructuren, bewijslagen en leveranciersdocumentatie die kunnen voortbouwen op bestaande leveranciersbewijsprocessen."
       },
       "agricultureFood": {
         "title": "Landbouw & Voeding",
-        "focus": "EUDR",
-        "description": "Due diligence en bewijs workflows voor EUDR-grondstoffen."
+        "regulatoryPressure": "EUDR en agrarische klimaatdata-workflows",
+        "operationalChallenge": "Grondstofgerelateerde ketens vragen steeds vaker om geolocatiedata, bewijs op producentniveau, due-diligence-documentatie en risicoclassificatie over bedrijven, leveranciers en zendingen heen.",
+        "arvenzaWorkflow": "EUDR Due Diligence en Agri-Climate Platform-workflows worden gepositioneerd als pilot- en roadmapcapaciteiten voor bedrijfsniveau-registraties, geolocatiebewijs, leveranciersdocumentatie en traceerbaarheidsvoorbereiding."
       },
       "importersExporters": {
         "title": "Importeurs & Exporteurs",
-        "focus": "CBAM / Regulatory Reporting",
-        "description": "CBAM-voorbereiding en regulatory reporting voor handelsoperatoren."
+        "regulatoryPressure": "Aangeververplichtingen en voorbereiding van leveranciersbewijs",
+        "operationalChallenge": "Importeurs en exporteurs moeten CN-code scope checks, leveranciersbewijs, berekeningsgereedheid, documentkwaliteit en rapportagedeadlines coördineren over meerdere handelsstromen.",
+        "arvenzaWorkflow": "Arvenza maakt van leveranciersdata, berekeningsvoorbereiding en bewijscoördinatie een herhaalbaar operationeel model voor CBAM en toekomstige EU-duurzaamheidsworkflows."
       }
     },
+    "evidenceStrip": {
+      "title": "Eén leveranciersbewijsmodel, meerdere regelgevingsworkflows",
+      "description": "Dezelfde operationele laag kan leverancierscommunicatie, productdataverzameling, berekeningsinput, kwaliteitscontrole van bewijs en documentatietraceerbaarheid ondersteunen binnen CBAM-, PPWR-, EUDR- en Digital Product Passport-workflows."
+    },
     "cta": {
-      "title": "Plan een demo voor uw sector",
-      "primary": "Demo plannen voor uw sector"
+      "title": "Ontdek hoe Arvenza past bij uw sectorworkflow",
+      "primary": "Demo plannen",
+      "secondary": "Product bekijken"
     }
   },
   "companyPage": {
     "eyebrow": "Bedrijf",
-    "title": "Arvenza RegTech is een productmerk voor EU-duurzaamheidscompliance",
-    "description": "Arvenza RegTech wordt beheerd door Anka Sustainability B.V. en ondersteunt exporteurs, fabrikanten en supply chain-teams bij het omzetten van EU-duurzaamheidsregelgeving in gestructureerde digitale workflows.",
-    "sectionsTitle": "Over Arvenza RegTech",
+    "title": "Een RegTech-productmerk voor EU-duurzaamheidscompliance-workflows",
+    "description": "Arvenza RegTech wordt beheerd door Anka Sustainability B.V., Nederland, en is ontworpen om leveranciersbewijs, productdata en regelgevingsgerichte berekeningsvereisten om te zetten in gestructureerde digitale workflows.",
     "cards": {
-      "flagship": {
-        "label": "Vlaggenschipproduct",
+      "productBrand": {
+        "label": "Productmerk",
+        "title": "Arvenza RegTech"
+      },
+      "legalOperator": {
+        "label": "Juridische exploitant",
+        "title": "Anka Sustainability B.V., Nederland",
+        "kvk": "KvK: 99787784"
+      },
+      "readyProduct": {
+        "label": "Gereed product",
         "title": "CBAM Calculation Engine",
-        "badge": "Vlaggenschip"
+        "status": "Gereed"
       },
-      "platform": {
-        "label": "Platformvisie",
-        "title": "EU Sustainability Compliance Platform"
-      },
-      "operator": {
-        "label": "Beheerder",
-        "title": "Anka Sustainability B.V.",
-        "detail": "Nederland"
-      },
-      "registry": {
-        "label": "Handelsregister",
-        "title": "KvK: 99787784"
+      "roadmapLogic": {
+        "label": "Roadmaplogica",
+        "title": "Pilot- en roadmapmodules bouwen voort op hetzelfde leveranciersbewijsmodel"
       }
     },
     "sections": {
       "whatIs": {
-        "title": "Wat is Arvenza?",
-        "body": "Arvenza RegTech is het EU Sustainability Compliance Platform — een productmerk waarvan CBAM Calculation Engine het vlaggenschipproduct is, gericht op gestructureerde CBAM-voorbereiding, leveranciersgegevens, ingebedde emissieberekening en auditklare documentatie."
+        "title": "Wat Arvenza RegTech is",
+        "body": "Arvenza RegTech is een productmerk dat zich richt op het omzetten van EU-duurzaamheidsregelgeving in operationele softwareworkflows. Het platform begint met CBAM Calculation Engine als gereedstaande productcapaciteit en breidt uit naar pilot- en roadmapmodules voor leveranciersbewijs, PPWR, EUDR en productdata-workflows."
       },
-      "experience": {
-        "title": "Gebouwd op regulatory implementatie-ervaring",
-        "body": "Het platform is ontworpen rond echte CBAM-voorbereidingsworkflows: leveranciersintake, emissieberekening met methodologie audit trail en declaratieklare bewijspakketten."
+      "whyNow": {
+        "title": "Waarom nu",
+        "body": "EU-duurzaamheidsregelgeving verschuift van interpretatie naar operationele uitvoering. CBAM-rapportagecycli, leveranciersbewijs, voorbereiding van verpakkingsdata en traceerbaarheidsvereisten creëren terugkerende workflows die niet betrouwbaar via losse spreadsheets en e-mails kunnen worden beheerd."
       },
-      "operator": {
-        "title": "Productmerk beheerd door Anka Sustainability B.V.",
-        "body": "Arvenza RegTech wordt beheerd door Anka Sustainability B.V., Nederland (KvK: 99787784). Alle platformdiensten worden geleverd door Anka Sustainability B.V. Arvenza is het productmerk — geen aparte rechtspersoon."
+      "whyCbamFirst": {
+        "title": "Waarom CBAM Calculation Engine eerst kwam",
+        "body": "CBAM creëert een directe behoefte aan leveranciersdata, berekening van ingebedde emissies, methodologische traceerbaarheid en aangifteklare bewijsdossiers. Daarom begint Arvenza met CBAM Calculation Engine als gereedstaand operationeel product voordat dezelfde bewijs- en datainfrastructuur wordt uitgebreid naar pilot- en roadmapmodules."
       },
-      "legal": {
-        "title": "Juridische positionering",
-        "body": "Platformdiensten, contractuele relaties en gegevensverwerking worden geleverd onder Anka Sustainability B.V. Het Arvenza RegTech merk identificeert het product en platform dat door Anka Sustainability B.V. wordt geleverd."
+      "roadmapLogic": {
+        "title": "Een roadmap vanuit hetzelfde operationele model",
+        "body": "De roadmap bestaat niet uit losse, niet-verbonden modules. CBAM, PPWR, EUDR, Digital Product Passport en ESG-bewijsworkflows steunen allemaal op gestructureerde leverancierscommunicatie, productdata, bewijskwaliteit en documentatietraceerbaarheid. Arvenza's roadmap bouwt voort op dit gedeelde operationele model."
+      },
+      "operatedBy": {
+        "title": "Beheerd door Anka Sustainability B.V.",
+        "body": "Arvenza RegTech wordt beheerd door Anka Sustainability B.V., een in Nederland geregistreerde onderneming. Deze structuur verbindt softwareontwikkeling met ervaring in regelgevingsimplementatie rond CBAM, LCA, EPD, productbewijs en EU-duurzaamheidsadviesworkflows."
       }
     },
-    "legalNote": "Arvenza RegTech is een productmerk beheerd door Anka Sustainability B.V., Nederland. KvK: 99787784. Alle platformdiensten worden geleverd door Anka Sustainability B.V.",
+    "trust": {
+      "ariaLabel": "Geloofwaardigheidskenmerken",
+      "item1": "In Nederland geregistreerde exploitant",
+      "item2": "KvK: 99787784",
+      "item3": "Gereedstaande CBAM Calculation Engine",
+      "item4": "Pilot- en roadmapmodules duidelijk gelabeld",
+      "item5": "Gebouwd op ervaring met regelgevingsimplementatie"
+    },
     "cta": {
-      "title": "Zie CBAM Calculation Engine in uw eigen workflowcontext",
-      "primary": "Demo plannen",
-      "secondary": "CBAM Calculation Engine verkennen"
+      "title": "Bekijk het gereedstaande CBAM-product en de bredere roadmap",
+      "body": "Bekijk CBAM Calculation Engine of vraag een walkthrough aan om te bespreken hoe Arvenza leveranciersbewijs en regelgevingsworkflows rond de behoeften van uw organisatie kan structureren.",
+      "primary": "CBAM Calculation Engine bekijken",
+      "secondary": "Demo aanvragen"
     }
   },
   "regulationsCbam": {
@@ -1531,34 +1491,65 @@
     }
   },
   "resourcesPage": {
-    "eyebrow": "Bronnen",
-    "title": "Praktische bronnen voor EU-duurzaamheidsregelgeving",
-    "description": "Updates, gidsen en checklists voor CBAM, PPWR, EUDR en Digital Product Passport worden hier gepubliceerd.",
-    "items": {
+    "eyebrow": "Kennisbank",
+    "title": "Praktische resources voor EU-duurzaamheidscompliance-workflows",
+    "description": "Gebruik Arvenza-resources om CBAM-voorbereiding, leveranciersbewijs, ingebedde emissiedata en aankomende EU-duurzaamheidscompliance-workflows te structureren.",
+    "positioning": "Resources voor CBAM, leveranciersbewijs en EU-duurzaamheidscompliance-workflows",
+    "categories": {
+      "cbamGuides": "CBAM-gidsen",
+      "checklists": "Checklists & templates",
+      "sectorBriefings": "Sectorbriefings",
+      "regulationUpdates": "Regelgevingsupdates"
+    },
+    "status": {
+      "available": "Beschikbaar",
+      "inPreparation": "In voorbereiding",
+      "roadmap": "Roadmap"
+    },
+    "library": {
+      "title": "Regelgevingsbibliotheek",
+      "description": "Praktische gidsen, checklists en briefings voor het structureren van leveranciersdata, berekeningsinput en bewijsworkflows binnen CBAM en aankomende EU-vereisten."
+    },
+    "resources": {
       "cbamChecklist": {
-        "title": "CBAM Voorbereidingschecklist",
-        "description": "Een gestructureerde checklist voor CBAM-gereedheid over leveranciersgegevens, berekeningen en bewijs."
+        "title": "CBAM-voorbereidingschecklist",
+        "description": "Een praktische checklist voor CN-code scope, leveranciersdata, ingebedde emissie-inputs, bewijskwaliteit en verantwoordelijkheden per rapportagecyclus.",
+        "cta": "Checklist aanvragen"
       },
-      "regulationUpdates": {
-        "title": "Regelgevingsupdates",
-        "description": "Gecureerde updates over EU-duurzaamheidsregelgeving en implementatietijdlijnen."
+      "supplierTemplate": {
+        "title": "Template voor leveranciersdataverzoek",
+        "description": "Een gestructureerde template voor leverancierscommunicatie rond installatieniveau-data, productreferenties, emissie-inputs en ondersteunend bewijs voor CBAM-workflows.",
+        "cta": "Template aanvragen"
       },
-      "guides": {
-        "title": "Gidsen en briefings",
-        "description": "Praktische gidsen en briefings voor compliance-teams."
+      "embeddedEmissionsGuide": {
+        "title": "Praktische gids voor ingebedde emissies",
+        "description": "Een praktische uitleg over directe emissies, indirecte emissies, berekeningsinput, methodologische traceerbaarheid en bewijsverwachtingen binnen CBAM-voorbereiding.",
+        "cta": "Ontvang melding"
       },
-      "blog": {
-        "title": "Blog / Inzichten",
-        "description": "Inzichten over CBAM-voorbereiding, leveranciersworkflows en EU-duurzaamheidscompliance."
+      "cbamCnScope": {
+        "title": "CBAM-goederen en CN-code scope",
+        "description": "Een gestructureerd overzicht van hoe teams CBAM-productscope, CN-code screening en leveranciersbewijsverzoeken per rapportagecyclus kunnen organiseren.",
+        "cta": "Ontvang melding"
+      },
+      "ppwrPackaging": {
+        "title": "PPWR-voorbereiding van verpakkingsdata",
+        "description": "Een roadmapbriefing over hoe verpakking-BOM's, leveranciersdocumentatie, bewijs voor gerecyclede inhoud en productfamilielogica kunnen worden gestructureerd voor PPWR-voorbereiding.",
+        "cta": "Roadmap volgen"
+      },
+      "eudrBrief": {
+        "title": "EUDR due-diligence startbriefing",
+        "description": "Een roadmapbriefing voor geolocatiebewijs, leveranciersverklaringen, due-diligence-documentatie en traceerbaarheidsvoorbereiding in grondstofgerelateerde ketens.",
+        "cta": "Roadmap volgen"
       }
     },
-    "ctaBand": {
-      "title": "Begin met CBAM Calculation Engine of plan een demo",
-      "primary": "CBAM Calculation Engine verkennen",
-      "secondary": "Demo plannen"
+    "leadMagnet": {
+      "title": "Begin met de CBAM-voorbereidingschecklist",
+      "description": "Gebruik de checklist om productscope, leveranciersdata, berekeningsinput en bewijsleemtes vóór de volgende rapportagecyclus te structureren.",
+      "cta": "Checklist aanvragen"
     },
     "subscribe": {
-      "title": "Mis geen regelgevingsupdates",
+      "title": "Ontvang updates over regelgevingsworkflows",
+      "description": "Ontvang praktische updates over CBAM, leveranciersbewijs, PPWR, EUDR en productdata-workflows wanneer Arvenza-resources worden gepubliceerd.",
       "emailLabel": "E-mailadres",
       "interestLabel": "Interessegebied",
       "interestPlaceholder": "Selecteer een gebied",
@@ -1570,7 +1561,7 @@
         "general": "Algemeen EU-duurzaamheid"
       },
       "submit": "Updates ontvangen",
-      "success": "Bedankt — we informeren u wanneer nieuwe bronnen beschikbaar zijn."
+      "success": "Bedankt — we informeren u wanneer nieuwe resources beschikbaar zijn."
     }
   },
   "legalPage": {

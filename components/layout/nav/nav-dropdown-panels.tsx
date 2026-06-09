@@ -8,23 +8,24 @@ import { cn } from "@/lib/utils";
 import { platformModuleHref } from "@/lib/platform-module-anchors";
 
 const PLATFORM_MODULE_KEYS = [
-  { key: "supplierEvidence", status: "available" as const },
-  { key: "pcf", status: "pilot" as const },
-  { key: "ppwr", status: "comingSoon" as const },
+  { key: "cbamComplianceConsole", status: "pilot" as const },
+  { key: "ppwr", status: "pilot" as const },
+  { key: "agriClimate", status: "pilot" as const },
   { key: "eudr", status: "comingSoon" as const },
   { key: "dpp", status: "comingSoon" as const },
-  { key: "auditEvidence", status: "available" as const },
-  { key: "regulatoryReporting", status: "pilot" as const },
+  { key: "supplierEvidence", status: "comingSoon" as const },
+  { key: "esgReporting", status: "comingSoon" as const },
 ] as const;
 
 const SOLUTION_KEYS = [
-  { key: "cbam", status: "availableNow" as const, href: "/platform/cbam" as const },
-  { key: "supplierEvidence", status: "available" as const, href: "/solutions" as const },
-  { key: "pcf", status: "pilot" as const, href: "/solutions" as const },
-  { key: "ppwr", status: "roadmap" as const, href: "/solutions" as const },
+  { key: "cbam", status: "ready" as const, href: "/platform/cbam" as const },
+  { key: "cbamComplianceConsole", status: "pilot" as const, href: "/solutions" as const },
+  { key: "ppwr", status: "pilot" as const, href: "/solutions" as const },
+  { key: "agriClimate", status: "pilot" as const, href: "/solutions" as const },
   { key: "eudr", status: "comingSoon" as const, href: "/solutions" as const },
   { key: "dpp", status: "comingSoon" as const, href: "/solutions" as const },
-  { key: "reporting", status: "pilot" as const, href: "/solutions" as const },
+  { key: "supplierEvidence", status: "comingSoon" as const, href: "/solutions" as const },
+  { key: "esgReporting", status: "comingSoon" as const, href: "/solutions" as const },
 ] as const;
 
 const INDUSTRY_KEYS = [
@@ -58,8 +59,8 @@ function statusLabel(
     pilot: tNav("status.pilot"),
     comingSoon: tNav("status.comingSoon"),
     roadmap: tNav("status.roadmap"),
-    availableNow: tNav("status.availableNow"),
-    flagship: tNav("status.flagship"),
+    ready: tNav("status.ready"),
+    coreProduct: tNav("status.coreProduct"),
   };
   return map[status];
 }
@@ -82,8 +83,8 @@ export function PlatformDropdownPanel({ onNavigate, className }: PanelProps) {
           </p>
           <div className="nav-featured-card mt-3">
             <div className="mb-2 flex flex-wrap items-center gap-2">
-              <NavStatusBadge status="flagship" label={t("featuredBadge")} />
-              <NavStatusBadge status="availableNow" label={t("featuredStatus")} />
+              <NavStatusBadge status="coreProduct" label={t("featuredBadge")} />
+              <NavStatusBadge status="ready" label={t("featuredStatus")} />
             </div>
             <h3 className="text-base font-semibold leading-snug text-[#071225] lg:text-[17px]">
               {t("featuredTitle")}
@@ -115,7 +116,7 @@ export function PlatformDropdownPanel({ onNavigate, className }: PanelProps) {
                   className="nav-dropdown-row group"
                   aria-label={moduleTitle}
                 >
-                  <span className="min-w-0 flex-1 text-sm font-medium text-[#071225] group-hover:text-[#7c3aed]">
+                  <span className="min-w-0 flex-1 break-words text-sm font-medium text-[#071225] group-hover:text-[#7c3aed]">
                     {moduleTitle}
                   </span>
                   <NavStatusBadge status={status} label={statusLabel(tNav, status)} />
@@ -143,8 +144,8 @@ export function SolutionsDropdownPanel({ onNavigate, className }: PanelProps) {
         <Link href="/platform/cbam" onClick={onNavigate} className="nav-featured-card-compact mt-2 block">
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-sm font-semibold text-[#071225]">{t("featuredTitle")}</span>
-            <NavStatusBadge status="flagship" label={t("featuredBadge")} />
-            <NavStatusBadge status="availableNow" label={t("featuredStatus")} />
+            <NavStatusBadge status="coreProduct" label={t("featuredBadge")} />
+            <NavStatusBadge status="ready" label={t("featuredStatus")} />
           </div>
         </Link>
         <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#64748b]">

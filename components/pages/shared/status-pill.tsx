@@ -1,13 +1,15 @@
 import { cn } from "@/lib/utils";
 
-type StatusVariant = "flagship" | "available" | "pilot" | "comingSoon" | "roadmap";
+type StatusVariant = "coreProduct" | "ready" | "available" | "pilot" | "inPreparation" | "comingSoon" | "roadmap";
 
 const variantClass: Record<StatusVariant, string> = {
-  flagship: "badge-available",
+  coreProduct: "badge-core-product",
+  ready: "badge-ready",
   available: "badge-available",
   pilot: "badge-pilot",
+  inPreparation: "badge-in-preparation",
   comingSoon: "badge-coming-soon",
-  roadmap: "badge-coming-soon",
+  roadmap: "badge-roadmap",
 };
 
 export function StatusPill({

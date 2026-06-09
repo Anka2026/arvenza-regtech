@@ -1,14 +1,20 @@
 import { cn } from "@/lib/utils";
 
-export type NavStatusKey = "available" | "pilot" | "comingSoon" | "roadmap" | "availableNow" | "flagship";
+export type NavStatusKey =
+  | "available"
+  | "pilot"
+  | "comingSoon"
+  | "roadmap"
+  | "ready"
+  | "coreProduct";
 
 const statusClass: Record<NavStatusKey, string> = {
   available: "nav-badge nav-badge-available",
   pilot: "nav-badge nav-badge-pilot",
   comingSoon: "nav-badge nav-badge-soon",
   roadmap: "nav-badge nav-badge-roadmap",
-  availableNow: "nav-badge nav-badge-available",
-  flagship: "nav-badge nav-badge-flagship",
+  ready: "nav-badge nav-badge-ready",
+  coreProduct: "nav-badge nav-badge-core",
 };
 
 interface NavStatusBadgeProps {

@@ -89,8 +89,8 @@ export function DemoPage() {
                 <div className="demo-preview-card demo-preview-card-main">
                   <div className="flex items-start justify-between gap-3">
                     <div>
-                      <p className="demo-preview-eyebrow">{t("preview.flagshipBadge")}</p>
-                      <p className="demo-preview-title">{t("preview.flagshipTitle")}</p>
+                      <p className="demo-preview-eyebrow">{t("preview.coreProductBadge")}</p>
+                      <p className="demo-preview-title">{t("preview.coreProductTitle")}</p>
                     </div>
                     <span className="demo-preview-pill">{t("preview.status")}</span>
                   </div>
@@ -107,7 +107,7 @@ export function DemoPage() {
 
                 <div className="demo-preview-card demo-preview-card-float">
                   <p className="demo-preview-label">{t("preview.metricsLabel")}</p>
-                  <div className="mt-2 grid grid-cols-3 gap-2">
+                  <div className="mt-2 grid grid-cols-1 gap-2 min-[360px]:grid-cols-3">
                     {previewModuleKeys.map((key) => (
                       <div key={key} className="demo-preview-metric">
                         <span className="demo-preview-metric-value">{t(`preview.metrics.${key}.value`)}</span>
@@ -135,7 +135,7 @@ export function DemoPage() {
 
       <FullBleedSection ariaLabelledby="demo-form-heading" className="section-light py-12 lg:py-14">
         <OrbitWaveMotif variant="section" orbitAlign="right" />
-        <PageContainer className="section-content">
+        <PageContainer className="section-content min-w-0">
           <FadeIn>
             <div className="mx-auto max-w-3xl text-center lg:max-w-none lg:text-left">
               <h2 id="demo-form-heading" className="heading-section-compact">
@@ -192,7 +192,7 @@ export function DemoPage() {
                   </ol>
                 </div>
 
-                <div className="demo-meta-row mt-6 grid grid-cols-2 gap-3">
+                <div className="demo-meta-row mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                   <div className="demo-meta-card">
                     <Clock className="h-4 w-4 text-[#7c3aed]" aria-hidden="true" />
                     <div>
@@ -223,7 +223,7 @@ export function DemoPage() {
       </FullBleedSection>
 
       <FullBleedSection ariaLabelledby="demo-coverage-heading" className="border-y border-[#dde5f2]/70 bg-white/50 py-12 lg:py-14">
-        <PageContainer className="section-content">
+        <PageContainer className="section-content min-w-0">
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">
               <h2 id="demo-coverage-heading" className="heading-section-compact">
@@ -254,7 +254,7 @@ export function DemoPage() {
       </FullBleedSection>
 
       <FullBleedSection ariaLabelledby="demo-audience-heading" className="section-light py-12 lg:py-14">
-        <PageContainer className="section-content">
+        <PageContainer className="section-content min-w-0">
           <FadeIn>
             <div className="demo-audience-band">
               <h2 id="demo-audience-heading" className="text-lg font-semibold tracking-tight text-[#071225] lg:text-xl">
@@ -278,7 +278,7 @@ export function DemoPage() {
 
       <FullBleedSection ariaLabelledby="demo-cta-heading" className="section-light pb-14 lg:pb-16">
         <OrbitWaveMotif variant="cta" orbitAlign="center" />
-        <PageContainer className="section-content">
+        <PageContainer className="section-content min-w-0">
           <FadeIn>
             <div className="demo-cta-band relative overflow-hidden rounded-[1.75rem] bg-gradient-cta px-8 py-10 shadow-[0_24px_64px_rgba(124,58,237,0.28)] sm:px-12 sm:py-11 lg:px-14 lg:py-12">
               <div

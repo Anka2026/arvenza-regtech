@@ -18,7 +18,7 @@ export function RegulationsCbamPage() {
   return (
     <>
       <FullBleedSection ariaLabelledby="cbam-reg-heading" className="section-hero-light pt-24 lg:pt-28">
-        <PageContainer className="section-content pb-10">
+        <PageContainer className="section-content min-w-0 pb-10">
           <FadeIn>
             <SectionHeading
               id="cbam-reg-heading"
@@ -31,7 +31,7 @@ export function RegulationsCbamPage() {
       </FullBleedSection>
 
       <FullBleedSection className="section-light pb-14 lg:pb-16">
-        <PageContainer className="section-content max-w-3xl">
+        <PageContainer className="section-content min-w-0 max-w-3xl">
           <div className="space-y-10">
             {SECTION_KEYS.map((key, i) => (
               <FadeIn key={key} delay={i * 0.03}>
@@ -48,9 +48,9 @@ export function RegulationsCbamPage() {
           </div>
 
           <FadeIn delay={0.15}>
-            <div className="mt-14 overflow-hidden rounded-[1.75rem] border border-[#7c3aed]/20 bg-gradient-to-br from-[#7c3aed]/[0.06] via-white to-[#2563eb]/[0.04] p-8 shadow-card lg:p-10">
-              <div className="grid items-center gap-8 lg:grid-cols-[1.15fr_1fr] lg:gap-10">
-                <div className="relative order-2 lg:order-1">
+            <div className="mt-14 overflow-hidden rounded-[1.25rem] border border-[#7c3aed]/20 bg-gradient-to-br from-[#7c3aed]/[0.06] via-white to-[#2563eb]/[0.04] p-5 shadow-card sm:rounded-[1.75rem] sm:p-8 lg:p-10">
+              <div className="grid min-w-0 grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_1fr] lg:gap-10">
+                <div className="relative order-2 min-w-0 lg:order-1">
                   <div
                     className="pointer-events-none absolute -inset-4 rounded-3xl bg-[radial-gradient(circle,rgba(124,58,237,0.14),transparent_70%)] blur-2xl"
                     aria-hidden="true"

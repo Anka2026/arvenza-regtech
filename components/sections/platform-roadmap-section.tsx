@@ -13,27 +13,26 @@ import {
   TreePine,
   Fingerprint,
   Users,
-  LineChart,
-  FileCheck,
   BarChart3,
   ArrowRight,
+  LayoutDashboard,
+  Sprout,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type RoadmapStatus = "available" | "pilot" | "comingSoon";
+type RoadmapStatus = "pilot" | "comingSoon";
 
 const roadmapIcons: Record<RoadmapModuleKey, typeof TreePine> = {
-  supplier: Users,
-  pcf: LineChart,
+  cbamComplianceConsole: LayoutDashboard,
   ppwr: Package,
+  agriClimate: Sprout,
   eudr: TreePine,
   dpp: Fingerprint,
-  auditEvidence: FileCheck,
-  regulatoryReporting: BarChart3,
+  supplier: Users,
+  esgReporting: BarChart3,
 };
 
 const statusBadgeClass: Record<RoadmapStatus, string> = {
-  available: "badge-available",
   pilot: "badge-pilot",
   comingSoon: "badge-coming-soon",
 };
@@ -60,18 +59,18 @@ export function PlatformRoadmapSection() {
         <FadeIn delay={0.04}>
           <article className="card-dark mb-5 border-[#7C3AED]/35 lg:mb-6">
             <div className="mb-3 flex flex-wrap items-center gap-2">
-              <span className="badge-available">{t("flagshipLabel")}</span>
-              <span className="badge-available">{t("flagshipStatus")}</span>
+              <span className="badge-core-product">{t("coreProductLabel")}</span>
+              <span className="badge-ready">{t("coreProductStatus")}</span>
             </div>
-            <h3 className="text-lg font-semibold text-[#F8FAFC] lg:text-xl">{t("flagshipTitle")}</h3>
+            <h3 className="text-lg font-semibold text-[#F8FAFC] lg:text-xl">{t("coreProductTitle")}</h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#94A3B8] lg:text-[15px]">
-              {t("flagshipDescription")}
+              {t("coreProductDescription")}
             </p>
             <Link
               href="/platform/cbam"
               className="group mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#C4B5FD] transition-colors hover:text-white"
             >
-              {t("flagshipCta")}
+              {t("coreProductCta")}
               <ArrowRight
                 className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5"
                 aria-hidden="true"

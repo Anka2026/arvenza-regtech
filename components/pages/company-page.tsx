@@ -1,14 +1,15 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Building2, Layers, Scale, Workflow } from "lucide-react";
+import { Building2, Calculator, Clock, GitBranch, Layers } from "lucide-react";
 import { FullBleedSection, PageContainer } from "@/components/layout/page-container";
 import { OrbitWaveMotif } from "@/components/home/orbit-wave-motif";
 import { FadeIn } from "@/components/ui/fade-in";
 import { PageCtaBand } from "@/components/pages/shared/page-cta-band";
 
-const SECTION_KEYS = ["whatIs", "experience", "operator", "legal"] as const;
-const SECTION_ICONS = [Layers, Workflow, Building2, Scale] as const;
+const SECTION_KEYS = ["whatIs", "whyNow", "whyCbamFirst", "roadmapLogic", "operatedBy"] as const;
+const SECTION_ICONS = [Layers, Clock, Calculator, GitBranch, Building2] as const;
+const TRUST_KEYS = ["item1", "item2", "item3", "item4", "item5"] as const;
 
 export function CompanyPage() {
   const t = useTranslations("companyPage");
@@ -42,25 +43,25 @@ export function CompanyPage() {
                   className="pointer-events-none absolute -inset-5 rounded-[2rem] bg-[radial-gradient(circle,rgba(124,58,237,0.14),transparent_68%)] blur-2xl"
                   aria-hidden="true"
                 />
-                <div className="corporate-info-card corporate-info-card-featured">
-                  <p className="corporate-info-label">{t("cards.flagship.label")}</p>
-                  <p className="corporate-info-title">{t("cards.flagship.title")}</p>
-                  <span className="corporate-info-badge">{t("cards.flagship.badge")}</span>
+                <div className="corporate-info-card">
+                  <p className="corporate-info-label">{t("cards.productBrand.label")}</p>
+                  <p className="corporate-info-title">{t("cards.productBrand.title")}</p>
                 </div>
                 <div className="corporate-info-card">
-                  <p className="corporate-info-label">{t("cards.platform.label")}</p>
-                  <p className="corporate-info-title">{t("cards.platform.title")}</p>
+                  <p className="corporate-info-label">{t("cards.legalOperator.label")}</p>
+                  <p className="corporate-info-title">{t("cards.legalOperator.title")}</p>
+                  <p className="corporate-info-detail mt-1">{t("cards.legalOperator.kvk")}</p>
                 </div>
-                <div className="corporate-info-card corporate-info-card-row">
-                  <div>
-                    <p className="corporate-info-label">{t("cards.operator.label")}</p>
-                    <p className="corporate-info-title">{t("cards.operator.title")}</p>
-                    <p className="corporate-info-detail">{t("cards.operator.detail")}</p>
-                  </div>
-                  <div className="corporate-info-kvk">
-                    <p className="corporate-info-label">{t("cards.registry.label")}</p>
-                    <p className="corporate-info-title">{t("cards.registry.title")}</p>
-                  </div>
+                <div className="corporate-info-card corporate-info-card-featured">
+                  <p className="corporate-info-label">{t("cards.readyProduct.label")}</p>
+                  <p className="corporate-info-title">{t("cards.readyProduct.title")}</p>
+                  <span className="corporate-info-badge">{t("cards.readyProduct.status")}</span>
+                </div>
+                <div className="corporate-info-card">
+                  <p className="corporate-info-label">{t("cards.roadmapLogic.label")}</p>
+                  <p className="corporate-info-title text-[15px] leading-snug lg:text-base">
+                    {t("cards.roadmapLogic.title")}
+                  </p>
                 </div>
               </div>
             </FadeIn>
@@ -69,23 +70,33 @@ export function CompanyPage() {
       </FullBleedSection>
 
       <FullBleedSection className="section-light py-12 lg:py-14">
-        <PageContainer className="section-content">
+        <PageContainer className="section-content min-w-0">
           <FadeIn>
-            <h2 className="heading-section-compact max-w-3xl">{t("sectionsTitle")}</h2>
+            <article className="corporate-section-card corporate-section-card-featured">
+              <div className="corporate-section-icon">
+                <Layers className="h-[18px] w-[18px] text-[#7c3aed]" aria-hidden="true" />
+              </div>
+              <h2 className="mt-3 text-[clamp(1.125rem,1.5vw+0.5rem,1.375rem)] font-bold tracking-[-0.02em] text-[#071225]">
+                {t("sections.whatIs.title")}
+              </h2>
+              <p className="mt-2.5 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
+                {t("sections.whatIs.body")}
+              </p>
+            </article>
           </FadeIn>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:gap-5">
-            {SECTION_KEYS.map((key, i) => {
-              const Icon = SECTION_ICONS[i];
+          <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-6 lg:gap-5">
+            {SECTION_KEYS.slice(1).map((key, i) => {
+              const Icon = SECTION_ICONS[i + 1];
               return (
-                <FadeIn key={key} delay={i * 0.04}>
-                  <article className="corporate-section-card">
+                <FadeIn key={key} delay={0.04 + i * 0.04}>
+                  <article className="corporate-section-card h-full">
                     <div className="corporate-section-icon">
                       <Icon className="h-[18px] w-[18px] text-[#7c3aed]" aria-hidden="true" />
                     </div>
-                    <h3 className="mt-3 text-base font-semibold text-[#071225] lg:text-[17px]">
+                    <h2 className="mt-3 text-base font-semibold leading-snug text-[#071225] lg:text-[17px]">
                       {t(`sections.${key}.title`)}
-                    </h3>
+                    </h2>
                     <p className="mt-2.5 text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
                       {t(`sections.${key}.body`)}
                     </p>
@@ -96,18 +107,28 @@ export function CompanyPage() {
           </div>
 
           <FadeIn delay={0.12}>
-            <div className="corporate-legal-note mt-8">
-              <p>{t("legalNote")}</p>
+            <div
+              className="corporate-trust-strip mt-10 rounded-[1.25rem] border border-[#7c3aed]/16 bg-gradient-to-br from-[#7c3aed]/[0.06] via-white to-[#2563eb]/[0.04] p-5 sm:rounded-[1.5rem] sm:p-6 lg:mt-12 lg:p-8"
+              aria-label={t("trust.ariaLabel")}
+            >
+              <ul className="flex flex-wrap gap-2">
+                {TRUST_KEYS.map((key) => (
+                  <li key={key}>
+                    <span className="corporate-trust-chip">{t(`trust.${key}`)}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </FadeIn>
 
           <div className="mt-10 lg:mt-12">
             <PageCtaBand
               title={t("cta.title")}
+              description={t("cta.body")}
               primaryLabel={t("cta.primary")}
-              primaryHref="/demo"
+              primaryHref="/platform/cbam"
               secondaryLabel={t("cta.secondary")}
-              secondaryHref="/platform/cbam"
+              secondaryHref="/demo"
             />
           </div>
         </PageContainer>

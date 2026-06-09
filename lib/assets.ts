@@ -86,7 +86,7 @@ export const MODULE_KEYS: ModuleKey[] = [
   "agri",
 ];
 
-/** CBAM customer journey — flagship workflow */
+/** CBAM customer journey — core product workflow */
 export const CBAM_JOURNEY_STEP_KEYS = [
   "assess",
   "collect",
@@ -98,15 +98,15 @@ export const CBAM_JOURNEY_STEP_KEYS = [
 
 export type CbamJourneyStepKey = (typeof CBAM_JOURNEY_STEP_KEYS)[number];
 
-/** Platform roadmap modules — statuses vary; CBAM flagship is separate */
+/** Platform roadmap modules — CBAM Calculation Engine is separate (ready core product) */
 export const ROADMAP_MODULE_CONFIG = [
-  { key: "supplier", status: "available" as const },
-  { key: "pcf", status: "pilot" as const },
-  { key: "ppwr", status: "comingSoon" as const },
+  { key: "cbamComplianceConsole", status: "pilot" as const },
+  { key: "ppwr", status: "pilot" as const },
+  { key: "agriClimate", status: "pilot" as const },
   { key: "eudr", status: "comingSoon" as const },
   { key: "dpp", status: "comingSoon" as const },
-  { key: "auditEvidence", status: "available" as const },
-  { key: "regulatoryReporting", status: "pilot" as const },
+  { key: "supplier", status: "comingSoon" as const },
+  { key: "esgReporting", status: "comingSoon" as const },
 ] as const;
 
 export type RoadmapModuleKey = (typeof ROADMAP_MODULE_CONFIG)[number]["key"];

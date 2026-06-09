@@ -98,7 +98,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-x-5 gap-y-7 sm:grid-cols-3 lg:col-span-7 lg:grid-cols-5 lg:gap-x-3 lg:gap-y-0">
+          <div className="grid grid-cols-1 gap-x-5 gap-y-7 min-[480px]:grid-cols-2 lg:col-span-7 lg:grid-cols-5 lg:gap-x-3 lg:gap-y-0">
             {linkGroups.map((group) => (
               <div key={group.title} className="min-w-0">
                 <h3 className="footer-column-title">{group.title}</h3>
@@ -114,7 +114,7 @@ export function Footer() {
               </div>
             ))}
 
-            <div className="min-w-0">
+            <div className="min-w-0 min-[480px]:col-span-2 lg:col-span-1">
               <h3 className="footer-column-title">{t("offices.title")}</h3>
               <ul className="list-none space-y-3">
                 {officeKeys.map((office) => (

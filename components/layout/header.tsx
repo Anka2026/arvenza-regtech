@@ -279,7 +279,7 @@ export function Header() {
 
         <button
           type="button"
-          className="rounded-lg p-2.5 text-[#64748b] transition-colors hover:bg-white/85 hover:text-[#071225] lg:hidden"
+          className="rounded-lg p-2.5 text-[#64748b] transition-colors hover:bg-white/85 hover:text-[#071225] xl:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-expanded={mobileOpen}
           aria-label={mobileOpen ? tA11y("closeMenu") : tA11y("openMenu")}
@@ -294,7 +294,7 @@ export function Header() {
 
       {mobileOpen && (
         <div
-          className="fixed inset-0 top-[4.75rem] z-40 overflow-y-auto border-t border-[#dde5f2] bg-white/95 backdrop-blur-xl sm:top-20 lg:hidden"
+          className="fixed inset-0 top-[4.75rem] z-40 overflow-y-auto overflow-x-clip border-t border-[#dde5f2] bg-white/95 backdrop-blur-xl sm:top-20 xl:hidden"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation"

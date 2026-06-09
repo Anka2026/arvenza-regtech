@@ -20,7 +20,7 @@ export function SectionHeading({
   compact = false,
 }: SectionHeadingProps) {
   return (
-    <div className={cn("max-w-4xl", className)}>
+    <div className={cn("max-w-4xl min-w-0", className)}>
       {eyebrow && (
         <p className={dark ? "eyebrow-dark mb-2.5" : "eyebrow mb-2.5"}>{eyebrow}</p>
       )}
