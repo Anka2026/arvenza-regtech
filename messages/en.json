@@ -1,0 +1,1735 @@
+{
+  "metadata": {
+    "home": {
+      "title": "Arvenza RegTech | CBAM Calculation Engine and EU Sustainability Compliance Platform",
+      "description": "Arvenza RegTech delivers CBAM Calculation Engine for exporters. Collect supplier data, calculate embedded emissions, and prepare declaration-ready, audit-ready CBAM evidence in one structured workflow."
+    },
+    "platform": {
+      "title": "Arvenza RegTech | EU Sustainability Compliance Platform",
+      "description": "CBAM-first platform hub with supplier data collection, embedded emissions calculation, and expanding EU sustainability modules."
+    },
+    "regulations": {
+      "title": "EU Sustainability Regulations | CBAM, PPWR, EUDR — Arvenza RegTech",
+      "description": "Regulatory coverage across CBAM, PPWR, EUDR, Digital Product Passport, supplier evidence management, and CSRD/ESRS support."
+    },
+    "resources": {
+      "title": "Arvenza RegTech Resources | CBAM and EU Sustainability Regulations",
+      "description": "Practical resources, guides, and regulation updates for CBAM, PPWR, EUDR, and Digital Product Passport."
+    },
+    "about": {
+      "title": "About Us | Arvenza RegTech",
+      "description": "Arvenza RegTech is the EU Sustainability Compliance Platform — a product brand operated by Anka Sustainability B.V., the Netherlands."
+    },
+    "contact": {
+      "title": "Contact | Arvenza RegTech",
+      "description": "Get in touch with the ARVENZA team. Offices in the Netherlands and Türkiye."
+    },
+    "demo": {
+      "title": "Request a Demo | Arvenza RegTech",
+      "description": "Explore CBAM Calculation Engine and the EU sustainability compliance platform in a demo tailored to your organisation."
+    },
+    "cbamPlatform": {
+      "title": "CBAM Calculation Engine | Supplier Data to Declaration-Ready Evidence",
+      "description": "CBAM Calculation Engine — supplier data collection, embedded emissions calculation and declaration-ready evidence in one structured workflow."
+    },
+    "solutions": {
+      "title": "Arvenza RegTech Solutions | CBAM, PPWR, EUDR and DPP Roadmap",
+      "description": "Structured CBAM compliance today with a broader EU sustainability compliance roadmap across PPWR, EUDR, and Digital Product Passport."
+    },
+    "industries": {
+      "title": "Arvenza RegTech Industries | Sector Workflows for EU Regulations",
+      "description": "Sector-specific EU sustainability compliance workflows for steel, packaging, automotive, electronics, agriculture, and trade."
+    },
+    "company": {
+      "title": "Arvenza RegTech Company | Product Brand Operated by Anka Sustainability B.V.",
+      "description": "Arvenza RegTech is a product brand operated by Anka Sustainability B.V., supporting structured EU sustainability compliance workflows."
+    },
+    "regulationsCbam": {
+      "title": "CBAM / SKDM Guide | Supplier Data and Embedded Emissions Calculation",
+      "description": "How CBAM preparation requires supplier data, traceable embedded emissions calculation, and declaration-ready evidence."
+    },
+    "legalPrivacy": {
+      "title": "Privacy Policy | Arvenza RegTech",
+      "description": "Privacy policy for Arvenza RegTech platform services operated by Anka Sustainability B.V."
+    },
+    "legalTerms": {
+      "title": "Terms of Service | Arvenza RegTech",
+      "description": "Terms of service for Arvenza RegTech platform services operated by Anka Sustainability B.V."
+    },
+    "legalCookies": {
+      "title": "Cookie Policy | Arvenza RegTech",
+      "description": "Cookie policy for the Arvenza RegTech website and platform services."
+    },
+    "legalNotice": {
+      "title": "Legal Notice | Arvenza RegTech",
+      "description": "Legal notice and company information for Arvenza RegTech and Anka Sustainability B.V."
+    },
+    "legalAccessibility": {
+      "title": "Accessibility Statement | Arvenza RegTech",
+      "description": "Accessibility statement for the Arvenza RegTech website."
+    }
+  },
+  "nav": {
+    "platform": "Platform",
+    "solutions": "Solutions",
+    "industries": "Industries",
+    "resources": "Resources",
+    "company": "Corporate",
+    "login": "Login",
+    "bookDemo": "Book a Demo",
+    "brandSubtitle": "RegTech",
+    "brandName": "Arvenza RegTech",
+    "brandAriaLabel": "Arvenza RegTech — Home",
+    "status": {
+      "available": "Available",
+      "pilot": "Pilot",
+      "comingSoon": "Coming Soon",
+      "roadmap": "Roadmap",
+      "availableNow": "Available now",
+      "flagship": "Flagship"
+    },
+    "platformMenu": {
+      "featuredLabel": "Featured Solution",
+      "featuredTitle": "CBAM Calculation Engine",
+      "featuredBadge": "Flagship",
+      "featuredStatus": "Live",
+      "featuredDescription": "Supplier data collection, embedded emissions calculation and declaration-ready evidence workflows in one structured engine.",
+      "featuredCta": "Explore CBAM Calculation Engine",
+      "modulesLabel": "Platform Modules",
+      "modules": {
+        "supplierEvidence": {
+          "title": "Supplier Evidence Hub"
+        },
+        "pcf": {
+          "title": "Product Carbon / LCA Workflows"
+        },
+        "ppwr": {
+          "title": "PPWR & Packaging BOM"
+        },
+        "eudr": {
+          "title": "EUDR Due Diligence"
+        },
+        "dpp": {
+          "title": "Digital Product Passport"
+        },
+        "auditEvidence": {
+          "title": "Audit-Ready Evidence Packs"
+        },
+        "regulatoryReporting": {
+          "title": "Regulatory Reporting Dashboard"
+        }
+      }
+    },
+    "solutionsMenu": {
+      "featuredLabel": "Featured",
+      "featuredTitle": "CBAM Calculation Engine",
+      "featuredBadge": "Flagship",
+      "featuredStatus": "Live",
+      "areasLabel": "Solution areas",
+      "areas": {
+        "cbam": "CBAM Compliance",
+        "supplierEvidence": "Supplier Evidence Workflows",
+        "pcf": "Product Carbon / LCA Workflows",
+        "ppwr": "Packaging & PPWR Readiness",
+        "eudr": "EUDR Due Diligence",
+        "dpp": "Digital Product Passport",
+        "reporting": "Regulatory Reporting Dashboard"
+      }
+    },
+    "industriesMenu": {
+      "items": {
+        "steelAluminium": "Steel & Aluminium",
+        "packagingFmcg": "Packaging & FMCG",
+        "automotive": "Automotive Supply Chains",
+        "electronics": "Electronics & Batteries",
+        "agriculture": "Agriculture & Food",
+        "importers": "Importers & Exporters"
+      }
+    },
+    "resourcesMenu": {
+      "items": {
+        "regulationUpdates": "Regulation Updates",
+        "guides": "Guides",
+        "cbamChecklist": "CBAM Checklist",
+        "insights": "Blog / Insights",
+        "moreComingSoon": "More resources coming soon"
+      }
+    },
+    "companyMenu": {
+      "items": {
+        "about": "About Us",
+        "legal": "Legal Notice",
+        "contact": "Request a Demo"
+      }
+    }
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "readMore": "Read more",
+    "getStarted": "Get started",
+    "contactUs": "Contact Us",
+    "explorePlatform": "Explore Platform",
+    "requestDemo": "Request Demo",
+    "viewAll": "View all",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "required": "Required",
+    "optional": "Optional",
+    "successTitle": "Thank you",
+    "successMessage": "Your message has been received. We will respond shortly.",
+    "errorRequired": "This field is required",
+    "errorEmail": "Please enter a valid email address",
+    "brandName": "Arvenza RegTech",
+    "tagline": "EU Sustainability Compliance Platform",
+    "email": "info@ankasustainability.com",
+    "website": "www.arvenza.net"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Arvenza RegTech",
+      "platformTagline": "EU Sustainability Compliance Platform",
+      "title": "CBAM compliance, from supplier data to declaration-ready calculations",
+      "description": "Arvenza helps exporters collect supplier emission data, calculate embedded emissions and prepare audit-ready CBAM evidence — in one structured workflow.",
+      "ctaPrimary": "Book a Demo",
+      "ctaSecondary": "Explore the Platform",
+      "platformVision": "Arvenza RegTech is built on the EU Sustainability Compliance Platform vision — covering CBAM, PPWR, EUDR, Digital Product Passport and supplier evidence workflows.",
+      "trustAriaLabel": "Platform capabilities",
+      "trust": {
+        "item1": "Supplier data collection",
+        "item2": "Embedded emissions calculation",
+        "item3": "Audit-ready evidence",
+        "item4": "Declaration-ready output"
+      },
+      "screenshotAlt": "CBAM Calculation Engine dashboard",
+      "mockCards": {
+        "supplier": "Supplier Data",
+        "supplierStatus": "12 requests · 9 complete",
+        "emissions": "Embedded Emissions",
+        "emissionsValue": "2.84 tCO₂e / t"
+      }
+    },
+    "problem": {
+      "title": "CBAM preparation should not fall apart before the declaration",
+      "description": "When supplier data, calculation methodology and evidence files live in different places, the same operational crisis restarts every quarter.",
+      "items": {
+        "item1": {
+          "title": "Supplier data stays trapped in email and Excel",
+          "description": "Collecting data takes weeks; formats are inconsistent and gaps are spotted too late."
+        },
+        "item2": {
+          "title": "CBAM calculations require methodology and traceability",
+          "description": "Direct/indirect split, electricity footprint, assumptions and default value comparisons increase error risk when tracked manually."
+        },
+        "item3": {
+          "title": "When declaration time arrives, the evidence crisis begins",
+          "description": "Supporting documents, supplier declarations and calculation notes are not ready in one file — so the process compresses into the final days."
+        }
+      }
+    },
+    "platformOverview": {
+      "eyebrow": "Flagship Product",
+      "title": "CBAM Calculation Engine",
+      "description": "Structured CBAM preparation from supplier data collection through embedded emissions calculation, evidence management, and declaration-ready outputs—with methodology audit trail built in.",
+      "cta": "Explore CBAM Calculation Engine",
+      "screenshotAlt": "CBAM Calculation Engine dashboard"
+    },
+    "platformRoadmap": {
+      "eyebrow": "Platform Roadmap",
+      "title": "CBAM today. Broader EU compliance tomorrow",
+      "description": "Arvenza RegTech builds a broader platform vision on CBAM Calculation Engine — its flagship product — covering PPWR, EUDR, Digital Product Passport and supplier evidence workflows.",
+      "flagshipLabel": "Flagship",
+      "flagshipStatus": "Available now",
+      "flagshipTitle": "CBAM Calculation Engine",
+      "flagshipDescription": "Supplier data collection, embedded emissions calculation, evidence workflows and declaration-ready CBAM preparation — in one platform.",
+      "flagshipCta": "Explore CBAM Calculation Engine",
+      "modulesLabel": "Platform modules",
+      "status": {
+        "available": "Available",
+        "pilot": "Pilot",
+        "comingSoon": "Coming Soon"
+      },
+      "items": {
+        "supplier": {
+          "title": "Supplier Evidence Hub",
+          "description": "Centralized supplier evidence management and validation across compliance workflows."
+        },
+        "pcf": {
+          "title": "Product Carbon / LCA Workflows",
+          "description": "Structured product carbon footprint and lifecycle assessment data workflows."
+        },
+        "ppwr": {
+          "title": "PPWR & Packaging BOM",
+          "description": "Packaging data management aligned with PPWR requirements and recyclability targets."
+        },
+        "eudr": {
+          "title": "EUDR Due Diligence",
+          "description": "Geolocation, risk assessment and traceability evidence for EU Deforestation Regulation compliance."
+        },
+        "dpp": {
+          "title": "Digital Product Passport",
+          "description": "Structured product data for Digital Product Passport and ESPR compliance."
+        },
+        "auditEvidence": {
+          "title": "Audit-Ready Evidence Packs",
+          "description": "Structured evidence assembly with quality flags and methodology notes for review."
+        },
+        "regulatoryReporting": {
+          "title": "Regulatory Reporting Dashboard",
+          "description": "Compliance dashboards, gap tracking and structured regulatory reporting outputs."
+        }
+      }
+    },
+    "journey": {
+      "eyebrow": "CBAM Customer Journey",
+      "title": "Assess → Collect → Calculate → Evidence → Report → Monitor",
+      "description": "CBAM Calculation Engine turns CBAM preparation into one structured customer journey.",
+      "capabilityLabel": "Platform capability",
+      "steps": {
+        "assess": {
+          "name": "Assess",
+          "subtitle": "Scope & Exposure",
+          "outcome": "See which products fall under CBAM scope, supplier risks and data gaps in one view.",
+          "capability": "CBAM scope mapping, CN/GTIP code checker, supplier risk overview"
+        },
+        "collect": {
+          "name": "Collect",
+          "subtitle": "Supplier Data Collection",
+          "outcome": "Open supplier access; collect emissions, production, electricity, fuel, process and evidence data in a structured way.",
+          "capability": "Supplier portal, data request workflows, evidence upload, completeness tracking"
+        },
+        "calculate": {
+          "name": "Calculate",
+          "subtitle": "Embedded Emissions Calculation",
+          "outcome": "Calculate product-level embedded emissions, direct/indirect split and electricity footprint from collected data.",
+          "capability": "CBAM Calculation Engine, default value comparison, methodology audit trail"
+        },
+        "evidence": {
+          "name": "Evidence",
+          "subtitle": "Evidence File",
+          "outcome": "Compile supplier declarations, documents, data quality notes, assumptions and methodology in one file.",
+          "capability": "Evidence pack builder, document library, quality flags, methodology notes"
+        },
+        "report": {
+          "name": "Report",
+          "subtitle": "Declaration Preparation",
+          "outcome": "Prepare declaration-ready CBAM output for importers, verifiers or internal teams.",
+          "capability": "Declaration export, importer-ready format, verifier briefing pack"
+        },
+        "monitor": {
+          "name": "Monitor",
+          "subtitle": "Continuous Tracking",
+          "outcome": "Track missing suppliers, low-quality data, upcoming periods and action lists.",
+          "capability": "Compliance dashboard, gap tracker, deadline alerts, supplier status overview"
+        }
+      }
+    },
+    "supplierPortal": {
+      "eyebrow": "Supplier Data Collection",
+      "title": "Collect supplier data in a structured way",
+      "description": "CBAM Calculation Engine gives suppliers controlled access to submit data and evidence — with full visibility for your compliance team.",
+      "screenshotAlt": "CBAM Calculation Engine workspace",
+      "bullets": {
+        "item1": "Supplier access with role-based permissions",
+        "item2": "Data request workflows by product and period",
+        "item3": "Evidence upload with document validation",
+        "item4": "Completeness tracking across supplier responses",
+        "item5": "Missing data visibility before declaration deadlines"
+      },
+      "ui": {
+        "title": "Supplier workflow",
+        "steps": {
+          "item1": { "label": "Supplier request sent", "status": "Complete", "state": "done" },
+          "item2": { "label": "Data entry pending", "status": "3 suppliers", "state": "active" },
+          "item3": { "label": "Evidence uploaded", "status": "12 documents", "state": "done" },
+          "item4": { "label": "Completeness checked", "status": "9/12", "state": "active" },
+          "item5": { "label": "Review required", "status": "2 items", "state": "pending" }
+        }
+      }
+    },
+    "calculation": {
+      "eyebrow": "Embedded Emissions Calculation",
+      "title": "Manage CBAM calculations with methodology trails",
+      "description": "Calculate embedded emissions with traceable logic — direct and indirect emissions, electricity footprints and default value comparisons maintained in a methodology audit trail.",
+      "screenshotAlt": "CBAM Calculation Engine executive intelligence view",
+      "bullets": {
+        "item1": "Embedded emissions calculation by product and installation",
+        "item2": "Direct and indirect emissions with clear allocation logic",
+        "item3": "Electricity footprint and emission factor management",
+        "item4": "Default value comparison and deviation documentation",
+        "item5": "Full methodology audit trail for every calculation step"
+      }
+    },
+    "evidence": {
+      "eyebrow": "CBAM Evidence",
+      "title": "Build a declaration-ready CBAM evidence file",
+      "description": "Assemble supplier declarations, supporting documents and quality indicators into a structured evidence file ready for declaration and review.",
+      "screenshotAlt": "CBAM Calculation Engine evidence and readiness dashboard",
+      "bullets": {
+        "item1": "Supplier declarations linked to calculation inputs",
+        "item2": "Supporting documents with version and source tracking",
+        "item3": "Data quality flags and resolution workflow",
+        "item4": "Methodology notes and assumptions",
+        "item5": "Importer / verifier briefing pack",
+        "item6": "Declaration-ready evidence file assembly"
+      },
+      "ui": {
+        "title": "Evidence pack",
+        "badge": "Review-ready",
+        "items": {
+          "item1": { "label": "Supplier declarations", "meta": "8 suppliers · Q2", "status": "Verified" },
+          "item2": { "label": "Supporting documents", "meta": "24 documents", "status": "Verified" },
+          "item3": { "label": "Quality indicators", "meta": "2 flags", "status": "In review" },
+          "item4": { "label": "Methodology notes", "meta": "v3.2", "status": "Draft" }
+        },
+        "readinessLabel": "Evidence readiness",
+        "readinessHint": "3 items to complete before declaration window"
+      }
+    },
+    "trustBlock": {
+      "eyebrow": "Trust & Expertise",
+      "title": "Built on regulatory implementation experience",
+      "description": "Arvenza RegTech is developed with the regulatory implementation expertise of Anka Sustainability B.V.",
+      "legalNote": "Arvenza RegTech is a product brand operated by Anka Sustainability B.V. KvK: 99787784.",
+      "items": {
+        "expertise": "20+ years EU sustainability and regulatory implementation experience",
+        "engine": "CBAM Calculation Engine — available now",
+        "output": "Quarterly declaration-ready output",
+        "anka": "Built by Anka Sustainability B.V. expertise",
+        "languages": "EN / TR / NL platform languages"
+      }
+    },
+    "dashboardPreview": {
+      "eyebrow": "Product Preview",
+      "title": "Declaration-Ready CBAM Workflow",
+      "description": "From supplier data intake to embedded emissions calculation and audit-ready evidence—structured in one CBAM compliance workflow.",
+      "screenshotAlt": "CBAM Calculation Engine dashboard",
+      "bullets": {
+        "item1": "Supplier Data Collection & Validation",
+        "item2": "Embedded Emissions Calculation",
+        "item3": "Evidence-Based Documentation",
+        "item4": "Methodology Audit Trail"
+      },
+      "activityTitle": "Recent Activity",
+      "trailTitle": "Evidence Trail",
+      "trailItems": {
+        "item1": "Supplier data received",
+        "item2": "Emissions calculated",
+        "item3": "Evidence validated",
+        "item4": "Declaration output prepared"
+      },
+      "activityItems": {
+        "item1": "CBAM embedded emissions recalculated",
+        "item2": "Supplier evidence uploaded — 8 documents",
+        "item3": "Methodology audit trail updated",
+        "item4": "Declaration-ready report generated"
+      },
+      "activityTimes": {
+        "item1": "2 min ago",
+        "item2": "18 min ago",
+        "item3": "1 hr ago",
+        "item4": "3 hr ago"
+      }
+    },
+    "howItWorks": {
+      "eyebrow": "CBAM Workflow",
+      "title": "Assess → Collect → Calculate → Evidence → Report → Monitor",
+      "description": "The Arvenza CBAM customer journey structures compliance preparation from initial assessment through ongoing monitoring.",
+      "steps": {
+        "assess": {
+          "title": "Assess",
+          "description": "Scope CBAM obligations, product coverage, and data requirements across your supply chain."
+        },
+        "collect": {
+          "title": "Collect",
+          "description": "Gather supplier emission data and supporting documentation in structured intake workflows."
+        },
+        "calculate": {
+          "title": "Calculate",
+          "description": "Calculate embedded emissions with methodology-aligned calculation logic and audit trail."
+        },
+        "evidence": {
+          "title": "Evidence",
+          "description": "Organize regulatory documentation, validation records, and defensible evidence chains."
+        },
+        "report": {
+          "title": "Report",
+          "description": "Prepare declaration-ready outputs and structured CBAM reporting documentation."
+        },
+        "monitor": {
+          "title": "Monitor",
+          "description": "Track data changes, workflow status, and compliance readiness over reporting periods."
+        }
+      }
+    },
+    "regulatoryCoverage": {
+      "eyebrow": "Regulatory Scope",
+      "title": "CBAM-First, EU Sustainability Roadmap",
+      "description": "Arvenza RegTech starts with CBAM compliance and expands toward broader EU sustainability regulation coverage.",
+      "statusAvailable": "Available",
+      "statusComingSoon": "Coming Soon",
+      "items": {
+        "cbam": {
+          "title": "CBAM / SKDM",
+          "description": "Supplier data collection, embedded emissions calculation, and declaration-ready CBAM preparation."
+        },
+        "ppwr": {
+          "title": "PPWR",
+          "description": "Packaging data, recyclability metrics, and PPWR compliance requirements."
+        },
+        "eudr": {
+          "title": "EUDR",
+          "description": "Due diligence, geolocation, and traceability evidence management."
+        },
+        "dpp": {
+          "title": "Digital Product Passport",
+          "description": "Structured product data for Digital Product Passport and ESPR compliance."
+        },
+        "supplier": {
+          "title": "Supplier Evidence",
+          "description": "Supplier data collection, evidence validation, and chain tracking."
+        },
+        "csrd": {
+          "title": "CSRD / ESRS",
+          "description": "ESG evidence storage, disclosure workflows, and structured reporting."
+        }
+      }
+    },
+    "valueStrip": {
+      "title": "Platform values",
+      "items": {
+        "workflows": "Audit-Ready Workflows",
+        "evidence": "Evidence & Document Management",
+        "modules": "CBAM-First Platform",
+        "traceability": "End-to-End Traceability",
+        "security": "Enterprise-Grade Security"
+      }
+    },
+    "trustStrip": {
+      "title": "Arvenza RegTech trust indicators",
+      "entityNote": "Arvenza RegTech is a product brand operated by Anka Sustainability B.V., the Netherlands. All platform services are provided by Anka Sustainability B.V.",
+      "items": {
+        "expertise": {
+          "value": "20+",
+          "label": "Years of Expertise"
+        },
+        "modules": {
+          "value": "8",
+          "label": "Purpose-Built Modules"
+        },
+        "regulations": {
+          "value": "5+",
+          "label": "EU Regulations Covered"
+        },
+        "languages": {
+          "value": "3",
+          "label": "Languages"
+        },
+        "entity": {
+          "value": "NL",
+          "label": "Netherlands-Based Operating Entity"
+        }
+      }
+    },
+    "cta": {
+      "title": "See how Arvenza structures CBAM compliance into one workflow",
+      "primary": "Book a Demo"
+    }
+  },
+  "platform": {
+    "hero": {
+      "eyebrow": "Platform",
+      "title": "The EU Sustainability Compliance Platform",
+      "description": "Eight regulation-specific modules unified in a single intelligent platform — designed for exporters, manufacturers, and supply chain operators."
+    },
+    "modules": {
+      "cbamCalc": {
+        "title": "CBAM Calculation Engine",
+        "description": "Automated embedded emissions calculation using official methodologies. Prepare CBAM declarations with validated data, audit trails, and structured outputs aligned with EU requirements.",
+        "features": [
+          "Embedded emissions calculation",
+          "Methodology-aligned outputs",
+          "Audit-ready data trails",
+          "Multi-product support"
+        ]
+      },
+      "cbamConsole": {
+        "title": "CBAM Compliance Console",
+        "description": "Manage the complete CBAM lifecycle — from importer registration and quarterly reporting to verification and submission — in a single structured workflow.",
+        "features": [
+          "Quarterly declaration management",
+          "Verification workflow",
+          "Document control",
+          "Status tracking"
+        ]
+      },
+      "eudr": {
+        "title": "EUDR Due Diligence & Traceability Platform",
+        "description": "Conduct due diligence assessments, manage geolocation data, and maintain traceability evidence for commodities covered under the EU Deforestation Regulation.",
+        "features": [
+          "Geolocation mapping",
+          "Risk assessment",
+          "Traceability chains",
+          "Evidence management"
+        ]
+      },
+      "ppwr": {
+        "title": "PPWR & Packaging Compliance Platform",
+        "description": "Structure packaging data, track recyclability metrics, and manage PPWR compliance requirements across your product portfolio.",
+        "features": [
+          "Packaging data registry",
+          "Recyclability tracking",
+          "Compliance dashboards",
+          "Reporting outputs"
+        ]
+      },
+      "dpp": {
+        "title": "Digital Product Passport Platform",
+        "description": "Create and manage structured product passport data aligned with ESPR and Digital Product Passport requirements for sustainable product design.",
+        "features": [
+          "Product data structuring",
+          "Passport generation",
+          "ESPR alignment",
+          "Lifecycle data"
+        ]
+      },
+      "supplier": {
+        "title": "Supplier Data Collection & Evidence Workflow",
+        "description": "Automate supplier data requests, validate incoming evidence, and maintain complete audit trails across your supply chain.",
+        "features": [
+          "Automated outreach",
+          "Evidence validation",
+          "Supplier portals",
+          "Chain of custody"
+        ]
+      },
+      "esg": {
+        "title": "ESG Evidence & Reporting Workspace",
+        "description": "Centralize ESG data collection, store supporting evidence, and generate structured reporting outputs for disclosure requirements.",
+        "features": [
+          "ESG data hub",
+          "Evidence repository",
+          "Reporting templates",
+          "Disclosure workflows"
+        ]
+      },
+      "agri": {
+        "title": "Agri-Climate Platform",
+        "description": "Manage climate and sustainability data across agricultural supply chains — from farm-level inputs to export-ready compliance outputs.",
+        "features": [
+          "Farm data collection",
+          "Climate metrics",
+          "Supply chain mapping",
+          "Compliance outputs"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Ready to explore the platform?",
+      "description": "Schedule a demo to see how ARVENZA modules work together in your compliance workflows.",
+      "button": "Request Demo"
+    }
+  },
+  "cbamPlatform": {
+    "hero": {
+      "eyebrow": "CBAM Calculation Engine",
+      "title": "From supplier data to declaration-ready CBAM evidence",
+      "description": "CBAM Calculation Engine unites supplier data intake, embedded emissions calculation, methodology audit trails and evidence file preparation in one disciplined product flow.",
+      "ctaPrimary": "Book a Demo",
+      "ctaSecondary": "Explore the Workflow",
+      "chipsAriaLabel": "Platform capabilities",
+      "chips": {
+        "item1": "Supplier data collection",
+        "item2": "Embedded emissions calculation",
+        "item3": "Methodology audit trail",
+        "item4": "Declaration-ready evidence"
+      },
+      "screenshotAlt": "CBAM Calculation Engine dashboard"
+    },
+    "challenge": {
+      "title": "The hardest part of CBAM preparation is not calculation — it is keeping the process together",
+      "description": "When supplier inputs, calculation logic and supporting evidence live in different places, teams face the same operational pressure every declaration cycle.",
+      "items": {
+        "item1": {
+          "title": "Supplier data stays outside the flow",
+          "description": "Emission inputs scatter across email and spreadsheets — gaps are often discovered only as the declaration window approaches."
+        },
+        "item2": {
+          "title": "Calculation logic must be traceable",
+          "description": "Direct and indirect allocation, electricity footprints, assumptions and default value comparisons require an auditable methodology trail."
+        },
+        "item3": {
+          "title": "Evidence files must be ready before the deadline",
+          "description": "When supplier declarations, supporting documents and methodology notes are not assembled in one review file, teams must rebuild the process under pressure."
+        }
+      }
+    },
+    "workflow": {
+      "eyebrow": "CBAM workflow",
+      "title": "A six-step CBAM workflow under control",
+      "description": "From scope assessment to continuous tracking, the full preparation path is structured around how teams actually work.",
+      "platformLabel": "Product capability",
+      "steps": {
+        "assess": {
+          "name": "Assess",
+          "subtitle": "Scope & exposure",
+          "customer": "Define CBAM scope, product coverage, supplier risk and data gaps before the reporting cycle starts.",
+          "platform": "Scope mapping, CN/GTIP coverage checks, supplier risk overview"
+        },
+        "collect": {
+          "name": "Collect",
+          "subtitle": "Supplier data intake",
+          "customer": "Open controlled supplier access and gather emissions, production, electricity, fuel, process and evidence data in structured requests.",
+          "platform": "Supplier portal, data request workflows, evidence upload, completeness tracking"
+        },
+        "calculate": {
+          "name": "Calculate",
+          "subtitle": "Embedded emissions calculation",
+          "customer": "Run product-level embedded emissions, direct/indirect allocation and electricity footprint from validated inputs.",
+          "platform": "CBAM Calculation Engine, default value comparison, methodology audit trail"
+        },
+        "evidence": {
+          "name": "Evidence",
+          "subtitle": "Review-ready file",
+          "customer": "Compile supplier declarations, documents, quality notes, assumptions and methodology into one structured evidence file.",
+          "platform": "Evidence pack builder, document library, quality flags, methodology notes"
+        },
+        "report": {
+          "name": "Report",
+          "subtitle": "Declaration preparation",
+          "customer": "Prepare declaration-ready CBAM output for importers, verifiers or internal sign-off.",
+          "platform": "Declaration export, importer-ready format, verifier briefing pack"
+        },
+        "monitor": {
+          "name": "Monitor",
+          "subtitle": "Continuous tracking",
+          "customer": "Track missing suppliers, weak data quality, upcoming periods and action queues before they become declaration risk.",
+          "platform": "Executive dashboard, gap tracker, deadline alerts, supplier status overview"
+        }
+      }
+    },
+    "complianceTool": {
+      "badge": "Supporting capability",
+      "title": "CBAM Compliance Tool",
+      "description": "A companion operational layer for control, review discipline and audit support alongside the core engine — it does not replace CBAM Calculation Engine.",
+      "items": {
+        "item1": "Control checkpoints across reporting periods",
+        "item2": "Evidence readiness visibility before declaration windows",
+        "item3": "Structured control views for internal validation and audit support",
+        "item4": "Operational tracking for teams managing recurring CBAM cycles"
+      },
+      "ui": {
+        "title": "Control layer",
+        "queue": {
+          "item1": { "label": "Review queue", "value": "4 open", "state": "active" },
+          "item2": { "label": "Evidence readiness", "value": "68%", "state": "active" },
+          "item3": { "label": "Control checklist", "value": "11/14", "state": "done" },
+          "item4": { "label": "Audit support", "value": "Ready", "state": "done" },
+          "item5": { "label": "Cycle status", "value": "Q2 active", "state": "pending" }
+        }
+      }
+    },
+    "supplier": {
+      "eyebrow": "Supplier data intake",
+      "title": "Move supplier data into a controlled intake flow",
+      "description": "Replace inbox and spreadsheet tracking with role-based supplier access, data request flows, evidence upload steps and completeness visibility.",
+      "screenshotAlt": "CBAM Calculation Engine workspace",
+      "bullets": {
+        "item1": "Role-based supplier access with controlled permissions",
+        "item2": "Data request workflows by product, installation and period",
+        "item3": "Evidence upload with document validation",
+        "item4": "Missing-data visibility before declaration deadlines",
+        "item5": "Completeness tracking across supplier responses"
+      },
+      "ui": {
+        "title": "Supplier workflow",
+        "steps": {
+          "item1": { "label": "Supplier request sent", "status": "Complete", "state": "done" },
+          "item2": { "label": "Data entry pending", "status": "3 suppliers", "state": "active" },
+          "item3": { "label": "Evidence uploaded", "status": "12 documents", "state": "done" },
+          "item4": { "label": "Completeness checked", "status": "9/12", "state": "active" },
+          "item5": { "label": "Review required", "status": "2 items", "state": "pending" }
+        }
+      }
+    },
+    "calculation": {
+      "eyebrow": "Embedded emissions calculation",
+      "title": "Run calculations with a methodology audit trail",
+      "description": "Model embedded emissions with traceable logic; direct and indirect allocation, electricity footprints, assumptions and default value comparisons held in the same methodology audit trail.",
+      "screenshotAlt": "CBAM Calculation Engine executive intelligence view",
+      "bullets": {
+        "item1": "Embedded emissions by product and installation",
+        "item2": "Direct and indirect emissions with explicit allocation logic",
+        "item3": "Electricity footprint and emission factor management",
+        "item4": "Default value comparison with assumption documentation",
+        "item5": "Methodology audit trail for every calculation step"
+      }
+    },
+    "evidence": {
+      "eyebrow": "Declaration-ready evidence",
+      "title": "Keep evidence files review- and submission-ready",
+      "description": "Bring supplier declarations, supporting documents, quality indicators and methodology notes into structured evidence files that internal teams, importers or verifiers can review.",
+      "screenshotAlt": "CBAM Calculation Engine evidence and readiness dashboard",
+      "bullets": {
+        "item1": "Supplier declarations linked to calculation inputs",
+        "item2": "Supporting documents with version and source tracking",
+        "item3": "Data quality flags and resolution workflow",
+        "item4": "Methodology notes and documented assumptions",
+        "item5": "Importer-ready output format",
+        "item6": "Verifier briefing pack assembly"
+      },
+      "ui": {
+        "title": "Evidence pack",
+        "badge": "Review-ready",
+        "items": {
+          "item1": { "label": "Supplier declarations", "meta": "8 suppliers · Q2", "status": "Verified" },
+          "item2": { "label": "Supporting documents", "meta": "24 documents", "status": "Verified" },
+          "item3": { "label": "Quality indicators", "meta": "2 flags", "status": "In review" },
+          "item4": { "label": "Methodology notes", "meta": "v3.2", "status": "Draft" }
+        },
+        "readinessLabel": "Evidence readiness",
+        "readinessHint": "3 items to complete before declaration window"
+      }
+    },
+    "monitoring": {
+      "eyebrow": "Executive monitoring",
+      "title": "Track periods, suppliers and actions from one view",
+      "description": "Monitor data gaps, upcoming periods, supplier status and action lists before they reach the declaration window.",
+      "screenshotAlt": "CBAM Calculation Engine monitoring dashboard",
+      "bullets": {
+        "item1": "Gap tracker for missing data and incomplete suppliers",
+        "item2": "Supplier status across reporting periods",
+        "item3": "Deadline alerts for upcoming declaration windows",
+        "item4": "Data quality flags with resolution actions",
+        "item5": "Action queues for compliance team follow-up"
+      },
+      "ui": {
+        "title": "Readiness summary",
+        "metrics": {
+          "item1": { "label": "Evidence readiness", "value": "68%", "hint": "3 items open" },
+          "item2": { "label": "Output readiness", "value": "82%", "hint": "Q2 period" },
+          "item3": { "label": "Attention queue", "value": "5", "hint": "2 high priority" },
+          "item4": { "label": "Supplier status", "value": "9/12", "hint": "Complete" },
+          "item5": { "label": "Deadline alerts", "value": "2", "hint": "Within 14 days" }
+        },
+        "alert": "2 suppliers pending data entry — complete before declaration window"
+      }
+    },
+    "audience": {
+      "eyebrow": "Who it is for",
+      "title": "For teams carrying operational CBAM load",
+      "description": "From exporters to supplier operations — structured workflows for teams that need declaration-ready preparation.",
+      "items": {
+        "item1": "Manufacturers exporting CBAM-covered goods to the EU",
+        "item2": "Teams responsible for supplier emission data collection",
+        "item3": "Organizations preparing recurring CBAM reporting cycles",
+        "item4": "Suppliers required to submit data to EU importers"
+      }
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Frequently asked questions about CBAM Calculation Engine",
+      "items": {
+        "item1": {
+          "question": "Does Arvenza guarantee CBAM declarations?",
+          "answer": "No. Arvenza does not guarantee compliance outcomes. The platform helps structure supplier data, calculations and evidence for CBAM preparation — your team remains responsible for declaration decisions."
+        },
+        "item2": {
+          "question": "Can suppliers enter data directly?",
+          "answer": "Yes. Controlled supplier access, structured data requests and evidence upload are built into the intake workflow — reducing manual follow-up for compliance teams."
+        },
+        "item3": {
+          "question": "Is calculation methodology traceable?",
+          "answer": "Yes. Methodology notes, assumptions and audit trail are structured within the calculation workflow to support internal review and validation."
+        },
+        "item4": {
+          "question": "Can evidence files be shared with external stakeholders?",
+          "answer": "Yes. Outputs can be prepared for importers, internal teams or verifier briefing as structured evidence packs — not ad hoc document folders."
+        }
+      }
+    },
+    "cta": {
+      "title": "See how to manage CBAM preparation in one product flow",
+      "primary": "Book a Demo"
+    }
+  },
+  "regulations": {
+    "hero": {
+      "eyebrow": "Regulations",
+      "title": "EU Sustainability Regulatory Coverage",
+      "description": "Structured platform support for the regulations shaping EU trade, manufacturing, and supply chain compliance."
+    },
+    "items": {
+      "cbam": {
+        "title": "CBAM — Carbon Border Adjustment Mechanism",
+        "abbreviation": "CBAM / SKDM",
+        "description": "The EU's carbon border adjustment mechanism requires importers to report embedded emissions and purchase CBAM certificates. Arvenza RegTech structures calculation, declaration, and verification workflows into audit-ready digital processes.",
+        "coverage": [
+          "Embedded emissions calculation",
+          "Quarterly declarations",
+          "Verification support",
+          "Certificate tracking"
+        ]
+      },
+      "ppwr": {
+        "title": "PPWR — Packaging and Packaging Waste Regulation",
+        "abbreviation": "PPWR",
+        "description": "PPWR introduces comprehensive requirements for packaging design, recyclability, and extended producer responsibility. Arvenza RegTech manages packaging data, tracks compliance metrics, and supports reporting obligations.",
+        "coverage": [
+          "Packaging data management",
+          "Recyclability assessment",
+          "EPR tracking",
+          "Compliance reporting"
+        ]
+      },
+      "eudr": {
+        "title": "EUDR — EU Deforestation Regulation",
+        "abbreviation": "EUDR",
+        "description": "EUDR requires operators and traders to conduct due diligence to ensure commodities are deforestation-free. Arvenza RegTech provides geolocation, risk assessment, and traceability evidence management.",
+        "coverage": [
+          "Due diligence workflows",
+          "Geolocation data",
+          "Risk classification",
+          "Traceability evidence"
+        ]
+      },
+      "dpp": {
+        "title": "DPP / ESPR — Digital Product Passport",
+        "abbreviation": "DPP / ESPR",
+        "description": "The Ecodesign for Sustainable Products Regulation introduces Digital Product Passports requiring structured product lifecycle data. Arvenza RegTech enables passport creation, data management, and regulatory alignment.",
+        "coverage": [
+          "Product passport creation",
+          "Lifecycle data",
+          "ESPR compliance",
+          "Data interoperability"
+        ]
+      },
+      "supplier": {
+        "title": "Supplier Evidence Management",
+        "abbreviation": "Supplier Evidence",
+        "description": "Cross-regulation supplier data collection and evidence management — ensuring traceable, validated documentation across your supply chain for audit readiness.",
+        "coverage": [
+          "Supplier portals",
+          "Evidence validation",
+          "Audit trails",
+          "Automated collection"
+        ]
+      },
+      "csrd": {
+        "title": "CSRD / ESRS — Corporate Sustainability Reporting",
+        "abbreviation": "CSRD / ESRS",
+        "description": "Supportive platform coverage for CSRD-aligned sustainability reporting — structured ESG evidence collection and ESRS-aligned data management.",
+        "coverage": [
+          "ESG evidence collection",
+          "ESRS data alignment",
+          "Reporting support",
+          "Disclosure workflows"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Need structured compliance for these regulations?",
+      "description": "Discover how ARVENZA maps regulatory requirements to actionable platform workflows.",
+      "button": "Explore CBAM Calculation Engine"
+    }
+  },
+  "resources": {
+    "hero": {
+      "eyebrow": "Resources",
+      "title": "Insights & Regulatory Intelligence",
+      "description": "Stay informed with regulation updates, compliance guides, and platform insights from the ARVENZA team."
+    },
+    "categories": {
+      "blog": "Blog",
+      "updates": "Regulation Updates",
+      "guides": "Guides"
+    },
+    "items": {
+      "item1": {
+        "category": "blog",
+        "title": "Understanding CBAM Reporting Requirements for Q1 2026",
+        "excerpt": "A structured overview of CBAM quarterly reporting obligations and how to prepare your embedded emissions data.",
+        "date": "May 2026"
+      },
+      "item2": {
+        "category": "updates",
+        "title": "EUDR Implementation Timeline: Key Dates for Operators",
+        "excerpt": "Updated timeline and compliance milestones for the EU Deforestation Regulation across commodity categories.",
+        "date": "April 2026"
+      },
+      "item3": {
+        "category": "guides",
+        "title": "Digital Product Passport: A Practical Guide for Manufacturers",
+        "excerpt": "Step-by-step guidance on structuring product data for Digital Product Passport compliance under ESPR.",
+        "date": "April 2026"
+      },
+      "item4": {
+        "category": "blog",
+        "title": "PPWR Recyclability Targets: What Exporters Need to Know",
+        "excerpt": "How PPWR recyclability requirements affect packaging design and export compliance for non-EU manufacturers.",
+        "date": "March 2026"
+      },
+      "item5": {
+        "category": "updates",
+        "title": "CSRD Phase-In: Reporting Requirements for FY2026",
+        "excerpt": "Overview of CSRD reporting phase-in schedules and ESRS data collection requirements for in-scope companies.",
+        "date": "March 2026"
+      },
+      "item6": {
+        "category": "guides",
+        "title": "Supplier Evidence Management Best Practices",
+        "excerpt": "Building audit-ready supplier evidence chains for multi-regulation compliance across your supply network.",
+        "date": "February 2026"
+      }
+    },
+    "cta": {
+      "title": "Want personalized regulatory guidance?",
+      "description": "Speak with our team about your specific compliance requirements.",
+      "button": "Contact Us"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "About Us",
+      "title": "EU Sustainability Compliance, Engineered as a Platform",
+      "description": "Arvenza RegTech is the EU Sustainability Compliance Platform — a product brand operated by Anka Sustainability B.V., the Netherlands."
+    },
+    "positioning": {
+      "title": "Our Positioning",
+      "description": "ARVENZA is not a consultancy. It is a purpose-built RegTech platform that transforms EU sustainability regulations into structured, scalable, audit-ready digital workflows. We serve exporters, manufacturers, and supply chain operators who need intelligent compliance infrastructure — not slide decks."
+    },
+    "expertise": {
+      "title": "Depth of Expertise",
+      "description": "Built on over 20 years of sustainability and regulatory expertise, ARVENZA combines deep domain knowledge with modern platform architecture. Our modules are regulation-specific, workflow-driven, and designed for the complexity of EU trade compliance."
+    },
+    "pillars": {
+      "title": "Trust Pillars",
+      "items": {
+        "platform": {
+          "title": "Platform-First",
+          "description": "Compliance delivered through scalable software — not one-off engagements."
+        },
+        "regulatory": {
+          "title": "Regulation-Specific",
+          "description": "Purpose-built modules aligned with CBAM, PPWR, EUDR, DPP, and beyond."
+        },
+        "audit": {
+          "title": "Audit-Ready by Design",
+          "description": "Every workflow produces traceable evidence and structured outputs."
+        },
+        "eu": {
+          "title": "EU-Aligned",
+          "description": "Netherlands-based operating entity with deep EU regulatory alignment."
+        }
+      }
+    },
+    "entity": {
+      "title": "Operating Entity",
+      "description": "Arvenza RegTech is a product brand operated by Anka Sustainability B.V., registered in the Netherlands. All platform services are provided by Anka Sustainability B.V.",
+      "location": "Utrecht, Netherlands"
+    },
+    "cta": {
+      "title": "Experience the platform",
+      "description": "See how ARVENZA transforms regulatory complexity into structured compliance workflows.",
+      "button": "Request Demo"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Get in Touch",
+      "description": "Reach our team for platform inquiries, partnership discussions, or general questions about EU sustainability compliance."
+    },
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Your name",
+      "email": "Email Address",
+      "emailPlaceholder": "you@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Your company name",
+      "subject": "Subject",
+      "subjectPlaceholder": "How can we help?",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your compliance needs...",
+      "submit": "Send Message",
+      "successTitle": "Thank you",
+      "successMessage": "Your message has been received. We will respond shortly."
+    },
+    "offices": {
+      "title": "Our Offices",
+      "netherlands": {
+        "title": "Netherlands Office",
+        "address": "Newtonlaan 115,\n3584 BH Utrecht, Hollanda"
+      },
+      "turkey": {
+        "title": "Türkiye Office",
+        "address": "Atakent Mah. / Mithatpaşa Cad.\nÇağla Plaza No: 116 İç Kapı No: 18\nÜmraniye / İstanbul / Türkiye"
+      },
+      "digital": {
+        "title": "Digital Solution Center",
+        "address": "Üniversite Mah. / Sangül Sk. No: 35/1\nAvcılar / İstanbul / Türkiye"
+      }
+    },
+    "direct": {
+      "title": "Direct Contact",
+      "emailLabel": "Email"
+    }
+  },
+  "demo": {
+    "hero": {
+      "eyebrow": "Request a Demo",
+      "title": "Explore CBAM Calculation Engine in your workflow context",
+      "description": "Our team walks you through the digital path from supplier data to declaration-ready evidence — shaped around your organisation, operating model, and regulatory priorities.",
+      "bullets": {
+        "item1": "Demo flow tailored to your organisation",
+        "item2": "CBAM Calculation Engine as the primary product narrative",
+        "item3": "Expert guidance on relevant modules and workflows"
+      },
+      "statLabel": "Demo focus",
+      "statValue": "CBAM Calculation Engine · EU compliance platform"
+    },
+    "preview": {
+      "flagshipBadge": "Flagship",
+      "flagshipTitle": "CBAM Calculation Engine",
+      "status": "Live",
+      "workflowLabel": "Demo workflow",
+      "steps": {
+        "step1": "Supplier data collection",
+        "step2": "Embedded emissions calculation",
+        "step3": "Declaration-ready evidence structure"
+      },
+      "metricsLabel": "Demo scope",
+      "metrics": {
+        "module1": { "value": "Data", "label": "Supplier" },
+        "module2": { "value": "Calc", "label": "Emissions" },
+        "module3": { "value": "Proof", "label": "Declaration" }
+      },
+      "modulesLabel": "Related modules",
+      "modules": {
+        "module1": "Supplier Evidence",
+        "module2": "Reporting",
+        "module3": "PPWR · EUDR"
+      }
+    },
+    "formSection": {
+      "title": "Submit your demo request",
+      "subtitle": "A short form is all we need. Our team will align demo scope and next steps with your requirements."
+    },
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Your full name",
+      "company": "Company",
+      "companyPlaceholder": "Your organisation",
+      "email": "Email Address",
+      "emailPlaceholder": "you@company.com",
+      "country": "Country",
+      "countryPlaceholder": "Select your country",
+      "interest": "Interest Area",
+      "interestPlaceholder": "Select your primary focus",
+      "message": "Message",
+      "messagePlaceholder": "Briefly share your CBAM readiness, supplier setup, or what you want to see in the demo...",
+      "submit": "Request Demo",
+      "successTitle": "Thank you",
+      "successMessage": "Your demo request has been received. Our team will be in touch shortly.",
+      "countries": {
+        "nl": "Netherlands",
+        "tr": "Türkiye",
+        "de": "Germany",
+        "fr": "France",
+        "be": "Belgium",
+        "it": "Italy",
+        "es": "Spain",
+        "uk": "United Kingdom",
+        "us": "United States",
+        "other": "Other"
+      },
+      "interests": {
+        "cbam": "CBAM / SKDM",
+        "ppwr": "PPWR",
+        "eudr": "EUDR",
+        "dpp": "Digital Product Passport",
+        "supplier": "Supplier Evidence",
+        "esg": "ESG Reporting",
+        "general": "General Platform Overview"
+      }
+    },
+    "expectations": {
+      "title": "What you will see in the demo",
+      "subtitle": "Every session is framed around your context — a focused product walkthrough, not a generic slide deck.",
+      "items": {
+        "item1": {
+          "title": "Organisation-specific module framing",
+          "description": "Relevant modules are scoped clearly against your sector and compliance priorities."
+        },
+        "item2": {
+          "title": "CBAM Calculation Engine walkthrough",
+          "description": "The flagship workflow from supplier data to evidence packs is shown in product context."
+        },
+        "item3": {
+          "title": "Data, calculation, and evidence review",
+          "description": "We assess how platform workflows align with your current processes and tooling."
+        },
+        "item4": {
+          "title": "Clear next steps",
+          "description": "You leave with a practical roadmap and recommended continuation plan."
+        }
+      },
+      "process": {
+        "title": "3-step demo process",
+        "steps": {
+          "step1": "Brief review of needs and current processes",
+          "step2": "Product session on CBAM Calculation Engine and related modules",
+          "step3": "Next steps and actionable recommendations"
+        }
+      },
+      "meta": {
+        "duration": {
+          "label": "Duration",
+          "value": "45–60 min"
+        },
+        "format": {
+          "label": "Format",
+          "value": "Live product session"
+        }
+      }
+    },
+    "coverage": {
+      "title": "Product areas the demo can cover",
+      "subtitle": "CBAM Calculation Engine at the centre — with supporting capabilities and expanding platform modules added as relevant.",
+      "items": {
+        "engine": {
+          "title": "CBAM Calculation Engine",
+          "description": "Supplier data, embedded emissions calculation, and declaration-ready evidence workflows — the structured flagship layer."
+        },
+        "compliance": {
+          "title": "CBAM Compliance Tool",
+          "description": "Supporting readiness, monitoring, and control views — integrated with the engine in one operating rhythm."
+        },
+        "platform": {
+          "title": "Expanding platform modules",
+          "description": "Supplier evidence, PPWR, EUDR, and Digital Product Passport — included where relevant to your scope."
+        }
+      }
+    },
+    "audience": {
+      "title": "Teams that request demos",
+      "items": {
+        "item1": "Manufacturers exporting to the EU",
+        "item2": "Teams preparing CBAM reporting",
+        "item3": "Operations teams collecting supplier data",
+        "item4": "Compliance and sustainability leaders"
+      }
+    },
+    "cta": {
+      "title": "See how to manage CBAM readiness in a product-led workflow",
+      "description": "Shape your workflow on Arvenza together — from supplier data to declaration-ready evidence.",
+      "primary": "Book a Demo"
+    }
+  },
+  "footer": {
+    "tagline": "EU Sustainability Compliance Platform",
+    "brandDescription": "Structure the path from supplier data to declaration-ready CBAM evidence with CBAM Calculation Engine — in one disciplined digital workflow.",
+    "columns": {
+      "platform": "Platform",
+      "regulations": "Regulations",
+      "company": "Corporate",
+      "legal": "Legal"
+    },
+    "platformLinks": {
+      "overview": "Overview",
+      "cbam": "CBAM Calculation Engine",
+      "solutions": "Solutions",
+      "industries": "Industries"
+    },
+    "regulationLinks": {
+      "cbam": "CBAM / SKDM",
+      "ppwr": "PPWR",
+      "eudr": "EUDR",
+      "dpp": "DPP / ESPR"
+    },
+    "companyLinks": {
+      "about": "About Us",
+      "resources": "Resources",
+      "demo": "Request a Demo",
+      "imprint": "Legal Notice"
+    },
+    "legalLinks": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy",
+      "imprint": "Legal Notice",
+      "accessibility": "Accessibility Statement"
+    },
+    "offices": {
+      "title": "Offices",
+      "netherlands": {
+        "label": "Netherlands Office",
+        "address": "Newtonlaan 115, 3584 BH Utrecht, Netherlands"
+      },
+      "turkey": {
+        "label": "Türkiye Office",
+        "address": "Atakent Mah. / Mithatpaşa Cad.\nÇağla Plaza No: 116 İç Kapı No: 18\nÜmraniye / İstanbul / Türkiye"
+      },
+      "digital": {
+        "label": "Digital Solution Center",
+        "address": "Üniversite Mah. / Sanayi Sk. No: 35/1\nAvcılar / İstanbul / Türkiye"
+      }
+    },
+    "legalNote": "Arvenza RegTech is a product brand operated by Anka Sustainability B.V., the Netherlands. KvK: 99787784.",
+    "copyright": "© {year} Anka Sustainability B.V. All rights reserved."
+  },
+  "language": {
+    "en": "English",
+    "tr": "Türkçe",
+    "nl": "Nederlands",
+    "switch": "Language"
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "languageMenu": "Select language",
+    "dashboardPreview": "ARVENZA compliance dashboard preview"
+  },
+  "platformHub": {
+    "eyebrow": "Platform",
+    "title": "A structured digital platform for EU sustainability compliance",
+    "description": "Arvenza RegTech offers a modular platform architecture built on CBAM Calculation Engine — its flagship product — extending to supplier evidence management, product carbon workflows, PPWR, EUDR, and Digital Product Passport requirements.",
+    "flagship": {
+      "badge": "Flagship",
+      "title": "CBAM Calculation Engine",
+      "description": "Supplier data collection, embedded emissions calculation, and declaration-ready evidence workflows in one structured engine.",
+      "cta": "Explore CBAM Calculation Engine",
+      "screenshotAlt": "CBAM Calculation Engine dashboard"
+    },
+    "capabilities": {
+      "title": "Platform capability layers",
+      "items": {
+        "supplierData": {
+          "title": "Supplier Data Collection",
+          "description": "Structured supplier data collection and evidence intake across your supply chain."
+        },
+        "emissions": {
+          "title": "Embedded Emissions Calculation",
+          "description": "Embedded emissions calculation with methodology audit trail and traceable inputs."
+        },
+        "evidence": {
+          "title": "Evidence & Documentation",
+          "description": "Audit-ready documentation and declaration-ready evidence organized by workflow."
+        },
+        "reporting": {
+          "title": "Reporting & Monitoring",
+          "description": "Regulatory reporting dashboards and monitoring views for compliance teams."
+        }
+      }
+    },
+    "roadmap": {
+      "title": "Platform roadmap",
+      "description": "Expanding modules beyond CBAM — with clear availability status for each area.",
+      "items": {
+        "supplierEvidence": {
+          "title": "Supplier Evidence Hub",
+          "description": "Centralized supplier evidence management and structured intake workflows."
+        },
+        "pcf": {
+          "title": "Product Carbon / LCA Workflows",
+          "description": "Product carbon footprint and LCA workflow support for expanding scope."
+        },
+        "ppwr": {
+          "title": "PPWR & Packaging BOM",
+          "description": "Packaging Bill of Materials and PPWR readiness workflows."
+        },
+        "eudr": {
+          "title": "EUDR Due Diligence",
+          "description": "Due diligence workflows for EU Deforestation Regulation requirements."
+        },
+        "dpp": {
+          "title": "Digital Product Passport",
+          "description": "Digital Product Passport data structure and evidence preparation."
+        },
+        "auditPacks": {
+          "title": "Audit-Ready Evidence Packs",
+          "description": "Structured evidence packs for audit and review processes."
+        },
+        "reporting": {
+          "title": "Regulatory Reporting Dashboard",
+          "description": "Dashboard views for regulatory reporting and compliance monitoring."
+        }
+      }
+    },
+    "cta": {
+      "title": "See how Arvenza supports your CBAM preparation",
+      "primary": "Book a Demo"
+    }
+  },
+  "solutionsPage": {
+    "eyebrow": "Solutions",
+    "title": "From CBAM to a broader EU sustainability compliance roadmap",
+    "description": "Arvenza RegTech structures CBAM compliance today while offering a broader platform architecture for PPWR, EUDR, Digital Product Passport, and supplier evidence workflows.",
+    "flagship": {
+      "badge": "Flagship",
+      "title": "CBAM Calculation Engine",
+      "description": "Supplier data collection, embedded emissions calculation, and declaration-ready evidence workflows in one structured engine.",
+      "cta": "Explore CBAM Calculation Engine",
+      "screenshotAlt": "CBAM Calculation Engine dashboard"
+    },
+    "items": {
+      "cbam": {
+        "title": "CBAM Compliance",
+        "description": "Structured CBAM preparation from supplier data to declaration-ready calculations."
+      },
+      "supplierEvidence": {
+        "title": "Supplier Evidence Workflows",
+        "description": "Supplier data collection and evidence management across your supply chain."
+      },
+      "pcf": {
+        "title": "Product Carbon / LCA Workflows",
+        "description": "Product carbon footprint workflows for expanding regulatory scope."
+      },
+      "ppwr": {
+        "title": "Packaging & PPWR Readiness",
+        "description": "Packaging BOM and PPWR readiness preparation workflows."
+      },
+      "eudr": {
+        "title": "EUDR Due Diligence",
+        "description": "Due diligence workflows for EU Deforestation Regulation requirements."
+      },
+      "dpp": {
+        "title": "Digital Product Passport",
+        "description": "Digital Product Passport data structure and evidence preparation."
+      },
+      "reporting": {
+        "title": "Regulatory Reporting Dashboard",
+        "description": "Dashboard views for regulatory reporting and compliance monitoring."
+      }
+    },
+    "cta": {
+      "title": "Plan a demo for your compliance roadmap",
+      "primary": "Book a Demo"
+    }
+  },
+  "industriesPage": {
+    "eyebrow": "Industries",
+    "title": "EU sustainability compliance varies by supply chain reality",
+    "description": "Arvenza RegTech is designed for sectors that must manage CBAM and future EU regulations across products, suppliers, data, and evidence structures.",
+    "items": {
+      "steelAluminium": {
+        "title": "Steel & Aluminium",
+        "focus": "CBAM",
+        "description": "Embedded emissions calculation and supplier data workflows for CBAM-covered goods."
+      },
+      "packagingFmcg": {
+        "title": "Packaging & FMCG",
+        "focus": "PPWR",
+        "description": "Packaging BOM and PPWR readiness workflows for fast-moving consumer goods."
+      },
+      "automotive": {
+        "title": "Automotive Supply Chains",
+        "focus": "CBAM / DPP / Supplier Evidence",
+        "description": "Multi-regulation workflows across CBAM, Digital Product Passport, and supplier evidence."
+      },
+      "electronicsBatteries": {
+        "title": "Electronics & Batteries",
+        "focus": "DPP / Supplier Evidence",
+        "description": "Digital Product Passport data and supplier evidence for complex supply chains."
+      },
+      "agricultureFood": {
+        "title": "Agriculture & Food",
+        "focus": "EUDR",
+        "description": "Due diligence and evidence workflows for EUDR-covered commodities."
+      },
+      "importersExporters": {
+        "title": "Importers & Exporters",
+        "focus": "CBAM / Regulatory Reporting",
+        "description": "CBAM preparation and regulatory reporting workflows for trade operators."
+      }
+    },
+    "cta": {
+      "title": "Book a demo for your sector",
+      "primary": "Book a Demo for Your Sector"
+    }
+  },
+  "companyPage": {
+    "eyebrow": "Corporate",
+    "title": "Arvenza RegTech is a product brand built for EU sustainability compliance",
+    "description": "Arvenza RegTech is operated by Anka Sustainability B.V., supporting exporters, manufacturers, and supply chain teams in turning EU sustainability regulations into structured digital workflows.",
+    "sectionsTitle": "About Arvenza RegTech",
+    "cards": {
+      "flagship": {
+        "label": "Flagship product",
+        "title": "CBAM Calculation Engine",
+        "badge": "Flagship"
+      },
+      "platform": {
+        "label": "Platform vision",
+        "title": "EU Sustainability Compliance Platform"
+      },
+      "operator": {
+        "label": "Operator",
+        "title": "Anka Sustainability B.V.",
+        "detail": "The Netherlands"
+      },
+      "registry": {
+        "label": "Chamber of Commerce",
+        "title": "KvK: 99787784"
+      }
+    },
+    "sections": {
+      "whatIs": {
+        "title": "What is Arvenza?",
+        "body": "Arvenza RegTech is the EU Sustainability Compliance Platform — a product brand whose flagship product is CBAM Calculation Engine, focused on structured CBAM preparation, supplier data collection, embedded emissions calculation, and audit-ready documentation."
+      },
+      "experience": {
+        "title": "Built on regulatory implementation experience",
+        "body": "The platform is designed around real CBAM preparation workflows: supplier data intake, embedded emissions calculation with methodology audit trail, and declaration-ready evidence packs organized in a structured workflow."
+      },
+      "operator": {
+        "title": "Product brand operated by Anka Sustainability B.V.",
+        "body": "Arvenza RegTech is operated by Anka Sustainability B.V., the Netherlands (KvK: 99787784). All platform services are provided by Anka Sustainability B.V. Arvenza is the product brand — not a separate legal entity."
+      },
+      "legal": {
+        "title": "Legal positioning",
+        "body": "Platform services, contractual relationships, and data processing are provided under Anka Sustainability B.V. The Arvenza RegTech brand identifies the product and platform experience delivered by Anka Sustainability B.V."
+      }
+    },
+    "legalNote": "Arvenza RegTech is a product brand operated by Anka Sustainability B.V., the Netherlands. KvK: 99787784. All platform services are provided by Anka Sustainability B.V.",
+    "cta": {
+      "title": "See CBAM Calculation Engine in your own workflow context",
+      "primary": "Book a Demo",
+      "secondary": "Explore CBAM Calculation Engine"
+    }
+  },
+  "regulationsCbam": {
+    "eyebrow": "CBAM / SKDM",
+    "title": "CBAM compliance requires supplier data and traceable calculation infrastructure",
+    "description": "Arvenza RegTech supports CBAM preparation by managing product scope, supplier data, embedded emissions calculation, and evidence packs in a structured digital workflow.",
+    "sections": {
+      "requirements": {
+        "title": "What does CBAM require?",
+        "body": "CBAM requires importers and operators to report embedded emissions for covered goods, supported by supplier data, calculation methodology, and auditable evidence. Preparation spans product scope, supplier engagement, and structured documentation."
+      },
+      "supplierData": {
+        "title": "Why is supplier data critical?",
+        "body": "Embedded emissions calculations depend on accurate supplier-specific data. Without structured supplier data collection and evidence intake, calculations lack traceability and audit-ready documentation."
+      },
+      "emissions": {
+        "title": "How should embedded emissions calculation be structured?",
+        "body": "Calculations should follow a documented methodology with an audit trail linking inputs, assumptions, and outputs. A structured workflow ensures consistency across products, suppliers, and reporting periods."
+      },
+      "evidence": {
+        "title": "Evidence packs and declaration preparation",
+        "body": "CBAM preparation requires organizing supplier responses, calculation outputs, and supporting documentation into declaration-ready evidence packs that compliance teams can review and submit."
+      },
+      "support": {
+        "title": "How does Arvenza support CBAM preparation?",
+        "body": "CBAM Calculation Engine combines supplier data collection, embedded emissions calculation, methodology audit trail, and audit-ready documentation in one structured workflow — from supplier intake to declaration-ready evidence."
+      }
+    },
+    "cta": {
+      "title": "Explore CBAM Calculation Engine",
+      "button": "Explore CBAM Calculation Engine",
+      "screenshotAlt": "CBAM Calculation Engine dashboard"
+    }
+  },
+  "resourcesPage": {
+    "eyebrow": "Resources",
+    "title": "Practical resources for EU sustainability regulations",
+    "description": "Updates, guides, and checklists for CBAM, PPWR, EUDR, and Digital Product Passport developments will be published here.",
+    "items": {
+      "cbamChecklist": {
+        "title": "CBAM Preparation Checklist",
+        "description": "A structured checklist for CBAM readiness across supplier data, calculations, and evidence."
+      },
+      "regulationUpdates": {
+        "title": "Regulation Updates",
+        "description": "Curated updates on EU sustainability regulation developments and implementation timelines."
+      },
+      "guides": {
+        "title": "Guides & Briefings",
+        "description": "Practical guides and briefings for compliance teams preparing for EU regulations."
+      },
+      "blog": {
+        "title": "Blog / Insights",
+        "description": "Insights on CBAM preparation, supplier workflows, and EU sustainability compliance."
+      }
+    },
+    "ctaBand": {
+      "title": "Start with CBAM Calculation Engine or plan a demo",
+      "primary": "Explore CBAM Calculation Engine",
+      "secondary": "Book a Demo"
+    },
+    "subscribe": {
+      "title": "Don't miss regulation updates",
+      "emailLabel": "Email address",
+      "interestLabel": "Area of interest",
+      "interestPlaceholder": "Select an area",
+      "interests": {
+        "cbam": "CBAM",
+        "ppwr": "PPWR",
+        "eudr": "EUDR",
+        "dpp": "Digital Product Passport",
+        "general": "General EU sustainability"
+      },
+      "submit": "Get Updates",
+      "success": "Thank you — we'll notify you when new resources are available."
+    }
+  },
+  "legalPage": {
+    "sidebarTitle": "Document information",
+    "productBrandLabel": "Product brand",
+    "productBrandValue": "Arvenza RegTech",
+    "operatorLabel": "Operator",
+    "operatorValue": "Anka Sustainability B.V., the Netherlands",
+    "kvkLabel": "Chamber of Commerce",
+    "kvkValue": "KvK: 99787784",
+    "emailLabel": "Contact",
+    "questionsBody": "For questions about this document, contact us or",
+    "demoLink": "request a demo"
+  },
+  "legal": {
+    "privacyPolicy": {
+      "eyebrow": "Legal",
+      "title": "Privacy Policy",
+      "description": "How Anka Sustainability B.V. processes personal data in connection with Arvenza RegTech platform services.",
+      "lastUpdated": "Last updated: June 2026",
+      "contact": "For questions about this policy, contact info@ankasustainability.com. Arvenza RegTech is a product brand operated by Anka Sustainability B.V., the Netherlands. KvK: 99787784.",
+      "sections": {
+        "s1": {
+          "title": "Introduction and scope",
+          "body": "This document applies to the Arvenza RegTech website and platform services provided by Anka Sustainability B.V., the Netherlands (KvK: 99787784). Arvenza RegTech is a product brand — all services are provided by Anka Sustainability B.V."
+        },
+        "s2": {
+          "title": "Information we collect",
+          "body": "We may collect contact details, organization information, usage data, and communications submitted through demo requests, resource subscriptions, or platform use."
+        },
+        "s3": {
+          "title": "Your rights and choices",
+          "body": "Depending on applicable law, you may have rights to access, correct, or delete personal data. Contact us at info@ankasustainability.com to exercise these rights."
+        },
+        "s4": {
+          "title": "Security and retention",
+          "body": "We apply appropriate technical and organizational measures to protect data. Retention periods depend on the nature of the data and legal requirements."
+        },
+        "s5": {
+          "title": "Updates",
+          "body": "We may update this document to reflect changes in services, regulation, or legal requirements. The last updated date at the top indicates the current version."
+        }
+      }
+    },
+    "terms": {
+      "eyebrow": "Legal",
+      "title": "Terms of Service",
+      "description": "Terms governing use of Arvenza RegTech platform services provided by Anka Sustainability B.V.",
+      "lastUpdated": "Last updated: June 2026",
+      "contact": "For questions about this policy, contact info@ankasustainability.com. Arvenza RegTech is a product brand operated by Anka Sustainability B.V., the Netherlands. KvK: 99787784.",
+      "sections": {
+        "s1": {
+          "title": "Agreement",
+          "body": "By accessing Arvenza RegTech services, you agree to these terms with Anka Sustainability B.V., the service provider. Arvenza RegTech is the product brand under which services are delivered."
+        },
+        "s2": {
+          "title": "Platform services",
+          "body": "The platform supports structured CBAM preparation workflows including supplier data collection, embedded emissions calculation, and audit-ready documentation. Service scope is defined in applicable agreements."
+        },
+        "s3": {
+          "title": "Acceptable use",
+          "body": "You agree to use the platform lawfully and not to misuse, reverse engineer, or attempt unauthorized access to systems or data."
+        },
+        "s4": {
+          "title": "Limitation of liability",
+          "body": "Services are provided subject to applicable agreements. Anka Sustainability B.V. does not guarantee regulatory outcomes; the platform supports structured compliance preparation workflows."
+        },
+        "s5": {
+          "title": "Governing law",
+          "body": "These terms are governed by the laws of the Netherlands unless otherwise agreed in writing."
+        }
+      }
+    },
+    "cookiePolicy": {
+      "eyebrow": "Legal",
+      "title": "Cookie Policy",
+      "description": "How cookies and similar technologies are used on the Arvenza RegTech website.",
+      "lastUpdated": "Last updated: June 2026",
+      "contact": "For questions about this policy, contact info@ankasustainability.com. Arvenza RegTech is a product brand operated by Anka Sustainability B.V., the Netherlands. KvK: 99787784.",
+      "sections": {
+        "s1": {
+          "title": "What are cookies?",
+          "body": "Cookies are small text files stored on your device when you visit a website. They help the site function and may support analytics and preferences."
+        },
+        "s2": {
+          "title": "Cookies we use",
+          "body": "We may use essential cookies for site functionality, preference cookies for language selection, and analytics cookies to understand site usage. Specific cookies may be updated as the site evolves."
+        },
+        "s3": {
+          "title": "Managing cookies",
+          "body": "You can control cookies through your browser settings. Disabling certain cookies may affect site functionality."
+        },
+        "s4": {
+          "title": "Third parties",
+          "body": "Some embedded services or analytics providers may set their own cookies subject to their policies."
+        },
+        "s5": {
+          "title": "Updates",
+          "body": "This cookie policy may be updated. Check the last updated date for the current version."
+        }
+      }
+    },
+    "legalNotice": {
+      "eyebrow": "Legal",
+      "title": "Legal Notice",
+      "description": "Company and legal information for Arvenza RegTech.",
+      "lastUpdated": "Last updated: June 2026",
+      "contact": "For questions about this policy, contact info@ankasustainability.com. Arvenza RegTech is a product brand operated by Anka Sustainability B.V., the Netherlands. KvK: 99787784.",
+      "sections": {
+        "s1": {
+          "title": "Service provider",
+          "body": "Anka Sustainability B.V., the Netherlands. KvK: 99787784. Newtonlaan 115, 3584 BH Utrecht, Netherlands."
+        },
+        "s2": {
+          "title": "Product brand",
+          "body": "Arvenza RegTech is a product brand operated by Anka Sustainability B.V. All platform services are provided by Anka Sustainability B.V. Arvenza is not a separate legal entity."
+        },
+        "s3": {
+          "title": "Contact",
+          "body": "Email: info@ankasustainability.com. For demo requests and platform inquiries, use the contact forms on this website or email directly."
+        },
+        "s4": {
+          "title": "Intellectual property",
+          "body": "Content, trademarks, and platform materials are protected by applicable intellectual property laws. Unauthorized use is prohibited."
+        },
+        "s5": {
+          "title": "Disclaimer",
+          "body": "Information on this website is provided for general purposes. It does not constitute legal advice. Regulatory requirements may change; users should verify current obligations."
+        }
+      }
+    },
+    "accessibility": {
+      "eyebrow": "Legal",
+      "title": "Accessibility Statement",
+      "description": "Our commitment to digital accessibility for the Arvenza RegTech website.",
+      "lastUpdated": "Last updated: June 2026",
+      "contact": "For questions about this policy, contact info@ankasustainability.com. Arvenza RegTech is a product brand operated by Anka Sustainability B.V., the Netherlands. KvK: 99787784.",
+      "sections": {
+        "s1": {
+          "title": "Commitment",
+          "body": "Anka Sustainability B.V. aims to make the Arvenza RegTech website accessible to users with diverse needs, in line with recognized accessibility standards where practicable."
+        },
+        "s2": {
+          "title": "Measures",
+          "body": "We use semantic HTML, sufficient color contrast where possible, keyboard navigability, and descriptive labels for interactive elements."
+        },
+        "s3": {
+          "title": "Known limitations",
+          "body": "Some third-party content or legacy components may not fully meet accessibility standards. We continue to improve the site over time."
+        },
+        "s4": {
+          "title": "Feedback",
+          "body": "If you encounter accessibility barriers, contact info@ankasustainability.com with a description of the issue and the page URL."
+        },
+        "s5": {
+          "title": "Review",
+          "body": "This statement was prepared in June 2026 and will be reviewed periodically."
+        }
+      }
+    }
+  }
+}

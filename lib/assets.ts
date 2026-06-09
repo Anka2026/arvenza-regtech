@@ -1,0 +1,129 @@
+/** Centralized public asset paths — matches files in public/assets */
+
+export const BRAND = {
+  logoMain: "/assets/brand/arvenza-logo-main.jpg",
+  logoMainPng: "/assets/brand/arvenza-logo-main.png",
+  logoSymbol: "/assets/brand/arvenza-logo-symbol.png",
+  logoWhite: "/assets/brand/arvenza-logo-white.png",
+  logoDark: "/assets/brand/arvenza-logo-dark.png",
+  logoHeader: "/assets/brand/arvenza-logo-header.jpg",
+  wave: "/assets/brand/arvenza-wave.png",
+} as const;
+
+/** Master visual for CBAM Calculation Engine — real product UI */
+export const CBAM_PRODUCT_SCREENSHOT =
+  "/assets/screenshots/cbam/cbam-calculation-engine-main.png";
+
+export type CbamScreenshotFocus =
+  | "full"
+  | "hero"
+  | "sidebar"
+  | "kpi"
+  | "chart"
+  | "calculation"
+  | "insightRail"
+  | "monitoring";
+
+export const CBAM_SCREENSHOT_FOCUS: Record<
+  CbamScreenshotFocus,
+  { objectPosition: string; objectFit: "contain" | "cover" }
+> = {
+  full: { objectPosition: "50% 0%", objectFit: "contain" },
+  hero: { objectPosition: "50% 0%", objectFit: "contain" },
+  sidebar: { objectPosition: "5% 50%", objectFit: "cover" },
+  kpi: { objectPosition: "36% 14%", objectFit: "cover" },
+  chart: { objectPosition: "50% 58%", objectFit: "cover" },
+  calculation: { objectPosition: "38% 36%", objectFit: "cover" },
+  insightRail: { objectPosition: "93% 46%", objectFit: "cover" },
+  monitoring: { objectPosition: "38% 20%", objectFit: "cover" },
+};
+
+export const SCREENSHOTS = {
+  cbamEngine: CBAM_PRODUCT_SCREENSHOT,
+  cbamConsole: CBAM_PRODUCT_SCREENSHOT,
+  cbamProduct: CBAM_PRODUCT_SCREENSHOT,
+  eudr: "/assets/screenshots/eudr/dashboard.png",
+  ppwr: "/assets/screenshots/ppwr/dashboard.png",
+  dpp: "/assets/screenshots/dpp/dashboard.png",
+  supplierEvidence: CBAM_PRODUCT_SCREENSHOT,
+  esgWorkspace: CBAM_PRODUCT_SCREENSHOT,
+  agriClimate: "/assets/screenshots/agri-climate/dashboard.png",
+} as const;
+
+export const PLATFORM_HERO_SCREENSHOT = CBAM_PRODUCT_SCREENSHOT;
+
+export type ModuleKey =
+  | "cbamCalc"
+  | "cbamConsole"
+  | "eudr"
+  | "ppwr"
+  | "dpp"
+  | "supplier"
+  | "esg"
+  | "agri";
+
+export type ModuleScreenshotKey = ModuleKey;
+
+export const MODULE_SCREENSHOTS: Record<ModuleKey, string> = {
+  cbamCalc: CBAM_PRODUCT_SCREENSHOT,
+  cbamConsole: CBAM_PRODUCT_SCREENSHOT,
+  eudr: SCREENSHOTS.eudr,
+  ppwr: SCREENSHOTS.ppwr,
+  dpp: SCREENSHOTS.dpp,
+  supplier: CBAM_PRODUCT_SCREENSHOT,
+  esg: CBAM_PRODUCT_SCREENSHOT,
+  agri: SCREENSHOTS.agriClimate,
+};
+
+export const MODULE_KEYS: ModuleKey[] = [
+  "cbamCalc",
+  "cbamConsole",
+  "eudr",
+  "ppwr",
+  "dpp",
+  "supplier",
+  "esg",
+  "agri",
+];
+
+/** CBAM customer journey — flagship workflow */
+export const CBAM_JOURNEY_STEP_KEYS = [
+  "assess",
+  "collect",
+  "calculate",
+  "evidence",
+  "report",
+  "monitor",
+] as const;
+
+export type CbamJourneyStepKey = (typeof CBAM_JOURNEY_STEP_KEYS)[number];
+
+/** Platform roadmap modules — statuses vary; CBAM flagship is separate */
+export const ROADMAP_MODULE_CONFIG = [
+  { key: "supplier", status: "available" as const },
+  { key: "pcf", status: "pilot" as const },
+  { key: "ppwr", status: "comingSoon" as const },
+  { key: "eudr", status: "comingSoon" as const },
+  { key: "dpp", status: "comingSoon" as const },
+  { key: "auditEvidence", status: "available" as const },
+  { key: "regulatoryReporting", status: "pilot" as const },
+] as const;
+
+export type RoadmapModuleKey = (typeof ROADMAP_MODULE_CONFIG)[number]["key"];
+
+export const ROADMAP_MODULE_KEYS = ROADMAP_MODULE_CONFIG.map((m) => m.key);
+
+export type LogoVariant = "main" | "dark" | "white" | "symbol";
+
+export function getLogoSrc(variant: LogoVariant = "main"): string {
+  switch (variant) {
+    case "dark":
+      return BRAND.logoDark;
+    case "white":
+      return BRAND.logoWhite;
+    case "symbol":
+      return BRAND.logoSymbol;
+    default:
+      return BRAND.logoMain;
+  }
+}
