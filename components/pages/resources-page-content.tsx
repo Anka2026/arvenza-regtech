@@ -19,7 +19,7 @@ import { StatusPill } from "@/components/pages/shared/status-pill";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const CATEGORY_KEYS = ["cbamGuides", "checklists", "sectorBriefings", "regulationUpdates"] as const;
+const CATEGORY_KEYS = ["all", "cbamGuides", "checklists", "sectorBriefings", "regulationUpdates"] as const;
 
 type CategoryKey = (typeof CATEGORY_KEYS)[number];
 type ResourceStatus = "available" | "inPreparation" | "roadmap";
@@ -92,6 +92,8 @@ const STATUS_VARIANT: Record<ResourceStatus, "available" | "inPreparation" | "ro
   roadmap: "roadmap",
 };
 
+const SUBSCRIBE_BENEFIT_KEYS = ["item1", "item2", "item3", "item4"] as const;
+
 export function ResourcesPageContent() {
   const t = useTranslations("resourcesPage");
   const [email, setEmail] = useState("");
@@ -119,7 +121,10 @@ export function ResourcesPageContent() {
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {CATEGORY_KEYS.map((key) => (
-                <span key={key} className="resource-category-chip">
+                <span
+                  key={key}
+                  className={cn("resource-category-chip", key === "all" && "resource-category-chip-active")}
+                >
                   {t(`categories.${key}`)}
                 </span>
               ))}
@@ -140,10 +145,11 @@ export function ResourcesPageContent() {
           </FadeIn>
 
           <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {RESOURCE_CONFIG.map(({ key, category, status, icon: Icon, href, anchor }, i) => {
+            {RESOURCE_CONFIG.map(({ key, category, status, icon: Icon, href, anchor }) => {
               const ctaLabel = t(`resources.${key}.cta`);
-              const card = (
+              return (
                 <article
+                  key={key}
                   className={cn(
                     "resource-card card-premium flex h-full min-w-0 flex-col p-5 sm:p-6",
                     status === "available" && "resource-card-available",
@@ -195,12 +201,6 @@ export function ResourcesPageContent() {
                   )}
                 </article>
               );
-
-              return (
-                <FadeIn key={key} delay={i * 0.03}>
-                  {card}
-                </FadeIn>
-              );
             })}
           </div>
 
@@ -241,11 +241,24 @@ export function ResourcesPageContent() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.12}>
-            <div
-              id="subscribe"
-              className="mt-12 scroll-mt-28 rounded-[1.25rem] border border-[#dde5f2] bg-white p-5 shadow-card sm:rounded-[1.75rem] sm:p-8 lg:mt-14 lg:p-10"
-            >
+          <div className="resource-subscribe-benefits mt-10 rounded-[1.25rem] border border-[#7c3aed]/14 bg-gradient-to-br from-[#7c3aed]/[0.04] via-white to-[#2563eb]/[0.03] p-5 sm:rounded-[1.5rem] sm:p-6 lg:mt-12 lg:p-8">
+            <h2 className="text-[clamp(1.125rem,1.5vw+0.5rem,1.375rem)] font-bold tracking-[-0.02em] text-[#071225]">
+              {t("subscribeBenefits.title")}
+            </h2>
+            <ul className="mt-4 grid gap-2.5 sm:grid-cols-2">
+              {SUBSCRIBE_BENEFIT_KEYS.map((key) => (
+                <li key={key} className="flex items-start gap-2.5 text-sm leading-relaxed text-[#64748b]">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7c3aed]" aria-hidden="true" />
+                  {t(`subscribeBenefits.items.${key}`)}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div
+            id="subscribe"
+            className="mt-8 scroll-mt-28 rounded-[1.25rem] border border-[#dde5f2] bg-white p-5 shadow-card sm:rounded-[1.75rem] sm:p-8 lg:mt-10 lg:p-10"
+          >
               <h2 className="text-balance text-lg font-bold tracking-[-0.03em] text-[#071225] sm:text-xl">
                 {t("subscribe.title")}
               </h2>
@@ -298,7 +311,6 @@ export function ResourcesPageContent() {
                 </form>
               )}
             </div>
-          </FadeIn>
         </PageContainer>
       </FullBleedSection>
     </>

@@ -12,9 +12,10 @@ import { ProductFeatureSection } from "@/components/platform/cbam/product-featur
 import { ComplianceControlPanel } from "@/components/platform/cbam/product-ui-compositions";
 import { CBAM_JOURNEY_STEP_KEYS } from "@/lib/assets";
 import { cn } from "@/lib/utils";
-import { Mail, Calculator, FileCheck, Factory, Users, Building2, Truck, ShieldCheck } from "lucide-react";
+import { Mail, Calculator, FileCheck, Factory, Users, Building2, Truck, ShieldCheck, Check } from "lucide-react";
 
 const chipKeys = ["item1", "item2", "item3", "item4"] as const;
+const trustBulletKeys = ["item1", "item2", "item3", "item4"] as const;
 const challengeKeys = ["item1", "item2", "item3"] as const;
 const challengeIcons = [Mail, Calculator, FileCheck];
 const complianceToolKeys = ["item1", "item2", "item3", "item4"] as const;
@@ -46,6 +47,21 @@ export function CbamPlatformPage() {
               </FadeIn>
               <FadeIn immediate>
                 <p className="body-lead-hero mt-4 lg:mt-5">{t("hero.description")}</p>
+              </FadeIn>
+              <FadeIn immediate>
+                <ul className="mt-5 space-y-2" aria-label={t("hero.trustBulletsAriaLabel")}>
+                  {trustBulletKeys.map((key) => (
+                    <li key={key} className="flex items-start gap-2.5 text-sm text-[#475569]">
+                      <span
+                        className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-[#7c3aed]/10 ring-1 ring-[#7c3aed]/18"
+                        aria-hidden="true"
+                      >
+                        <Check className="h-3 w-3 text-[#7c3aed]" />
+                      </span>
+                      <span>{t(`hero.trustBullets.${key}`)}</span>
+                    </li>
+                  ))}
+                </ul>
               </FadeIn>
               <FadeIn immediate>
                 <div className="mt-6 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
@@ -141,36 +157,34 @@ export function CbamPlatformPage() {
               className="mb-4 lg:mb-5"
             />
           </FadeIn>
-          <ol className="grid list-none gap-2 sm:grid-cols-2 lg:gap-2.5">
+          <ol className="cbam-workflow-grid grid list-none gap-2 sm:grid-cols-2 lg:gap-2.5">
             {CBAM_JOURNEY_STEP_KEYS.map((key, index) => (
               <li key={key}>
-                <FadeIn delay={index * 0.03}>
-                  <article className="h-full rounded-lg border border-[#dde5f2]/80 bg-white/90 px-3 py-3 shadow-card ring-1 ring-[#dde5f2]/50">
-                    <div className="flex items-start gap-2.5">
-                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-[#7c3aed] to-[#2563eb] text-[10px] font-bold tabular-nums text-white">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <div className="min-w-0 flex-1">
-                        <h3 className="text-[13px] font-semibold leading-snug text-[#071225]">
-                          {t(`workflow.steps.${key}.name`)}{" "}
-                          <span className="font-medium text-[#64748b]">
-                            — {t(`workflow.steps.${key}.subtitle`)}
-                          </span>
-                        </h3>
-                        <p className="mt-1 text-xs leading-snug text-[#475569] line-clamp-2">
-                          {t(`workflow.steps.${key}.customer`)}
-                        </p>
-                        <p className="mt-1.5 text-[10px] leading-snug text-[#64748b]">
-                          <span className="font-semibold uppercase tracking-[0.1em] text-[#7c3aed]">
-                            {t("workflow.platformLabel")}
-                          </span>
-                          {" · "}
-                          {t(`workflow.steps.${key}.platform`)}
-                        </p>
-                      </div>
+                <article className="cbam-workflow-step h-full rounded-lg border border-[#dde5f2]/80 bg-white/90 px-3 py-3 shadow-card ring-1 ring-[#dde5f2]/50">
+                  <div className="flex items-start gap-2.5">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-[#7c3aed] to-[#2563eb] text-[10px] font-bold tabular-nums text-white">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="text-[13px] font-semibold leading-snug text-[#071225]">
+                        {t(`workflow.steps.${key}.name`)}{" "}
+                        <span className="font-medium text-[#64748b]">
+                          — {t(`workflow.steps.${key}.subtitle`)}
+                        </span>
+                      </h3>
+                      <p className="mt-1 text-xs leading-snug text-[#475569] line-clamp-2">
+                        {t(`workflow.steps.${key}.customer`)}
+                      </p>
+                      <p className="mt-1.5 text-[10px] leading-snug text-[#64748b]">
+                        <span className="font-semibold uppercase tracking-[0.1em] text-[#7c3aed]">
+                          {t("workflow.platformLabel")}
+                        </span>
+                        {" · "}
+                        {t(`workflow.steps.${key}.platform`)}
+                      </p>
                     </div>
-                  </article>
-                </FadeIn>
+                  </div>
+                </article>
               </li>
             ))}
           </ol>

@@ -14,7 +14,13 @@ export type LegalDocumentKey =
   | "legalNotice"
   | "accessibility";
 
-const SECTION_KEYS = ["s1", "s2", "s3", "s4", "s5"] as const;
+const DOCUMENT_SECTION_KEYS: Record<LegalDocumentKey, readonly string[]> = {
+  privacyPolicy: ["s1", "s2", "s3", "s4", "s5"],
+  terms: ["s1", "s2", "s3", "s4", "s5"],
+  cookiePolicy: ["s1", "s2", "s3", "s4", "s5"],
+  legalNotice: ["s1", "s2", "s3", "s4", "s5", "s6", "s7"],
+  accessibility: ["s1", "s2", "s3", "s4", "s5", "s6"],
+};
 
 interface LegalDocumentPageProps {
   documentKey: LegalDocumentKey;
@@ -49,30 +55,26 @@ export function LegalDocumentPage({ documentKey }: LegalDocumentPageProps) {
         <PageContainer className="section-content">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_300px]">
             <div className="min-w-0 space-y-4">
-              {SECTION_KEYS.map((key, i) => (
-                <FadeIn key={key} delay={i * 0.03}>
-                  <section className="legal-doc-card">
-                    <h2 className="text-base font-semibold text-[#071225] lg:text-lg">
-                      {t(`sections.${key}.title`)}
-                    </h2>
-                    <p className="mt-3 text-sm leading-[1.7] text-[#475569] lg:text-[15px]">
-                      {t(`sections.${key}.body`)}
-                    </p>
-                  </section>
-                </FadeIn>
+              {DOCUMENT_SECTION_KEYS[documentKey].map((key) => (
+                <section key={key} className="legal-doc-card">
+                  <h2 className="text-base font-semibold text-[#071225] lg:text-lg">
+                    {t(`sections.${key}.title`)}
+                  </h2>
+                  <p className="mt-3 text-sm leading-[1.7] text-[#475569] lg:text-[15px]">
+                    {t(`sections.${key}.body`)}
+                  </p>
+                </section>
               ))}
 
-              <FadeIn delay={0.15}>
-                <div className="legal-contact-band">
-                  <p className="text-sm leading-relaxed text-[#475569]">{t("contact")}</p>
-                  <p className="mt-4 text-sm text-[#64748b]">
-                    {tPage("questionsBody")}{" "}
-                    <Link href="/demo" className="legal-inline-link">
-                      {tPage("demoLink")}
-                    </Link>
-                  </p>
-                </div>
-              </FadeIn>
+              <div className="legal-contact-band">
+                <p className="text-sm leading-relaxed text-[#475569]">{t("contact")}</p>
+                <p className="mt-4 text-sm text-[#64748b]">
+                  {tPage("questionsBody")}{" "}
+                  <Link href="/demo" className="legal-inline-link">
+                    {tPage("demoLink")}
+                  </Link>
+                </p>
+              </div>
             </div>
 
             <aside className="lg:sticky lg:top-28 lg:self-start">

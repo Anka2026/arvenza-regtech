@@ -25,7 +25,7 @@ export function PageCtaBand({
   className,
 }: PageCtaBandProps) {
   return (
-    <FadeIn>
+    <FadeIn immediate>
       <div
         className={cn(
           "relative min-w-0 overflow-hidden rounded-2xl bg-gradient-cta px-5 py-8 shadow-[0_24px_64px_rgba(124,58,237,0.28)] sm:rounded-[1.75rem] sm:px-8 sm:py-10 lg:px-12 lg:py-12",

@@ -101,10 +101,9 @@ export function IndustriesPage() {
 
       <FullBleedSection className="section-light pb-14 lg:pb-16">
         <PageContainer className="section-content min-w-0">
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {INDUSTRY_CONFIG.map(({ key, icon: Icon, capabilities }, i) => (
-              <FadeIn key={key} delay={i * 0.03}>
-                <article className="industry-card card-premium flex h-full min-w-0 flex-col p-5 lg:p-6">
+          <div className="industry-grid grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {INDUSTRY_CONFIG.map(({ key, icon: Icon, capabilities }) => (
+              <article key={key} className="industry-card card-premium flex h-full min-w-0 flex-col p-5 lg:p-6">
                   <div className="flex items-start gap-3">
                     <div
                       className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#7c3aed]/10 ring-1 ring-[#7c3aed]/18"
@@ -119,6 +118,8 @@ export function IndustriesPage() {
                       <p className="industry-regulation-chip mt-2.5 inline-flex max-w-full">
                         {t(`items.${key}.regulatoryPressure`)}
                       </p>
+                      <p className="industry-field-label mt-4">{t("fields.sectorSignal")}</p>
+                      <p className="industry-sector-signal mt-1.5">{t(`items.${key}.sectorSignal`)}</p>
                     </div>
                   </div>
 
@@ -153,8 +154,7 @@ export function IndustriesPage() {
                       ))}
                     </ul>
                   </div>
-                </article>
-              </FadeIn>
+              </article>
             ))}
           </div>
 

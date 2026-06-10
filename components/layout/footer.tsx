@@ -91,6 +91,10 @@ export function Footer() {
                 </div>
               </div>
               <p className="footer-body mt-4 text-[13px] leading-relaxed sm:text-sm">{t("brandDescription")}</p>
+              <Link href="/demo" className="footer-get-started-link mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#C4B5FD] transition-colors hover:text-white">
+                {t("getStarted")}
+                <span aria-hidden="true">→</span>
+              </Link>
               <a href={`mailto:${tCommon("email")}`} className="footer-email-link mt-4">
                 <Mail className="h-4 w-4 shrink-0" aria-hidden="true" />
                 {tCommon("email")}

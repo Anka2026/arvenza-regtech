@@ -158,7 +158,7 @@
     },
     "companyMenu": {
       "items": {
-        "about": "Hakkımızda",
+        "about": "Kurumsal",
         "legal": "Yasal Bildirim",
         "contact": "Demo Talep Et"
       }
@@ -193,7 +193,7 @@
       "description": "Arvenza, ihracatçıların tedarikçi emisyon verilerini toplamasına, gömülü emisyonları hesaplamasına ve denetime hazır CBAM kanıt dosyası hazırlamasına tek yapılandırılmış iş akışı içinde destek olur.",
       "ctaPrimary": "Demo Planla",
       "ctaSecondary": "Platformu Keşfet",
-      "platformVision": "Arvenza RegTech; CBAM, PPWR, EUDR, Digital Product Passport ve tedarikçi kanıt iş akışları için geliştirilen EU Sustainability Compliance Platform vizyonu üzerine inşa edilmiştir.",
+      "platformVision": "Arvenza RegTech; CBAM, PPWR, EUDR, Digital Product Passport ve tedarikçi kanıt iş akışlarını kapsayan AB Sürdürülebilirlik Uyum Platformu vizyonu üzerine inşa edilmiştir.",
       "trustAriaLabel": "Platform yetenekleri",
       "trust": {
         "item1": "Tedarikçi veri toplama",
@@ -587,7 +587,14 @@
         "item3": "Metodoloji iz kaydı",
         "item4": "Beyana hazır kanıt"
       },
-      "screenshotAlt": "CBAM Calculation Engine panosu"
+      "screenshotAlt": "CBAM Calculation Engine panosu",
+      "trustBulletsAriaLabel": "Temel yetenekler",
+      "trustBullets": {
+        "item1": "Tedarikçi veri toplama",
+        "item2": "Gömülü emisyon hesabı",
+        "item3": "Metodoloji iz kaydı",
+        "item4": "CBAM raporlaması için kanıt hazırlığı"
+      }
     },
     "challenge": {
       "title": "SKDM hazırlığında en zor konu hesaplama değil, süreci bir arada tutmaktır",
@@ -1113,7 +1120,7 @@
     }
   },
   "footer": {
-    "tagline": "AB sürdürülebilirlik uyum platformu",
+    "tagline": "AB Sürdürülebilirlik Uyum Platformu",
     "brandDescription": "CBAM Calculation Engine ile tedarikçi verisinden beyana hazır SKDM kanıtına uzanan süreci yapılandırılmış dijital iş akışına dönüştürün.",
     "columns": {
       "platform": "Platform",
@@ -1134,7 +1141,7 @@
       "dpp": "DPP / ESPR"
     },
     "companyLinks": {
-      "about": "Hakkımızda",
+      "about": "Kurumsal",
       "resources": "Kaynaklar",
       "demo": "Demo Talep Et",
       "imprint": "Yasal Bildirim"
@@ -1162,7 +1169,8 @@
       }
     },
     "legalNote": "Arvenza RegTech, Hollanda merkezli Anka Sustainability B.V. tarafından işletilen bir ürün markasıdır. KvK: 99787784.",
-    "copyright": "© {year} Anka Sustainability B.V. Tüm hakları saklıdır."
+    "copyright": "© {year} Anka Sustainability B.V. Tüm hakları saklıdır.",
+    "getStarted": "Başlayın"
   },
   "language": {
     "en": "English",
@@ -1201,11 +1209,13 @@
           "title": "Dokümantasyon ve raporlama katmanı",
           "description": "Dokümantasyon izlenebilirliği, kanıt dosyaları, raporlama dönemi hazırlığı ve incelemeye hazır iş akışı çıktıları."
         }
-      }
+      },
+      "diagramAriaLabel": "Platform mimarisi katman diyagramı"
     },
     "sections": {
       "ready": {
-        "title": "Hazır"
+        "title": "Hazır ürün yeteneği",
+        "description": "CBAM Calculation Engine, Arvenza platform mimarisi içindeki hazır operasyonel ürün yeteneğidir."
       },
       "pilot": {
         "title": "Pilot modüller",
@@ -1220,7 +1230,7 @@
       "badge": "Merkez Ürün",
       "title": "CBAM Calculation Engine",
       "description": "Tedarikçi veri toplama, gömülü emisyon hesabı, metodoloji iz kaydı ve beyana hazır CBAM kanıt dosyası için hazır ürün yeteneği.",
-      "exploreCta": "Ürünü İncele",
+      "exploreCta": "CBAM Calculation Engine'i İncele",
       "demoCta": "Demo Talep Et",
       "screenshotAlt": "CBAM Calculation Engine panosu"
     },
@@ -1258,6 +1268,12 @@
       "title": "Hazır CBAM ürününü ve genişleyen platform yol haritasını keşfedin",
       "primary": "CBAM Calculation Engine'i İncele",
       "secondary": "Demo Talep Et"
+    },
+    "heroChipsAriaLabel": "Platform öne çıkanları",
+    "heroChips": {
+      "item1": "Hazır CBAM motoru",
+      "item2": "3 pilot modül",
+      "item3": "Ortak kanıt modeli"
     }
   },
   "solutionsPage": {
@@ -1340,7 +1356,8 @@
     "fields": {
       "operationalChallenge": "Operasyonel zorluk",
       "arvenzaWorkflow": "Arvenza iş akışı",
-      "relevantCapability": "İlgili yetenek"
+      "relevantCapability": "İlgili yetenek",
+      "sectorSignal": "Sektör sinyali"
     },
     "products": {
       "cbamEngine": "CBAM Calculation Engine",
@@ -1355,37 +1372,43 @@
         "title": "Demir-Çelik ve Alüminyum",
         "regulatoryPressure": "CBAM definitif dönem",
         "operationalChallenge": "GTİP/CN kod eşleştirmesi, tesis düzeyi tedarikçi verisi, doğrudan ve dolaylı emisyonlar, elektrik faktörleri ve kanıt kalitesi her raporlama döneminde birlikte yönetilmelidir.",
-        "arvenzaWorkflow": "CBAM Calculation Engine; tedarikçi verisini, gömülü emisyon hesabını, metodoloji iz kaydını ve beyana hazır kanıt dosyasını kontrollü bir iş akışında yapılandırır."
+        "arvenzaWorkflow": "CBAM Calculation Engine; tedarikçi verisini, gömülü emisyon hesabını, metodoloji iz kaydını ve beyana hazır kanıt dosyasını kontrollü bir iş akışında yapılandırır.",
+        "sectorSignal": "CBAM kapsamındaki malzeme aileleri ve tedarikçi kanıt iş akışları"
       },
       "automotive": {
         "title": "Otomotiv Tedarik Zincirleri",
         "regulatoryPressure": "CBAM, DPP ve tedarikçi kanıt gereklilikleri",
         "operationalChallenge": "Otomotiv tedarik zincirleri çok katmanlı tedarikçiler, yüksek hacimli komponentler ve çelik, alüminyum, batarya ve ürün verisi yükümlülüklerinin kesiştiği karma malzeme yapılarıyla çalışır.",
-        "arvenzaWorkflow": "Arvenza; tedarikçi iletişimi, kanıt toplama ve ürün düzeyi veri iş akışlarını yapılandırarak ekiplerin bugün CBAM kanıtını hazırlamasına ve aynı modeli ileride DPP gerekliliklerine genişletmesine destek olur."
+        "arvenzaWorkflow": "Arvenza; tedarikçi iletişimi, kanıt toplama ve ürün düzeyi veri iş akışlarını yapılandırarak ekiplerin bugün CBAM kanıtını hazırlamasına ve aynı modeli ileride DPP gerekliliklerine genişletmesine destek olur.",
+        "sectorSignal": "Çok katmanlı tedarikçi verisi ve ürün kanıt koordinasyonu"
       },
       "packagingFmcg": {
         "title": "Ambalaj ve FMCG",
         "regulatoryPressure": "PPWR ve ambalaj veri hazırlığı",
         "operationalChallenge": "Ambalaj ekipleri; PPWR raporlama ve tasarım yükümlülükleri operasyonel hale gelmeden önce malzeme düzeyi ürün ağacı, geri dönüştürülmüş içerik kanıtı, tedarikçi dokümantasyonu ve ürün ailesi mantığını yönetmelidir.",
-        "arvenzaWorkflow": "PPWR / Ambalaj Uyumu pilotu; ambalaj ürün ağaçlarını, tedarikçi kanıtını ve ürün düzeyi ambalaj verisini platformun kanıt iş akışı mantığıyla yapılandırmak üzere tasarlanmıştır."
+        "arvenzaWorkflow": "PPWR / Ambalaj Uyumu pilotu; ambalaj ürün ağaçlarını, tedarikçi kanıtını ve ürün düzeyi ambalaj verisini platformun kanıt iş akışı mantığıyla yapılandırmak üzere tasarlanmıştır.",
+        "sectorSignal": "Ambalaj ürün ağaçları, geri dönüştürülmüş içerik kanıtı ve tedarikçi dokümantasyonu"
       },
       "electronicsBatteries": {
         "title": "Elektronik ve Bataryalar",
         "regulatoryPressure": "Digital Product Passport ve ürün düzeyi kanıt",
         "operationalChallenge": "Elektronik ve batarya tedarik zincirleri; tedarikçiler ve ürün aileleri arasında tutarlı kalması gereken yapılandırılmış ürün verisi, komponent düzeyi kanıt, yaşam döngüsü nitelikleri ve izlenebilirlik katmanları gerektirir.",
-        "arvenzaWorkflow": "Arvenza'nın Digital Product Passport yol haritası; mevcut tedarikçi kanıt operasyonlarından genişletilebilecek ürün veri yapıları, kanıt katmanları ve tedarikçi dokümantasyonu üzerine odaklanır."
+        "arvenzaWorkflow": "Arvenza'nın Digital Product Passport yol haritası; mevcut tedarikçi kanıt operasyonlarından genişletilebilecek ürün veri yapıları, kanıt katmanları ve tedarikçi dokümantasyonu üzerine odaklanır.",
+        "sectorSignal": "Komponent kanıtı, ürün veri yapıları ve izlenebilirlik hazırlığı"
       },
       "agricultureFood": {
         "title": "Tarım ve Gıda",
         "regulatoryPressure": "EUDR ve tarımsal iklim veri iş akışları",
         "operationalChallenge": "Emtia bağlantılı tedarik zincirleri; çiftlikler, tedarikçiler ve sevkiyatlar genelinde coğrafi konum verisi, üretici düzeyi kanıt, özen yükümlülüğü dokümantasyonu ve risk sınıflandırması gerektirir.",
-        "arvenzaWorkflow": "EUDR Due Diligence ve Agri-Climate Platform iş akışları; çiftlik düzeyi kayıtlar, coğrafi konum kanıtı, tedarikçi dokümantasyonu ve izlenebilirlik hazırlığı için pilot/yol haritası yetenekleri olarak konumlandırılır."
+        "arvenzaWorkflow": "EUDR Due Diligence ve Agri-Climate Platform iş akışları; çiftlik düzeyi kayıtlar, coğrafi konum kanıtı, tedarikçi dokümantasyonu ve izlenebilirlik hazırlığı için pilot/yol haritası yetenekleri olarak konumlandırılır.",
+        "sectorSignal": "Üretici kayıtları, coğrafi konum kanıtı ve gözetim zinciri hazırlığı"
       },
       "importersExporters": {
         "title": "İthalatçılar ve İhracatçılar",
         "regulatoryPressure": "Beyan sahibi yükümlülükleri ve tedarikçi kanıt hazırlığı",
         "operationalChallenge": "İthalatçı ve ihracatçılar; farklı ticaret akışlarında GTİP/CN kapsam kontrolü, tedarikçi kanıt talepleri, hesaplama hazırlığı, dokümantasyon kalitesi ve raporlama takvimlerini birlikte yönetmelidir.",
-        "arvenzaWorkflow": "Arvenza; tedarikçi veri toplama, hesaplama hazırlığı ve kanıt koordinasyonunu CBAM ve gelecekteki AB sürdürülebilirlik iş akışları için tekrarlanabilir bir operasyon modeline dönüştürür."
+        "arvenzaWorkflow": "Arvenza; tedarikçi veri toplama, hesaplama hazırlığı ve kanıt koordinasyonunu CBAM ve gelecekteki AB sürdürülebilirlik iş akışları için tekrarlanabilir bir operasyon modeline dönüştürür.",
+        "sectorSignal": "Raporlama dönemi koordinasyonu, tedarikçi takibi ve kanıt hazırlığı"
       }
     },
     "evidenceStrip": {
@@ -1395,7 +1418,7 @@
     "cta": {
       "title": "Arvenza'nın sektörünüze nasıl uyduğunu görün",
       "primary": "Demo Planla",
-      "secondary": "Ürünü İncele"
+      "secondary": "CBAM Calculation Engine'i İncele"
     }
   },
   "companyPage": {
@@ -1457,6 +1480,16 @@
       "body": "CBAM Calculation Engine'i inceleyin veya Arvenza'nın tedarikçi kanıtı ve regülasyon iş akışlarını kurumunuzun ihtiyaçlarına göre nasıl yapılandırabileceğini görüşmek için demo talep edin.",
       "primary": "CBAM Calculation Engine'i İncele",
       "secondary": "Demo Talep Et"
+    },
+    "whyArvenzaNow": {
+      "title": "Neden Arvenza, neden şimdi",
+      "body": "AB sürdürülebilirlik regülasyonları yorumlama aşamasından tekrarlayan operasyonel uygulama aşamasına geçiyor. CBAM, PPWR, EUDR ve ürün verisi gereklilikleri; tedarikçi iletişimi, kanıt kalitesi, hesaplama girdileri ve dokümantasyon izlenebilirliği etrafında tekrarlanabilir iş akışları oluşturur. Arvenza RegTech, bu regülasyon uygulama mantığını yapılandırılmış yazılıma dönüştürmek için geliştirilmiştir.",
+      "stripAriaLabel": "Güvenilirlik vurguları",
+      "strip": {
+        "item1": "Regülasyon uygulama pratiğinden geliştirildi",
+        "item2": "Ortak operasyon modeli olarak tedarikçi kanıtı",
+        "item3": "Hazır CBAM ürünü, genişleyen yol haritası"
+      }
     }
   },
   "regulationsCbam": {
@@ -1497,6 +1530,7 @@
     "description": "Arvenza kaynakları; CBAM hazırlığı, tedarikçi kanıtı toplama, gömülü emisyon verisi ve yaklaşan AB sürdürülebilirlik uyum iş akışlarını yapılandırmanıza destek olur.",
     "positioning": "CBAM, tedarikçi kanıtı ve AB sürdürülebilirlik uyum iş akışları için kaynaklar",
     "categories": {
+      "all": "Tümü",
       "cbamGuides": "CBAM Rehberleri",
       "checklists": "Kontrol Listeleri ve Şablonlar",
       "sectorBriefings": "Sektör Bilgilendirmeleri",
@@ -1563,6 +1597,15 @@
       },
       "submit": "Güncellemeleri al",
       "success": "Kaydınız alındı. Yeni kaynaklar yayınlandığında sizi bilgilendireceğiz."
+    },
+    "subscribeBenefits": {
+      "title": "Abone olduğunuzda neler alırsınız",
+      "items": {
+        "item1": "CBAM raporlama dönemi hatırlatmaları",
+        "item2": "Yeni kaynak bildirimleri",
+        "item3": "Tedarikçi kanıtı iş akışı güncellemeleri",
+        "item4": "Regülasyon yol haritası bilgilendirmeleri"
+      }
     }
   },
   "legalPage": {
@@ -1670,27 +1713,35 @@
       "title": "Yasal Bildirim",
       "description": "Arvenza RegTech için şirket ve yasal bilgiler.",
       "lastUpdated": "Son güncelleme: Haziran 2026",
-      "contact": "info@ankasustainability.com. Arvenza RegTech, Hollanda merkezli Anka Sustainability B.V. tarafından işletilen bir ürün markasıdır. KvK: 99787784.",
+      "contact": "Bu belge hakkında sorularınız için info@ankasustainability.com adresine yazın.",
       "sections": {
         "s1": {
           "title": "Hizmet sağlayıcı",
           "body": "Anka Sustainability B.V., Hollanda. KvK: 99787784. Newtonlaan 115, 3584 BH Utrecht, Hollanda."
         },
         "s2": {
-          "title": "Ürün markası",
-          "body": "Arvenza RegTech, Anka Sustainability B.V. tarafından işletilen bir ürün markasıdır. Tüm platform hizmetleri Anka Sustainability B.V. tarafından sunulur."
+          "title": "Ürün markası ve işletici",
+          "body": "Arvenza RegTech, Hollanda merkezli Anka Sustainability B.V. tarafından işletilen bir ürün markasıdır. KvK: 99787784. Arvenza RegTech ayrı bir tüzel kişilik değildir; tüm platform hizmetleri Anka Sustainability B.V. tarafından sunulur."
         },
         "s3": {
           "title": "İletişim",
-          "body": "E-posta: info@ankasustainability.com"
+          "body": "E-posta: info@ankasustainability.com. Demo talepleri ve platform soruları için web sitesindeki formları kullanabilir veya doğrudan e-posta gönderebilirsiniz."
         },
         "s4": {
-          "title": "Fikri mülkiyet",
-          "body": "İçerik, markalar ve platform materyalleri geçerli fikri mülkiyet yasalarıyla korunmaktadır."
+          "title": "Bilginin kapsamı",
+          "body": "Bu web sitesinde yer alan bilgiler genel ürün ve regülasyon iş akışı bilgilendirmesi niteliğindedir; hukuki danışmanlık, belgelendirme, akreditasyon veya regülasyon sonucuna ilişkin garanti anlamına gelmez."
         },
         "s5": {
-          "title": "Sorumluluk reddi",
-          "body": "Bu web sitesindeki bilgiler genel amaçlıdır ve hukuki tavsiye niteliği taşımaz."
+          "title": "Fikri mülkiyet",
+          "body": "Ticari markalar, ürün adları, web sitesi içerikleri, ekran görüntüleri, arayüz konseptleri ve görsel materyaller aksi belirtilmedikçe Anka Sustainability B.V.'ye aittir veya lisanslı olarak kullanılmaktadır."
+        },
+        "s6": {
+          "title": "Regülasyon sonucuna ilişkin garanti verilmemesi",
+          "body": "Arvenza RegTech yapılandırılmış uyum hazırlık iş akışlarını destekler. Regülasyon gereklilikleri değişebilir ve bağlama göre farklılık gösterebilir. Güncel yükümlülükleri ve sonuçları uygun olduğunda nitelikli danışmanlarla doğrulamak kullanıcı sorumluluğundadır."
+        },
+        "s7": {
+          "title": "Sorumlu taraf",
+          "body": "Bu web sitesinin ve Arvenza RegTech ürün markasının işletiminden Anka Sustainability B.V. sorumludur. Hukuki veya gizlilik soruları için info@ankasustainability.com adresine yazın."
         }
       }
     },
@@ -1699,29 +1750,40 @@
       "title": "Erişilebilirlik Bildirimi",
       "description": "Arvenza RegTech web sitesi için dijital erişilebilirlik taahhüdü.",
       "lastUpdated": "Son güncelleme: Haziran 2026",
-      "contact": "info@ankasustainability.com",
+      "contact": "Erişilebilirlik soruları için info@ankasustainability.com. Arvenza RegTech, Hollanda merkezli Anka Sustainability B.V. tarafından işletilen bir ürün markasıdır. KvK: 99787784.",
       "sections": {
         "s1": {
           "title": "Taahhüt",
           "body": "Anka Sustainability B.V., Arvenza RegTech web sitesini mümkün olduğunca erişilebilir kılmayı hedefler."
         },
         "s2": {
-          "title": "Önlemler",
-          "body": "Anlamsal HTML, yeterli renk kontrastı, klavye gezinilebilirliği ve açıklayıcı etiketler kullanılır."
+          "title": "Kapsam",
+          "body": "Bu bildirim, Anka Sustainability B.V. tarafından Arvenza RegTech ürün markası altında işletilen kamuya açık pazarlama web sitesi ve bilgilendirme sayfaları için geçerlidir."
         },
         "s3": {
-          "title": "Bilinen sınırlamalar",
-          "body": "Bazı üçüncü taraf içerikler tam erişilebilirlik standartlarını karşılamayabilir."
+          "title": "Erişilebilirlik yaklaşımı",
+          "body": "Anlamsal HTML, mümkün olduğunca yeterli renk kontrastı, klavye gezinilebilirliği, açıklayıcı etiketler ve yakınlaştırma ile metin akışını destekleyen duyarlı düzenler kullanılır."
         },
         "s4": {
-          "title": "Geri bildirim",
-          "body": "Erişilebilirlik engelleri için info@ankasustainability.com adresine sayfa URL'si ile birlikte yazın."
+          "title": "Bilinen sınırlamalar",
+          "body": "Bazı üçüncü taraf içerikler, gömülü medya veya eski bileşenler tam erişilebilirlik standartlarını karşılamayabilir. Siteyi zaman içinde iyileştirmeye devam ediyoruz."
         },
         "s5": {
-          "title": "İnceleme",
+          "title": "Geri bildirim ve iletişim",
+          "body": "Erişilebilirlik engelleri için info@ankasustainability.com adresine sorunu ve sayfa URL'sini ileterek yazın."
+        },
+        "s6": {
+          "title": "Gözden geçirme",
           "body": "Bu bildirim Haziran 2026'da hazırlanmış olup periyodik olarak gözden geçirilecektir."
         }
       }
     }
+  },
+  "cookieConsent": {
+    "ariaLabel": "Çerez onayı",
+    "message": "Web sitesinin çalışması için zorunlu çerezleri kullanırız; deneyimi iyileştirmek için isteğe bağlı çerezler de kullanabiliriz. İsteğe bağlı çerezleri kabul edebilir veya reddedebilirsiniz.",
+    "accept": "Kabul Et",
+    "reject": "Reddet",
+    "policyLink": "Çerez Politikası"
   }
 }

@@ -66,9 +66,7 @@ export function HeroSection() {
                   </li>
                 ))}
               </ul>
-            </FadeIn>
-            <FadeIn immediate>
-              <p className="mt-6 max-w-xl border-t border-[#dde5f2]/70 pt-5 text-sm leading-relaxed text-[#64748b] lg:mt-7">
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-[#64748b]">
                 {t("platformVision")}
               </p>
             </FadeIn>

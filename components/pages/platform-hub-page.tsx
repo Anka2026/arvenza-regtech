@@ -8,6 +8,7 @@ import { SectionHeading } from "@/components/home/section-heading";
 import { FadeIn } from "@/components/ui/fade-in";
 import { PageCtaBand } from "@/components/pages/shared/page-cta-band";
 import { StatusPill } from "@/components/pages/shared/status-pill";
+import { PlatformArchitectureDiagram } from "@/components/platform/platform-architecture-diagram";
 import { CbamProductScreenshot } from "@/components/ui/cbam-product-screenshot";
 import { buttonVariants } from "@/components/ui/button";
 import { PLATFORM_MODULE_ANCHORS } from "@/lib/platform-module-anchors";
@@ -19,6 +20,8 @@ const ARCHITECTURE_LAYER_KEYS = [
   "calculationMethodology",
   "documentationReporting",
 ] as const;
+
+const HERO_CHIP_KEYS = ["item1", "item2", "item3"] as const;
 
 const PILOT_MODULE_KEYS = ["cbamConsole", "ppwr", "agriClimate"] as const;
 const COMING_SOON_MODULE_KEYS = ["eudr", "dpp", "supplierEvidence", "esgReporting"] as const;
@@ -78,142 +81,156 @@ export function PlatformHubPage() {
   return (
     <>
       <FullBleedSection ariaLabelledby="platform-heading" className="section-hero-light pt-24 lg:pt-28">
-        <PageContainer className="section-content min-w-0 pb-10">
-          <FadeIn immediate>
-            <SectionHeading
-              id="platform-heading"
-              eyebrow={t("eyebrow")}
-              title={t("title")}
-              description={t("description")}
-            />
-          </FadeIn>
+        <PageContainer className="section-content min-w-0 pb-10 lg:pb-12">
+          <div className="grid min-w-0 grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-10 xl:gap-12">
+            <div className="min-w-0">
+              <FadeIn immediate>
+                <SectionHeading
+                  id="platform-heading"
+                  eyebrow={t("eyebrow")}
+                  title={t("title")}
+                  description={t("description")}
+                />
+                <ul className="mt-5 flex flex-wrap gap-1.5" aria-label={t("heroChipsAriaLabel")}>
+                  {HERO_CHIP_KEYS.map((key) => (
+                    <li key={key}>
+                      <span className="chip-dark">
+                        <span className="chip-dot" aria-hidden="true" />
+                        {t(`heroChips.${key}`)}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </FadeIn>
+            </div>
+
+            <FadeIn immediate direction="none" className="min-w-0 w-full">
+              <PlatformArchitectureDiagram />
+            </FadeIn>
+          </div>
         </PageContainer>
       </FullBleedSection>
 
       <FullBleedSection className="section-light pb-14 lg:pb-16">
         <PageContainer className="section-content min-w-0">
-          <FadeIn>
-            <div className="platform-architecture-strip rounded-[1.25rem] border border-[#7c3aed]/14 bg-gradient-to-br from-[#7c3aed]/[0.05] via-white to-[#2563eb]/[0.04] p-5 sm:rounded-[1.5rem] sm:p-6 lg:p-8">
-              <h2 className="text-[clamp(1.125rem,1.5vw+0.5rem,1.375rem)] font-bold tracking-[-0.02em] text-[#071225]">
-                {t("architecture.title")}
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
-                {t("architecture.body")}
-              </p>
-              <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-                {ARCHITECTURE_LAYER_KEYS.map((key) => (
-                  <div key={key} className="platform-layer-card rounded-xl border border-[#dde5f2]/90 bg-white/90 p-4">
-                    <p className="platform-layer-label">{t(`architecture.layers.${key}.title`)}</p>
-                    <p className="mt-2 text-xs leading-relaxed text-[#64748b] lg:text-sm">
-                      {t(`architecture.layers.${key}.description`)}
-                    </p>
-                  </div>
-                ))}
-              </div>
+          <div className="platform-architecture-strip rounded-[1.25rem] border border-[#7c3aed]/14 bg-gradient-to-br from-[#7c3aed]/[0.05] via-white to-[#2563eb]/[0.04] p-5 sm:rounded-[1.5rem] sm:p-6 lg:p-8">
+            <h2 className="text-[clamp(1.125rem,1.5vw+0.5rem,1.375rem)] font-bold tracking-[-0.02em] text-[#071225]">
+              {t("architecture.title")}
+            </h2>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
+              {t("architecture.body")}
+            </p>
+            <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {ARCHITECTURE_LAYER_KEYS.map((key) => (
+                <div key={key} className="platform-layer-card rounded-xl border border-[#dde5f2]/90 bg-white/90 p-4">
+                  <p className="platform-layer-label">{t(`architecture.layers.${key}.title`)}</p>
+                  <p className="mt-2 text-xs leading-relaxed text-[#64748b] lg:text-sm">
+                    {t(`architecture.layers.${key}.description`)}
+                  </p>
+                </div>
+              ))}
             </div>
-          </FadeIn>
+          </div>
 
-          <FadeIn delay={0.04}>
-            <div className="mt-12 lg:mt-14">
-              <h2 className="text-[clamp(1.125rem,1.5vw+0.5rem,1.375rem)] font-bold tracking-[-0.02em] text-[#071225]">
-                {t("sections.ready.title")}
-              </h2>
-              <div className="core-product-showcase relative mt-6 overflow-hidden rounded-[1.25rem] border border-[#2563eb]/22 bg-gradient-to-br from-[#2563eb]/[0.06] via-white to-[#7c3aed]/[0.05] p-5 shadow-card sm:rounded-[1.75rem] sm:p-8 lg:p-10">
-                <div className="grid min-w-0 items-center gap-8 lg:grid-cols-[1fr_1.2fr] lg:gap-10">
-                  <div className="min-w-0">
-                    <div className="flex flex-wrap items-start gap-2.5">
-                      <StatusPill variant="coreProduct" label={t("readyModule.badge")} />
-                      <StatusPill variant="ready" label={tStatus("ready")} />
-                    </div>
-                    <h3 className="mt-5 text-[clamp(1.375rem,2vw+0.5rem,2rem)] font-bold tracking-[-0.03em] text-[#071225]">
-                      {t("readyModule.title")}
-                    </h3>
-                    <p className="mt-4 max-w-3xl text-base leading-relaxed text-[#64748b] lg:text-lg">
-                      {t("readyModule.description")}
-                    </p>
-                    <div className="mt-6 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
-                      <Link
-                        href="/platform/cbam"
-                        className={cn(
-                          buttonVariants({ variant: "default", size: "lg" }),
-                          "inline-flex w-full justify-center gap-2 sm:w-auto"
-                        )}
-                      >
-                        {t("readyModule.exploreCta")}
-                        <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                      </Link>
-                      <Link
-                        href="/demo"
-                        className={cn(
-                          buttonVariants({ variant: "accent-outline", size: "lg" }),
-                          "w-full justify-center sm:w-auto"
-                        )}
-                      >
-                        {t("readyModule.demoCta")}
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="hero-product-stage relative min-w-0 w-full max-w-full">
-                    <div
-                      className="pointer-events-none absolute -inset-4 rounded-3xl bg-[radial-gradient(circle,rgba(37,99,235,0.12),transparent_70%)] blur-2xl"
-                      aria-hidden="true"
-                    />
-                    <CbamProductScreenshot
-                      focus="full"
-                      alt={t("readyModule.screenshotAlt")}
-                      size="large"
-                      elevated
-                      className="relative w-full max-w-full shadow-dashboard-glow"
-                    />
-                  </div>
+          <div className="section-ready-header mt-10 lg:mt-12">
+            <h2 className="text-[clamp(1.25rem,1.75vw+0.5rem,1.75rem)] font-bold tracking-[-0.02em] text-[#071225]">
+              {t("sections.ready.title")}
+            </h2>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
+              {t("sections.ready.description")}
+            </p>
+          </div>
+
+          <div className="core-product-showcase relative mt-6 overflow-hidden rounded-[1.25rem] border border-[#2563eb]/22 bg-gradient-to-br from-[#2563eb]/[0.06] via-white to-[#7c3aed]/[0.05] p-5 shadow-card sm:rounded-[1.75rem] sm:p-8 lg:p-10">
+            <div className="grid min-w-0 items-center gap-8 lg:grid-cols-[1fr_1.2fr] lg:gap-10">
+              <div className="min-w-0">
+                <div className="flex flex-wrap items-start gap-2.5">
+                  <StatusPill variant="coreProduct" label={t("readyModule.badge")} />
+                  <StatusPill variant="ready" label={tStatus("ready")} />
+                </div>
+                <h3 className="mt-5 text-[clamp(1.375rem,2vw+0.5rem,2rem)] font-bold tracking-[-0.03em] text-[#071225]">
+                  {t("readyModule.title")}
+                </h3>
+                <p className="mt-4 max-w-3xl text-base leading-relaxed text-[#64748b] lg:text-lg">
+                  {t("readyModule.description")}
+                </p>
+                <div className="mt-6 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
+                  <Link
+                    href="/platform/cbam"
+                    className={cn(
+                      buttonVariants({ variant: "default", size: "lg" }),
+                      "inline-flex w-full justify-center gap-2 sm:w-auto"
+                    )}
+                  >
+                    {t("readyModule.exploreCta")}
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
+                  <Link
+                    href="/demo"
+                    className={cn(
+                      buttonVariants({ variant: "accent-outline", size: "lg" }),
+                      "w-full justify-center sm:w-auto"
+                    )}
+                  >
+                    {t("readyModule.demoCta")}
+                  </Link>
                 </div>
               </div>
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={0.06}>
-            <div className="mt-12 lg:mt-14">
-              <h2 className="text-[clamp(1.125rem,1.5vw+0.5rem,1.375rem)] font-bold tracking-[-0.02em] text-[#071225]">
-                {t("sections.pilot.title")}
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
-                {t("sections.pilot.description")}
-              </p>
-              <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-                {PILOT_MODULE_KEYS.map((key) => (
-                  <ModuleCard
-                    key={key}
-                    moduleKey={key}
-                    status="pilot"
-                    anchorId={PLATFORM_MODULE_ANCHORS[PILOT_ANCHOR[key]]}
-                  />
-                ))}
+              <div className="hero-product-stage relative min-w-0 w-full max-w-full">
+                <div
+                  className="pointer-events-none absolute -inset-4 rounded-3xl bg-[radial-gradient(circle,rgba(37,99,235,0.12),transparent_70%)] blur-2xl"
+                  aria-hidden="true"
+                />
+                <CbamProductScreenshot
+                  focus="full"
+                  alt={t("readyModule.screenshotAlt")}
+                  size="large"
+                  elevated
+                  className="relative w-full max-w-full shadow-dashboard-glow"
+                />
               </div>
             </div>
-          </FadeIn>
+          </div>
 
-          <FadeIn delay={0.08}>
-            <div className="mt-12 lg:mt-14">
-              <h2 className="text-[clamp(1.125rem,1.5vw+0.5rem,1.375rem)] font-bold tracking-[-0.02em] text-[#071225]">
-                {t("sections.comingSoon.title")}
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
-                {t("sections.comingSoon.description")}
-              </p>
-              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                {COMING_SOON_MODULE_KEYS.map((key) => (
-                  <ModuleCard
-                    key={key}
-                    moduleKey={key}
-                    status="comingSoon"
-                    anchorId={PLATFORM_MODULE_ANCHORS[COMING_SOON_ANCHOR[key]]}
-                  />
-                ))}
-              </div>
+          <div className="mt-10 lg:mt-12">
+            <h2 className="text-[clamp(1.125rem,1.5vw+0.5rem,1.375rem)] font-bold tracking-[-0.02em] text-[#071225]">
+              {t("sections.pilot.title")}
+            </h2>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
+              {t("sections.pilot.description")}
+            </p>
+            <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+              {PILOT_MODULE_KEYS.map((key) => (
+                <ModuleCard
+                  key={key}
+                  moduleKey={key}
+                  status="pilot"
+                  anchorId={PLATFORM_MODULE_ANCHORS[PILOT_ANCHOR[key]]}
+                />
+              ))}
             </div>
-          </FadeIn>
+          </div>
 
-          <div className="mt-14">
+          <div className="mt-10 lg:mt-12">
+            <h2 className="text-[clamp(1.125rem,1.5vw+0.5rem,1.375rem)] font-bold tracking-[-0.02em] text-[#071225]">
+              {t("sections.comingSoon.title")}
+            </h2>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
+              {t("sections.comingSoon.description")}
+            </p>
+            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {COMING_SOON_MODULE_KEYS.map((key) => (
+                <ModuleCard
+                  key={key}
+                  moduleKey={key}
+                  status="comingSoon"
+                  anchorId={PLATFORM_MODULE_ANCHORS[COMING_SOON_ANCHOR[key]]}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12 lg:mt-14">
             <PageCtaBand
               title={t("cta.title")}
               primaryLabel={t("cta.primary")}

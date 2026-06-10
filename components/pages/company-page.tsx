@@ -11,6 +11,8 @@ const SECTION_KEYS = ["whatIs", "whyNow", "whyCbamFirst", "roadmapLogic", "opera
 const SECTION_ICONS = [Layers, Clock, Calculator, GitBranch, Building2] as const;
 const TRUST_KEYS = ["item1", "item2", "item3", "item4", "item5"] as const;
 
+const WHY_NOW_STRIP_KEYS = ["item1", "item2", "item3"] as const;
+
 export function CompanyPage() {
   const t = useTranslations("companyPage");
 
@@ -28,7 +30,7 @@ export function CompanyPage() {
                 <p className="eyebrow-pill">{t("eyebrow")}</p>
               </FadeIn>
               <FadeIn immediate>
-                <h1 id="company-heading" className="heading-hero mt-5 text-balance">
+                <h1 id="company-heading" className="heading-hero company-hero-heading mt-5 text-balance">
                   {t("title")}
                 </h1>
               </FadeIn>
@@ -71,8 +73,26 @@ export function CompanyPage() {
 
       <FullBleedSection className="section-light py-12 lg:py-14">
         <PageContainer className="section-content min-w-0">
-          <FadeIn>
-            <article className="corporate-section-card corporate-section-card-featured">
+          <article className="corporate-why-now-card corporate-section-card-featured">
+            <div className="corporate-section-icon">
+              <Clock className="h-[18px] w-[18px] text-[#7c3aed]" aria-hidden="true" />
+            </div>
+            <h2 className="mt-3 text-[clamp(1.125rem,1.5vw+0.5rem,1.5rem)] font-bold tracking-[-0.02em] text-[#071225]">
+              {t("whyArvenzaNow.title")}
+            </h2>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
+              {t("whyArvenzaNow.body")}
+            </p>
+            <ul className="mt-5 flex flex-wrap gap-2" aria-label={t("whyArvenzaNow.stripAriaLabel")}>
+              {WHY_NOW_STRIP_KEYS.map((key) => (
+                <li key={key}>
+                  <span className="corporate-trust-chip">{t(`whyArvenzaNow.strip.${key}`)}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+
+          <article className="corporate-section-card corporate-section-card-featured mt-5">
               <div className="corporate-section-icon">
                 <Layers className="h-[18px] w-[18px] text-[#7c3aed]" aria-hidden="true" />
               </div>
@@ -83,14 +103,12 @@ export function CompanyPage() {
                 {t("sections.whatIs.body")}
               </p>
             </article>
-          </FadeIn>
 
           <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-6 lg:gap-5">
             {SECTION_KEYS.slice(1).map((key, i) => {
               const Icon = SECTION_ICONS[i + 1];
               return (
-                <FadeIn key={key} delay={0.04 + i * 0.04}>
-                  <article className="corporate-section-card h-full">
+                <article key={key} className="corporate-section-card h-full">
                     <div className="corporate-section-icon">
                       <Icon className="h-[18px] w-[18px] text-[#7c3aed]" aria-hidden="true" />
                     </div>
@@ -101,16 +119,14 @@ export function CompanyPage() {
                       {t(`sections.${key}.body`)}
                     </p>
                   </article>
-                </FadeIn>
               );
             })}
           </div>
 
-          <FadeIn delay={0.12}>
-            <div
-              className="corporate-trust-strip mt-10 rounded-[1.25rem] border border-[#7c3aed]/16 bg-gradient-to-br from-[#7c3aed]/[0.06] via-white to-[#2563eb]/[0.04] p-5 sm:rounded-[1.5rem] sm:p-6 lg:mt-12 lg:p-8"
-              aria-label={t("trust.ariaLabel")}
-            >
+          <div
+            className="corporate-trust-strip mt-10 rounded-[1.25rem] border border-[#7c3aed]/16 bg-gradient-to-br from-[#7c3aed]/[0.06] via-white to-[#2563eb]/[0.04] p-5 sm:rounded-[1.5rem] sm:p-6 lg:mt-12 lg:p-8"
+            aria-label={t("trust.ariaLabel")}
+          >
               <ul className="flex flex-wrap gap-2">
                 {TRUST_KEYS.map((key) => (
                   <li key={key}>
@@ -118,8 +134,7 @@ export function CompanyPage() {
                   </li>
                 ))}
               </ul>
-            </div>
-          </FadeIn>
+          </div>
 
           <div className="mt-10 lg:mt-12">
             <PageCtaBand

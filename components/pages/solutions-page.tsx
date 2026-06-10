@@ -66,6 +66,28 @@ const STATUS_KEY: Record<SolutionKey, SolutionStatus> = {
   dpp: "comingSoon",
 };
 
+function SolutionWorkflowVisual({ status }: { status: SolutionStatus }) {
+  return (
+    <div
+      className={cn(
+        "solution-workflow-visual",
+        status === "ready" && "solution-workflow-visual-ready",
+        status === "pilot" && "solution-workflow-visual-pilot",
+        status === "comingSoon" && "solution-workflow-visual-roadmap"
+      )}
+      aria-hidden="true"
+    >
+      <span className="solution-workflow-node" />
+      <span className="solution-workflow-line" />
+      <span className="solution-workflow-node" />
+      <span className="solution-workflow-line" />
+      <span className="solution-workflow-node" />
+      <span className="solution-workflow-line" />
+      <span className="solution-workflow-node solution-workflow-node-end" />
+    </div>
+  );
+}
+
 function SolutionCard({
   solutionKey,
   featured = false,
@@ -120,7 +142,9 @@ function SolutionCard({
         </div>
       </div>
 
-      <div className="mt-5 space-y-4 border-t border-[#dde5f2]/80 pt-4">
+      <SolutionWorkflowVisual status={status} />
+
+      <div className="mt-4 space-y-4 border-t border-[#dde5f2]/80 pt-4">
         <div>
           <p className="solution-field-label">{t("fields.problem")}</p>
           <p className="mt-1.5 text-sm leading-relaxed text-[#64748b]">
@@ -178,58 +202,48 @@ export function SolutionsPage() {
 
       <FullBleedSection className="section-light pb-14 lg:pb-16">
         <PageContainer className="section-content min-w-0">
-          <FadeIn>
-            <SolutionCard solutionKey={READY_KEY} featured />
-          </FadeIn>
+          <SolutionCard solutionKey={READY_KEY} featured />
 
-          <FadeIn delay={0.05}>
-            <div className="mt-12 lg:mt-14">
-              <h2 className="text-[clamp(1.125rem,1.5vw+0.5rem,1.375rem)] font-bold tracking-[-0.02em] text-[#071225]">
-                {t("sections.pilot.title")}
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
-                {t("sections.pilot.description")}
-              </p>
-              <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-                {PILOT_KEYS.map((key, i) => (
-                  <FadeIn key={key} delay={0.06 + i * 0.03}>
-                    <SolutionCard solutionKey={key} />
-                  </FadeIn>
-                ))}
-              </div>
+          <div className="solutions-section-divider mt-10 lg:mt-12" aria-hidden="true" />
+
+          <div className="mt-10 lg:mt-12">
+            <h2 className="text-[clamp(1.125rem,1.5vw+0.5rem,1.375rem)] font-bold tracking-[-0.02em] text-[#071225]">
+              {t("sections.pilot.title")}
+            </h2>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
+              {t("sections.pilot.description")}
+            </p>
+            <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {PILOT_KEYS.map((key) => (
+                <SolutionCard key={key} solutionKey={key} />
+              ))}
             </div>
-          </FadeIn>
+          </div>
 
-          <FadeIn delay={0.08}>
-            <div id="roadmap" className="mt-12 scroll-mt-28 lg:mt-14">
-              <h2 className="text-[clamp(1.125rem,1.5vw+0.5rem,1.375rem)] font-bold tracking-[-0.02em] text-[#071225]">
-                {t("sections.roadmap.title")}
-              </h2>
-              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
-                {t("sections.roadmap.description")}
-              </p>
-              <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2">
-                {ROADMAP_KEYS.map((key, i) => (
-                  <FadeIn key={key} delay={0.1 + i * 0.03}>
-                    <SolutionCard solutionKey={key} />
-                  </FadeIn>
-                ))}
-              </div>
+          <div id="roadmap" className="mt-10 scroll-mt-28 lg:mt-12">
+            <h2 className="text-[clamp(1.125rem,1.5vw+0.5rem,1.375rem)] font-bold tracking-[-0.02em] text-[#071225]">
+              {t("sections.roadmap.title")}
+            </h2>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
+              {t("sections.roadmap.description")}
+            </p>
+            <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2">
+              {ROADMAP_KEYS.map((key) => (
+                <SolutionCard key={key} solutionKey={key} />
+              ))}
             </div>
-          </FadeIn>
+          </div>
 
-          <FadeIn delay={0.12}>
-            <div className="solution-maturity-strip mt-12 rounded-[1.25rem] border border-[#7c3aed]/16 bg-gradient-to-br from-[#7c3aed]/[0.06] via-white to-[#2563eb]/[0.04] p-5 sm:rounded-[1.5rem] sm:p-6 lg:mt-14 lg:p-8">
+          <div className="solution-maturity-strip mt-10 rounded-[1.25rem] border border-[#7c3aed]/16 bg-gradient-to-br from-[#7c3aed]/[0.06] via-white to-[#2563eb]/[0.04] p-5 sm:rounded-[1.5rem] sm:p-6 lg:mt-12 lg:p-8">
               <h2 className="text-balance text-[clamp(1.125rem,1.5vw+0.5rem,1.375rem)] font-bold tracking-[-0.02em] text-[#071225]">
                 {t("maturity.title")}
               </h2>
               <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
                 {t("maturity.description")}
               </p>
-            </div>
-          </FadeIn>
+          </div>
 
-          <div className="mt-14">
+          <div className="mt-12 lg:mt-14">
             <PageCtaBand
               title={t("cta.title")}
               primaryLabel={t("cta.primary")}
