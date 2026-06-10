@@ -17,7 +17,7 @@ export function RegulationsCbamPage() {
 
   return (
     <>
-      <FullBleedSection ariaLabelledby="cbam-reg-heading" className="section-hero-light pt-24 lg:pt-28">
+      <FullBleedSection ariaLabelledby="cbam-reg-heading" className="section-hero-light page-hero-top">
         <PageContainer className="section-content min-w-0 pb-10">
           <FadeIn>
             <SectionHeading

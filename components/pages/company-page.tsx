@@ -25,12 +25,12 @@ export function CompanyPage() {
 
   return (
     <div className="corporate-page">
-      <FullBleedSection ariaLabelledby="company-heading" className="section-company-hero pt-24 lg:pt-28">
+      <FullBleedSection ariaLabelledby="company-heading" className="section-company-hero page-hero-top">
         <div className="pointer-events-none absolute inset-0 bg-grid-dots opacity-[0.32]" aria-hidden="true" />
         <div className="pointer-events-none absolute -left-16 top-10 h-64 w-64 rounded-full hero-glow-purple blur-3xl" aria-hidden="true" />
         <OrbitWaveMotif variant="hero" showOrbit showWaves />
 
-        <PageContainer className="section-content min-w-0 pb-10 lg:pb-12">
+        <PageContainer className="section-content min-w-0 page-hero-bottom">
           <div className="grid min-w-0 grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-12">
             <div className="min-w-0 max-w-[600px]">
               <FadeIn immediate>
@@ -95,7 +95,7 @@ export function CompanyPage() {
 
       <FullBleedSection className="section-light company-section-narrative page-end-cap">
         <OrbitWaveMotif variant="section" orbitAlign="left" />
-        <PageContainer className="section-content min-w-0 py-10 lg:py-12">
+        <PageContainer className="section-content min-w-0 page-section-y">
           <FadeIn>
             <article className="company-why-now-panel">
               <div className="company-why-now-panel-glow" aria-hidden="true" />
@@ -141,7 +141,7 @@ export function CompanyPage() {
             </article>
           </FadeIn>
 
-          <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-6">
+          <div className="mt-5 grid grid-cols-1 gap-3 md:grid-cols-2 lg:mt-6">
             {SECTION_KEYS.map((key, i) => {
               const Icon = SECTION_ICONS[i];
               const featured = key === "whatIs";
@@ -169,7 +169,7 @@ export function CompanyPage() {
           </div>
 
           <FadeIn delay={0.12}>
-            <div className="company-trust-strip mt-10 lg:mt-12" aria-label={t("trust.ariaLabel")}>
+            <div className="company-trust-strip page-stack-gap" aria-label={t("trust.ariaLabel")}>
               <p className="company-trust-strip-title">{t("trust.title")}</p>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {TRUST_KEYS.map((key) => (
@@ -181,11 +181,11 @@ export function CompanyPage() {
             </div>
           </FadeIn>
 
-          <div className="mt-10 lg:mt-12">
+          <div className="page-stack-gap">
             <CompanyLeadershipSection />
           </div>
 
-          <div className="mt-10 lg:mt-12">
+          <div className="page-stack-gap">
             <PageCtaBand
               title={t("cta.title")}
               description={t("cta.body")}

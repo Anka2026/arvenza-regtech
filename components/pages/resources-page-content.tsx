@@ -20,6 +20,7 @@ import {
   type ResourceKey,
 } from "@/components/resources/resource-library-card";
 import { ResourcesSubscribePanel } from "@/components/resources/resources-subscribe-panel";
+import { CbamCnScopeChecker } from "@/components/tools/cbam-cn-scope-checker";
 import { cn } from "@/lib/utils";
 
 const HERO_CHIP_KEYS = ["item1", "item2", "item3"] as const;
@@ -40,6 +41,7 @@ const RESOURCE_SECTIONS: {
     icon: typeof ClipboardCheck;
     href: "/demo" | "/solutions#roadmap";
     anchorToSubscribe?: boolean;
+    anchorToChecker?: boolean;
   }[];
 }[] = [
   {
@@ -48,6 +50,13 @@ const RESOURCE_SECTIONS: {
     resources: [
       { key: "cbamChecklist", category: "checklists", icon: ClipboardCheck, href: "/demo" },
       { key: "supplierTemplate", category: "checklists", icon: FileText, href: "/demo" },
+      {
+        key: "cbamCnScope",
+        category: "cbamGuides",
+        icon: Search,
+        href: "/demo",
+        anchorToChecker: true,
+      },
     ],
   },
   {
@@ -58,13 +67,6 @@ const RESOURCE_SECTIONS: {
         key: "embeddedEmissionsGuide",
         category: "cbamGuides",
         icon: BookOpen,
-        href: "/demo",
-        anchorToSubscribe: true,
-      },
-      {
-        key: "cbamCnScope",
-        category: "cbamGuides",
-        icon: Search,
         href: "/demo",
         anchorToSubscribe: true,
       },
@@ -97,7 +99,7 @@ export function ResourcesPageContent() {
     <>
       <FullBleedSection
         ariaLabelledby="resources-heading"
-        className="section-resources-hero pt-24 lg:pt-28"
+        className="section-resources-hero page-hero-top"
       >
         <div className="pointer-events-none absolute inset-0 bg-grid-dots opacity-[0.32]" aria-hidden="true" />
         <div
@@ -106,7 +108,7 @@ export function ResourcesPageContent() {
         />
         <OrbitWaveMotif variant="hero" showOrbit showWaves />
 
-        <PageContainer className="section-content min-w-0 pb-10 lg:pb-12">
+        <PageContainer className="section-content min-w-0 page-hero-bottom">
           <FadeIn immediate>
             <SectionHeading
               id="resources-heading"
@@ -157,7 +159,7 @@ export function ResourcesPageContent() {
 
       <FullBleedSection className="section-light resources-section-library">
         <OrbitWaveMotif variant="section" orbitAlign="right" />
-        <PageContainer className="section-content min-w-0 py-10 lg:py-12">
+        <PageContainer className="section-content min-w-0 page-section-y">
           <FadeIn staticReveal>
             <div className="resource-library-head">
               <div className="resource-library-head-icon" aria-hidden="true">
@@ -175,7 +177,7 @@ export function ResourcesPageContent() {
           </FadeIn>
 
           {filteredSections.map(({ sectionKey, status, resources }, sectionIndex) => (
-            <div key={sectionKey} className={sectionIndex > 0 ? "resource-status-section mt-10 lg:mt-12" : "mt-8"}>
+            <div key={sectionKey} className={sectionIndex > 0 ? "resource-status-section page-stack-gap" : "mt-6"}>
               <FadeIn staticReveal delay={sectionIndex * 0.02}>
                 <div className="resource-status-head">
                   <span className={`resource-status-badge resource-status-badge-${status}`}>
@@ -199,12 +201,33 @@ export function ResourcesPageContent() {
                       icon={resource.icon}
                       href={resource.href}
                       anchorToSubscribe={resource.anchorToSubscribe}
+                      anchorToChecker={resource.anchorToChecker}
                     />
                   </FadeIn>
                 ))}
               </div>
             </div>
           ))}
+
+          <FadeIn staticReveal>
+            <section
+              id="cbam-cn-scope-checker"
+              className="cn-scope-checker-section mt-10 scroll-mt-28 lg:mt-12"
+              aria-labelledby="cn-scope-checker-heading"
+            >
+              <p className="eyebrow-pill">{t("cnScopeChecker.eyebrow")}</p>
+              <h2
+                id="cn-scope-checker-heading"
+                className="mt-3 text-[clamp(1.25rem,1.75vw+0.5rem,1.75rem)] font-bold tracking-[-0.02em] text-[#071225]"
+              >
+                {t("cnScopeChecker.title")}
+              </h2>
+              <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
+                {t("cnScopeChecker.description")}
+              </p>
+              <CbamCnScopeChecker className="mt-6" />
+            </section>
+          </FadeIn>
 
           <FadeIn staticReveal delay={0.08}>
             <ResourcesSubscribePanel />

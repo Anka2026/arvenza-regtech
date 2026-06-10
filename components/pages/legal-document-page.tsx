@@ -35,11 +35,11 @@ export function LegalDocumentPage({ documentKey }: LegalDocumentPageProps) {
 
   return (
     <div className="legal-page">
-      <FullBleedSection ariaLabelledby="legal-heading" className="section-legal-hero pt-24 lg:pt-28">
+      <FullBleedSection ariaLabelledby="legal-heading" className="section-legal-hero page-hero-top">
         <div className="pointer-events-none absolute inset-0 bg-grid-dots opacity-[0.24]" aria-hidden="true" />
-        <OrbitWaveMotif variant="section" orbitAlign="left" />
+        <OrbitWaveMotif variant="legal" orbitAlign="right" intensity="subtle" showWaves={false} />
 
-        <PageContainer className="section-content min-w-0 pb-10 lg:pb-12">
+        <PageContainer className="section-content min-w-0 page-hero-bottom">
           <FadeIn immediate>
             <div className="legal-hero-block max-w-4xl">
               <div className="legal-hero-icon" aria-hidden="true">
@@ -58,8 +58,8 @@ export function LegalDocumentPage({ documentKey }: LegalDocumentPageProps) {
       </FullBleedSection>
 
       <FullBleedSection className="section-light legal-section-body">
-        <PageContainer className="section-content py-10 lg:py-12">
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,280px)] lg:gap-10">
+        <PageContainer className="section-content page-section-y-tight legal-section-body">
+          <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,260px)] lg:gap-8">
             <aside className="order-first min-w-0 lg:order-2 lg:sticky lg:top-28 lg:self-start">
               <FadeIn delay={0.06}>
                 <div className="legal-sidebar">
@@ -117,7 +117,7 @@ export function LegalDocumentPage({ documentKey }: LegalDocumentPageProps) {
               </FadeIn>
             </aside>
 
-            <div className="order-last min-w-0 space-y-4 lg:order-1">
+            <div className="order-last min-w-0 space-y-3 lg:order-1">
               {sections.map((key, index) => (
                 <section key={key} id={`legal-section-${key}`} className="legal-doc-card scroll-mt-28">
                   <div className="legal-doc-card-head">

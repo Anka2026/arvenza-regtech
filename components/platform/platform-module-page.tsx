@@ -64,13 +64,13 @@ export function PlatformModulePage({ module }: PlatformModulePageProps) {
     <>
       <FullBleedSection
         ariaLabelledby="module-hero-heading"
-        className="section-hero-light section-hero-home pt-24 lg:pt-28"
+        className="section-hero-light section-hero-home page-hero-top"
       >
         <div className="pointer-events-none absolute inset-0 bg-grid-dots opacity-[0.38]" aria-hidden="true" />
         <div className="pointer-events-none absolute -left-20 top-16 h-72 w-72 rounded-full hero-glow-purple blur-3xl" aria-hidden="true" />
         <OrbitWaveMotif variant="hero" showOrbit showWaves />
 
-        <PageContainer className="section-content min-w-0 pb-10 lg:pb-12">
+        <PageContainer className="section-content min-w-0 page-hero-bottom">
           <FadeIn immediate>
             <Link
               href="/platform"

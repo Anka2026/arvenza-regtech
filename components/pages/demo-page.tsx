@@ -41,13 +41,13 @@ export function DemoPage() {
 
   return (
     <div className="demo-page">
-      <FullBleedSection ariaLabelledby="demo-hero-heading" className="section-demo-hero pt-24 lg:pt-28">
+      <FullBleedSection ariaLabelledby="demo-hero-heading" className="section-demo-hero page-hero-top">
         <div className="pointer-events-none absolute inset-0 bg-grid-dots opacity-[0.3]" aria-hidden="true" />
         <div className="pointer-events-none absolute -left-20 top-12 h-64 w-64 rounded-full hero-glow-purple blur-3xl" aria-hidden="true" />
         <div className="pointer-events-none absolute -right-10 top-24 h-56 w-56 rounded-full hero-glow-cyan blur-3xl" aria-hidden="true" />
         <OrbitWaveMotif variant="hero" showOrbit showWaves />
 
-        <PageContainer className="section-content min-w-0 pb-10 lg:pb-12">
+        <PageContainer className="section-content min-w-0 page-hero-bottom">
           <div className="grid min-w-0 grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-12 xl:gap-14">
             <div className="min-w-0 max-w-[580px]">
               <FadeIn immediate>
@@ -151,7 +151,7 @@ export function DemoPage() {
 
       <FullBleedSection ariaLabelledby="demo-form-heading" className="section-light demo-section-form">
         <OrbitWaveMotif variant="section" orbitAlign="right" />
-        <PageContainer className="section-content min-w-0 py-10 lg:py-12">
+        <PageContainer className="section-content min-w-0 page-section-y-tight">
           <FadeIn>
             <div className="demo-form-section-head">
               <h2 id="demo-form-heading" className="heading-section-compact">
@@ -161,7 +161,7 @@ export function DemoPage() {
             </div>
           </FadeIn>
 
-          <div className="mt-8 grid min-w-0 grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-10 xl:gap-12">
+          <div className="mt-6 grid min-w-0 grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-8 xl:gap-10">
             <FadeIn>
               <div className="demo-form-shell">
                 <ContactForm namespace="demo" variant="premium" />
@@ -257,7 +257,7 @@ export function DemoPage() {
       </FullBleedSection>
 
       <FullBleedSection ariaLabelledby="demo-coverage-heading" className="section-muted demo-section-coverage">
-        <PageContainer className="section-content min-w-0 py-10 lg:py-12">
+        <PageContainer className="section-content min-w-0 page-section-y-tight">
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">
               <h2 id="demo-coverage-heading" className="heading-section-compact">
@@ -266,7 +266,7 @@ export function DemoPage() {
               <p className="body-lead mt-3">{t("coverage.subtitle")}</p>
             </div>
           </FadeIn>
-          <div className="mt-8 grid gap-4 md:grid-cols-3 lg:gap-5">
+          <div className="mt-6 grid gap-3 md:grid-cols-3 lg:gap-4">
             {coverageKeys.map((key, index) => {
               const Icon = coverageIcons[index];
               return (
@@ -289,7 +289,7 @@ export function DemoPage() {
       </FullBleedSection>
 
       <FullBleedSection ariaLabelledby="demo-audience-heading" className="section-light demo-section-audience">
-        <PageContainer className="section-content min-w-0 py-10 lg:py-12">
+        <PageContainer className="section-content min-w-0 page-section-y-tight">
           <FadeIn>
             <div className="demo-audience-band">
               <h2 id="demo-audience-heading" className="text-lg font-semibold tracking-tight text-[#071225] lg:text-xl">

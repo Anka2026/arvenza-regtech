@@ -220,7 +220,7 @@ export function PlatformHubPage() {
 
     <>
 
-      <FullBleedSection ariaLabelledby="platform-heading" className="section-hero-light section-hero-home pt-24 lg:pt-28">
+      <FullBleedSection ariaLabelledby="platform-heading" className="section-hero-light section-hero-home page-hero-top">
 
         <div className="pointer-events-none absolute inset-0 bg-grid-dots opacity-[0.38]" aria-hidden="true" />
 
@@ -230,7 +230,7 @@ export function PlatformHubPage() {
 
 
 
-        <PageContainer className="section-content min-w-0 pb-10 lg:pb-12">
+        <PageContainer className="section-content min-w-0 page-hero-bottom">
 
           <div className="grid min-w-0 grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-10 xl:gap-12">
 

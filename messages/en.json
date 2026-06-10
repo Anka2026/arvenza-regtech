@@ -1694,7 +1694,7 @@
   "companyPage": {
     "eyebrow": "Corporate",
     "title": "A RegTech product brand built for EU sustainability compliance workflows",
-    "description": "Arvenza RegTech is operated by Anka Sustainability B.V., the Netherlands, and is designed to turn supplier evidence, product data and regulatory calculation requirements into structured digital workflows.",
+    "description": "Arvenza RegTech is operated by Anka Sustainability B.V., the Netherlands, and is designed to turn supplier evidence, product data and regulatory calculation requirements into structured digital workflows. The product starts with CBAM Calculation Engine and expands through clearly labelled pilot and roadmap modules built around the same evidence model.",
     "cards": {
       "productBrand": {
         "label": "Product brand",
@@ -1908,14 +1908,14 @@
         "cta": "Get notified"
       },
       "cbamCnScope": {
-        "format": "Guide",
+        "format": "Interactive tool",
         "valuePreview": {
-          "item1": "CN-code screening workflow",
-          "item2": "Product scope check structure"
+          "item1": "Initial CN / HS / GTİP scope screening",
+          "item2": "Sector and product description lookup"
         },
-        "title": "CN Code and Product Scope Guide",
-        "description": "A practical workflow for CN-code screening, product scope checks and CBAM coverage mapping",
-        "cta": "Get notified"
+        "title": "CBAM CN Code Scope Checker",
+        "description": "Check whether a CN / HS / GTİP code appears in the CBAM product scope and review the related sector, product description and evidence workflow",
+        "cta": "Open checker"
       },
       "ppwrPackaging": {
         "format": "Briefing",
@@ -1938,10 +1938,51 @@
         "cta": "Follow roadmap"
       }
     },
+    "cnScopeChecker": {
+      "eyebrow": "Scope screening tool",
+      "title": "Check CBAM scope by CN code",
+      "description": "Enter a CN, HS or GTİP code to run an initial scope screening against the listed CBAM product codes",
+      "searchLabel": "CN, HS or GTİP code",
+      "searchPlaceholder": "Enter CN code (e.g. 25231000, 2523.10.00 or cement)",
+      "examplesAriaLabel": "Example CN codes",
+      "examples": {
+        "item1": "25231000",
+        "item2": "28041000",
+        "item3": "72162100",
+        "item4": "76012080"
+      },
+      "loading": "Loading listed CBAM CN codes…",
+      "loadError": "Unable to load the CN code list. Please refresh and try again",
+      "notFoundTitle": "Not found in listed CBAM CN scope",
+      "notFoundSubtitle": "Initial screening result based on listed CN codes",
+      "foundTitle": "Appears in listed CBAM scope",
+      "foundSubtitle": "Initial screening result — not a legal classification decision",
+      "searchedCode": "Searched code",
+      "partialMatchNote": "Showing closest listed matches — confirm the full 8-digit CN code against your customs declaration",
+      "fields": {
+        "code": "CN code",
+        "sector": "CBAM sector",
+        "description": "Product description",
+        "scopeStatus": "Scope status"
+      },
+      "status": {
+        "included": "Listed code",
+        "appearsInScope": "Appears in listed CBAM scope (initial screening)"
+      },
+      "nextStep": {
+        "included": "This code appears in the listed CBAM product scope. Review supplier evidence, embedded emissions data and product documentation before reporting.",
+        "notFound": "This code was not found in the listed CBAM CN scope. Final applicability may still depend on customs classification, product description and technical review."
+      },
+      "disclaimer": "This tool provides an initial scope screening based on listed CN codes. Final CBAM applicability may require product description, customs classification and technical review."
+    },
     "leadMagnet": {
+      "title": "Start with the CBAM readiness checklist",
+      "description": "Use the checklist to structure product scope, supplier data needs, calculation inputs and evidence gaps before the next reporting cycle.",
+      "cta": "Request checklist",
       "highlights": {
         "item1": "Map product scope before the next reporting cycle",
-        "item2": "Identify supplier data and evidence gaps early"
+        "item2": "Identify supplier data and evidence gaps early",
+        "item3": "Structure calculation inputs before reporting starts"
       }
     },
     "subscribeBenefits": {
@@ -1954,8 +1995,23 @@
       }
     },
     "subscribe": {
+      "title": "Get regulation workflow updates",
+      "description": "Receive practical updates on CBAM, supplier evidence, PPWR, EUDR and product-data workflows as Arvenza resources are released.",
+      "emailLabel": "Work email",
+      "emailPlaceholder": "you@company.com",
+      "interestLabel": "Main interest",
+      "interestPlaceholder": "Select your main interest",
+      "submit": "Subscribe for updates",
+      "success": "Thank you — we will send workflow updates to your inbox.",
       "contactPrefix": "Prefer email? Contact",
-      "emailPlaceholder": "you@company.com"
+      "interests": {
+        "cbam": "CBAM Calculation Engine",
+        "supplier": "Supplier evidence workflows",
+        "ppwr": "PPWR / Packaging Compliance",
+        "eudr": "EUDR Due Diligence",
+        "dpp": "Digital Product Passport",
+        "general": "General product demo"
+      }
     },
     "heroChipsAriaLabel": "Resource hub highlights",
     "heroChips": {

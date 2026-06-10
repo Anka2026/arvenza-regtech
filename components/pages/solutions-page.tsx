@@ -21,7 +21,7 @@ export function SolutionsPage() {
     <>
       <FullBleedSection
         ariaLabelledby="solutions-heading"
-        className="section-solutions-hero pt-24 lg:pt-28"
+        className="section-solutions-hero page-hero-top"
       >
         <div className="pointer-events-none absolute inset-0 bg-grid-dots opacity-[0.32]" aria-hidden="true" />
         <div
@@ -34,7 +34,7 @@ export function SolutionsPage() {
         />
         <OrbitWaveMotif variant="hero" showOrbit showWaves />
 
-        <PageContainer className="section-content min-w-0 pb-10 lg:pb-12">
+        <PageContainer className="section-content min-w-0 page-hero-bottom">
           <div className="grid min-w-0 grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-10 xl:gap-12">
             <div className="min-w-0">
               <FadeIn immediate>
@@ -65,7 +65,7 @@ export function SolutionsPage() {
       </FullBleedSection>
 
       <FullBleedSection className="section-light solutions-section-ready">
-        <PageContainer className="section-content min-w-0 py-10 lg:py-12">
+        <PageContainer className="section-content min-w-0 page-section-y">
           <FadeIn>
             <div className="solution-segment-head">
               <span className="solution-segment-badge solution-segment-badge-ready">{t("sections.ready.label")}</span>
@@ -88,7 +88,7 @@ export function SolutionsPage() {
 
       <FullBleedSection className="section-muted solutions-section-pilot">
         <OrbitWaveMotif variant="muted" orbitAlign="left" />
-        <PageContainer className="section-content min-w-0 py-10 lg:py-12">
+        <PageContainer className="section-content min-w-0 page-section-y">
           <FadeIn>
             <div className="solution-segment-head">
               <span className="solution-segment-badge solution-segment-badge-pilot">{t("sections.pilot.label")}</span>
@@ -113,7 +113,7 @@ export function SolutionsPage() {
 
       <FullBleedSection id="roadmap" className="section-light solutions-section-roadmap scroll-mt-28 page-end-cap">
         <OrbitWaveMotif variant="section" orbitAlign="right" />
-        <PageContainer className="section-content min-w-0 py-10 lg:py-12">
+        <PageContainer className="section-content min-w-0 page-section-y">
           <FadeIn>
             <div className="solution-segment-head">
               <span className="solution-segment-badge solution-segment-badge-roadmap">{t("sections.roadmap.label")}</span>

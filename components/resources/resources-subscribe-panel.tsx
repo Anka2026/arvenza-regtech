@@ -8,7 +8,8 @@ import { StatusPill } from "@/components/pages/shared/status-pill";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const BENEFIT_KEYS = ["item1", "item2", "item3", "item4"] as const;
+const LEAD_HIGHLIGHT_KEYS = ["item1", "item2", "item3"] as const;
+const INTEREST_KEYS = ["cbam", "supplier", "ppwr", "eudr", "dpp", "general"] as const;
 const CONTACT_EMAIL = "info@ankasustainability.com";
 
 export function ResourcesSubscribePanel() {
@@ -37,7 +38,7 @@ export function ResourcesSubscribePanel() {
             <h2 className="resource-lead-title">{t("leadMagnet.title")}</h2>
             <p className="resource-lead-desc">{t("leadMagnet.description")}</p>
             <ul className="resource-lead-points mt-4 list-none">
-              {BENEFIT_KEYS.slice(0, 2).map((key) => (
+              {LEAD_HIGHLIGHT_KEYS.map((key) => (
                 <li key={key} className="resource-lead-point">
                   <Check className="h-3.5 w-3.5 shrink-0 text-[#7c3aed]" aria-hidden="true" />
                   {t(`leadMagnet.highlights.${key}`)}
@@ -67,7 +68,7 @@ export function ResourcesSubscribePanel() {
               {t("subscribeBenefits.title")}
             </h2>
             <ul className="mt-4 grid gap-2.5 sm:grid-cols-2">
-              {BENEFIT_KEYS.map((key) => (
+              {(["item1", "item2", "item3", "item4"] as const).map((key) => (
                 <li key={key} className="resource-benefit-item">
                   <span className="resource-value-dot" aria-hidden="true" />
                   {t(`subscribeBenefits.items.${key}`)}
@@ -127,11 +128,11 @@ export function ResourcesSubscribePanel() {
                     className="resource-form-input"
                   >
                     <option value="">{t("subscribe.interestPlaceholder")}</option>
-                    <option value="cbam">{t("subscribe.interests.cbam")}</option>
-                    <option value="ppwr">{t("subscribe.interests.ppwr")}</option>
-                    <option value="eudr">{t("subscribe.interests.eudr")}</option>
-                    <option value="dpp">{t("subscribe.interests.dpp")}</option>
-                    <option value="general">{t("subscribe.interests.general")}</option>
+                    {INTEREST_KEYS.map((key) => (
+                      <option key={key} value={key}>
+                        {t(`subscribe.interests.${key}`)}
+                      </option>
+                    ))}
                   </select>
                 </div>
                 <button

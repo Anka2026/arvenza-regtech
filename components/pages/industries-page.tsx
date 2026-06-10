@@ -69,7 +69,7 @@ export function IndustriesPage() {
     <>
       <FullBleedSection
         ariaLabelledby="industries-heading"
-        className="section-industries-hero pt-24 lg:pt-28"
+        className="section-industries-hero page-hero-top"
       >
         <div className="pointer-events-none absolute inset-0 bg-grid-dots opacity-[0.34]" aria-hidden="true" />
         <div
@@ -78,7 +78,7 @@ export function IndustriesPage() {
         />
         <OrbitWaveMotif variant="hero" showOrbit showWaves />
 
-        <PageContainer className="section-content min-w-0 pb-10 lg:pb-12">
+        <PageContainer className="section-content min-w-0 page-hero-bottom">
           <div className="grid min-w-0 grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-10">
             <FadeIn immediate>
               <SectionHeading
@@ -108,7 +108,7 @@ export function IndustriesPage() {
 
       <FullBleedSection className="section-light industries-section-grid">
         <OrbitWaveMotif variant="section" orbitAlign="left" />
-        <PageContainer className="section-content min-w-0 py-10 lg:py-12">
+        <PageContainer className="section-content min-w-0 page-section-y">
           <FadeIn>
             <div className="industry-segment-head">
               <span className="industry-segment-badge">{t("sectors.label")}</span>

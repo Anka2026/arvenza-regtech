@@ -1,50 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Linkedin } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { SafeImage } from "@/components/ui/safe-image";
 import {
   isValidExternalUrl,
-  LEADERSHIP_PORTRAIT_CANDIDATES,
+  LEADERSHIP_PORTRAIT_PATH,
 } from "@/lib/company-leadership";
 import { cn } from "@/lib/utils";
 
 const BODY_KEYS = ["paragraph1", "paragraph2", "paragraph3"] as const;
 
-function useLeadershipPortrait(): string | null {
-  const [portraitSrc, setPortraitSrc] = useState<string | null>(null);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    (async () => {
-      for (const src of LEADERSHIP_PORTRAIT_CANDIDATES) {
-        try {
-          const res = await fetch(src, { method: "HEAD" });
-          if (!cancelled && res.ok) {
-            setPortraitSrc(src);
-            return;
-          }
-        } catch {
-          /* try next candidate */
-        }
-      }
-      if (!cancelled) setPortraitSrc(null);
-    })();
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  return portraitSrc;
-}
-
 export function CompanyLeadershipSection() {
   const t = useTranslations("companyPage.leadership");
-  const portraitSrc = useLeadershipPortrait();
+  const [showPortrait, setShowPortrait] = useState(true);
   const linkedInUrl = t("linkedinUrl");
   const showLinkedIn = isValidExternalUrl(linkedInUrl);
 
@@ -68,20 +38,22 @@ export function CompanyLeadershipSection() {
           <div
             className={cn(
               "company-leadership-grid mt-6 lg:mt-7",
-              portraitSrc && "company-leadership-grid-with-portrait"
+              showPortrait && "company-leadership-grid-with-portrait"
             )}
           >
-            {portraitSrc ? (
-              <figure className="company-leadership-portrait mx-auto w-full max-w-[280px] lg:mx-0 lg:max-w-none">
+            {showPortrait ? (
+              <figure className="company-leadership-portrait mx-auto w-full lg:mx-0">
                 <div className="company-leadership-portrait-frame">
-                  <SafeImage
-                    src={portraitSrc}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={LEADERSHIP_PORTRAIT_PATH}
                     alt={t("portraitAlt")}
                     width={440}
-                    height={520}
-                    className="company-leadership-portrait-image h-full w-full"
-                    objectFit="cover"
-                    objectPosition="center top"
+                    height={550}
+                    loading="lazy"
+                    decoding="async"
+                    className="company-leadership-portrait-image h-full w-full object-cover"
+                    onError={() => setShowPortrait(false)}
                   />
                 </div>
               </figure>

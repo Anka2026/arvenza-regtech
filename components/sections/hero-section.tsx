@@ -25,7 +25,7 @@ export function HeroSection() {
       <div className="pointer-events-none absolute bottom-0 left-1/2 h-48 w-[120%] -translate-x-1/2 bg-[radial-gradient(ellipse,rgba(37,99,235,0.08),transparent_70%)]" aria-hidden="true" />
       <OrbitWaveMotif variant="hero" showOrbit showWaves />
 
-      <PageContainer className="section-content min-w-0 pb-10 pt-24 lg:pb-12 lg:pt-28">
+      <PageContainer className="section-content min-w-0 page-hero-bottom page-hero-top">
         <div className="grid w-full min-w-0 grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,44%)_minmax(0,56%)] lg:gap-8 xl:gap-10">
           <div className="min-w-0 lg:max-w-[540px]">
             <FadeIn immediate>

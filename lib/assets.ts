@@ -3,7 +3,7 @@
 export const BRAND = {
   logoMain: "/assets/brand/arvenza-logo-main.jpg",
   logoMainPng: "/assets/brand/arvenza-logo-main.png",
-  logoSymbol: "/assets/brand/arvenza-logo-symbol.png",
+  logoSymbol: "/assets/brand/arvenza-logo-header.jpg",
   logoWhite: "/assets/brand/arvenza-logo-white.png",
   logoDark: "/assets/brand/arvenza-logo-dark.png",
   logoHeader: "/assets/brand/arvenza-logo-header.jpg",
@@ -124,7 +124,7 @@ export function getLogoSrc(variant: LogoVariant = "main"): string {
     case "white":
       return BRAND.logoWhite;
     case "symbol":
-      return BRAND.logoSymbol;
+      return BRAND.logoHeader;
     default:
       return BRAND.logoMain;
   }

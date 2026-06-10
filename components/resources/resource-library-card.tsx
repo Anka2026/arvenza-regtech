@@ -33,6 +33,7 @@ export interface ResourceLibraryCardProps {
   icon: LucideIcon;
   href: "/demo" | "/solutions#roadmap";
   anchorToSubscribe?: boolean;
+  anchorToChecker?: boolean;
 }
 
 export function ResourceLibraryCard({
@@ -42,6 +43,7 @@ export function ResourceLibraryCard({
   icon: Icon,
   href,
   anchorToSubscribe = false,
+  anchorToChecker = false,
 }: ResourceLibraryCardProps) {
   const t = useTranslations("resourcesPage");
 
@@ -96,7 +98,21 @@ export function ResourceLibraryCard({
       </dl>
 
       <div className="resource-library-card-cta mt-auto pt-4">
-        {anchorToSubscribe ? (
+        {anchorToChecker ? (
+          <a
+            href="#cbam-cn-scope-checker"
+            className={cn(
+              buttonVariants({
+                variant: status === "available" ? "default" : "accent-outline",
+                size: "sm",
+              }),
+              "inline-flex w-full justify-center sm:w-auto"
+            )}
+          >
+            {ctaLabel}
+            <ArrowRight className="ml-1.5 h-3.5 w-3.5" aria-hidden="true" />
+          </a>
+        ) : anchorToSubscribe ? (
           <a
             href="#subscribe"
             className={cn(

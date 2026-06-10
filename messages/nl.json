@@ -1694,7 +1694,7 @@
   "companyPage": {
     "eyebrow": "Bedrijf",
     "title": "Een RegTech-productmerk voor EU-duurzaamheidsworkflows",
-    "description": "Arvenza RegTech wordt beheerd door Anka Sustainability B.V., Nederland, en is ontworpen om leveranciersbewijs, productdata en regelgevingsgerichte berekeningsvereisten om te zetten in gestructureerde digitale workflows.",
+    "description": "Arvenza RegTech wordt beheerd door Anka Sustainability B.V., Nederland, en is ontworpen om leveranciersbewijs, productdata en regelgevingsgerichte berekeningsvereisten om te zetten in gestructureerde digitale workflows. Het product begint met CBAM Calculation Engine en breidt uit via duidelijk gelabelde pilot- en roadmapmodules rond hetzelfde bewijsmodel.",
     "cards": {
       "productBrand": {
         "label": "Productmerk",
@@ -1908,14 +1908,14 @@
         "cta": "Ontvang melding"
       },
       "cbamCnScope": {
-        "format": "Gids",
+        "format": "Interactieve tool",
         "valuePreview": {
-          "item1": "CN-code-screeningworkflow",
-          "item2": "Structuur productscopecheck"
+          "item1": "Eerste CN-/HS-/GTİP-scopecontrole",
+          "item2": "Sector- en productomschrijving opzoeken"
         },
-        "title": "CN-code- en productscopegids",
-        "description": "Praktische workflow voor CN-code-screening, productscopechecks en CBAM-dekkingsmapping",
-        "cta": "Ontvang melding"
+        "title": "CBAM CN-code scopechecker",
+        "description": "Controleer of een CN-, HS- of GTİP-code voorkomt in de CBAM-productscope en bekijk de bijbehorende sector, productomschrijving en bewijsworkflow",
+        "cta": "Checker openen"
       },
       "ppwrPackaging": {
         "format": "Briefing",
@@ -1938,15 +1938,52 @@
         "cta": "Roadmap volgen"
       }
     },
-    "leadMagnet": {
-      "highlights": {
-        "item1": "Productscope in kaart brengen vóór de volgende rapportagecyclus",
-        "item2": "Leveranciersdata- en bewijsgaten vroeg identificeren"
-      }
+    "cnScopeChecker": {
+      "eyebrow": "Scopecontroletool",
+      "title": "Controleer CBAM-scope per CN-code",
+      "description": "Voer een CN-, HS- of GTİP-code in om een eerste scopecontrole uit te voeren op basis van de vermelde CBAM-productcodes",
+      "searchLabel": "CN-, HS- of GTİP-code",
+      "searchPlaceholder": "Voer CN-code in (bijv. 25231000, 2523.10.00 of cement)",
+      "examplesAriaLabel": "Voorbeeld CN-codes",
+      "examples": {
+        "item1": "25231000",
+        "item2": "28041000",
+        "item3": "72162100",
+        "item4": "76012080"
+      },
+      "loading": "Vermelde CBAM CN-codes laden…",
+      "loadError": "Kan de CN-codelijst niet laden. Vernieuw de pagina en probeer opnieuw",
+      "notFoundTitle": "Niet gevonden in vermelde CBAM-CN-scope",
+      "notFoundSubtitle": "Eerste screeningresultaat op basis van vermelde CN-codes",
+      "foundTitle": "Komt voor in vermelde CBAM-scope",
+      "foundSubtitle": "Eerste screeningresultaat — geen juridische classificatiebeslissing",
+      "searchedCode": "Gezochte code",
+      "partialMatchNote": "Dichtstbijzijnde vermelde matches — bevestig de volledige 8-cijferige CN-code tegen uw douaneaangifte",
+      "fields": {
+        "code": "CN-code",
+        "sector": "CBAM-sector",
+        "description": "Productomschrijving",
+        "scopeStatus": "Scopestatus"
+      },
+      "status": {
+        "included": "Vermelde code",
+        "appearsInScope": "Komt voor in vermelde CBAM-scope (eerste screening)"
+      },
+      "nextStep": {
+        "included": "Deze code komt voor in de vermelde CBAM-productscope. Controleer leveranciersbewijs, ingebedde emissiedata en productdocumentatie vóór rapportage.",
+        "notFound": "Deze code is niet gevonden in de vermelde CBAM-CN-scope. Definitieve toepasselijkheid kan nog steeds afhangen van douaneclassificatie, productomschrijving en technische beoordeling."
+      },
+      "disclaimer": "Deze tool biedt een eerste scopecontrole op basis van vermelde CN-codes. Definitieve CBAM-toepasselijkheid kan productomschrijving, douaneclassificatie en technische beoordeling vereisen."
     },
-    "subscribe": {
-      "contactPrefix": "Liever e-mail? Neem contact op via",
-      "emailPlaceholder": "u@bedrijf.com"
+    "leadMagnet": {
+      "title": "Begin met de CBAM-voorbereidingschecklist",
+      "description": "Gebruik de checklist om productscope, leveranciersdata, berekeningsinput en bewijsleemtes vóór de volgende rapportagecyclus te structureren.",
+      "cta": "Checklist aanvragen",
+      "highlights": {
+        "item1": "Breng productscope in kaart vóór de volgende rapportagecyclus",
+        "item2": "Identificeer leveranciersdata en bewijsleemtes vroegtijdig",
+        "item3": "Structureer berekeningsinput voordat rapportage begint"
+      }
     },
     "subscribeBenefits": {
       "title": "Wat u ontvangt bij inschrijving",
@@ -1957,6 +1994,25 @@
         "item4": "Briefings over de regelgevingsroadmap"
       }
     },
+    "subscribe": {
+      "title": "Ontvang updates over regelgevingsworkflows",
+      "description": "Ontvang praktische updates over CBAM, leveranciersbewijs, PPWR, EUDR en productdata-workflows wanneer Arvenza-resources worden gepubliceerd.",
+      "emailLabel": "Zakelijk e-mailadres",
+      "emailPlaceholder": "naam@bedrijf.com",
+      "interestLabel": "Belangrijkste interesse",
+      "interestPlaceholder": "Selecteer uw belangrijkste interesse",
+      "submit": "Inschrijven voor updates",
+      "success": "Bedankt — we sturen workflow-updates naar uw inbox.",
+      "contactPrefix": "Liever e-mail? Neem contact op via",
+      "interests": {
+        "cbam": "CBAM Calculation Engine",
+        "supplier": "Leveranciersbewijsworkflows",
+        "ppwr": "PPWR / Packaging Compliance",
+        "eudr": "EUDR Due Diligence",
+        "dpp": "Digital Product Passport",
+        "general": "Algemene productdemo"
+      }
+    },
     "heroChipsAriaLabel": "Resourcehub-hoogtepunten",
     "heroChips": {
       "item1": "Beschikbare checklists",
@@ -1964,7 +2020,7 @@
       "item3": "Praktische workflowwaarde"
     },
     "fields": {
-      "valuePreview": "Ne elde edersiniz"
+      "valuePreview": "Wat u krijgt"
     },
     "sections": {
       "available": {

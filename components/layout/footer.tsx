@@ -81,7 +81,7 @@ export function Footer() {
       <div className="footer-ambient-mesh" aria-hidden="true" />
       <OrbitWaveMotif variant="footer" showOrbit showWaves />
 
-      <PageContainer className="section-content relative z-10 py-11 lg:py-12">
+      <PageContainer className="section-content relative z-10 py-9 lg:py-10">
         <div className="footer-top-cta">
           <div className="footer-top-cta-copy">
             <p className="footer-top-cta-kicker">{t("ctaBand.kicker")}</p>

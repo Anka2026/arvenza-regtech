@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { SafeImage } from "@/components/ui/safe-image";
-import { getLogoSrc, BRAND, type LogoVariant } from "@/lib/assets";
+import { BRAND, getLogoSrc, type LogoVariant } from "@/lib/assets";
 
 interface LogoProps {
   variant?: LogoVariant;
@@ -30,13 +30,13 @@ export function Logo({
   return (
     <SafeImage
       src={src}
-      fallbackSrc={variant === "main" ? BRAND.logoMainPng : BRAND.logoMain}
+      fallbackSrc={BRAND.logoMain}
       alt="Arvenza RegTech"
       width={width}
       height={height}
       priority={priority}
       className={cn("object-contain", className)}
-      style={{ height, width }}
+      style={{ height, width: variant === "symbol" ? height : width }}
     />
   );
 }
@@ -54,14 +54,27 @@ export function HeaderLogo({
   className,
 }: HeaderLogoProps) {
   return (
-    <span className={cn("header-logo-wordmark flex min-w-0 max-w-[min(100%,14rem)] items-center gap-2 sm:max-w-none sm:gap-2.5", className)}>
-      <Logo
-        variant="symbol"
-        priority={priority}
-        className="h-8 w-8 shrink-0 sm:h-9 sm:w-9 lg:h-10 lg:w-10"
-        height={40}
-      />
-      <span className="header-logo-text min-w-0 truncate text-[15px] font-semibold leading-tight tracking-tight text-[#071225] sm:text-[17px] lg:text-[18px]">
+    <span
+      className={cn(
+        "header-logo-wordmark flex min-w-0 max-w-[min(100%,14rem)] items-center gap-2 sm:max-w-none sm:gap-2.5",
+        className
+      )}
+    >
+      <span className="header-logo-symbol flex h-8 w-8 shrink-0 items-center justify-center sm:h-9 sm:w-9 lg:h-10 lg:w-10">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={BRAND.logoHeader}
+          alt=""
+          width={40}
+          height={40}
+          loading={priority ? "eager" : "lazy"}
+          fetchPriority={priority ? "high" : "auto"}
+          decoding={priority ? "sync" : "async"}
+          className="h-full w-full object-contain"
+          aria-hidden="true"
+        />
+      </span>
+      <span className="header-logo-text min-w-0 truncate text-[15px] font-semibold leading-tight tracking-tight text-[#071225] sm:text-[17px] lg:text-lg">
         {wordmark}
       </span>
     </span>

@@ -34,7 +34,7 @@ export function CbamPlatformPage() {
         <div className="pointer-events-none absolute -right-16 bottom-8 h-64 w-64 rounded-full hero-glow-cyan blur-3xl" aria-hidden="true" />
         <OrbitWaveMotif variant="hero" showOrbit showWaves />
 
-        <PageContainer className="section-content min-w-0 pb-10 pt-24 lg:pb-12 lg:pt-28">
+        <PageContainer className="section-content min-w-0 page-hero-bottom page-hero-top">
           <div className="grid w-full min-w-0 grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-10">
             <div className="min-w-0 max-w-[540px]">
               <FadeIn immediate>

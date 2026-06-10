@@ -1694,7 +1694,7 @@
   "companyPage": {
     "eyebrow": "Kurumsal",
     "title": "AB sürdürülebilirlik uyum iş akışları için geliştirilen RegTech ürün markası",
-    "description": "Arvenza RegTech, Hollanda merkezli Anka Sustainability B.V. tarafından işletilir ve tedarikçi kanıtı, ürün verisi ve regülasyon hesaplama gerekliliklerini yapılandırılmış dijital iş akışlarına dönüştürmek için geliştirilmiştir.",
+    "description": "Arvenza RegTech, Hollanda merkezli Anka Sustainability B.V. tarafından işletilir ve tedarikçi kanıtı, ürün verisi ve regülasyon hesaplama gerekliliklerini yapılandırılmış dijital iş akışlarına dönüştürmek için geliştirilmiştir. Ürün, CBAM Calculation Engine ile başlar ve aynı kanıt modeli üzerine kurulu, açıkça etiketlenmiş pilot ve yol haritası modüllerine genişler.",
     "cards": {
       "productBrand": {
         "label": "Ürün markası",
@@ -1908,14 +1908,14 @@
         "cta": "Yayınlanınca haber ver"
       },
       "cbamCnScope": {
-        "format": "Rehber",
+        "format": "Etkileşimli araç",
         "valuePreview": {
-          "item1": "CN kodu tarama iş akışı",
-          "item2": "Ürün kapsam kontrol yapısı"
+          "item1": "Ön CN / HS / GTİP kapsam taraması",
+          "item2": "Sektör ve ürün açıklaması sorgulama"
         },
-        "title": "CN Kodu ve Ürün Kapsamı Rehberi",
-        "description": "CN kodu taraması, ürün kapsam kontrolü ve CBAM kapsam eşlemesi için pratik iş akışı",
-        "cta": "Yayınlanınca haber ver"
+        "title": "CBAM CN / GTİP Kapsam Kontrol Aracı",
+        "description": "CN / HS / GTİP kodunun CBAM ürün kapsamı içinde yer alıp almadığını kontrol edin; ilgili sektör, ürün açıklaması ve kanıt iş akışı bilgisini görüntüleyin",
+        "cta": "Kontrol aracını aç"
       },
       "ppwrPackaging": {
         "format": "Bilgilendirme",
@@ -1938,15 +1938,52 @@
         "cta": "Yol Haritasını Takip Et"
       }
     },
-    "leadMagnet": {
-      "highlights": {
-        "item1": "Sonraki raporlama döngüsü öncesi ürün kapsamını haritalayın",
-        "item2": "Tedarikçi veri ve kanıt boşluklarını erken tespit edin"
-      }
+    "cnScopeChecker": {
+      "eyebrow": "Kapsam tarama aracı",
+      "title": "CN koduna göre CBAM kapsamını kontrol edin",
+      "description": "Listelenen CBAM ürün kodlarına göre ön kapsam taraması yapmak için CN, HS veya GTİP kodu girin",
+      "searchLabel": "CN, HS veya GTİP kodu",
+      "searchPlaceholder": "CN kodu girin (ör. 25231000, 2523.10.00 veya çimento)",
+      "examplesAriaLabel": "Örnek CN kodları",
+      "examples": {
+        "item1": "25231000",
+        "item2": "28041000",
+        "item3": "72162100",
+        "item4": "76012080"
+      },
+      "loading": "Listelenen CBAM CN kodları yükleniyor…",
+      "loadError": "CN kod listesi yüklenemedi. Lütfen sayfayı yenileyip tekrar deneyin",
+      "notFoundTitle": "Listelenen CBAM CN kapsamında bulunamadı",
+      "notFoundSubtitle": "Listelenen CN kodlarına göre ön tarama sonucu",
+      "foundTitle": "Listelenen CBAM kapsamında görünüyor",
+      "foundSubtitle": "Ön tarama sonucu — yasal sınıflandırma kararı değildir",
+      "searchedCode": "Aranan kod",
+      "partialMatchNote": "En yakın listelenen eşleşmeler gösteriliyor — tam 8 haneli CN kodunu gümrük beyannamenizle doğrulayın",
+      "fields": {
+        "code": "CN kodu",
+        "sector": "CBAM sektörü",
+        "description": "Ürün açıklaması",
+        "scopeStatus": "Kapsam durumu"
+      },
+      "status": {
+        "included": "Listelenen kod",
+        "appearsInScope": "Listelenen CBAM kapsamında görünüyor (ön tarama)"
+      },
+      "nextStep": {
+        "included": "Bu kod listelenen CBAM ürün kapsamı içinde görünüyor. Raporlama öncesinde tedarikçi kanıtı, gömülü emisyon verisi ve ürün dokümantasyonunu gözden geçirin.",
+        "notFound": "Bu kod listelenen CBAM CN kapsamı içinde bulunamadı. Nihai uygulanabilirlik yine de gümrük sınıflandırması, ürün açıklaması ve teknik incelemeye bağlı olabilir."
+      },
+      "disclaimer": "Bu araç, listelenen CN/GTİP kodlarına göre ön kapsam taraması sağlar. Nihai CBAM uygulanabilirliği için ürün açıklaması, gümrük sınıflandırması ve teknik inceleme gerekebilir."
     },
-    "subscribe": {
-      "contactPrefix": "E-posta mı tercih edersiniz? İletişim:",
-      "emailPlaceholder": "siz@sirket.com"
+    "leadMagnet": {
+      "title": "CBAM hazırlık kontrol listesiyle başlayın",
+      "description": "Bir sonraki raporlama dönemi öncesinde ürün kapsamı, tedarikçi veri ihtiyacı, hesaplama girdileri ve kanıt boşluklarını yapılandırmak için kontrol listesini kullanın.",
+      "cta": "Kontrol listesini talep et",
+      "highlights": {
+        "item1": "Bir sonraki raporlama dönemi öncesinde ürün kapsamını haritalayın",
+        "item2": "Tedarikçi verisi ve kanıt boşluklarını erken belirleyin",
+        "item3": "Raporlama başlamadan önce hesaplama girdilerini yapılandırın"
+      }
     },
     "subscribeBenefits": {
       "title": "Abone olduğunuzda neler alırsınız",
@@ -1955,6 +1992,25 @@
         "item2": "Yeni kaynak bildirimleri",
         "item3": "Tedarikçi kanıtı iş akışı güncellemeleri",
         "item4": "Regülasyon yol haritası bilgilendirmeleri"
+      }
+    },
+    "subscribe": {
+      "title": "Regülasyon iş akışı güncellemelerini alın",
+      "description": "Arvenza kaynakları yayınlandıkça CBAM, tedarikçi kanıtı, PPWR, EUDR ve ürün verisi iş akışlarına dair pratik güncellemeleri alın.",
+      "emailLabel": "İş e-postası",
+      "emailPlaceholder": "adiniz@sirket.com",
+      "interestLabel": "Ana ilgi alanı",
+      "interestPlaceholder": "Ana ilgi alanınızı seçin",
+      "submit": "Güncellemelere abone ol",
+      "success": "Teşekkürler — iş akışı güncellemelerini e-posta adresinize göndereceğiz.",
+      "contactPrefix": "E-posta mı tercih ediyorsunuz? İletişim",
+      "interests": {
+        "cbam": "CBAM Calculation Engine",
+        "supplier": "Tedarikçi kanıtı iş akışları",
+        "ppwr": "PPWR / Ambalaj Uyumu",
+        "eudr": "EUDR Due Diligence",
+        "dpp": "Digital Product Passport",
+        "general": "Genel ürün demosu"
       }
     },
     "heroChipsAriaLabel": "Kaynak merkezi öne çıkanları",
