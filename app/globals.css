@@ -168,6 +168,11 @@
     font-weight: 700;
     line-height: 1.08;
     letter-spacing: -0.03em;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    min-width: 0;
+    max-width: 100%;
     background: linear-gradient(
       125deg,
       #071225 0%,
@@ -178,6 +183,16 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+  }
+
+  .company-hero-heading {
+    max-width: 18ch;
+  }
+
+  @media (min-width: 1024px) {
+    .company-hero-heading {
+      max-width: 22ch;
+    }
   }
 
   .text-accent {
@@ -1917,12 +1932,53 @@
     color: #5b21b6;
   }
 
-  body:has(.cookie-consent-banner) {
+  .resource-category-filter {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    background: rgba(124, 58, 237, 0.06);
+    padding: 0.4375rem 0.875rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: #475569;
+    border: 1px solid rgba(124, 58, 237, 0.14);
+    white-space: normal;
+    text-align: left;
+    line-height: 1.35;
+    cursor: pointer;
+    transition:
+      background-color 0.18s ease,
+      border-color 0.18s ease,
+      color 0.18s ease,
+      box-shadow 0.18s ease;
+  }
+
+  .resource-category-filter:hover {
+    border-color: rgba(124, 58, 237, 0.28);
+    color: #334155;
+  }
+
+  .resource-category-filter:focus-visible {
+    outline: 2px solid #7c3aed;
+    outline-offset: 2px;
+  }
+
+  .resource-category-filter-active {
+    background: rgba(124, 58, 237, 0.14);
+    border-color: rgba(124, 58, 237, 0.36);
+    color: #5b21b6;
+    box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.08);
+  }
+
+  body:has(.cookie-consent-banner),
+  body.cookie-banner-visible {
     padding-bottom: 5.5rem;
   }
 
   @media (min-width: 640px) {
-    body:has(.cookie-consent-banner) {
+    body:has(.cookie-consent-banner),
+    body.cookie-banner-visible {
       padding-bottom: 4.75rem;
     }
   }

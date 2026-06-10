@@ -57,6 +57,19 @@ export const PLATFORM_MODULE_SCREENSHOTS: Record<PlatformModuleKey, string> = {
   esgReporting: "/assets/screenshots/esg-workspace/dashboard.png",
 };
 
+/** EUDR Turkish UI — English mock for EN/NL locales */
+export const EUDR_SCREENSHOT_EN = "/assets/screenshots/eudr/dashboard-en.png";
+
+export function resolveModuleScreenshotPath(
+  moduleKey: PlatformModuleKey,
+  locale?: string
+): string {
+  if (moduleKey === "eudr" && locale && locale !== "tr") {
+    return EUDR_SCREENSHOT_EN;
+  }
+  return PLATFORM_MODULE_SCREENSHOTS[moduleKey];
+}
+
 export const PLATFORM_MODULE_SCREENSHOT_FOCUS: Record<PlatformModuleKey, ProductScreenshotFocus> = {
   cbamCalc: "full",
   cbamComplianceConsole: "full",

@@ -1173,7 +1173,8 @@
       "primary": "Book a Demo"
     },
     "contactPanel": {
-      "title": "Direct contact"
+      "title": "Direct contact",
+      "operatorNote": "Demo requests are handled by Anka Sustainability B.V., the operating company behind Arvenza RegTech."
     }
   },
   "footer": {
@@ -1754,6 +1755,22 @@
       "operatorCountry": "The Netherlands",
       "operatorKvk": "KvK: 99787784",
       "clarifier": "Arvenza RegTech is the product brand; Anka Sustainability B.V. is the legal operator"
+    },
+    "leadership": {
+      "eyebrow": "Leadership approach",
+      "title": "Regulatory implementation behind the product",
+      "name": "Burcu Şimşek",
+      "role": "Managing Director & Regulatory Implementation Lead",
+      "body": {
+        "paragraph1": "Arvenza RegTech is shaped by hands-on regulatory implementation experience across CBAM, LCA, EPD, supplier evidence, product documentation and EU sustainability compliance workflows. The product is designed to translate complex regulatory requirements into structured, traceable and operational digital workflows.",
+        "paragraph2": "Instead of treating compliance as a one-off reporting exercise, Arvenza focuses on the recurring work behind it: supplier communication, evidence quality, calculation inputs, methodology traceability and declaration-ready outputs.",
+        "paragraph3": "This practitioner-led approach helps keep the platform grounded in real implementation needs rather than generic software assumptions."
+      },
+      "quote": "We are building Arvenza to make regulatory workflows clearer, more structured and more defensible — not just easier to report.",
+      "quoteAttribution": "Burcu Şimşek",
+      "portraitAlt": "Burcu Şimşek, Managing Director and Regulatory Implementation Lead",
+      "linkedinUrl": "",
+      "linkedinLabel": "View LinkedIn profile"
     },
     "trust": {
       "ariaLabel": "Credibility highlights",

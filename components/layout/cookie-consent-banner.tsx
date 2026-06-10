@@ -10,8 +10,10 @@ const STORAGE_KEY = "arvenza-cookie-consent";
 export function CookieConsentBanner() {
   const t = useTranslations("cookieConsent");
   const [visible, setVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     try {
       if (!localStorage.getItem(STORAGE_KEY)) {
         setVisible(true);
@@ -20,6 +22,14 @@ export function CookieConsentBanner() {
       setVisible(true);
     }
   }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+    document.body.classList.toggle("cookie-banner-visible", visible);
+    return () => {
+      document.body.classList.remove("cookie-banner-visible");
+    };
+  }, [visible, mounted]);
 
   const dismiss = (value: "accepted" | "rejected") => {
     try {
@@ -30,13 +40,14 @@ export function CookieConsentBanner() {
     setVisible(false);
   };
 
-  if (!visible) return null;
+  if (!mounted || !visible) return null;
 
   return (
     <div
       role="dialog"
       aria-label={t("ariaLabel")}
-      className="cookie-consent-banner fixed inset-x-0 bottom-0 z-50 border-t border-[#dde5f2] bg-white/95 px-4 py-4 shadow-[0_-8px_32px_rgba(15,23,42,0.08)] backdrop-blur-sm sm:px-6"
+      aria-live="polite"
+      className="cookie-consent-banner fixed inset-x-0 bottom-0 z-[120] border-t border-[#dde5f2] bg-white/98 px-4 py-4 shadow-[0_-8px_32px_rgba(15,23,42,0.12)] backdrop-blur-md sm:px-6"
     >
       <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
         <p className="min-w-0 flex-1 text-sm leading-relaxed text-[#475569]">{t("message")}</p>

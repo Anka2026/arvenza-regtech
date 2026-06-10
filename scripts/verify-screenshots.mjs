@@ -15,6 +15,7 @@ const PATHS = [
   "/assets/screenshots/ppwr/dashboard.png",
   "/assets/screenshots/agri-climate/dashboard.png",
   "/assets/screenshots/eudr/dashboard.png",
+  "/assets/screenshots/eudr/dashboard-en.png",
   "/assets/screenshots/dpp/dashboard.png",
   "/assets/screenshots/supplier-evidence/dashboard.png",
   "/assets/screenshots/esg-workspace/dashboard.png",

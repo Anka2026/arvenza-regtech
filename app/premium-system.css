@@ -2114,6 +2114,207 @@
     font-weight: 600;
   }
 
+  .company-leadership-panel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.375rem;
+    border: 1px solid rgba(124, 58, 237, 0.16);
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(248, 250, 255, 0.94) 48%,
+      rgba(255, 255, 255, 0.97) 100%
+    );
+    padding: 1.5rem 1.375rem;
+    box-shadow:
+      0 4px 24px rgba(15, 23, 42, 0.05),
+      0 1px 0 rgba(255, 255, 255, 0.85) inset;
+    backdrop-filter: blur(8px);
+  }
+
+  @media (min-width: 640px) {
+    .company-leadership-panel {
+      padding: 1.75rem 1.75rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .company-leadership-panel {
+      padding: 2rem 2.125rem;
+    }
+  }
+
+  .company-leadership-panel-glow {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 0% 0%, rgba(124, 58, 237, 0.07), transparent 42%),
+      radial-gradient(circle at 100% 100%, rgba(37, 99, 235, 0.06), transparent 38%);
+    pointer-events: none;
+  }
+
+  .company-leadership-grid {
+    display: grid;
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .company-leadership-grid {
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 1.375rem;
+      align-items: start;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .company-leadership-grid-with-portrait {
+      grid-template-columns: minmax(0, 200px) minmax(0, 1fr) minmax(0, 260px);
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .company-leadership-grid-with-portrait {
+      grid-template-columns: minmax(0, 220px) minmax(0, 1fr) minmax(0, 280px);
+      gap: 1.75rem;
+    }
+  }
+
+  .company-leadership-portrait {
+    margin: 0;
+    min-width: 0;
+  }
+
+  .company-leadership-portrait-frame {
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 1px solid rgba(124, 58, 237, 0.14);
+    background: linear-gradient(180deg, #f8fafc 0%, #eef1f6 100%);
+    aspect-ratio: 4 / 5;
+    max-width: 280px;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.08);
+  }
+
+  @media (min-width: 768px) {
+    .company-leadership-portrait-frame {
+      max-width: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .company-leadership-portrait-frame {
+      height: 100%;
+      min-height: 280px;
+    }
+  }
+
+  .company-leadership-portrait-image {
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .company-leadership-narrative {
+    border-radius: 1rem;
+    border: 1px solid rgba(221, 229, 242, 0.95);
+    background: rgba(255, 255, 255, 0.82);
+    padding: 1.125rem 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .company-leadership-narrative {
+      padding: 1.25rem 1.375rem;
+    }
+  }
+
+  .company-leadership-name {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #071225;
+  }
+
+  .company-leadership-role {
+    margin-top: 0.25rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1.45;
+    color: #7c3aed;
+  }
+
+  .company-leadership-linkedin {
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.625rem;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    background: rgba(124, 58, 237, 0.05);
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #6d28d9;
+    transition:
+      background-color 0.18s ease,
+      border-color 0.18s ease,
+      color 0.18s ease;
+  }
+
+  .company-leadership-linkedin:hover {
+    border-color: rgba(124, 58, 237, 0.32);
+    background: rgba(124, 58, 237, 0.1);
+    color: #5b21b6;
+  }
+
+  .company-leadership-quote {
+    margin: 0;
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+    border: 1px solid rgba(124, 58, 237, 0.22);
+    background: linear-gradient(160deg, #0b1530 0%, #071225 100%);
+    padding: 1.25rem 1.375rem;
+    box-shadow: 0 12px 32px rgba(7, 18, 37, 0.18);
+  }
+
+  @media (min-width: 768px) {
+    .company-leadership-grid:not(.company-leadership-grid-with-portrait) .company-leadership-quote {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .company-leadership-grid-with-portrait .company-leadership-quote {
+      grid-column: auto;
+    }
+  }
+
+  .company-leadership-quote-text {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #e2e8f0;
+  }
+
+  @media (min-width: 640px) {
+    .company-leadership-quote-text {
+      font-size: 1rem;
+    }
+  }
+
+  .company-leadership-quote-attribution {
+    margin-top: 1.125rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.22);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #94a3b8;
+  }
+
   /* ── Legal pages ── */
   .section-legal-hero {
     background: linear-gradient(180deg, #f4f5f9 0%, #f8f9fc 100%);

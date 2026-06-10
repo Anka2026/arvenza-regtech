@@ -47,7 +47,7 @@ export function PlatformRoadmapSection() {
       <OrbitWaveMotif variant="dark" orbitAlign="right" />
       <div className="pointer-events-none absolute inset-0 dark-section-glow" aria-hidden="true" />
       <PageContainer className="section-content">
-        <FadeIn>
+        <FadeIn staticReveal>
           <SectionHeading
             id="roadmap-heading"
             eyebrow={t("eyebrow")}
@@ -64,7 +64,7 @@ export function PlatformRoadmapSection() {
           <li><span className="badge-coming-soon">{t("maturityLegend.comingSoon")}</span></li>
         </ul>
 
-        <FadeIn delay={0.04}>
+        <FadeIn staticReveal>
           <article className="card-dark mb-4 border-[#7C3AED]/35 lg:mb-5">
             <div className="mb-3 flex flex-wrap items-center gap-2">
               <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#7C3AED]/12 ring-1 ring-[#7C3AED]/20">
@@ -97,7 +97,7 @@ export function PlatformRoadmapSection() {
           {ROADMAP_MODULE_CONFIG.map(({ key, status }, i) => {
             const Icon = roadmapIcons[key];
             return (
-              <FadeIn key={key} delay={0.06 + i * 0.02}>
+              <FadeIn key={key} staticReveal>
                 <Link href={roadmapModuleHref(key)} className="group block h-full">
                   <article
                     className={cn(

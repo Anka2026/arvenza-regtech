@@ -1173,7 +1173,8 @@
       "primary": "Demo plannen"
     },
     "contactPanel": {
-      "title": "Rechtstreeks contact"
+      "title": "Rechtstreeks contact",
+      "operatorNote": "Demoaanvragen worden behandeld door Anka Sustainability B.V., de exploitant achter Arvenza RegTech."
     }
   },
   "footer": {
@@ -1692,7 +1693,7 @@
   },
   "companyPage": {
     "eyebrow": "Bedrijf",
-    "title": "Een RegTech-productmerk voor EU-duurzaamheidscompliance-workflows",
+    "title": "Een RegTech-productmerk voor EU-duurzaamheidsworkflows",
     "description": "Arvenza RegTech wordt beheerd door Anka Sustainability B.V., Nederland, en is ontworpen om leveranciersbewijs, productdata en regelgevingsgerichte berekeningsvereisten om te zetten in gestructureerde digitale workflows.",
     "cards": {
       "productBrand": {
@@ -1744,6 +1745,22 @@
       "operatorCountry": "Nederland",
       "operatorKvk": "KvK: 99787784",
       "clarifier": "Arvenza RegTech is het productmerk; Anka Sustainability B.V. is de juridische operator"
+    },
+    "leadership": {
+      "eyebrow": "Leiderschapsbenadering",
+      "title": "Regelgevingsimplementatie achter het product",
+      "name": "Burcu Şimşek",
+      "role": "Managing Director & Lead Regelgevingsimplementatie",
+      "body": {
+        "paragraph1": "Arvenza RegTech is gevormd door praktijkervaring met regelgevingsimplementatie rond CBAM, LCA, EPD, leveranciersbewijs, productdocumentatie en EU-duurzaamheidscompliance-workflows. Het product is ontworpen om complexe regelgevingsvereisten om te zetten in gestructureerde, traceerbare en operationele digitale workflows.",
+        "paragraph2": "In plaats van compliance te behandelen als een eenmalige rapportageoefening, richt Arvenza zich op het terugkerende werk erachter: leverancierscommunicatie, bewijskwaliteit, berekeningsinput, methodologische traceerbaarheid en aangifteklare outputdossiers.",
+        "paragraph3": "Deze praktijkgerichte benadering helpt het platform te baseren op echte implementatiebehoeften, niet op generieke softwareaannames."
+      },
+      "quote": "We bouwen Arvenza om regelgevingsworkflows duidelijker, gestructureerder en beter verdedigbaar te maken — niet alleen om rapportage eenvoudiger te maken.",
+      "quoteAttribution": "Burcu Şimşek",
+      "portraitAlt": "Burcu Şimşek, Managing Director en Lead Regelgevingsimplementatie",
+      "linkedinUrl": "",
+      "linkedinLabel": "LinkedIn-profiel bekijken"
     },
     "trust": {
       "ariaLabel": "Geloofwaardigheidskenmerken",
@@ -2161,7 +2178,7 @@
     },
     "cbamComplianceConsole": {
       "eyebrow": "CBAM Compliance Console",
-      "title": "Operationele coördinatie voor CBAM-bewijs en rapportagegereedheid",
+      "title": "Operationele coördinatie voor CBAM-bewijs en rapportage",
       "description": "Een pilotcoördinatielaag voor het monitoren van leveranciersbewijsstatus, berekeningsgereedheid, opvolgacties en voortgang per rapportagecyclus in CBAM-workflows.",
       "chipsAriaLabel": "Console-hoogtepunten",
       "chips": {
@@ -2401,7 +2418,7 @@
     },
     "eudr": {
       "eyebrow": "EUDR Due Diligence",
-      "title": "Geplande due-diligence-workflows voor ontbossingsgerelateerde supply chains",
+      "title": "Geplande EUDR-workflows voor risico en traceerbaarheid",
       "description": "Een roadmapmodule voor geolocatiebewijs, leveranciersverklaringen, risicoclassificatie en traceerbaarheidsdocumentatie in grondstofgebonden supply chains.",
       "chipsAriaLabel": "EUDR-roadmaphoogtepunten",
       "chips": {

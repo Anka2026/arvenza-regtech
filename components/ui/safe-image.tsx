@@ -20,6 +20,11 @@ interface SafeImageProps {
   fallbackSrc?: string;
 }
 
+/** Static public assets — native img avoids Next optimizer failures on edge/static hosts */
+function isStaticPublicAsset(src: string) {
+  return src.startsWith("/assets/") || src.startsWith("/images/");
+}
+
 export function SafeImage({
   src,
   alt,
@@ -56,14 +61,37 @@ export function SafeImage({
     return (
       <div
         className={cn(
-          "flex items-center justify-center bg-surface-muted",
+          "flex items-center justify-center bg-[#eef1f6]",
           fill ? "absolute inset-0" : className
         )}
         role="img"
         aria-label={alt}
       >
-        <LayoutDashboard className="h-8 w-8 text-indigo-700/25" aria-hidden="true" />
+        <LayoutDashboard className="h-8 w-8 text-[#7c3aed]/30" aria-hidden="true" />
       </div>
+    );
+  }
+
+  const imageStyle: React.CSSProperties = {
+    ...style,
+    objectPosition: objectPosition ?? "left top",
+  };
+
+  if (isStaticPublicAsset(currentSrc)) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={currentSrc}
+        alt={alt}
+        width={fill ? undefined : width}
+        height={fill ? undefined : height}
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "auto"}
+        decoding={priority ? "sync" : "async"}
+        className={cn(fill ? "absolute inset-0 h-full w-full" : "", fitClass, className)}
+        style={imageStyle}
+        onError={handleError}
+      />
     );
   }
 
@@ -76,8 +104,9 @@ export function SafeImage({
       height={!fill ? height : undefined}
       priority={priority}
       sizes={sizes}
+      unoptimized
       className={cn(fitClass, className)}
-      style={{ ...style, objectPosition }}
+      style={imageStyle}
       onError={handleError}
     />
   );

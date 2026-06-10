@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import {
   BookOpen,
@@ -19,12 +20,16 @@ import {
   type ResourceKey,
 } from "@/components/resources/resource-library-card";
 import { ResourcesSubscribePanel } from "@/components/resources/resources-subscribe-panel";
+import { cn } from "@/lib/utils";
 
-const CATEGORY_TAG_KEYS = ["cbamGuides", "checklists", "sectorBriefings", "regulationUpdates"] as const;
 const HERO_CHIP_KEYS = ["item1", "item2", "item3"] as const;
 
-type CategoryKey = (typeof CATEGORY_TAG_KEYS)[number];
+type CategoryKey = "cbamGuides" | "checklists" | "regulationUpdates";
 type ResourceStatus = "available" | "inPreparation" | "roadmap";
+type FilterKey = "all" | CategoryKey;
+
+/** Categories that have at least one resource card */
+const FILTER_CATEGORIES: FilterKey[] = ["all", "checklists", "cbamGuides", "regulationUpdates"];
 
 const RESOURCE_SECTIONS: {
   sectionKey: "available" | "inPreparation" | "roadmap";
@@ -77,6 +82,16 @@ const RESOURCE_SECTIONS: {
 
 export function ResourcesPageContent() {
   const t = useTranslations("resourcesPage");
+  const [activeFilter, setActiveFilter] = useState<FilterKey>("all");
+
+  const filteredSections = useMemo(() => {
+    if (activeFilter === "all") return RESOURCE_SECTIONS;
+
+    return RESOURCE_SECTIONS.map((section) => ({
+      ...section,
+      resources: section.resources.filter((r) => r.category === activeFilter),
+    })).filter((section) => section.resources.length > 0);
+  }, [activeFilter]);
 
   return (
     <>
@@ -112,12 +127,28 @@ export function ResourcesPageContent() {
                 </li>
               ))}
             </ul>
-            <div className="mt-6 flex flex-wrap gap-2" role="list" aria-label={t("categoryTagsAriaLabel")}>
-              {CATEGORY_TAG_KEYS.map((key) => (
-                <span key={key} role="listitem" className="resource-category-chip">
-                  {t(`categories.${key}`)}
-                </span>
-              ))}
+            <div
+              className="mt-6 flex flex-wrap gap-2"
+              role="group"
+              aria-label={t("categoryTagsAriaLabel")}
+            >
+              {FILTER_CATEGORIES.map((key) => {
+                const isActive = activeFilter === key;
+                return (
+                  <button
+                    key={key}
+                    type="button"
+                    aria-pressed={isActive}
+                    onClick={() => setActiveFilter(key)}
+                    className={cn(
+                      "resource-category-filter",
+                      isActive && "resource-category-filter-active"
+                    )}
+                  >
+                    {t(`categories.${key}`)}
+                  </button>
+                );
+              })}
             </div>
           </FadeIn>
         </PageContainer>
@@ -127,7 +158,7 @@ export function ResourcesPageContent() {
       <FullBleedSection className="section-light resources-section-library">
         <OrbitWaveMotif variant="section" orbitAlign="right" />
         <PageContainer className="section-content min-w-0 py-10 lg:py-12">
-          <FadeIn>
+          <FadeIn staticReveal>
             <div className="resource-library-head">
               <div className="resource-library-head-icon" aria-hidden="true">
                 <Library className="h-5 w-5 text-[#7c3aed]" />
@@ -143,9 +174,9 @@ export function ResourcesPageContent() {
             </div>
           </FadeIn>
 
-          {RESOURCE_SECTIONS.map(({ sectionKey, status, resources }, sectionIndex) => (
+          {filteredSections.map(({ sectionKey, status, resources }, sectionIndex) => (
             <div key={sectionKey} className={sectionIndex > 0 ? "resource-status-section mt-10 lg:mt-12" : "mt-8"}>
-              <FadeIn delay={sectionIndex * 0.04}>
+              <FadeIn staticReveal delay={sectionIndex * 0.02}>
                 <div className="resource-status-head">
                   <span className={`resource-status-badge resource-status-badge-${status}`}>
                     {t(`sections.${sectionKey}.label`)}
@@ -160,7 +191,7 @@ export function ResourcesPageContent() {
               </FadeIn>
               <div className="resource-library-grid mt-5">
                 {resources.map((resource, i) => (
-                  <FadeIn key={resource.key} delay={0.04 + sectionIndex * 0.04 + i * 0.03}>
+                  <FadeIn key={resource.key} staticReveal delay={0.02 + i * 0.02}>
                     <ResourceLibraryCard
                       resourceKey={resource.key}
                       category={resource.category}
@@ -175,7 +206,7 @@ export function ResourcesPageContent() {
             </div>
           ))}
 
-          <FadeIn delay={0.12}>
+          <FadeIn staticReveal delay={0.08}>
             <ResourcesSubscribePanel />
           </FadeIn>
         </PageContainer>

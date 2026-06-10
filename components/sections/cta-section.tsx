@@ -15,7 +15,7 @@ export function CtaSection() {
     <FullBleedSection ariaLabelledby="cta-heading" className="section-light home-section-compact !pb-8 lg:!pb-10">
       <OrbitWaveMotif variant="cta" orbitAlign="center" />
       <PageContainer className="section-content">
-        <FadeIn>
+        <FadeIn staticReveal>
           <div className="relative overflow-hidden rounded-[1.75rem] premium-cta-band px-6 py-10 sm:px-10 sm:py-11 lg:px-14 lg:py-12">
             <div
               className="pointer-events-none absolute -bottom-24 left-1/2 h-64 w-[120%] -translate-x-1/2 rounded-full bg-white/10 blur-3xl motion-reduce:animate-none animate-[glow-pulse_8s_ease-in-out_infinite]"

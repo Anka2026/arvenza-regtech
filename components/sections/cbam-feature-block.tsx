@@ -81,7 +81,7 @@ export function CbamFeatureBlock({
             imageFirst && "lg:[&>*:first-child]:order-2 lg:[&>*:last-child]:order-1"
           )}
         >
-          <FadeIn>
+          <FadeIn staticReveal>
             <SectionHeading
               id={`${id}-heading`}
               eyebrow={t("eyebrow")}
@@ -114,7 +114,7 @@ export function CbamFeatureBlock({
             </ul>
           </FadeIn>
 
-          <FadeIn delay={0.06} className="relative min-w-0 w-full max-w-full">
+          <FadeIn staticReveal className="relative min-w-0 w-full max-w-full">
             <div className="home-feature-visual-panel">
             {resolvedVisual.type === "screenshot" ? (
               <>
@@ -127,6 +127,7 @@ export function CbamFeatureBlock({
                   alt={t("screenshotAlt")}
                   size="large"
                   elevated
+                  priority={namespace === "home.calculation"}
                   className="relative w-full max-w-full shadow-dashboard-glow"
                 />
               </>

@@ -38,7 +38,6 @@ const audienceIcons = [Users, Workflow, Calculator, Sparkles] as const;
 export function DemoPage() {
   const t = useTranslations("demo");
   const tCommon = useTranslations("common");
-  const tFooter = useTranslations("footer");
 
   return (
     <div className="demo-page">
@@ -179,7 +178,7 @@ export function DemoPage() {
                   >
                     {tCommon("email")}
                   </a>
-                  <p className="demo-contact-panel-note">{tFooter("contactNote")}</p>
+                  <p className="demo-contact-panel-note">{t("contactPanel.operatorNote")}</p>
                 </div>
               </div>
             </FadeIn>

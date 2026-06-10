@@ -22,7 +22,7 @@ export function ProblemSection() {
     >
       <OrbitWaveMotif variant="section" orbitAlign="left" />
       <PageContainer className="section-content">
-        <FadeIn>
+        <FadeIn staticReveal>
           <SectionHeading
             id="problem-heading"
             eyebrow={t("eyebrow")}
@@ -35,7 +35,7 @@ export function ProblemSection() {
           {problemKeys.map((key, i) => {
             const Icon = icons[i];
             return (
-              <FadeIn key={key} delay={i * 0.04}>
+              <FadeIn key={key} staticReveal>
                 <article className="card-glass card-risk flex h-full flex-col p-5">
                   <div className="icon-accent-wrap mb-3">
                     <Icon className="h-[19px] w-[19px] text-[#7c3aed]" aria-hidden="true" />

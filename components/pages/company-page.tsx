@@ -9,6 +9,7 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { PageCtaBand } from "@/components/pages/shared/page-cta-band";
 import { StatusPill } from "@/components/pages/shared/status-pill";
 import { CompanyProductContext } from "@/components/company/company-product-context";
+import { CompanyLeadershipSection } from "@/components/company/company-leadership-section";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -179,6 +180,10 @@ export function CompanyPage() {
               </ul>
             </div>
           </FadeIn>
+
+          <div className="mt-10 lg:mt-12">
+            <CompanyLeadershipSection />
+          </div>
 
           <div className="mt-10 lg:mt-12">
             <PageCtaBand

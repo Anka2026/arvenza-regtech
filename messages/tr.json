@@ -1173,7 +1173,8 @@
       "primary": "Demo Talep Et"
     },
     "contactPanel": {
-      "title": "Dogrudan iletisim"
+      "title": "Dogrudan iletisim",
+      "operatorNote": "Demo talepleri, Arvenza RegTech'in arkasındaki işletici şirket olan Anka Sustainability B.V. tarafından yönetilir."
     }
   },
   "footer": {
@@ -1744,6 +1745,22 @@
       "operatorCountry": "Hollanda",
       "operatorKvk": "KvK: 99787784",
       "clarifier": "Arvenza RegTech urun markasidir; Anka Sustainability B.V. yasal operatordur"
+    },
+    "leadership": {
+      "eyebrow": "Liderlik yaklaşımı",
+      "title": "Ürünün arkasındaki regülasyon uygulama deneyimi",
+      "name": "Burcu Şimşek",
+      "role": "Yönetici Müdür ve Regülasyon Uygulama Lideri",
+      "body": {
+        "paragraph1": "Arvenza RegTech; CBAM, LCA, EPD, tedarikçi kanıtı, ürün dokümantasyonu ve AB sürdürülebilirlik uyum iş akışlarındaki uygulama deneyimiyle şekillenir. Ürün, karmaşık regülasyon gerekliliklerini yapılandırılmış, izlenebilir ve operasyonel dijital iş akışlarına dönüştürmek için geliştirilmiştir.",
+        "paragraph2": "Arvenza, uyumu tek seferlik bir raporlama işi olarak ele almak yerine, bu raporlamanın arkasındaki tekrarlayan operasyonel işleri merkezine alır: tedarikçi iletişimi, kanıt kalitesi, hesaplama girdileri, metodoloji izlenebilirliği ve beyana hazır çıktı dosyaları.",
+        "paragraph3": "Bu uygulayıcı yaklaşım, platformun genel yazılım varsayımlarından değil, gerçek uygulama ihtiyaçlarından beslenmesini sağlar."
+      },
+      "quote": "Arvenza'yı regülasyon iş akışlarını daha net, daha yapılandırılmış ve daha savunulabilir hale getirmek için geliştiriyoruz — yalnızca raporlamayı kolaylaştırmak için değil.",
+      "quoteAttribution": "Burcu Şimşek",
+      "portraitAlt": "Burcu Şimşek, Yönetici Müdür ve Regülasyon Uygulama Lideri",
+      "linkedinUrl": "",
+      "linkedinLabel": "LinkedIn profilini görüntüle"
     },
     "trust": {
       "ariaLabel": "Güvenilirlik vurguları",
