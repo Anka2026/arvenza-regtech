@@ -39,7 +39,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={inter.variable}>
-      <body className="min-h-screen font-sans antialiased">
+      <body className="premium-site-canvas min-h-screen font-sans antialiased">
         <NextIntlClientProvider messages={messages}>
           <SkipLink />
           <Header />

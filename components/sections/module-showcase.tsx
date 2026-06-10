@@ -3,12 +3,10 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { FadeIn } from "@/components/ui/fade-in";
-import { BrowserMockup } from "@/components/ui/browser-mockup";
+import { ProductScreenshot } from "@/components/ui/product-screenshot";
 import { CheckCircle2 } from "lucide-react";
-import {
-  MODULE_SCREENSHOTS,
-  type ModuleScreenshotKey,
-} from "@/lib/assets";
+import { type ModuleScreenshotKey } from "@/lib/assets";
+import { LEGACY_MODULE_KEY_TO_PLATFORM } from "@/lib/platform-modules";
 import { cn } from "@/lib/utils";
 
 const moduleKeys: ModuleScreenshotKey[] = [
@@ -42,8 +40,9 @@ export function ModuleShowcase({ namespace = "platform" }: ModuleShowcaseProps) 
               )}
             >
               <div className={cn(reversed && "lg:[direction:ltr]")}>
-                <BrowserMockup
-                  src={MODULE_SCREENSHOTS[key]}
+                <ProductScreenshot
+                  moduleKey={LEGACY_MODULE_KEY_TO_PLATFORM[key]}
+                  presentation="hero"
                   alt={t(`modules.${key}.title`)}
                   aspectClass="aspect-[16/10]"
                   elevated

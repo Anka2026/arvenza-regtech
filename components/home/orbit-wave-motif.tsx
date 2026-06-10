@@ -13,12 +13,12 @@ interface OrbitWaveMotifProps {
 }
 
 const opacityMap = {
-  hero: { orbit: 0.28, wave: 0.4, dot: 0.35 },
-  section: { orbit: 0.2, wave: 0.35, dot: 0.3 },
-  muted: { orbit: 0.16, wave: 0.3, dot: 0.26 },
-  dark: { orbit: 0.24, wave: 0.38, dot: 0.32 },
-  cta: { orbit: 0.2, wave: 0.32, dot: 0.28 },
-  footer: { orbit: 0.14, wave: 0.28, dot: 0.24 },
+  hero: { orbit: 0.55, wave: 0.4, dot: 0.35 },
+  section: { orbit: 0.38, wave: 0.35, dot: 0.3 },
+  muted: { orbit: 0.32, wave: 0.3, dot: 0.26 },
+  dark: { orbit: 0.42, wave: 0.38, dot: 0.32 },
+  cta: { orbit: 0.35, wave: 0.32, dot: 0.28 },
+  footer: { orbit: 0.28, wave: 0.28, dot: 0.24 },
 };
 
 /** Decorative orbit + wave — never participates in document flow */
@@ -66,7 +66,7 @@ export function OrbitWaveMotif({
               cy="200"
               r="188"
               stroke={`url(#${gradId})`}
-              strokeWidth="1"
+              strokeWidth="1.5"
               strokeDasharray="4 12"
               opacity={op.orbit}
             />
@@ -75,9 +75,9 @@ export function OrbitWaveMotif({
               cy="200"
               r="148"
               stroke={`url(#${gradId})`}
-              strokeWidth="0.75"
+              strokeWidth="1.25"
               strokeDasharray="2 16"
-              opacity={op.orbit * 0.55}
+              opacity={op.orbit * 0.64}
             />
             <defs>
               <linearGradient id={gradId} x1="0" y1="0" x2="400" y2="400">

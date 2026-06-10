@@ -28,14 +28,10 @@ export function PageCtaBand({
     <FadeIn immediate>
       <div
         className={cn(
-          "relative min-w-0 overflow-hidden rounded-2xl bg-gradient-cta px-5 py-8 shadow-[0_24px_64px_rgba(124,58,237,0.28)] sm:rounded-[1.75rem] sm:px-8 sm:py-10 lg:px-12 lg:py-12",
+          "premium-cta-band relative min-w-0 overflow-hidden rounded-2xl px-5 py-8 sm:rounded-[1.75rem] sm:px-8 sm:py-10 lg:px-12 lg:py-12",
           className
         )}
       >
-        <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.22),transparent_55%)]"
-          aria-hidden="true"
-        />
         <div className="relative z-10 mx-auto max-w-2xl text-center">
           <h2 className="text-balance text-[clamp(1.25rem,4vw+0.35rem,2rem)] font-bold tracking-[-0.03em] text-white">
             {title}

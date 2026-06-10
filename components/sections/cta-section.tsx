@@ -12,15 +12,11 @@ export function CtaSection() {
   const t = useTranslations("home.cta");
 
   return (
-    <FullBleedSection ariaLabelledby="cta-heading" className="section-light !pb-10 lg:!pb-12">
+    <FullBleedSection ariaLabelledby="cta-heading" className="section-light home-section-compact !pb-8 lg:!pb-10">
       <OrbitWaveMotif variant="cta" orbitAlign="center" />
       <PageContainer className="section-content">
         <FadeIn>
-          <div className="relative overflow-hidden rounded-[1.75rem] bg-gradient-cta px-8 py-11 shadow-[0_24px_64px_rgba(124,58,237,0.28)] sm:px-12 sm:py-12 lg:px-16 lg:py-14">
-            <div
-              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.22),transparent_55%)]"
-              aria-hidden="true"
-            />
+          <div className="relative overflow-hidden rounded-[1.75rem] premium-cta-band px-6 py-10 sm:px-10 sm:py-11 lg:px-14 lg:py-12">
             <div
               className="pointer-events-none absolute -bottom-24 left-1/2 h-64 w-[120%] -translate-x-1/2 rounded-full bg-white/10 blur-3xl motion-reduce:animate-none animate-[glow-pulse_8s_ease-in-out_infinite]"
               aria-hidden="true"
@@ -32,7 +28,7 @@ export function CtaSection() {
               >
                 {t("title")}
               </h2>
-              <div className="mt-8">
+              <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Link
                   href="/demo"
                   className={cn(
@@ -41,6 +37,15 @@ export function CtaSection() {
                   )}
                 >
                   {t("primary")}
+                </Link>
+                <Link
+                  href="/platform/cbam"
+                  className={cn(
+                    buttonVariants({ variant: "accent-outline", size: "lg" }),
+                    "w-full border-white/40 bg-transparent text-white hover:bg-white/10 sm:w-auto"
+                  )}
+                >
+                  {t("secondary")}
                 </Link>
               </div>
             </div>

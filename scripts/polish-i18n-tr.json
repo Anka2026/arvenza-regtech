@@ -1,0 +1,157 @@
+{
+  "companyPage": {
+    "productContext": {
+      "kicker": "Ürün mimarisi bağlamı",
+      "ariaLabel": "Ürün ve operatör bağlamı",
+      "layers": {
+        "supplierEvidence": {
+          "label": "Operasyon modeli",
+          "value": "Tedarikçi kanıtı ve dokümantasyon izlenebilirliği"
+        },
+        "readyProduct": {
+          "label": "Hazır ürün",
+          "value": "CBAM Calculation Engine"
+        },
+        "roadmap": {
+          "value": "Ortak kanıt mantığı üzerinde pilot ve yakında modüller"
+        }
+      },
+      "operatorNote": "Arvenza RegTech, Anka Sustainability B.V. tarafından işletilen bir ürün markasıdır — ayrı bir tüzel kişilik değildir"
+    }
+  },
+  "resourcesPage": {
+    "sections": {
+      "available": {
+        "title": "Hemen talep edin",
+        "description": "CBAM hazırlığı ve tedarikçi iletişimini yapılandırmak için bugün talep edebileceğiniz pratik kontrol listeleri ve şablonlar"
+      },
+      "inPreparation": {
+        "title": "Hazırlanan rehberler",
+        "description": "Hazırlanan yapılandırılmış rehberler — yayınlandığında e-posta ile bilgilendirme"
+      }
+    },
+    "resources": {
+      "cbamChecklist": {
+        "valuePreview": {
+          "item1": "CN kodu ve ürün kapsamı eşlemesi",
+          "item2": "Tedarikçi verisi ve kanıt boşluk kontrol listesi"
+        }
+      },
+      "supplierTemplate": {
+        "valuePreview": {
+          "item1": "Yapılandırılmış tedarikçi iletişim alanları",
+          "item2": "Tesis düzeyi veri talep formatı"
+        }
+      }
+    }
+  },
+  "solutionsPage": {
+    "eyebrow": "Çözümler",
+    "title": "AB düzenleme baskısını yapılandırılmış iş akışlarına dönüştürün",
+    "fields": {
+      "problem": "Sorun",
+      "approach": "Arvenza yaklaşımı",
+      "capability": "İlgili yetenek"
+    },
+    "sections": {
+      "ready": {
+        "title": "Hazır çözüm iş akışı",
+        "description": "CBAM Uyum İş Akışları, tedarikçi verisinden beyana hazır kanıta kadar CBAM Calculation Engine ile desteklenen hazır operasyonel kullanım senaryosudur"
+      },
+      "pilot": {
+        "title": "Pilot çözüm iş akışları",
+        "description": "Yapılandırılmış pilot erişimle sunulan genişletilmiş kullanım senaryoları — tam ürün kullanılabilirliği ima edilmez"
+      },
+      "roadmap": {
+        "title": "Yol haritası çözüm iş akışları",
+        "description": "Aynı tedarikçi kanıtı mantığını EUDR ve Digital Product Passport hazırlığına taşıyan planlanan kullanım senaryoları"
+      }
+    },
+    "solutions": {
+      "cbamWorkflows": {
+        "cta": "CBAM Calculation Engine'i İncele",
+        "secondaryCta": "Demo Talep Et",
+        "workflowSteps": {
+          "step1": "Ürün kapsamını belirle",
+          "step2": "Tedarikçi verisi topla",
+          "step3": "Emisyon hesapla",
+          "step4": "Kanıt dosyası oluştur"
+        },
+        "features": {
+          "item1": "Tedarikçi veri girişi",
+          "item2": "Metodoloji izlenebilirliği",
+          "item3": "Beyana hazır çıktılar"
+        }
+      },
+      "cbamConsole": {
+        "cta": "Pilot Erişimi Görüşelim",
+        "secondaryCta": "Ürün modülünü inceleyin"
+      },
+      "ppwr": {
+        "cta": "Pilot Erişimi Görüşelim",
+        "secondaryCta": "Ürün modülünü inceleyin"
+      },
+      "agriClimate": {
+        "cta": "Pilot Erişimi Görüşelim",
+        "secondaryCta": "Ürün modülünü inceleyin"
+      },
+      "eudr": {
+        "cta": "Yol Haritasını Takip Et",
+        "secondaryCta": "Yol haritası modülünü inceleyin"
+      },
+      "dpp": {
+        "cta": "Yol Haritasını Takip Et",
+        "secondaryCta": "Yol haritası modülünü inceleyin"
+      }
+    },
+    "cta": {
+      "title": "Uyum iş akışınızı ekibimizle görüşün",
+      "primary": "Demo Talep Et",
+      "secondary": "CBAM Calculation Engine'i İncele"
+    }
+  },
+  "industriesPage": {
+    "fields": {
+      "operationalChallenge": "Operasyonel zorluk",
+      "arvenzaWorkflow": "Arvenza iş akışı",
+      "relevantCapability": "İlgili yetenek",
+      "sectorSignal": "Sektör sinyali",
+      "workflowSummary": "İş akışı özeti"
+    },
+    "items": {
+      "steelAluminium": {
+        "cta": "Demo Talep Et",
+        "secondaryCta": "CBAM Calculation Engine'i İncele"
+      },
+      "automotive": {
+        "cta": "Demo Talep Et",
+        "secondaryCta": "CBAM Calculation Engine'i İncele"
+      },
+      "packagingFmcg": {
+        "cta": "Pilot Erişimi Görüşelim",
+        "secondaryCta": "PPWR modülünü inceleyin"
+      },
+      "electronicsBatteries": {
+        "cta": "Yol Haritasını Takip Et",
+        "secondaryCta": "DPP modülünü inceleyin"
+      },
+      "agricultureFood": {
+        "cta": "Pilot Erişimi Görüşelim",
+        "secondaryCta": "Agri-Climate modülünü inceleyin"
+      },
+      "importersExporters": {
+        "cta": "Demo Talep Et",
+        "secondaryCta": "CBAM Calculation Engine'i İncele"
+      }
+    },
+    "cta": {
+      "primary": "Demo Talep Et",
+      "secondary": "CBAM Calculation Engine'i İncele"
+    }
+  },
+  "demo": {
+    "formSection": {
+      "subtitle": "Kısa bir form yeterli — ekibimiz ihtiyaçlarınıza göre demo kapsamını ve sonraki adımları netleştirir"
+    }
+  }
+}

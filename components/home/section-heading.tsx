@@ -22,7 +22,10 @@ export function SectionHeading({
   return (
     <div className={cn("max-w-4xl min-w-0", className)}>
       {eyebrow && (
-        <p className={dark ? "eyebrow-dark mb-2.5" : "eyebrow mb-2.5"}>{eyebrow}</p>
+        <div className="section-eyebrow-wrap">
+          <span className="section-heading-accent" aria-hidden="true" />
+          <p className={dark ? "eyebrow-dark mb-2.5" : "eyebrow mb-2.5"}>{eyebrow}</p>
+        </div>
       )}
       <h2
         id={id}

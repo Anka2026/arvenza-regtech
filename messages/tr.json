@@ -67,6 +67,36 @@
     "legalAccessibility": {
       "title": "Erişilebilirlik Bildirimi | Arvenza RegTech",
       "description": "Arvenza RegTech web sitesi erişilebilirlik bildirimi."
+    },
+    "platformModules": {
+      "cbamComplianceConsole": {
+        "title": "CBAM Uyum Konsolu | Pilot Koordinasyon Katmani",
+        "description": "CBAM Uyum Konsolu pilotu — tedarikci kanit durumu, hesaplama hazirligi ve raporlama dongusu ilerlemesi icin operasyonel izleme."
+      },
+      "ppwr": {
+        "title": "PPWR / Ambalaj Uyumu | Pilot Modul",
+        "description": "PPWR ambalaj uyumu pilotu — yapilandirilmis ambalaj BOM verileri, tedarikci kaniti ve ambalaj verisi hazirligi."
+      },
+      "agriClimate": {
+        "title": "Agri-Climate Platformu | Pilot Modul",
+        "description": "Agri-Climate Platform pilotu — tarimsal iklim verisi, ciftlik duzeyinde kayitlar ve kanit hazirligi is akislari."
+      },
+      "eudr": {
+        "title": "EUDR Due Diligence | Yol Haritasi Modulu",
+        "description": "Planlanan EUDR due diligence is akislari — konum kaniti, tedarikci beyanlari ve izlenebilirlik dokumantasyonu."
+      },
+      "dpp": {
+        "title": "Dijital Urun Pasaportu | Yol Haritasi Modulu",
+        "description": "Planlanan Dijital Urun Pasaportu modulu — urun veri yapilari, tedarikci kanit katmanlari ve dokumantasyon izlenebilirligi."
+      },
+      "supplierEvidence": {
+        "title": "Tedarikci Kanit Is Akisi | Yol Haritasi Modulu",
+        "description": "Planlanan tedarikci iletisimi, veri talepleri, kanit yukleme ve takip is akislari."
+      },
+      "esgReporting": {
+        "title": "ESG Kanit ve Raporlama Calisma Alani | Yol Haritasi Modulu",
+        "description": "Planlanan ESG kanit koordinasyonu, raporlama girdileri ve dokumantasyon izlenebilirligi calisma alani."
+      }
     }
   },
   "nav": {
@@ -192,8 +222,29 @@
       "title": "Tedarikçi verisinden beyana hazır CBAM hesaplamalarına",
       "description": "Arvenza, ihracatçıların tedarikçi emisyon verilerini toplamasına, gömülü emisyonları hesaplamasına ve denetime hazır CBAM kanıt dosyası hazırlamasına tek yapılandırılmış iş akışı içinde destek olur.",
       "ctaPrimary": "Demo Planla",
-      "ctaSecondary": "Platformu Keşfet",
+      "ctaSecondary": "CBAM Calculation Engine'i Keşfet",
       "platformVision": "Arvenza RegTech; CBAM, PPWR, EUDR, Digital Product Passport ve tedarikçi kanıt iş akışlarını kapsayan AB Sürdürülebilirlik Uyum Platformu vizyonu üzerine inşa edilmiştir.",
+      "productBadge": "Çekirdek Ürün",
+      "productStatus": "Hazır",
+      "signalsAriaLabel": "Temel iş akışı sinyalleri",
+      "signals": {
+        "regulatory": {
+          "title": "Regülasyon karmaşıklığı",
+          "description": "CBAM kapsamı, metodoloji ve raporlama döngüleri tek yapıda"
+        },
+        "supplierEvidence": {
+          "title": "Tedarikçi kanıtı",
+          "description": "Yapılandırılmış alım, kalite işaretleme ve takip"
+        },
+        "declarationReady": {
+          "title": "Beyana hazır çıktılar",
+          "description": "İnceleme ve beyan hazırlığı için paketlenmiş hesaplama çıktıları"
+        },
+        "workflow": {
+          "title": "Disiplinli iş akışı",
+          "description": "Elektronik tablo dağılması olmadan tekrarlayan çeyreklik hazırlık"
+        }
+      },
       "trustAriaLabel": "Platform yetenekleri",
       "trust": {
         "item1": "Tedarikçi veri toplama",
@@ -202,14 +253,23 @@
         "item4": "Beyana hazır çıktı"
       },
       "screenshotAlt": "CBAM Calculation Engine panosu",
-      "mockCards": {
-        "supplier": "Tedarikçi Verisi",
-        "supplierStatus": "12 talep · 9 tamamlandı",
-        "emissions": "Gömülü Emisyon",
-        "emissionsValue": "2,84 tCO₂e / t"
+      "floatCards": {
+        "supplier": {
+          "label": "Tedarikçi kanıt katmanı",
+          "hint": "Yapılandırılmış veri alımı"
+        },
+        "calculation": {
+          "label": "Hesaplama katmanı",
+          "hint": "Metodoloji izlenebilirliği"
+        },
+        "evidence": {
+          "label": "Beyan çıktısı",
+          "hint": "İncelemeye hazır kanıt dosyası"
+        }
       }
     },
     "problem": {
+      "eyebrow": "Operasyonel zorluk",
       "title": "CBAM hazırlığı beyan öncesinde dağılmamalı",
       "description": "Tedarikçi verisi, hesaplama metodolojisi ve kanıt dosyaları farklı yerlerde kaldığında her çeyrek aynı operasyonel kriz yeniden başlar.",
       "items": {
@@ -238,6 +298,12 @@
       "eyebrow": "Platform Yol Haritası",
       "title": "Hazır CBAM motorundan genişleyen uyum yol haritasına",
       "description": "Arvenza RegTech, hazır operasyonel ürün olarak CBAM Calculation Engine ile başlar; aynı tedarikçi kanıt modelini pilot ve yol haritası modüllerine genişletir.",
+      "maturityLegendAriaLabel": "Ürün olgunluk etiketleri",
+      "maturityLegend": {
+        "ready": "Hazır",
+        "pilot": "Pilot",
+        "comingSoon": "Yakında"
+      },
       "coreProductLabel": "Merkez Ürün",
       "coreProductStatus": "Hazır",
       "coreProductTitle": "CBAM Calculation Engine",
@@ -278,7 +344,8 @@
           "title": "ESG Kanıt & Raporlama Çalışma Alanı",
           "description": "Planlanan ESG kanıt koordinasyonu, raporlama girdileri ve dokümantasyon izlenebilirliği çalışma alanı."
         }
-      }
+      },
+      "moduleExploreCta": "Modulu incele"
     },
     "journey": {
       "eyebrow": "CBAM Müşteri Yolculuğu",
@@ -290,37 +357,37 @@
           "name": "Değerlendir",
           "subtitle": "Kapsam ve Maruziyet",
           "outcome": "Firma hangi ürünlerin CBAM kapsamında olduğunu, tedarikçi risklerini ve veri boşluklarını tek görünümde görür.",
-          "capability": "CBAM scope mapping, CN/GTIP code checker, supplier risk overview"
+          "capability": "CBAM kapsam eşlemesi, CN/GTIP kod kontrolü, tedarikçi risk özeti"
         },
         "collect": {
           "name": "Topla",
           "subtitle": "Tedarikçi Veri Toplama",
           "outcome": "Tedarikçilere erişim açılır; emisyon, üretim, elektrik, yakıt, proses ve kanıt verileri yapılandırılmış şekilde toplanır.",
-          "capability": "Supplier portal, data request workflows, evidence upload, completeness tracking"
+          "capability": "Tedarikçi portalı, veri talep iş akışları, kanıt yükleme, tamlık takibi"
         },
         "calculate": {
           "name": "Hesapla",
           "subtitle": "Gömülü Emisyon Hesabı",
-          "outcome": "Toplanan verilerle ürün bazlı embedded emissions, direct/indirect ayrımı ve elektrik ayak izi hesaplanır.",
-          "capability": "CBAM Calculation Engine, default value comparison, methodology audit trail"
+          "outcome": "Toplanan verilerle ürün bazlı gömülü emisyon, direct/indirect ayrımı ve elektrik ayak izi hesaplanır.",
+          "capability": "CBAM Calculation Engine, varsayılan değer karşılaştırması, metodoloji iz kaydı"
         },
         "evidence": {
           "name": "Kanıtla",
           "subtitle": "Kanıt Dosyası",
           "outcome": "Tedarikçi beyanları, belgeler, veri kalitesi notları, varsayımlar ve metodoloji tek dosyada derlenir.",
-          "capability": "Evidence pack builder, document library, quality flags, methodology notes"
+          "capability": "Kanıt paketi oluşturucu, belge kütüphanesi, kalite bayrakları, metodoloji notları"
         },
         "report": {
           "name": "Raporla",
           "subtitle": "Beyan Hazırlığı",
           "outcome": "İthalatçı, doğrulayıcı veya iç ekip için beyana hazır CBAM çıktısı hazırlanır.",
-          "capability": "Declaration export, importer-ready format, verifier briefing pack"
+          "capability": "Beyan dışa aktarımı, ithalatçıya hazır format, doğrulayıcı bilgilendirme paketi"
         },
         "monitor": {
           "name": "İzle",
           "subtitle": "Sürekli Takip",
           "outcome": "Eksik tedarikçiler, düşük kaliteli veriler, yaklaşan dönemler ve aksiyon listeleri izlenir.",
-          "capability": "Compliance dashboard, gap tracker, deadline alerts, supplier status overview"
+          "capability": "Uyum panosu, boşluk takibi, son tarih alarmları, tedarikçi durum özeti"
         }
       }
     },
@@ -424,15 +491,22 @@
     },
     "trustBlock": {
       "eyebrow": "Güven ve Uzmanlık",
-      "title": "Düzenleyici uygulama deneyimi üzerine inşa edildi",
-      "description": "Arvenza RegTech, Anka Sustainability B.V.'nin düzenleyici uygulama uzmanlığıyla geliştirilmektedir.",
+      "title": "Regülasyon uygulama pratiğinden geliştirildi",
+      "description": "Arvenza RegTech; CBAM, LCA, EPD, tedarikçi kanıtı ve AB sürdürülebilirlik danışmanlığı iş akışlarında görülen pratik uygulama kalıpları etrafında geliştirilmiştir. Ürün, tekrarlayan regülasyon görevlerini yapılandırılmış ve izlenebilir dijital iş akışlarına dönüştürmeye odaklanır.",
       "legalNote": "Arvenza RegTech, Anka Sustainability B.V. tarafından işletilen bir ürün markasıdır. KvK: 99787784.",
-      "items": {
-        "expertise": "20+ yıl AB sürdürülebilirlik ve regülasyon uygulama deneyimi",
-        "engine": "CBAM Calculation Engine — Hazır",
-        "output": "Çeyreklik beyana hazır çıktı",
-        "anka": "Anka Sustainability B.V. uzmanlığıyla geliştirildi",
-        "languages": "EN / TR / NL platform dilleri"
+      "cards": {
+        "cbamLogic": {
+          "title": "CBAM uygulama mantığı",
+          "description": "Tekrarlayan CBAM raporlama döngüleriyle uyumlu yapılandırılmış hesaplama girdileri, metodoloji izlenebilirliği ve kanıt hazırlığı."
+        },
+        "supplierEvidence": {
+          "title": "Tedarikçi kanıtı iş akışları",
+          "description": "Uyum modülleri genelinde paylaşılan tedarikçi iletişimi, veri talepleri, kanıt yükleme ve kalite işaretleme."
+        },
+        "productData": {
+          "title": "Ürün verisi dokümantasyon pratiği",
+          "description": "Regülasyon gerekliliklerini operasyonel veriye bağlayan ürün kapsamı, ürün ağacı referansları ve dokümantasyon izlenebilirliği."
+        }
       }
     },
     "dashboardPreview": {
@@ -541,37 +615,11 @@
         "security": "Kurumsal Güvenlik"
       }
     },
-    "trustStrip": {
-      "title": "Arvenza RegTech güven göstergeleri",
-      "entityNote": "Arvenza RegTech, Anka Sustainability B.V. (Hollanda) tarafından işletilen bir ürün markasıdır. Tüm platform hizmetleri Anka Sustainability B.V. tarafından sağlanmaktadır.",
-      "items": {
-        "expertise": {
-          "value": "20+",
-          "label": "Yıl Uzmanlık"
-        },
-        "modules": {
-          "value": "8",
-          "label": "Amaca Özel Modül"
-        },
-        "regulations": {
-          "value": "5+",
-          "label": "AB Regülasyonu"
-        },
-        "languages": {
-          "value": "3",
-          "label": "Dil"
-        },
-        "entity": {
-          "value": "NL",
-          "label": "Hollanda Merkezli İşletici Yapı"
-        }
-      }
-    },
     "cta": {
       "title": "Arvenza'nın CBAM uyum sürecini tek iş akışında nasıl yapılandırdığını görün",
-      "primary": "Demo Planla"
-    },
-    "screenshotAlt": "CBAM Calculation Engine panosu"
+      "primary": "Demo Planla",
+      "secondary": "CBAM Calculation Engine'i Keşfet"
+    }
   },
   "cbamPlatform": {
     "hero": {
@@ -621,37 +669,37 @@
       "platformLabel": "Ürün yeteneği",
       "steps": {
         "assess": {
-          "name": "Assess",
+          "name": "Değerlendir",
           "subtitle": "Kapsam ve maruziyet",
           "customer": "Raporlama döngüsü başlamadan SKDM kapsamını, ürün kapsamını, tedarikçi riskini ve veri boşluklarını tanımlayın.",
           "platform": "Kapsam eşlemesi, CN/GTIP kapsam kontrolleri, tedarikçi risk özeti"
         },
         "collect": {
-          "name": "Collect",
+          "name": "Topla",
           "subtitle": "Tedarikçi veri girişi",
           "customer": "Kontrollü tedarikçi erişimi açın; emisyon, üretim, elektrik, yakıt, proses ve kanıt verilerini yapılandırılmış taleplerle toplayın.",
           "platform": "Tedarikçi portalı, veri talep iş akışları, kanıt yükleme, tamlık takibi"
         },
         "calculate": {
-          "name": "Calculate",
+          "name": "Hesapla",
           "subtitle": "Gömülü emisyon hesabı",
           "customer": "Doğrulanmış girdilerle ürün bazlı gömülü emisyon, direct/indirect tahsis ve elektrik ayak izini çalıştırın.",
           "platform": "CBAM Calculation Engine, default değer karşılaştırması, metodoloji iz kaydı"
         },
         "evidence": {
-          "name": "Evidence",
+          "name": "Kanıtla",
           "subtitle": "İncelemeye hazır dosya",
           "customer": "Tedarikçi beyanları, belgeler, kalite notları, varsayımlar ve metodolojiyi tek yapılandırılmış kanıt dosyasında birleştirin.",
           "platform": "Kanıt paketi oluşturucu, belge kütüphanesi, kalite bayrakları, metodoloji notları"
         },
         "report": {
-          "name": "Report",
+          "name": "Raporla",
           "subtitle": "Beyan hazırlığı",
           "customer": "İthalatçı, doğrulayıcı veya iç onay için beyana hazır SKDM çıktısı hazırlayın.",
           "platform": "Beyan dışa aktarımı, ithalatçıya hazır format, doğrulayıcı bilgilendirme paketi"
         },
         "monitor": {
-          "name": "Monitor",
+          "name": "İzle",
           "subtitle": "Sürekli takip",
           "customer": "Eksik tedarikçileri, zayıf veri kalitesini, yaklaşan dönemleri ve aksiyon kuyruklarını beyan riskine dönüşmeden izleyin.",
           "platform": "Yönetici panosu, boşluk takibi, son tarih alarmları, tedarikçi durum özeti"
@@ -970,7 +1018,13 @@
         "item3": "İlgili modüller ve iş akışları için uzman yönlendirmesi"
       },
       "statLabel": "Demo odağı",
-      "statValue": "CBAM Calculation Engine · AB uyum platformu"
+      "statValue": "CBAM Calculation Engine · AB uyum platformu",
+      "chipsAriaLabel": "Demo one cikanlar",
+      "chips": {
+        "item1": "Urun odakli tur",
+        "item2": "CBAM Calculation Engine odağı",
+        "item3": "Uzman is akisi rehberligi"
+      }
     },
     "preview": {
       "coreProductBadge": "Merkez Ürün",
@@ -1006,7 +1060,7 @@
     },
     "formSection": {
       "title": "Demo talebinizi iletin",
-      "subtitle": "Kısa bir form yeterli. Ekibimiz ihtiyaçlarınıza göre demo kapsamını ve sonraki adımları netleştirir."
+      "subtitle": "Kısa bir form yeterli — ekibimiz ihtiyaçlarınıza göre demo kapsamını ve sonraki adımları netleştirir"
     },
     "form": {
       "name": "Ad Soyad",
@@ -1117,6 +1171,9 @@
       "title": "CBAM hazırlığını ürün odaklı bir iş akışında nasıl yöneteceğinizi görün",
       "description": "Demo ile iş akışınızı Arvenza üzerinde birlikte kurgulayın — tedarikçi verisinden beyana hazır kanıta.",
       "primary": "Demo Talep Et"
+    },
+    "contactPanel": {
+      "title": "Dogrudan iletisim"
     }
   },
   "footer": {
@@ -1168,9 +1225,15 @@
         "address": "Üniversite Mah. / Sanayi Sk. No: 35/1\nAvcılar / İstanbul / Türkiye"
       }
     },
+    "contactNote": "Arvenza iletişimleri şu anda Anka Sustainability B.V. üzerinden yürütülmektedir.",
     "legalNote": "Arvenza RegTech, Hollanda merkezli Anka Sustainability B.V. tarafından işletilen bir ürün markasıdır. KvK: 99787784.",
     "copyright": "© {year} Anka Sustainability B.V. Tüm hakları saklıdır.",
-    "getStarted": "Başlayın"
+    "getStarted": "Başlayın",
+    "ctaBand": {
+      "kicker": "Baslayin",
+      "title": "CBAM Calculation Engine is akisinizi baglaminda gorun"
+    },
+    "operatorLine": "Anka Sustainability B.V. tarafindan isletilir"
   },
   "language": {
     "en": "English",
@@ -1192,38 +1255,48 @@
     "architecture": {
       "title": "Birden fazla regülasyon iş akışı için ortak operasyon modeli",
       "body": "Platform; tedarikçi iletişimi, veri toplama, hesaplama girdileri, kanıt kalite kontrolleri, dokümantasyon izlenebilirliği ve raporlama hazırlığı gibi tekrarlayan regülasyon iş akışı kalıpları etrafında yapılandırılır.",
+      "supportingBody": "Aynı katman mantığı CBAM, pilot ve yol haritası modülleri genelinde geçerlidir — tedarikçi alımı, ürün referansları, hesaplama girdileri ve raporlama dokümantasyonunu izlenebilir bir operasyon modelinde birleştirir.",
+      "diagramKicker": "Platform mimarisi",
+      "diagramAriaLabel": "Platform mimarisi katman diyagramı",
+      "flowAriaLabel": "Mimari katman akışı",
       "layers": {
         "supplierEvidence": {
-          "title": "Tedarikçi kanıt katmanı",
+          "title": "Tedarikçi Kanıt Katmanı",
+          "shortDescription": "Tedarikçi iletişimi, veri talepleri ve kanıt kalite işaretleme.",
           "description": "Uyum iş akışları genelinde yapılandırılmış tedarikçi iletişimi, veri talepleri, kanıt yükleme ve kalite işaretleme."
         },
         "productData": {
-          "title": "Ürün verisi katmanı",
+          "title": "Ürün Verisi Katmanı",
+          "shortDescription": "Ürün kapsamı, ürün ağacı yapıları ve tesis referansları.",
           "description": "Regülasyon gerekliliklerine bağlı ürün kapsamı, ürün ağacı yapıları, tesis referansları ve ürün ailesi mantığı."
         },
         "calculationMethodology": {
-          "title": "Hesaplama ve metodoloji katmanı",
+          "title": "Hesaplama ve Metodoloji Katmanı",
+          "shortDescription": "Hesaplama girdileri, metodoloji notları ve izlenebilirlik.",
           "description": "Hesaplama girdileri, metodoloji notları, varsayılan değer karşılaştırması ve veriyi çıktılara bağlayan izlenebilirlik."
         },
         "documentationReporting": {
-          "title": "Dokümantasyon ve raporlama katmanı",
+          "title": "Dokümantasyon ve Raporlama Katmanı",
+          "shortDescription": "Kanıt dosyaları, raporlama dönemi hazırlığı ve incelemeye hazır çıktılar.",
           "description": "Dokümantasyon izlenebilirliği, kanıt dosyaları, raporlama dönemi hazırlığı ve incelemeye hazır iş akışı çıktıları."
         }
-      },
-      "diagramAriaLabel": "Platform mimarisi katman diyagramı"
+      }
     },
     "sections": {
       "ready": {
         "title": "Hazır ürün yeteneği",
-        "description": "CBAM Calculation Engine, Arvenza platform mimarisi içindeki hazır operasyonel ürün yeteneğidir."
+        "description": "CBAM Calculation Engine, Arvenza platform mimarisi içindeki hazır operasyonel ürün yeteneğidir.",
+        "label": "Hazır"
       },
       "pilot": {
         "title": "Pilot modüller",
-        "description": "Yapılandırılmış erişimle sunulan pilot modüller — operasyonel izleme ve genişletilmiş uyum iş akışları; tam ürün kullanılabilirliği ima edilmez."
+        "description": "Yapılandırılmış erişimle sunulan pilot modüller — operasyonel izleme ve genişletilmiş uyum iş akışları; tam ürün kullanılabilirliği ima edilmez.",
+        "label": "Pilot"
       },
       "comingSoon": {
         "title": "Yakında modüller",
-        "description": "Aynı tedarikçi kanıtı, ürün verisi ve dokümantasyon izlenebilirliği modeli üzerine planlanan yol haritası modülleri."
+        "description": "Aynı tedarikçi kanıtı, ürün verisi ve dokümantasyon izlenebilirliği modeli üzerine planlanan yol haritası modülleri.",
+        "label": "Yakında"
       }
     },
     "readyModule": {
@@ -1237,31 +1310,45 @@
     "modules": {
       "cbamConsole": {
         "title": "CBAM Compliance Console",
-        "description": "CBAM kanıt durumu, tedarikçi takibi, hesaplama hazırlığı ve raporlama dönemi ilerleyişi için pilot koordinasyon katmanı."
+        "description": "CBAM kanıt durumu, tedarikçi takibi, hesaplama hazırlığı ve raporlama dönemi ilerleyişi için pilot koordinasyon katmanı.",
+        "exploreCta": "CBAM Compliance Console'u İncele",
+        "screenshotAlt": "CBAM Compliance Console pano önizlemesi"
       },
       "ppwr": {
         "title": "PPWR / Ambalaj Uyumu",
-        "description": "Ambalaj ürün ağaçları, tedarikçi kanıtı ve PPWR odaklı ambalaj veri hazırlığı için pilot modül."
+        "description": "Ambalaj ürün ağaçları, tedarikçi kanıtı ve PPWR odaklı ambalaj veri hazırlığı için pilot modül.",
+        "exploreCta": "PPWR / Packaging Compliance'i İncele",
+        "screenshotAlt": "PPWR ambalaj uyumu pano önizlemesi"
       },
       "agriClimate": {
         "title": "Agri-Climate Platform",
-        "description": "Tarımsal iklim verisi, çiftlik düzeyi kayıtlar ve kanıt hazırlığı iş akışları için pilot ürün alanı."
+        "description": "Tarımsal iklim verisi, çiftlik düzeyi kayıtlar ve kanıt hazırlığı iş akışları için pilot ürün alanı.",
+        "exploreCta": "Agri-Climate Platform'u İncele",
+        "screenshotAlt": "Agri-Climate Platform pano önizlemesi"
       },
       "eudr": {
         "title": "EUDR Due Diligence",
-        "description": "Coğrafi konum kanıtı, tedarikçi beyanları ve izlenebilirlik dokümantasyonu için planlanan özen yükümlülüğü iş akışları."
+        "description": "Coğrafi konum kanıtı, tedarikçi beyanları ve izlenebilirlik dokümantasyonu için planlanan özen yükümlülüğü iş akışları.",
+        "exploreCta": "EUDR yol haritasını takip edin",
+        "screenshotAlt": "EUDR özen yükümlülüğü pano önizlemesi"
       },
       "dpp": {
         "title": "Digital Product Passport",
-        "description": "Digital Product Passport gereklilikleri için planlanan ürün veri yapıları, tedarikçi kanıt katmanları ve dokümantasyon izlenebilirliği."
+        "description": "Digital Product Passport gereklilikleri için planlanan ürün veri yapıları, tedarikçi kanıt katmanları ve dokümantasyon izlenebilirliği.",
+        "exploreCta": "Digital Product Passport yol haritasını takip edin",
+        "screenshotAlt": "Digital Product Passport pano önizlemesi"
       },
       "supplierEvidence": {
         "title": "Tedarikçi Kanıt İş Akışı",
-        "description": "Modüller genelinde paylaşılan planlanan tedarikçi iletişimi, veri talepleri, kanıt yükleme ve takip iş akışları."
+        "description": "Modüller genelinde paylaşılan planlanan tedarikçi iletişimi, veri talepleri, kanıt yükleme ve takip iş akışları.",
+        "exploreCta": "Supplier Evidence Workflow yol haritasını takip edin",
+        "screenshotAlt": "Tedarikçi kanıt iş akışı pano önizlemesi"
       },
       "esgReporting": {
         "title": "ESG Kanıt & Raporlama Çalışma Alanı",
-        "description": "Planlanan ESG kanıt koordinasyonu, raporlama girdileri ve dokümantasyon izlenebilirliği çalışma alanı."
+        "description": "Planlanan ESG kanıt koordinasyonu, raporlama girdileri ve dokümantasyon izlenebilirliği çalışma alanı.",
+        "exploreCta": "ESG Evidence & Reporting Workspace yol haritasını takip edin",
+        "screenshotAlt": "ESG kanıt ve raporlama çalışma alanı pano önizlemesi"
       }
     },
     "cta": {
@@ -1278,76 +1365,196 @@
   },
   "solutionsPage": {
     "eyebrow": "Çözümler",
-    "title": "AB regülasyon baskısını yapılandırılmış iş akışlarına dönüştüren çözümler",
-    "description": "Arvenza RegTech; tedarikçi verisi, ürün kanıtı, hesaplama girdileri ve dokümantasyon iş akışlarını pratik regülasyon kullanım senaryoları etrafında yapılandırır — CBAM Calculation Engine ile başlayıp pilot ve yol haritası modüllerine genişler.",
+    "title": "AB düzenleme baskısını yapılandırılmış iş akışlarına dönüştürün",
+    "description": "Arvenza RegTech; tedarikçi verisi, ürün kanıtı, hesaplama girdileri ve dokümantasyon iş akışlarını pratik uyum kullanım senaryoları etrafında düzenler — bağlı ürün modülleri, ortak operasyon modeli",
     "fields": {
-      "problem": "Problem",
+      "problem": "Sorun",
       "approach": "Arvenza yaklaşımı",
-      "capability": "İlgili yetenek"
+      "capability": "İlgili yetenek",
+      "features": "İş akışı odağı",
+      "output": "İş akışı çıktısı",
+      "targetTeam": "Hedef ekip"
     },
     "sections": {
+      "ready": {
+        "label": "Hazır",
+        "title": "Hazır çözüm iş akışı",
+        "description": "CBAM Uyum İş Akışları, tedarikçi verisinden beyana hazır kanıta kadar CBAM Calculation Engine ile desteklenen hazır operasyonel kullanım senaryosudur"
+      },
       "pilot": {
+        "label": "Pilot",
         "title": "Pilot çözüm iş akışları",
-        "description": "Yapılandırılmış pilot erişimle genişletilen kullanım senaryoları — operasyonel izleme, ambalaj uyumu ve tarımsal iklim verisi iş akışları."
+        "description": "Yapılandırılmış pilot erişimle sunulan genişletilmiş kullanım senaryoları — tam ürün kullanılabilirliği ima edilmez"
       },
       "roadmap": {
+        "label": "Yakında",
         "title": "Yol haritası çözüm iş akışları",
-        "description": "Platform genelinde aynı tedarikçi kanıtı ve dokümantasyon mantığı üzerine planlanan kullanım senaryoları."
+        "description": "Aynı tedarikçi kanıtı mantığını EUDR ve Digital Product Passport hazırlığına taşıyan planlanan kullanım senaryoları"
       }
     },
     "solutions": {
       "cbamWorkflows": {
-        "title": "CBAM Uyum İş Akışları",
-        "problem": "Çeyreklik CBAM hazırlığı; tedarikçi düzeyinde gömülü emisyon verisi, tesis bilgisi, metodoloji iz kaydı ve kanıt kalite kontrolleri gerektirir. Birçok ekip bu süreci hâlâ dağınık Excel dosyaları ve e-posta zincirleriyle yönetir.",
-        "approach": "CBAM Calculation Engine; tedarikçi veri toplama, gömülü emisyon hesabı, metodoloji notları ve beyana hazır kanıt dosyasını kontrollü bir dijital iş akışında yapılandırır.",
+        "title": "CBAM Compliance Workflows",
+        "poweredBy": "CBAM Calculation Engine ile desteklenir",
+        "problem": "Çeyreklik CBAM hazırlığı; tedarikçi düzeyinde gömülü emisyon verisi, tesis bilgisi, metodoloji izlenebilirliği ve kanıt kalite kontrolleri gerektirir — birçok ekip bunu hâlâ dağınık Excel ve e-posta trafiğinde yönetiyor",
+        "approach": "CBAM Calculation Engine; tedarikçi veri toplama, gömülü emisyon hesabı, metodoloji notları ve beyana hazır kanıt dosyasını tek kontrollü iş akışında birleştirir",
         "capability": "CBAM Calculation Engine",
-        "cta": "CBAM Calculation Engine'i İncele"
+        "workflowSteps": {
+          "step1": "Ürün kapsamını belirle",
+          "step2": "Tedarikçi verisi topla",
+          "step3": "Emisyon hesapla",
+          "step4": "Kanıt dosyası oluştur"
+        },
+        "features": {
+          "item1": "Tedarikçi veri girişi",
+          "item2": "Metodoloji izlenebilirliği",
+          "item3": "Beyana hazır çıktılar"
+        },
+        "output": "Raporlama dönemi başına denetime hazır CBAM kanıt dosyası",
+        "targetTeam": "Çeyreklik CBAM beyanları hazırlayan ihracat uyumu, sürdürülebilirlik ve tedarik ekipleri",
+        "cta": "CBAM Calculation Engine'i İncele",
+        "secondaryCta": "Demo Talep Et"
       },
       "cbamConsole": {
         "title": "CBAM Compliance Console",
-        "problem": "Tedarikçi veri toplama başladıktan sonra ekiplerin kanıt durumu, takip aksiyonları, hesaplama hazırlığı ve raporlama dönemi ilerleyişini net şekilde izlemesi gerekir.",
-        "approach": "CBAM Compliance Console pilotu; tedarikçi kanıtı, hesaplama hazırlığı ve raporlama hazırlığını CBAM dönemleri boyunca izlemek için koordinasyon katmanı olarak konumlandırılır.",
+        "problem": "Tedarikçi veri toplama başladığında ekiplerin kanıt durumu, takip aksiyonları, hesaplama hazırlığı ve raporlama dönemi ilerlemesine dair net bir operasyonel görünüme ihtiyacı vardır",
+        "approach": "CBAM Compliance Console pilotu; CBAM döngüleri genelinde tedarikçi kanıtı, hesaplama hazırlığı ve raporlama koordinasyonu için izleme ve koordinasyon katmanı olarak konumlanır",
         "capability": "CBAM Compliance Console",
-        "cta": "Pilot Erişimi Görüşelim"
+        "workflowSteps": {
+          "step1": "Veri girişini izle",
+          "step2": "Kanıt boşluklarını takip et",
+          "step3": "Takibi koordine et",
+          "step4": "Döngü hazırlığını gözden geçir"
+        },
+        "features": {
+          "item1": "Kanıt durumu görünümü",
+          "item2": "Takip kuyruğu",
+          "item3": "Döngü ilerleme takibi"
+        },
+        "output": "Raporlama dönemi başına operasyonel CBAM hazırlık panosu",
+        "targetTeam": "Çok tedarikçili hazırlığı koordine eden CBAM program liderleri ve uyum operasyon ekipleri",
+        "cta": "Pilot Erişimi Görüşelim",
+        "secondaryCta": "Ürün modülünü inceleyin"
       },
       "ppwr": {
-        "title": "PPWR / Ambalaj Uyumu",
-        "problem": "Ambalaj ekipleri; PPWR gereklilikleri operasyonel hale gelmeden önce malzeme düzeyi ürün ağacı verisi, tedarikçi dokümantasyonu, geri dönüştürülmüş içerik kanıtı ve ürün ailesi mantığını organize etmelidir.",
-        "approach": "PPWR / Packaging Compliance pilotu; ambalaj ürün ağaçlarını, tedarikçi kanıtını ve ambalaj veri hazırlığını tekrarlanabilir bir kanıt iş akışı etrafında yapılandırır.",
+        "title": "PPWR / Packaging Compliance",
+        "problem": "Ambalaj ekipleri; PPWR gereklilikleri operasyonel olarak bağlayıcı hale gelmeden önce malzeme düzeyinde ürün ağacı verisi, tedarikçi dokümantasyonu, geri dönüştürülmüş içerik kanıtı ve ürün ailesi mantığını organize etmelidir",
+        "approach": "PPWR / Packaging Compliance pilotu; ambalaj ürün ağaçlarını, tedarikçi kanıtını ve ambalaj verisi hazırlığını tekrarlanabilir bir kanıt iş akışı etrafında yapılandırır",
         "capability": "PPWR / Packaging Compliance",
-        "cta": "Pilot Erişimi Görüşelim"
+        "workflowSteps": {
+          "step1": "Ambalaj kapsamını haritala",
+          "step2": "Tedarikçi ürün ağacı verisi topla",
+          "step3": "Kanıt bağlantılarını yapılandır",
+          "step4": "İnceleme çıktılarını hazırla"
+        },
+        "features": {
+          "item1": "Ambalaj ürün ağacı yapısı",
+          "item2": "Geri dönüştürülmüş içerik kanıtı",
+          "item3": "Tedarikçi dokümantasyonu"
+        },
+        "output": "Ürün ailesi başına yapılandırılmış ambalaj uyum veri paketi",
+        "targetTeam": "PPWR uyumlu dokümantasyon hazırlayan ambalaj, sürdürülebilirlik ve tedarik ekipleri",
+        "cta": "Pilot Erişimi Görüşelim",
+        "secondaryCta": "Ürün modülünü inceleyin"
       },
       "agriClimate": {
-        "title": "Tarımsal İklim Veri İş Akışları",
-        "problem": "Tarımsal ve emtia bağlantılı tedarik zincirleri; üretici düzeyi kayıtlar, coğrafi konum kanıtı, çiftlik düzeyi veri ve izlenebilirlik dokümantasyonu gerektirir.",
-        "approach": "Agri-Climate Platform; tarımsal iklim verisi, çiftlik düzeyi kayıtlar ve kanıt hazırlığı iş akışlarını yapılandırmak için pilot ürün alanı olarak konumlandırılır.",
+        "title": "Agri-Climate Veri İş Akışları",
+        "problem": "Tarımsal ve emtia bağlantılı tedarik zincirleri giderek üretici düzeyi kayıtlar, konum kanıtı, çiftlik düzeyi veri ve izlenebilirlik dokümantasyonu gerektiriyor",
+        "approach": "Agri-Climate Platform; tarımsal iklim verisi, çiftlik düzeyi kayıtlar ve kanıt hazırlığı iş akışlarını yapılandırmak için pilot ürün alanı olarak konumlanır",
         "capability": "Agri-Climate Platform",
-        "cta": "Pilot Erişimi Görüşelim"
+        "workflowSteps": {
+          "step1": "Üretici ağını haritala",
+          "step2": "Çiftlik düzeyi veri topla",
+          "step3": "Kanıt kalitesini doğrula",
+          "step4": "İklim kayıtlarını hazırla"
+        },
+        "features": {
+          "item1": "Çiftlik düzeyi kayıtlar",
+          "item2": "Konum kanıtı hazırlığı",
+          "item3": "Üretici dokümantasyonu"
+        },
+        "output": "Emtia kapsamı başına yapılandırılmış tarımsal iklim kanıtı",
+        "targetTeam": "Tarımsal ihracatçılar, emtia tüccarları ve gıda tedarik zinciri uyum ekipleri",
+        "cta": "Pilot Erişimi Görüşelim",
+        "secondaryCta": "Ürün modülünü inceleyin"
       },
       "eudr": {
-        "title": "EUDR Özen Yükümlülüğü İş Akışları",
-        "problem": "Emtia bağlantılı tedarik zincirleri; coğrafi konum verisi, tedarikçi beyanları, risk sınıflandırması ve izlenebilirlik dokümantasyonu için hazırlık yapmalıdır.",
-        "approach": "EUDR Due Diligence yol haritası modülü; platform genelinde kullanılan tedarikçi kanıtı ve dokümantasyon mantığı üzerine inşa edilecek şekilde planlanır.",
+        "title": "EUDR Due Diligence İş Akışları",
+        "problem": "Emtia bağlantılı tedarik zincirleri konum verisi, tedarikçi beyanları, risk sınıflandırması ve izlenebilirlik dokümantasyonuna hazırlanmalıdır",
+        "approach": "EUDR Due Diligence yol haritası modülü; platform genelinde kullanılan tedarikçi kanıtı ve dokümantasyon mantığı üzerine planlanmıştır",
         "capability": "EUDR Due Diligence",
-        "cta": "Yol Haritasını Takip Et"
+        "workflowSteps": {
+          "step1": "Emtia kapsamını belirle",
+          "step2": "Konum verisi topla",
+          "step3": "Beyanları yapılandır",
+          "step4": "Due diligence dosyalarını hazırla"
+        },
+        "features": {
+          "item1": "Konum kanıtı",
+          "item2": "Tedarikçi beyanları",
+          "item3": "İzlenebilirlik dokümantasyonu"
+        },
+        "output": "Emtia iş akışı başına due diligence dokümantasyon paketi",
+        "targetTeam": "Emtia ithalatçıları, marka tedarik zinciri ekipleri ve uyum fonksiyonları",
+        "cta": "Yol Haritasını Takip Et",
+        "secondaryCta": "Yol haritası modülünü inceleyin"
       },
       "dpp": {
         "title": "Digital Product Passport Hazırlığı",
-        "problem": "Üreticilerin DPP gereklilikleri pratik bir veri problemine dönüşmeden önce ürün düzeyi veri yapıları, kanıt katmanları, komponent dokümantasyonu ve izlenebilirlik mantığını hazırlaması gerekir.",
-        "approach": "Digital Product Passport yol haritası modülü; ürün veri yapıları, tedarikçi kanıt katmanları ve dokümantasyon izlenebilirliği etrafında planlanır.",
+        "problem": "Üreticiler; DPP gereklilikleri pratik bir veri zorluğu haline gelmeden önce ürün düzeyi veri yapıları, kanıt katmanları, bileşen dokümantasyonu ve izlenebilirlik mantığına ihtiyaç duyar",
+        "approach": "Digital Product Passport yol haritası modülü; ürün veri yapıları, tedarikçi kanıt katmanları ve dokümantasyon izlenebilirliği etrafında planlanmıştır",
         "capability": "Digital Product Passport",
-        "cta": "Yol Haritasını Takip Et"
+        "workflowSteps": {
+          "step1": "Ürün kapsamını tanımla",
+          "step2": "Bileşen kanıtı topla",
+          "step3": "Pasaport verisini yapılandır",
+          "step4": "Hazırlık çıktılarını oluştur"
+        },
+        "features": {
+          "item1": "Ürün veri yapıları",
+          "item2": "Bileşen dokümantasyonu",
+          "item3": "Kanıt izlenebilirliği"
+        },
+        "output": "SKU ailesi başına ürün pasaportu hazırlık veri paketi",
+        "targetTeam": "Üreticiler, ürün uyum ekipleri ve sürdürülebilirlik veri fonksiyonları",
+        "cta": "Yol Haritasını Takip Et",
+        "secondaryCta": "Yol haritası modülünü inceleyin"
       }
     },
     "maturity": {
-      "title": "Hazır CBAM motorundan genişleyen uyum yol haritasına",
-      "description": "Arvenza, hazır operasyonel ürün olarak CBAM Calculation Engine ile başlar; aynı tedarikçi kanıtı ve veri yapılandırma mantığını pilot ve yol haritası modüllerine genişletir."
+      "title": "Çözüm olgunluk yol haritası",
+      "description": "Arvenza hazır CBAM uyum iş akışıyla başlar; aynı kanıt disiplinini pilot ve yol haritası kullanım senaryolarına genişletir",
+      "items": {
+        "cbamWorkflows": "CBAM Compliance Workflows",
+        "cbamConsole": "CBAM Compliance Console",
+        "ppwr": "PPWR / Packaging Compliance",
+        "agriClimate": "Agri-Climate Data Workflows",
+        "eudr": "EUDR Due Diligence Workflows",
+        "dpp": "Digital Product Passport Readiness"
+      }
     },
     "cta": {
-      "title": "Uyum iş akışınızı ekibimizle birlikte değerlendirin",
-      "primary": "Demo Planla",
-      "secondary": "Kaynakları inceleyin"
-    }
+      "title": "Uyum iş akışınızı ekibimizle görüşün",
+      "primary": "Demo Talep Et",
+      "secondary": "CBAM Calculation Engine'i İncele"
+    },
+    "heroWorkflow": {
+      "diagramAriaLabel": "Regülasyon baskısından operasyonel iş akışına kullanım senaryosu akışı",
+      "steps": {
+        "pressure": "Regülasyon baskısı",
+        "supplierData": "Tedarikçi verisi",
+        "calculation": "Hesaplama girdisi",
+        "evidence": "Kanıt dosyası",
+        "workflow": "İş akışı"
+      }
+    },
+    "heroChipsAriaLabel": "Çözüm öne çıkanları",
+    "heroChips": {
+      "item1": "Kullanım senaryosu iş akışları",
+      "item2": "Hazır CBAM çözümü",
+      "item3": "Şeffaf olgunluk modeli"
+    },
+    "workflowRailAriaLabel": "Çözüm iş akışı adımları"
   },
   "industriesPage": {
     "eyebrow": "Sektörler",
@@ -1357,7 +1564,8 @@
       "operationalChallenge": "Operasyonel zorluk",
       "arvenzaWorkflow": "Arvenza iş akışı",
       "relevantCapability": "İlgili yetenek",
-      "sectorSignal": "Sektör sinyali"
+      "sectorSignal": "Sektör sinyali",
+      "workflowSummary": "İş akışı özeti"
     },
     "products": {
       "cbamEngine": "CBAM Calculation Engine",
@@ -1369,46 +1577,82 @@
     },
     "items": {
       "steelAluminium": {
-        "title": "Demir-Çelik ve Alüminyum",
-        "regulatoryPressure": "CBAM definitif dönem",
-        "operationalChallenge": "GTİP/CN kod eşleştirmesi, tesis düzeyi tedarikçi verisi, doğrudan ve dolaylı emisyonlar, elektrik faktörleri ve kanıt kalitesi her raporlama döneminde birlikte yönetilmelidir.",
-        "arvenzaWorkflow": "CBAM Calculation Engine; tedarikçi verisini, gömülü emisyon hesabını, metodoloji iz kaydını ve beyana hazır kanıt dosyasını kontrollü bir iş akışında yapılandırır.",
-        "sectorSignal": "CBAM kapsamındaki malzeme aileleri ve tedarikçi kanıt iş akışları"
+        "workflowSteps": {
+          "step1": "CN kodları ve tesisleri haritala",
+          "step2": "Tedarikçi emisyon verisi topla",
+          "step3": "Beyana hazır kanıt dosyası hazırla"
+        },
+        "cta": "Demo Talep Et",
+        "secondaryCta": "CBAM Calculation Engine'i İncele",
+        "title": "Çelik ve Alüminyum",
+        "regulatoryPressure": "Kapsanan metal ihracatında CBAM raporlama baskısı",
+        "sectorSignal": "Birden fazla CN kodu ve tedarikçide tesis düzeyi emisyon verisi",
+        "operationalChallenge": "Her çeyreklik raporlama dönemi öncesi tedarikçi emisyon girdileri, tesis referansları ve kanıt kalitesini koordine etmek"
       },
       "automotive": {
+        "workflowSteps": {
+          "step1": "Çok katmanlı tedarikçi verisini koordine et",
+          "step2": "CBAM malzeme kanıtı hazırla",
+          "step3": "Ürün verisi iş akışlarına genişlet"
+        },
+        "cta": "Demo Talep Et",
+        "secondaryCta": "CBAM Calculation Engine'i İncele",
         "title": "Otomotiv Tedarik Zincirleri",
-        "regulatoryPressure": "CBAM, DPP ve tedarikçi kanıt gereklilikleri",
-        "operationalChallenge": "Otomotiv tedarik zincirleri çok katmanlı tedarikçiler, yüksek hacimli komponentler ve çelik, alüminyum, batarya ve ürün verisi yükümlülüklerinin kesiştiği karma malzeme yapılarıyla çalışır.",
-        "arvenzaWorkflow": "Arvenza; tedarikçi iletişimi, kanıt toplama ve ürün düzeyi veri iş akışlarını yapılandırarak ekiplerin bugün CBAM kanıtını hazırlamasına ve aynı modeli ileride DPP gerekliliklerine genişletmesine destek olur.",
-        "sectorSignal": "Çok katmanlı tedarikçi verisi ve ürün kanıt koordinasyonu"
+        "regulatoryPressure": "CBAM malzeme kanıtı ve genişleyen ürün verisi gereklilikleri",
+        "sectorSignal": "Malzeme ve bileşenler genelinde çok katmanlı tedarikçi karmaşıklığı",
+        "operationalChallenge": "CBAM hazırlığını daha geniş ürün ve tedarikçi dokümantasyon iş akışlarıyla hizalamak"
       },
       "packagingFmcg": {
+        "workflowSteps": {
+          "step1": "Ambalaj ürün ağacı kapsamını yapılandır",
+          "step2": "Tedarikçi ambalaj kanıtı topla",
+          "step3": "PPWR uyumlu dokümantasyon hazırla"
+        },
+        "cta": "Pilot Erişimi Görüşelim",
+        "secondaryCta": "PPWR modülünü inceleyin",
         "title": "Ambalaj ve FMCG",
-        "regulatoryPressure": "PPWR ve ambalaj veri hazırlığı",
-        "operationalChallenge": "Ambalaj ekipleri; PPWR raporlama ve tasarım yükümlülükleri operasyonel hale gelmeden önce malzeme düzeyi ürün ağacı, geri dönüştürülmüş içerik kanıtı, tedarikçi dokümantasyonu ve ürün ailesi mantığını yönetmelidir.",
-        "arvenzaWorkflow": "PPWR / Ambalaj Uyumu pilotu; ambalaj ürün ağaçlarını, tedarikçi kanıtını ve ürün düzeyi ambalaj verisini platformun kanıt iş akışı mantığıyla yapılandırmak üzere tasarlanmıştır.",
-        "sectorSignal": "Ambalaj ürün ağaçları, geri dönüştürülmüş içerik kanıtı ve tedarikçi dokümantasyonu"
+        "regulatoryPressure": "PPWR ambalaj verisi ve tedarikçi kanıtı hazırlığı",
+        "sectorSignal": "Malzeme düzeyinde ürün ağacı verisi ve geri dönüştürülmüş içerik dokümantasyonu ihtiyacı",
+        "operationalChallenge": "Gereklilikler operasyonel olarak bağlayıcı hale gelmeden ambalaj tedarikçi kanıtını yapılandırmak"
       },
       "electronicsBatteries": {
+        "workflowSteps": {
+          "step1": "Bileşen ve ürün kapsamını haritala",
+          "step2": "Tedarikçi dokümantasyonunu organize et",
+          "step3": "Pasaport hazırlık verisini oluştur"
+        },
+        "cta": "Yol Haritasını Takip Et",
+        "secondaryCta": "DPP modülünü inceleyin",
         "title": "Elektronik ve Bataryalar",
-        "regulatoryPressure": "Digital Product Passport ve ürün düzeyi kanıt",
-        "operationalChallenge": "Elektronik ve batarya tedarik zincirleri; tedarikçiler ve ürün aileleri arasında tutarlı kalması gereken yapılandırılmış ürün verisi, komponent düzeyi kanıt, yaşam döngüsü nitelikleri ve izlenebilirlik katmanları gerektirir.",
-        "arvenzaWorkflow": "Arvenza'nın Digital Product Passport yol haritası; mevcut tedarikçi kanıt operasyonlarından genişletilebilecek ürün veri yapıları, kanıt katmanları ve tedarikçi dokümantasyonu üzerine odaklanır.",
-        "sectorSignal": "Komponent kanıtı, ürün veri yapıları ve izlenebilirlik hazırlığı"
+        "regulatoryPressure": "Digital Product Passport ve bileşen izlenebilirliği hazırlığı",
+        "sectorSignal": "Ürün aileleri genelinde bileşen dokümantasyonu ve tedarikçi kanıtı",
+        "operationalChallenge": "Pasaport gereklilikleri ölçeklenmeden ürün düzeyi veri yapılarını oluşturmak"
       },
       "agricultureFood": {
+        "workflowSteps": {
+          "step1": "Üretici ve emtia kapsamını haritala",
+          "step2": "Çiftlik düzeyi kanıt topla",
+          "step3": "Due diligence dokümantasyonu hazırla"
+        },
+        "cta": "Pilot Erişimi Görüşelim",
+        "secondaryCta": "Agri-Climate modülünü inceleyin",
         "title": "Tarım ve Gıda",
-        "regulatoryPressure": "EUDR ve tarımsal iklim veri iş akışları",
-        "operationalChallenge": "Emtia bağlantılı tedarik zincirleri; çiftlikler, tedarikçiler ve sevkiyatlar genelinde coğrafi konum verisi, üretici düzeyi kanıt, özen yükümlülüğü dokümantasyonu ve risk sınıflandırması gerektirir.",
-        "arvenzaWorkflow": "EUDR Due Diligence ve Agri-Climate Platform iş akışları; çiftlik düzeyi kayıtlar, coğrafi konum kanıtı, tedarikçi dokümantasyonu ve izlenebilirlik hazırlığı için pilot/yol haritası yetenekleri olarak konumlandırılır.",
-        "sectorSignal": "Üretici kayıtları, coğrafi konum kanıtı ve gözetim zinciri hazırlığı"
+        "regulatoryPressure": "EUDR ve tarımsal iklim kanıt beklentileri",
+        "sectorSignal": "Emtia zincirlerinde üretici düzeyi kayıtlar ve konum kanıtı",
+        "operationalChallenge": "Tedarikçiler genelinde çiftlik düzeyi veri ve izlenebilirlik dokümantasyonunu yapılandırmak"
       },
       "importersExporters": {
+        "workflowSteps": {
+          "step1": "CN kodları ve ticaret akışlarını kapsamla",
+          "step2": "Tedarikçi kanıt girişini koordine et",
+          "step3": "Raporlama dönemi hazırlığını izle"
+        },
+        "cta": "Demo Talep Et",
+        "secondaryCta": "CBAM Calculation Engine'i İncele",
         "title": "İthalatçılar ve İhracatçılar",
-        "regulatoryPressure": "Beyan sahibi yükümlülükleri ve tedarikçi kanıt hazırlığı",
-        "operationalChallenge": "İthalatçı ve ihracatçılar; farklı ticaret akışlarında GTİP/CN kapsam kontrolü, tedarikçi kanıt talepleri, hesaplama hazırlığı, dokümantasyon kalitesi ve raporlama takvimlerini birlikte yönetmelidir.",
-        "arvenzaWorkflow": "Arvenza; tedarikçi veri toplama, hesaplama hazırlığı ve kanıt koordinasyonunu CBAM ve gelecekteki AB sürdürülebilirlik iş akışları için tekrarlanabilir bir operasyon modeline dönüştürür.",
-        "sectorSignal": "Raporlama dönemi koordinasyonu, tedarikçi takibi ve kanıt hazırlığı"
+        "regulatoryPressure": "Ticaret akışları ve kapsanan mallar genelinde CBAM beyan hazırlığı",
+        "sectorSignal": "CN kodu kapsam eşlemesi ve çok tedarikçili kanıt koordinasyonu",
+        "operationalChallenge": "Beyan pencerelerinden önce tedarikçiler genelinde raporlama dönemi hazırlığını izlemek"
       }
     },
     "evidenceStrip": {
@@ -1417,8 +1661,33 @@
     },
     "cta": {
       "title": "Arvenza'nın sektörünüze nasıl uyduğunu görün",
-      "primary": "Demo Planla",
+      "primary": "Demo Talep Et",
       "secondary": "CBAM Calculation Engine'i İncele"
+    },
+    "heroChipsAriaLabel": "Sektör öne çıkanları",
+    "heroChips": {
+      "item1": "Sektöre özel iş akışları",
+      "item2": "Regülasyon baskısı haritalama",
+      "item3": "Şeffaf yetenek uyumu"
+    },
+    "strategyVisual": {
+      "ariaLabel": "Regülasyon baskısından yapılandırılmış iş akışına dikey strateji",
+      "kicker": "Dikey strateji modeli",
+      "steps": {
+        "pressure": "Regülasyon baskısı",
+        "evidence": "Tedarikçi kanıtı",
+        "workflow": "Yapılandırılmış iş akışı"
+      },
+      "sectors": {
+        "step1": "Malzeme ve ticaret",
+        "step2": "Ambalaj ve elektronik",
+        "step3": "Tarım ve gıda"
+      }
+    },
+    "sectors": {
+      "label": "Hedef sektörler",
+      "title": "Altı sektör, tek kanıt operasyon modeli",
+      "description": "Her sektör kartı regülasyon baskısını, iş akışı uygunluğunu ve dürüst hazırlığı destekleyen Arvenza yeteneklerini eşler — Hazır, Pilot veya Yakında"
     }
   },
   "companyPage": {
@@ -1467,13 +1736,23 @@
         "body": "Arvenza RegTech, Hollanda'da kayıtlı Anka Sustainability B.V. tarafından işletilir. Bu yapı; yazılım geliştirmeyi CBAM, LCA, EPD, ürün kanıtı ve AB sürdürülebilirlik danışmanlığı iş akışlarındaki regülasyon uygulama deneyimiyle birleştirir."
       }
     },
+    "operatorTeam": {
+      "title": "Regülasyon uygulama ekibi tarafından geliştirildi",
+      "body": "Arvenza RegTech, Anka Sustainability B.V. tarafından işletilir ve AB sürdürülebilirlik regülasyonları, ürün kanıtı, tedarikçi dokümantasyonu ve karbon bağlantılı raporlama iş akışlarındaki uygulama deneyiminden geliştirilmiştir.",
+      "operatorLabel": "İşletici",
+      "operatorName": "Anka Sustainability B.V.",
+      "operatorCountry": "Hollanda",
+      "operatorKvk": "KvK: 99787784",
+      "clarifier": "Arvenza RegTech urun markasidir; Anka Sustainability B.V. yasal operatordur"
+    },
     "trust": {
       "ariaLabel": "Güvenilirlik vurguları",
       "item1": "Hollanda kayıtlı işletici",
       "item2": "KvK: 99787784",
       "item3": "Hazır CBAM Calculation Engine",
-      "item4": "Pilot ve yol haritası modülleri açıkça etiketlenir",
-      "item5": "Regülasyon uygulama deneyimi üzerine kurulu"
+      "item4": "Pilot modüller açıkça etiketlenir",
+      "item5": "Regülasyon uygulama pratiğinden geliştirildi",
+      "title": "Guvenilirlik sinyalleri"
     },
     "cta": {
       "title": "Hazır CBAM ürününü ve genişleyen yol haritasını görün",
@@ -1490,6 +1769,35 @@
         "item2": "Ortak operasyon modeli olarak tedarikçi kanıtı",
         "item3": "Hazır CBAM ürünü, genişleyen yol haritası"
       }
+    },
+    "heroChipsAriaLabel": "Şirket öne çıkanları",
+    "heroChips": {
+      "item1": "Urun markasi",
+      "item2": "Hazir CBAM motoru",
+      "item3": "Hollanda operatoru"
+    },
+    "factPanel": {
+      "kicker": "Ozette",
+      "cta": "CBAM Calculation Engine kesfedin"
+    },
+    "productContext": {
+      "ariaLabel": "Ürün ve operatör bağlamı",
+      "kicker": "Ürün mimarisi bağlamı",
+      "layers": {
+        "supplierEvidence": {
+          "label": "Operasyon modeli",
+          "value": "Tedarikçi kanıtı ve dokümantasyon izlenebilirliği"
+        },
+        "readyProduct": {
+          "label": "Hazır ürün",
+          "value": "CBAM Calculation Engine"
+        },
+        "roadmap": {
+          "label": "Roadmap",
+          "value": "Ortak kanıt mantığı üzerinde pilot ve yakında modüller"
+        }
+      },
+      "operatorNote": "Arvenza RegTech, Anka Sustainability B.V. tarafından işletilen bir ürün markasıdır — ayrı bir tüzel kişilik değildir"
     }
   },
   "regulationsCbam": {
@@ -1529,6 +1837,7 @@
     "title": "AB sürdürülebilirlik uyum iş akışları için pratik kaynaklar",
     "description": "Arvenza kaynakları; CBAM hazırlığı, tedarikçi kanıtı toplama, gömülü emisyon verisi ve yaklaşan AB sürdürülebilirlik uyum iş akışlarını yapılandırmanıza destek olur.",
     "positioning": "CBAM, tedarikçi kanıtı ve AB sürdürülebilirlik uyum iş akışları için kaynaklar",
+    "categoryTagsAriaLabel": "Kaynak kütüphanesi kategorileri",
     "categories": {
       "all": "Tümü",
       "cbamGuides": "CBAM Rehberleri",
@@ -1541,62 +1850,86 @@
       "inPreparation": "Hazırlanıyor",
       "roadmap": "Yol Haritası"
     },
+    "metadata": {
+      "formatLabel": "Format",
+      "statusLabel": "Durum",
+      "formatGuide": "Rehber"
+    },
     "library": {
       "title": "Regülasyon kaynak kütüphanesi",
       "description": "CBAM ve yaklaşan AB gereklilikleri genelinde tedarikçi verisi, hesaplama girdileri ve kanıt iş akışlarını yapılandırmak için pratik rehberler, kontrol listeleri ve bilgilendirmeler."
     },
     "resources": {
       "cbamChecklist": {
+        "format": "Kontrol listesi",
+        "valuePreview": {
+          "item1": "CN kodu ve ürün kapsamı eşlemesi",
+          "item2": "Tedarikçi verisi ve kanıt boşluk kontrol listesi"
+        },
         "title": "CBAM Hazırlık Kontrol Listesi",
-        "description": "GTİP/CN kod kapsamı, tedarikçi veri ihtiyacı, gömülü emisyon girdileri, kanıt kalitesi ve raporlama dönemi sorumluluklarını yapılandırmak için pratik kontrol listesi.",
+        "description": "Sonraki CBAM raporlama döneminiz öncesi ürün kapsamı, tedarikçi veri boşlukları ve kanıt gerekliliklerini haritalamak için pratik kontrol listesi",
         "cta": "Kontrol listesini talep et"
       },
       "supplierTemplate": {
+        "format": "Şablon",
+        "valuePreview": {
+          "item1": "Yapılandırılmış tedarikçi iletişim alanları",
+          "item2": "Tesis düzeyi veri talep formatı"
+        },
         "title": "Tedarikçi Veri Talep Şablonu",
-        "description": "CBAM iş akışları için tesis düzeyi veri, ürün referansları, emisyon girdileri ve destekleyici kanıt talep etmeye yönelik yapılandırılmış tedarikçi iletişim şablonu.",
+        "description": "Tedarikçi iletişimi, tesis düzeyi veri talepleri ve kanıt yükleme rehberliği için yapılandırılmış alanlar",
         "cta": "Şablonu talep et"
       },
       "embeddedEmissionsGuide": {
+        "format": "Rehber",
+        "valuePreview": {
+          "item1": "Doğrudan ve dolaylı emisyon açıklaması",
+          "item2": "Metodoloji izlenebilirliği beklentileri"
+        },
         "title": "Gömülü Emisyonlar Pratik Rehberi",
-        "description": "CBAM hazırlığında doğrudan emisyonlar, dolaylı emisyonlar, hesaplama girdileri, metodoloji iz kaydı ve kanıt beklentilerini açıklayan pratik rehber.",
+        "description": "Doğrudan ve dolaylı emisyon mantığı, metodoloji izlenebilirliği ve hesaplama girdisi hazırlığı için yapılandırılmış rehber",
         "cta": "Yayınlanınca haber ver"
       },
       "cbamCnScope": {
-        "title": "CBAM Ürünleri ve GTİP/CN Kapsamı",
-        "description": "Her raporlama dönemi öncesinde CBAM ürün kapsamı, GTİP/CN kod taraması ve tedarikçi kanıt taleplerinin nasıl yapılandırılabileceğine dair genel bakış.",
+        "format": "Rehber",
+        "valuePreview": {
+          "item1": "CN kodu tarama iş akışı",
+          "item2": "Ürün kapsam kontrol yapısı"
+        },
+        "title": "CN Kodu ve Ürün Kapsamı Rehberi",
+        "description": "CN kodu taraması, ürün kapsam kontrolü ve CBAM kapsam eşlemesi için pratik iş akışı",
         "cta": "Yayınlanınca haber ver"
       },
       "ppwrPackaging": {
-        "title": "PPWR Ambalaj Veri Hazırlığı",
-        "description": "Ambalaj ürün ağaçları, tedarikçi dokümantasyonu, geri dönüştürülmüş içerik kanıtı ve ürün ailesi mantığının PPWR hazırlığı için nasıl yapılandırılabileceğine dair yol haritası bilgilendirmesi.",
-        "cta": "Yol haritasını takip et"
+        "format": "Bilgilendirme",
+        "valuePreview": {
+          "item1": "Ambalaj ürün ağacı hazırlık özeti",
+          "item2": "Tedarikçi kanıtı yapılandırma mantığı"
+        },
+        "title": "PPWR Ambalaj Bilgilendirmesi",
+        "description": "Ambalaj ürün ağacı hazırlığı, tedarikçi kanıtı yapılandırması ve PPWR uyumlu veri iş akışları için yol haritası bilgilendirmesi",
+        "cta": "Yol Haritasını Takip Et"
       },
       "eudrBrief": {
-        "title": "EUDR Özen Yükümlülüğü Başlangıç Notu",
-        "description": "Emtia bağlantılı tedarik zincirlerinde coğrafi konum kanıtı, tedarikçi beyanları, özen yükümlülüğü dokümantasyonu ve izlenebilirlik hazırlığı için yol haritası bilgilendirmesi.",
-        "cta": "Yol haritasını takip et"
+        "format": "Bilgilendirme",
+        "valuePreview": {
+          "item1": "Konum kanıtı hazırlığı",
+          "item2": "Due diligence dokümantasyon yapısı"
+        },
+        "title": "EUDR Due Diligence Bilgilendirmesi",
+        "description": "Konum kanıtı, tedarikçi beyanları ve izlenebilirlik dokümantasyonu hazırlığı için yol haritası bilgilendirmesi",
+        "cta": "Yol Haritasını Takip Et"
       }
     },
     "leadMagnet": {
-      "title": "CBAM hazırlık kontrol listesiyle başlayın",
-      "description": "Bir sonraki raporlama dönemi öncesinde ürün kapsamı, tedarikçi veri ihtiyacı, hesaplama girdileri ve kanıt boşluklarını yapılandırmak için kontrol listesini kullanın.",
-      "cta": "Kontrol listesini talep et"
+      "highlights": {
+        "item1": "Sonraki raporlama döngüsü öncesi ürün kapsamını haritalayın",
+        "item2": "Tedarikçi veri ve kanıt boşluklarını erken tespit edin"
+      }
     },
     "subscribe": {
-      "title": "Regülasyon iş akışı güncellemelerini alın",
-      "description": "Arvenza kaynakları yayınlandıkça CBAM, tedarikçi kanıtı, PPWR, EUDR ve ürün verisi iş akışlarına dair pratik güncellemeleri alın.",
-      "emailLabel": "E-posta adresi",
-      "interestLabel": "İlgi alanı",
-      "interestPlaceholder": "Alan seçin",
-      "interests": {
-        "cbam": "CBAM",
-        "ppwr": "PPWR",
-        "eudr": "EUDR",
-        "dpp": "Digital Product Passport",
-        "general": "Genel AB sürdürülebilirlik"
-      },
-      "submit": "Güncellemeleri al",
-      "success": "Kaydınız alındı. Yeni kaynaklar yayınlandığında sizi bilgilendireceğiz."
+      "contactPrefix": "E-posta mı tercih edersiniz? İletişim:",
+      "emailPlaceholder": "siz@sirket.com"
     },
     "subscribeBenefits": {
       "title": "Abone olduğunuzda neler alırsınız",
@@ -1605,6 +1938,32 @@
         "item2": "Yeni kaynak bildirimleri",
         "item3": "Tedarikçi kanıtı iş akışı güncellemeleri",
         "item4": "Regülasyon yol haritası bilgilendirmeleri"
+      }
+    },
+    "heroChipsAriaLabel": "Kaynak merkezi öne çıkanları",
+    "heroChips": {
+      "item1": "Mevcut kontrol listeleri",
+      "item2": "Şeffaf kaynak durumu",
+      "item3": "Pratik iş akışı değeri"
+    },
+    "fields": {
+      "valuePreview": "Ne elde edersiniz"
+    },
+    "sections": {
+      "available": {
+        "label": "Mevcut",
+        "title": "Hemen talep edin",
+        "description": "CBAM hazırlığı ve tedarikçi iletişimini yapılandırmak için bugün talep edebileceğiniz pratik kontrol listeleri ve şablonlar"
+      },
+      "inPreparation": {
+        "label": "Hazırlanıyor",
+        "title": "Hazırlanan rehberler",
+        "description": "Hazırlanan yapılandırılmış rehberler — yayınlandığında e-posta ile bilgilendirme"
+      },
+      "roadmap": {
+        "label": "Yol Haritası",
+        "title": "Regülasyon bilgilendirmeleri",
+        "description": "Arvenza kaynak kütüphanesini genişletirken PPWR ve EUDR iş akışları için yol haritası bilgilendirmeleri"
       }
     }
   },
@@ -1618,7 +1977,8 @@
     "kvkValue": "KvK: 99787784",
     "emailLabel": "İletişim",
     "questionsBody": "Bu belge hakkında sorularınız için bizimle iletişime geçin veya",
-    "demoLink": "demo talep edin"
+    "demoLink": "demo talep edin",
+    "tocLabel": "Bu belgede"
   },
   "legal": {
     "privacyPolicy": {
@@ -1785,5 +2145,579 @@
     "accept": "Kabul Et",
     "reject": "Reddet",
     "policyLink": "Çerez Politikası"
+  },
+  "platformModules": {
+    "shared": {
+      "capabilitiesEyebrow": "Yetenekler",
+      "workflowEyebrow": "İş akışı",
+      "useCasesEyebrow": "Kullanım alanları",
+      "backToPlatform": "Platforma Dön",
+      "pilotNotice": "Bu modül yapılandırılmış pilot erişimindedir — önizlemeler genel kullanıma açık ürün durumunu değil, ürün yönünü yansıtır",
+      "comingSoonNotice": "Bu modül ürün yol haritasındadır — önizlemeler canlı ürün kullanılabilirliğini değil, planlanan yetenek yönünü yansıtır",
+      "discussPilot": "Pilot Erişimi Görüşelim",
+      "followRoadmap": "Yol Haritasını Takip Et",
+      "requestDemo": "Demo Talep Et",
+      "explorePlatform": "Platformu Keşfet"
+    },
+    "cbamComplianceConsole": {
+      "eyebrow": "CBAM Compliance Console",
+      "title": "CBAM kanıt ve raporlama hazırlığı için operasyonel koordinasyon",
+      "description": "CBAM iş akışlarında tedarikçi kanıt durumu, hesaplama hazırlığı, takip eylemleri ve raporlama döngüsü ilerlemesini izlemek için pilot koordinasyon katmanı.",
+      "chipsAriaLabel": "Konsol öne çıkanları",
+      "chips": {
+        "item1": "Kanıt durumu izleme",
+        "item2": "Raporlama döngüsü koordinasyonu",
+        "item3": "Tedarikçi takip görünürlüğü"
+      },
+      "screenshotAlt": "CBAM Compliance Console pano önizlemesi",
+      "positioning": {
+        "title": "Hesaplama çıktılarından operasyonel CBAM hazırlığına",
+        "description": "Tedarikçi veri toplama ve hesaplama çalışmaları başladığında ekipler, elektronik tablo takibine geri dönmeden kanıt kalitesi, açık takipler ve raporlama döngüsü hazırlığı için yapılandırılmış bir görünüme ihtiyaç duyar."
+      },
+      "capabilities": {
+        "title": "Konsolun koordine etmek üzere tasarlandığı alanlar",
+        "description": "CBAM hazırlığı genelinde operasyonel görünürlüğe odaklanan pilot yetenek — hazır Calculation Engine'in yerine geçmez.",
+        "items": {
+          "item1": {
+            "title": "Kanıt durumu özeti",
+            "description": "Raporlama döngüleri genelinde tedarikçi gönderimlerini, kalite işaretlemesini ve eksik kanıtları takip edin."
+          },
+          "item2": {
+            "title": "Hesaplama hazırlık sinyalleri",
+            "description": "Hangi ürün hatları, tesisler veya tedarikçilerin hesaplama incelemesine hazır olduğunu görünür kılın."
+          },
+          "item3": {
+            "title": "Takip eylemi kuyruğu",
+            "description": "Tedarikçi iletişimi, veri boşlukları ve dahili inceleme görevlerini tek operasyonel görünümde düzenleyin."
+          },
+          "item4": {
+            "title": "Raporlama döngüsü ilerlemesi",
+            "description": "Veri alımından beyanname hazır kanıt paketlemesine kadar hazırlık kilometre taşlarını izleyin."
+          }
+        }
+      },
+      "workflow": {
+        "title": "Ekipler konsolu CBAM döngülerinde nasıl kullanır",
+        "description": "Tekrarlayan çeyreklik hazırlık genelinde yapılandırılmış koordinasyon — Calculation Engine iş akışına bağlı.",
+        "steps": {
+          "step1": {
+            "title": "Raporlama döngüsünü kapsamla",
+            "description": "Aktif CBAM dönemi için ürün kapsamı, tedarikçi listesi ve kanıt gereksinimlerini tanımlayın."
+          },
+          "step2": {
+            "title": "Kanıt alımını izle",
+            "description": "Tedarikçi gönderimlerini, kalite bayraklarını ve bekleyen veri taleplerini takip edin."
+          },
+          "step3": {
+            "title": "Hesaplama hazırlığını incele",
+            "description": "Gömülü emisyon hesaplaması ve metodoloji incelemesine hazır kayıtları belirleyin."
+          },
+          "step4": {
+            "title": "Beyanname devir teslimini hazırla",
+            "description": "Gönderim hazırlığı öncesinde nihai kanıt paketlemesi ve dahili onayı koordine edin."
+          }
+        }
+      },
+      "useCases": {
+        "title": "Bu pilot kimler için",
+        "items": {
+          "item1": {
+            "title": "CBAM program liderleri",
+            "description": "Birden fazla ürün hattında tedarikçi iletişimi ve çeyreklik raporlama hazırlığını koordine eden ekipler."
+          },
+          "item2": {
+            "title": "Uyum operasyonları",
+            "description": "Manuel elektronik tablo birleştirmesi olmadan kanıt durumuna görünürlük ihtiyaç duyan fonksiyonlar."
+          },
+          "item3": {
+            "title": "İhracat uyum ekipleri",
+            "description": "CBAM hazırlığını tek bir hesaplama iş akışının ötesine ölçeklendiren kuruluşlar."
+          }
+        }
+      },
+      "cta": {
+        "title": "CBAM Compliance Console pilot erişimini ekibimizle görüşün"
+      }
+    },
+    "ppwr": {
+      "eyebrow": "PPWR / Packaging Compliance",
+      "title": "PPWR hazırlığı için ambalaj verilerini ve tedarikçi kanıtını yapılandırın",
+      "description": "Operasyonel PPWR gereksinimleri öncesinde ambalaj BOM'larını, tedarikçi dokümantasyonunu, geri dönüştürülmüş içerik kanıtını ve ürün ailesi mantığını düzenlemek için pilot modül.",
+      "chipsAriaLabel": "PPWR modül öne çıkanları",
+      "chips": {
+        "item1": "Ambalaj BOM yapısı",
+        "item2": "Tedarikçi dokümantasyonu",
+        "item3": "Geri dönüştürülmüş içerik kanıtı"
+      },
+      "screenshotAlt": "PPWR ambalaj uyumu pano önizlemesi",
+      "positioning": {
+        "title": "Ambalaj uyumu bir veri ve kanıt problemidir",
+        "description": "PPWR hazırlığı, gereksinimler operasyonel olarak bağlayıcı hale gelmeden önce malzeme düzeyinde ambalaj verisi, tedarikçi kanıtı ve ürün ailesi izlenebilirliği gerektirir."
+      },
+      "capabilities": {
+        "title": "Pilot yetenek alanları",
+        "description": "Ambalaj verisi yapılandırma ve kanıt hazırlığına odaklanır — tam düzenleyici sertifikasyon değildir.",
+        "items": {
+          "item1": {
+            "title": "Ambalaj BOM organizasyonu",
+            "description": "Malzeme bileşimlerini, bileşen referanslarını ve ürün ailesi ambalaj mantığını yapılandırın."
+          },
+          "item2": {
+            "title": "Tedarikçi kanıt alımı",
+            "description": "Ambalajla ilgili tedarikçi beyanlarını ve destekleyici dokümantasyonu toplayın."
+          },
+          "item3": {
+            "title": "Geri dönüştürülmüş içerik takibi",
+            "description": "Geri dönüştürülmüş içerik kanıtını ve tedarikçi onaylarını malzeme ve SKU bazında düzenleyin."
+          },
+          "item4": {
+            "title": "Dokümantasyon izlenebilirliği",
+            "description": "Ambalaj veri kayıtlarını kanıt dosyalarına ve inceleme durumuna bağlayın."
+          }
+        }
+      },
+      "workflow": {
+        "title": "PPWR hazırlık iş akışı",
+        "description": "Platform işletim modeliyle uyumlu, tekrarlanabilir ambalaj verisi ve kanıt yapılandırması.",
+        "steps": {
+          "step1": {
+            "title": "Ürün ambalaj kapsamını haritala",
+            "description": "Dokümantasyon gerektiren SKU'ları, ambalaj bileşenlerini ve tedarikçi kaynaklarını belirleyin."
+          },
+          "step2": {
+            "title": "Tedarikçi ambalaj verisi topla",
+            "description": "Malzeme bileşimleri, geri dönüştürülmüş içerik iddiaları ve destekleyici kanıt talep edin."
+          },
+          "step3": {
+            "title": "BOM ve kanıt bağlantılarını yapılandır",
+            "description": "Tedarikçi dokümantasyonuna bağlı ambalaj BOM kayıtlarını düzenleyin."
+          },
+          "step4": {
+            "title": "İncelemeye hazır çıktıları hazırla",
+            "description": "Dahili inceleme ve düzenleyici hazırlık planlaması için yapılandırılmış ambalaj verisini paketleyin."
+          }
+        }
+      },
+      "useCases": {
+        "title": "Bu pilot kimler için",
+        "items": {
+          "item1": {
+            "title": "FMCG ve ambalaj ekipleri",
+            "description": "Geniş ürün portföylerinde ambalaj verisi hazırlayan kuruluşlar."
+          },
+          "item2": {
+            "title": "Tedarikçi ağları olan marka sahipleri",
+            "description": "Birden fazla malzeme tedarikçisinden ambalaj kanıtını koordine eden ekipler."
+          },
+          "item3": {
+            "title": "Sürdürülebilirlik ve uyum fonksiyonları",
+            "description": "Operasyonel raporlama döngüleri öncesinde PPWR hazırlığı oluşturan gruplar."
+          }
+        }
+      },
+      "cta": {
+        "title": "PPWR ambalaj uyumu pilot erişimini görüşün"
+      }
+    },
+    "agriClimate": {
+      "eyebrow": "Agri-Climate Platform",
+      "title": "Tarımsal iklim verilerini ve çiftlik düzeyinde kanıtı yapılandırın",
+      "description": "Emtia bağlantılı tedarik zincirlerinde tarımsal iklim verilerini, çiftlik düzeyinde kayıtları, üretici dokümantasyonunu ve kanıt hazırlığını düzenlemek için pilot ürün alanı.",
+      "chipsAriaLabel": "Agri-Climate öne çıkanları",
+      "chips": {
+        "item1": "Çiftlik düzeyinde kayıtlar",
+        "item2": "Üretici dokümantasyonu",
+        "item3": "İklim verisi yapılandırma"
+      },
+      "screenshotAlt": "Agri-Climate Platform pano önizlemesi",
+      "positioning": {
+        "title": "Tarımsal tedarik zincirleri yapılandırılmış iklim kanıtına ihtiyaç duyar",
+        "description": "Emtia bağlantılı tedarik zincirleri, düzenleyici ve alıcı beklentileri yoğunlaşmadan önce üretici düzeyinde kayıtlar, coğrafi konum referansları ve çiftlik düzeyinde verinin organize edilmesini giderek daha fazla gerektiriyor."
+      },
+      "capabilities": {
+        "title": "Pilot yetenek alanları",
+        "description": "Tarımsal veri yapılandırma ve kanıt hazırlık iş akışlarına odaklanır.",
+        "items": {
+          "item1": {
+            "title": "Çiftlik ve üretici kayıtları",
+            "description": "Üretici referanslarını, çiftlik düzeyinde veriyi ve tedarikçi dokümantasyonunu düzenleyin."
+          },
+          "item2": {
+            "title": "İklim verisi alımı",
+            "description": "Tarladan tedarik zincirine tarımsal iklim girdilerini ve destekleyici kanıtı yapılandırın."
+          },
+          "item3": {
+            "title": "Coğrafi konum kanıt hazırlığı",
+            "description": "İzlenebilirlik gereksinimleriyle uyumlu konum bağlantılı dokümantasyon hazırlayın."
+          },
+          "item4": {
+            "title": "Kanıt kalite işaretlemesi",
+            "description": "Üretici ağları genelinde veri tamlığını ve takip ihtiyaçlarını işaretleyin."
+          }
+        }
+      },
+      "workflow": {
+        "title": "Agri-climate kanıt iş akışı",
+        "description": "Tarımsal tedarik zinciri uyum hazırlığı için disiplinli veri yapılandırması.",
+        "steps": {
+          "step1": {
+            "title": "Tedarik zinciri kapsamını tanımla",
+            "description": "Ağ genelinde emtiaları, üreticileri ve veri gereksinimlerini haritalayın."
+          },
+          "step2": {
+            "title": "Çiftlik düzeyinde veri topla",
+            "description": "Üretici kayıtlarını, iklim girdilerini ve destekleyici dokümantasyonu alın."
+          },
+          "step3": {
+            "title": "Kanıtı yapılandır ve doğrula",
+            "description": "Kalite işaretlemesi ve boşluk tespitiyle kayıtları düzenleyin."
+          },
+          "step4": {
+            "title": "Raporlamaya hazır çıktıları hazırla",
+            "description": "İnceleme ve aşağı akış kullanımı için yapılandırılmış tarımsal iklim kanıtını paketleyin."
+          }
+        }
+      },
+      "useCases": {
+        "title": "Bu pilot kimler için",
+        "items": {
+          "item1": {
+            "title": "Tarımsal ihracatçılar",
+            "description": "AB bağlantılı tedarik zincirleri için çiftlik düzeyinde dokümantasyon hazırlayan kuruluşlar."
+          },
+          "item2": {
+            "title": "Emtia tüccarları",
+            "description": "Dağınık tedarikçi ağları genelinde üretici kanıtını koordine eden ekipler."
+          },
+          "item3": {
+            "title": "Gıda ve tarım uyum ekipleri",
+            "description": "Düzenleyici genişleme öncesinde yapılandırılmış iklim verisi iş akışları oluşturan fonksiyonlar."
+          }
+        }
+      },
+      "cta": {
+        "title": "Agri-Climate Platform pilot erişimini görüşün"
+      }
+    },
+    "eudr": {
+      "eyebrow": "EUDR Due Diligence",
+      "title": "Ormansızlaşma bağlantılı tedarik zincirleri için planlanan özen yükümlülüğü iş akışları",
+      "description": "Emtia bağlantılı tedarik zincirlerinde coğrafi konum kanıtı, tedarikçi beyanları, risk sınıflandırması ve izlenebilirlik dokümantasyonu için yol haritası modülü.",
+      "chipsAriaLabel": "EUDR yol haritası öne çıkanları",
+      "chips": {
+        "item1": "Coğrafi konum kanıtı",
+        "item2": "Özen yükümlülüğü dokümantasyonu",
+        "item3": "Tedarikçi beyanları"
+      },
+      "screenshotAlt": "EUDR özen yükümlülüğü pano önizlemesi",
+      "positioning": {
+        "title": "EUDR yapılandırılmış özen yükümlülüğü kanıtı gerektirir",
+        "description": "Emtia bağlantılı tedarik zincirleri, CBAM ile aynı tedarikçi kanıt modeli üzerine inşa edilmiş coğrafi konum verisi, tedarikçi beyanları ve izlenebilirlik dokümantasyonu için tekrarlanabilir iş akışlarına ihtiyaç duyar."
+      },
+      "capabilities": {
+        "title": "Planlanan yetenek yönü",
+        "description": "Yol haritası modülü — önizlemeler planlanan ürün yönünü yansıtır.",
+        "items": {
+          "item1": {
+            "title": "Coğrafi konum kanıt yönetimi",
+            "description": "Parsel düzeyinde konum verisini ve tedarikçilerden gelen destekleyici dokümantasyonu düzenleyin."
+          },
+          "item2": {
+            "title": "Tedarikçi beyan alımı",
+            "description": "Tedarikçi onayları ve özen yükümlülüğü beyanlarının yapılandırılmış toplanması."
+          },
+          "item3": {
+            "title": "Risk sınıflandırma desteği",
+            "description": "Risk değerlendirme ve inceleme iş akışları için dokümantasyon katmanlarını hazırlayın."
+          },
+          "item4": {
+            "title": "İzlenebilirlik dokümantasyonu",
+            "description": "Emtia akışlarını tedarik zinciri boyunca kanıt dosyalarına bağlayın."
+          }
+        }
+      },
+      "workflow": {
+        "title": "Planlanan özen yükümlülüğü iş akışı",
+        "description": "Tedarikçi alımından dokümantasyon incelemesine yapılandırılmış kanıt hazırlığı.",
+        "steps": {
+          "step1": {
+            "title": "Emtia ve tedarikçileri kapsamla",
+            "description": "EUDR kapsamındaki ürünleri ve dokümantasyon gerektiren tedarikçi ağlarını tanımlayın."
+          },
+          "step2": {
+            "title": "Coğrafi konum ve beyanları topla",
+            "description": "Konum kanıtını ve tedarikçi özen yükümlülüğü beyanlarını alın."
+          },
+          "step3": {
+            "title": "Risk ve izlenebilirlik kayıtlarını yapılandır",
+            "description": "Kalite işaretlemesi ve boşluk takibiyle kanıtı düzenleyin."
+          },
+          "step4": {
+            "title": "İncelemeye hazır dokümantasyon hazırla",
+            "description": "Dahili inceleme ve düzenleyici hazırlık için özen yükümlülüğü kanıtını paketleyin."
+          }
+        }
+      },
+      "useCases": {
+        "title": "Hedeflenen kullanım alanları",
+        "items": {
+          "item1": {
+            "title": "Emtia ithalatçıları",
+            "description": "Kereste, kakao, kahve ve diğer emtialarda EUDR özen yükümlülüğü hazırlayan kuruluşlar."
+          },
+          "item2": {
+            "title": "Marka tedarik zinciri ekipleri",
+            "description": "Çok kademeli tedarikçi ağlarından coğrafi konum kanıtını koordine eden ekipler."
+          },
+          "item3": {
+            "title": "Uyum ve hukuk fonksiyonları",
+            "description": "Ormansızlaşma özen yükümlülüğü dokümantasyon iş akışları oluşturan gruplar."
+          }
+        }
+      },
+      "cta": {
+        "title": "EUDR modül yol haritasını takip edin ve güncellemeler talep edin"
+      }
+    },
+    "dpp": {
+      "eyebrow": "Digital Product Passport",
+      "title": "Digital Product Passport hazırlığı için planlanan ürün veri yapıları",
+      "description": "DPP gereksinimleri öncesinde ürün düzeyinde veri yapıları, tedarikçi kanıt katmanları, bileşen dokümantasyonu ve izlenebilirlik mantığı için yol haritası modülü.",
+      "chipsAriaLabel": "DPP yol haritası öne çıkanları",
+      "chips": {
+        "item1": "Ürün veri yapıları",
+        "item2": "Bileşen dokümantasyonu",
+        "item3": "Kanıt izlenebilirliği"
+      },
+      "screenshotAlt": "Digital Product Passport pano önizlemesi",
+      "positioning": {
+        "title": "DPP yapılandırılmış ürün ve tedarikçi verisiyle başlar",
+        "description": "Digital Product Passport gereksinimleri pratik bir operasyonel zorluk haline gelmeden önce üreticilerin ürün düzeyinde veri modelleri, bileşen referansları ve tedarikçi kanıt katmanlarını organize etmesi gerekir."
+      },
+      "capabilities": {
+        "title": "Planlanan yetenek yönü",
+        "description": "Yol haritası modülü — önizlemeler planlanan ürün yönünü yansıtır.",
+        "items": {
+          "item1": {
+            "title": "Ürün veri modelleme",
+            "description": "Ürün referanslarını, bileşen hiyerarşilerini ve malzeme niteliklerini yapılandırın."
+          },
+          "item2": {
+            "title": "Tedarikçi kanıt katmanları",
+            "description": "Bileşen düzeyinde tedarikçi dokümantasyonunu ürün kayıtlarına bağlayın."
+          },
+          "item3": {
+            "title": "Dokümantasyon izlenebilirliği",
+            "description": "Kanıt dosyalarını ürün ve bileşen referanslarına inceleme durumuyla bağlayın."
+          },
+          "item4": {
+            "title": "Pasaporta hazırlık",
+            "description": "Gelişmekte olan DPP veri yapısı beklentileriyle uyumlu veri çıktılarını düzenleyin."
+          }
+        }
+      },
+      "workflow": {
+        "title": "Planlanan DPP hazırlık iş akışı",
+        "description": "Ürün kapsam tanımından kanıt bağlantılı dokümantasyona.",
+        "steps": {
+          "step1": {
+            "title": "Ürün kapsamını tanımla",
+            "description": "Dokümantasyon gerektiren ürünleri, bileşenleri ve tedarikçi kaynaklarını belirleyin."
+          },
+          "step2": {
+            "title": "Bileşen kanıtı topla",
+            "description": "Ürün yapıları için tedarikçi dokümantasyonu ve malzeme verisi alın."
+          },
+          "step3": {
+            "title": "Pasaport veri katmanlarını yapılandır",
+            "description": "Kanıt ve inceleme durumuna bağlı ürün kayıtlarını düzenleyin."
+          },
+          "step4": {
+            "title": "Hazırlık çıktılarını hazırla",
+            "description": "Dahili inceleme ve DPP planlaması için yapılandırılmış ürün verisini paketleyin."
+          }
+        }
+      },
+      "useCases": {
+        "title": "Hedeflenen kullanım alanları",
+        "items": {
+          "item1": {
+            "title": "Üreticiler",
+            "description": "Pasaport hazırlığı için bileşen düzeyinde dokümantasyon hazırlayan ürün ekipleri."
+          },
+          "item2": {
+            "title": "Elektronik ve otomotiv tedarikçileri",
+            "description": "Karmaşık BOM'ları ve çok kademeli tedarikçi kanıtını yöneten kuruluşlar."
+          },
+          "item3": {
+            "title": "Sürdürülebilirlik veri ekipleri",
+            "description": "Ürün düzeyinde sürdürülebilirlik veri yapılarını koordine eden fonksiyonlar."
+          }
+        }
+      },
+      "cta": {
+        "title": "Digital Product Passport yol haritasını takip edin"
+      }
+    },
+    "supplierEvidence": {
+      "eyebrow": "Supplier Evidence Workflow",
+      "title": "Planlanan paylaşımlı tedarikçi iletişimi ve kanıt alımı",
+      "description": "Platform modülleri genelinde paylaşılan tedarikçi iletişimi, yapılandırılmış veri talepleri, kanıt yükleme, kalite işaretlemesi ve takip iş akışları için yol haritası modülü.",
+      "chipsAriaLabel": "Tedarikçi iş akışı öne çıkanları",
+      "chips": {
+        "item1": "Yapılandırılmış veri talepleri",
+        "item2": "Kanıt yükleme",
+        "item3": "Takip izleme"
+      },
+      "screenshotAlt": "Tedarikçi kanıt iş akışı pano önizlemesi",
+      "positioning": {
+        "title": "Tedarikçi kanıtı paylaşımlı temeldir",
+        "description": "Arvenza'daki her düzenleyici iş akışı disiplinli tedarikçi iletişimi, yapılandırılmış veri alımı ve kanıt kalite işaretlemesine dayanır — bu modül bu modeli paylaşımlı platform katmanı olarak genişletir."
+      },
+      "capabilities": {
+        "title": "Planlanan yetenek yönü",
+        "description": "Yol haritası modülü — önizlemeler planlanan ürün yönünü yansıtır.",
+        "items": {
+          "item1": {
+            "title": "Tedarikçi iletişim şablonları",
+            "description": "Tesis düzeyinde veri ve destekleyici kanıt için yapılandırılmış talep formatları."
+          },
+          "item2": {
+            "title": "Kanıt yükleme ve alım",
+            "description": "Dosya referansları ve meta verilerle tedarikçi gönderimlerini düzenleyin."
+          },
+          "item3": {
+            "title": "Kalite işaretleme ve boşluklar",
+            "description": "Eksik gönderimleri işaretleyin ve takip eylemlerini tetikleyin."
+          },
+          "item4": {
+            "title": "Modüller arası kanıt yeniden kullanımı",
+            "description": "Tedarikçi kayıtlarını CBAM, PPWR, EUDR ve diğer modül iş akışlarına bağlayın."
+          }
+        }
+      },
+      "workflow": {
+        "title": "Planlanan tedarikçi kanıt iş akışı",
+        "description": "İletişimden kanıt doğrulamaya tekrarlanabilir tedarikçi alımı.",
+        "steps": {
+          "step1": {
+            "title": "Veri gereksinimlerini tanımla",
+            "description": "Tedarikçi ve ürün kapsamı başına alanları, kanıt türlerini ve son tarihleri belirleyin."
+          },
+          "step2": {
+            "title": "Yapılandırılmış talepler gönder",
+            "description": "Net veri ve dokümantasyon beklentileriyle tedarikçi iletişimi başlatın."
+          },
+          "step3": {
+            "title": "İncele ve kalite işaretle",
+            "description": "Gönderimleri doğrulayın, boşlukları işaretleyin ve takipleri planlayın."
+          },
+          "step4": {
+            "title": "Aşağı akış modüllerine aktar",
+            "description": "Doğrulanmış kanıtı hesaplama, raporlama ve uyum iş akışlarına yönlendirin."
+          }
+        }
+      },
+      "useCases": {
+        "title": "Hedeflenen kullanım alanları",
+        "items": {
+          "item1": {
+            "title": "Çoklu düzenleme ihracatçıları",
+            "description": "Tedarikçi verisini bir kez toplayıp CBAM ve yol haritası modülleri genelinde kanıtı yeniden kullanan ekipler."
+          },
+          "item2": {
+            "title": "Satın alma ve tedarikçi kalitesi",
+            "description": "Ölçekte tedarikçi dokümantasyonunu koordine eden fonksiyonlar."
+          },
+          "item3": {
+            "title": "Uyum operasyonları",
+            "description": "E-posta ve elektronik tablo tedarikçi takibini yapılandırılmış iş akışlarıyla değiştiren gruplar."
+          }
+        }
+      },
+      "cta": {
+        "title": "Supplier Evidence Workflow yol haritasını takip edin"
+      }
+    },
+    "esgReporting": {
+      "eyebrow": "ESG Evidence & Reporting Workspace",
+      "title": "Planlanan ESG kanıt koordinasyonu ve raporlama hazırlığı",
+      "description": "ESG kanıt koordinasyonu, raporlama girdileri, dokümantasyon izlenebilirliği ve incelemeye hazır çalışma alanı çıktıları için yol haritası modülü.",
+      "chipsAriaLabel": "ESG çalışma alanı öne çıkanları",
+      "chips": {
+        "item1": "Kanıt koordinasyonu",
+        "item2": "Raporlama girdileri",
+        "item3": "Dokümantasyon izlenebilirliği"
+      },
+      "screenshotAlt": "ESG kanıt ve raporlama çalışma alanı pano önizlemesi",
+      "positioning": {
+        "title": "ESG raporlaması aynı kanıt disiplinine ihtiyaç duyar",
+        "description": "ESG ve sürdürülebilirlik raporlama fonksiyonları, düzenleyici uyum ekipleriyle aynı tedarikçi kanıtı, veri kalitesi ve dokümantasyon izlenebilirliği zorluklarıyla karşılaşır — tek bir çalışma alanı modelinde yapılandırılır."
+      },
+      "capabilities": {
+        "title": "Planlanan yetenek yönü",
+        "description": "Yol haritası modülü — önizlemeler planlanan ürün yönünü yansıtır.",
+        "items": {
+          "item1": {
+            "title": "Kanıt koordinasyonu",
+            "description": "ESG ile ilgili tedarikçi ve dahili kanıtı yapılandırılmış iş akışlarında düzenleyin."
+          },
+          "item2": {
+            "title": "Raporlama girdisi hazırlığı",
+            "description": "Raporlama çerçeveleri ve dahili inceleme döngüleriyle uyumlu hesaplama girdilerini yapılandırın."
+          },
+          "item3": {
+            "title": "Dokümantasyon izlenebilirliği",
+            "description": "Kanıt dosyalarını inceleme durumuyla raporlama kalemlerine bağlayın."
+          },
+          "item4": {
+            "title": "İncelemeye hazır çalışma alanı çıktıları",
+            "description": "Denetim ve açıklama hazırlığı için koordine edilmiş kanıtı paketleyin."
+          }
+        }
+      },
+      "workflow": {
+        "title": "Planlanan ESG raporlama iş akışı",
+        "description": "Kanıt toplamadan raporlama girdisi hazırlığına.",
+        "steps": {
+          "step1": {
+            "title": "Raporlama kapsamını tanımla",
+            "description": "Açıklama gereksinimlerini, veri sahiplerini ve kanıt ihtiyaçlarını haritalayın."
+          },
+          "step2": {
+            "title": "Kanıt topla ve yapılandır",
+            "description": "Kalite işaretlemesiyle tedarikçi ve dahili dokümantasyonu alın."
+          },
+          "step3": {
+            "title": "Raporlama girdilerini hazırla",
+            "description": "Çerçeve uyumlu raporlama hazırlığı için doğrulanmış veriyi düzenleyin."
+          },
+          "step4": {
+            "title": "İncele ve çıktıları paketle",
+            "description": "Dahili onayı koordine edin ve denetime hazır kanıt paketlemesi yapın."
+          }
+        }
+      },
+      "useCases": {
+        "title": "Hedeflenen kullanım alanları",
+        "items": {
+          "item1": {
+            "title": "ESG ve sürdürülebilirlik ekipleri",
+            "description": "İş birimleri genelinde açıklama kanıtını koordine eden fonksiyonlar."
+          },
+          "item2": {
+            "title": "CSRD hazırlık ekipleri",
+            "description": "Raporlama yükümlülükleri öncesinde kanıt yapılandıran kuruluşlar."
+          },
+          "item3": {
+            "title": "Grup uyum fonksiyonları",
+            "description": "Düzenleyici ve gönüllü sürdürülebilirlik raporlama iş akışlarını birleştiren ekipler."
+          }
+        }
+      },
+      "cta": {
+        "title": "ESG Evidence & Reporting Workspace yol haritasını takip edin"
+      }
+    }
   }
 }

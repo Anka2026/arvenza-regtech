@@ -2,10 +2,12 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import { ArrowRight, Building2, Hash, Mail, MapPin } from "lucide-react";
 import { LogoMark } from "@/components/brand/logo";
 import { OrbitWaveMotif } from "@/components/home/orbit-wave-motif";
 import { PageContainer } from "@/components/layout/page-container";
-import { Mail, MapPin } from "lucide-react";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const officeKeys = ["netherlands", "turkey", "digital"] as const;
 
@@ -76,9 +78,28 @@ export function Footer() {
 
   return (
     <footer className="footer-dark relative isolate overflow-hidden" role="contentinfo">
+      <div className="footer-ambient-mesh" aria-hidden="true" />
       <OrbitWaveMotif variant="footer" showOrbit showWaves />
-      <PageContainer className="section-content py-11 lg:py-12">
-        <div className="grid gap-8 lg:grid-cols-12 lg:gap-x-6 lg:gap-y-8">
+
+      <PageContainer className="section-content relative z-10 py-11 lg:py-12">
+        <div className="footer-top-cta">
+          <div className="footer-top-cta-copy">
+            <p className="footer-top-cta-kicker">{t("ctaBand.kicker")}</p>
+            <p className="footer-top-cta-title">{t("ctaBand.title")}</p>
+          </div>
+          <Link
+            href="/demo"
+            className={cn(
+              buttonVariants({ variant: "secondary", size: "default" }),
+              "footer-get-started-btn w-full border-0 bg-white text-[#071225] shadow-card hover:bg-white/95 sm:w-auto"
+            )}
+          >
+            {t("getStarted")}
+            <ArrowRight className="ml-1.5 h-4 w-4" aria-hidden="true" />
+          </Link>
+        </div>
+
+        <div className="mt-10 grid gap-8 lg:grid-cols-12 lg:gap-x-6 lg:gap-y-8">
           <div className="lg:col-span-5">
             <div className="footer-brand-block">
               <div className="footer-brand-intro">
@@ -91,20 +112,31 @@ export function Footer() {
                 </div>
               </div>
               <p className="footer-body mt-4 text-[13px] leading-relaxed sm:text-sm">{t("brandDescription")}</p>
-              <Link href="/demo" className="footer-get-started-link mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#C4B5FD] transition-colors hover:text-white">
-                {t("getStarted")}
-                <span aria-hidden="true">→</span>
-              </Link>
+
               <a href={`mailto:${tCommon("email")}`} className="footer-email-link mt-4">
                 <Mail className="h-4 w-4 shrink-0" aria-hidden="true" />
                 {tCommon("email")}
               </a>
+              <p className="footer-contact-note mt-2 max-w-sm text-xs leading-relaxed text-[#94A3B8]">
+                {t("contactNote")}
+              </p>
+
+              <div className="footer-operator-strip">
+                <span className="footer-operator-chip">
+                  <Building2 className="h-3 w-3 shrink-0" aria-hidden="true" />
+                  {t("operatorLine")}
+                </span>
+                <span className="footer-operator-chip">
+                  <Hash className="h-3 w-3 shrink-0" aria-hidden="true" />
+                  KvK 99787784
+                </span>
+              </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-x-5 gap-y-7 min-[480px]:grid-cols-2 lg:col-span-7 lg:grid-cols-5 lg:gap-x-3 lg:gap-y-0">
+          <div className="grid grid-cols-1 gap-x-5 gap-y-7 min-[400px]:grid-cols-2 lg:col-span-7 lg:grid-cols-4 xl:grid-cols-5 lg:gap-x-4 lg:gap-y-0">
             {linkGroups.map((group) => (
-              <div key={group.title} className="min-w-0">
+              <div key={group.title} className="footer-link-column min-w-0">
                 <h3 className="footer-column-title">{group.title}</h3>
                 <ul className="list-none space-y-1.5">
                   {group.links.map((link) => (
@@ -118,11 +150,11 @@ export function Footer() {
               </div>
             ))}
 
-            <div className="min-w-0 min-[480px]:col-span-2 lg:col-span-1">
+            <div className="footer-link-column min-w-0 min-[400px]:col-span-2 lg:col-span-1 xl:col-span-1">
               <h3 className="footer-column-title">{t("offices.title")}</h3>
               <ul className="list-none space-y-3">
                 {officeKeys.map((office) => (
-                  <li key={office} className="flex items-start gap-2">
+                  <li key={office} className="footer-office-item">
                     <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#A78BFA]/80" aria-hidden="true" />
                     <div>
                       <p className="text-[12px] font-medium leading-snug text-[#E2E8F0]">

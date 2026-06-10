@@ -1,0 +1,157 @@
+{
+  "companyPage": {
+    "productContext": {
+      "kicker": "Productarchitectuur context",
+      "ariaLabel": "Product- en operatorcontext",
+      "layers": {
+        "supplierEvidence": {
+          "label": "Operatiemodel",
+          "value": "Leveranciersbewijs en documentatietraceerbaarheid"
+        },
+        "readyProduct": {
+          "label": "Gereed product",
+          "value": "CBAM Calculation Engine"
+        },
+        "roadmap": {
+          "value": "Pilot- en binnenkort-modules op gedeelde bewijslagen"
+        }
+      },
+      "operatorNote": "Arvenza RegTech is een productmerk beheerd door Anka Sustainability B.V. — geen aparte rechtspersoon"
+    }
+  },
+  "resourcesPage": {
+    "sections": {
+      "available": {
+        "title": "Nu aanvragen",
+        "description": "Praktische checklists en templates die u vandaag kunt aanvragen om CBAM-readiness en leverancierscommunicatie te structureren"
+      },
+      "inPreparation": {
+        "title": "Gidsen in ontwikkeling",
+        "description": "Gestructureerde gidsen in voorbereiding — abonneer voor e-mailupdates bij publicatie"
+      }
+    },
+    "resources": {
+      "cbamChecklist": {
+        "valuePreview": {
+          "item1": "CN-code- en productscopemapping",
+          "item2": "Checklist voor leveranciersdata en bewijsgaten"
+        }
+      },
+      "supplierTemplate": {
+        "valuePreview": {
+          "item1": "Gestructureerde leverancierscommunicatievelden",
+          "item2": "Data-aanvraagformaat op installatieniveau"
+        }
+      }
+    }
+  },
+  "solutionsPage": {
+    "eyebrow": "Oplossingen",
+    "title": "Oplossingen die EU-regeldruk omzetten in gestructureerde workflows",
+    "fields": {
+      "problem": "Het probleem",
+      "approach": "Arvenza-aanpak",
+      "capability": "Relevante capability"
+    },
+    "sections": {
+      "ready": {
+        "title": "Gereed oplossingsworkflow",
+        "description": "CBAM Compliance Workflows is het gereed operationele use case — aangedreven door CBAM Calculation Engine van leveranciersdata tot declaratie-klaar bewijs"
+      },
+      "pilot": {
+        "title": "Pilot oplossingsworkflows",
+        "description": "Uitgebreide use cases in gestructureerde pilottoegang — geen volledige productbeschikbaarheid geïmpliceerd"
+      },
+      "roadmap": {
+        "title": "Roadmap oplossingsworkflows",
+        "description": "Geplande use cases die dezelfde leveranciersbewijslagen uitbreiden naar EUDR- en Digital Product Passport-readiness"
+      }
+    },
+    "solutions": {
+      "cbamWorkflows": {
+        "cta": "CBAM Calculation Engine bekijken",
+        "secondaryCta": "Demo aanvragen",
+        "workflowSteps": {
+          "step1": "Productscope bepalen",
+          "step2": "Leveranciersdata verzamelen",
+          "step3": "Emissies berekenen",
+          "step4": "Bewijs bundelen"
+        },
+        "features": {
+          "item1": "Leveranciersdata-inname",
+          "item2": "Methodologie-traceerbaarheid",
+          "item3": "Declaratie-klaar output"
+        }
+      },
+      "cbamConsole": {
+        "cta": "Pilottoegang bespreken",
+        "secondaryCta": "Productmodule bekijken"
+      },
+      "ppwr": {
+        "cta": "Pilottoegang bespreken",
+        "secondaryCta": "Productmodule bekijken"
+      },
+      "agriClimate": {
+        "cta": "Pilottoegang bespreken",
+        "secondaryCta": "Productmodule bekijken"
+      },
+      "eudr": {
+        "cta": "Roadmap volgen",
+        "secondaryCta": "Roadmapmodule bekijken"
+      },
+      "dpp": {
+        "cta": "Roadmap volgen",
+        "secondaryCta": "Roadmapmodule bekijken"
+      }
+    },
+    "cta": {
+      "title": "Bespreek uw compliance-workflow met ons team",
+      "primary": "Demo aanvragen",
+      "secondary": "CBAM Calculation Engine bekijken"
+    }
+  },
+  "industriesPage": {
+    "fields": {
+      "operationalChallenge": "Operationele uitdaging",
+      "arvenzaWorkflow": "Arvenza-workflow",
+      "relevantCapability": "Relevante capability",
+      "sectorSignal": "Sectorsignaal",
+      "workflowSummary": "Workflowsamenvatting"
+    },
+    "items": {
+      "steelAluminium": {
+        "cta": "Demo aanvragen",
+        "secondaryCta": "CBAM Calculation Engine bekijken"
+      },
+      "automotive": {
+        "cta": "Demo aanvragen",
+        "secondaryCta": "CBAM Calculation Engine bekijken"
+      },
+      "packagingFmcg": {
+        "cta": "Pilottoegang bespreken",
+        "secondaryCta": "PPWR-module bekijken"
+      },
+      "electronicsBatteries": {
+        "cta": "Roadmap volgen",
+        "secondaryCta": "DPP-module bekijken"
+      },
+      "agricultureFood": {
+        "cta": "Pilottoegang bespreken",
+        "secondaryCta": "Agri-Climate-module bekijken"
+      },
+      "importersExporters": {
+        "cta": "Demo aanvragen",
+        "secondaryCta": "CBAM Calculation Engine bekijken"
+      }
+    },
+    "cta": {
+      "primary": "Demo aanvragen",
+      "secondary": "CBAM Calculation Engine bekijken"
+    }
+  },
+  "demo": {
+    "formSection": {
+      "subtitle": "Een kort formulier is voldoende — ons team stemt demoscope en vervolgstappen af op uw behoeften"
+    }
+  }
+}

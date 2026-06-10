@@ -89,7 +89,11 @@ const config: Config = {
         dashboard:
           "0 28px 70px rgba(7, 18, 37, 0.45), 0 0 0 1px rgba(255,255,255,0.05) inset",
         "dashboard-glow":
-          "0 32px 80px rgba(124, 58, 237, 0.2), 0 0 0 1px rgba(255,255,255,0.06) inset",
+          "0 36px 90px rgba(124, 58, 237, 0.24), 0 0 0 1px rgba(255,255,255,0.08) inset",
+        "premium-card":
+          "0 12px 40px rgba(124, 58, 237, 0.1), 0 4px 12px rgba(11, 20, 38, 0.05)",
+        "premium-glow":
+          "0 0 48px rgba(124, 58, 237, 0.15), 0 0 96px rgba(37, 99, 235, 0.08)",
         "btn-gradient":
           "0 4px 14px rgba(124, 58, 237, 0.35), 0 2px 6px rgba(37, 99, 235, 0.2)",
         "btn-gradient-hover":

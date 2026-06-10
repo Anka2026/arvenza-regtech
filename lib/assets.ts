@@ -17,6 +17,7 @@ export const CBAM_PRODUCT_SCREENSHOT =
 export type CbamScreenshotFocus =
   | "full"
   | "hero"
+  | "heroNav"
   | "sidebar"
   | "kpi"
   | "chart"
@@ -28,9 +29,10 @@ export const CBAM_SCREENSHOT_FOCUS: Record<
   CbamScreenshotFocus,
   { objectPosition: string; objectFit: "contain" | "cover" }
 > = {
-  full: { objectPosition: "50% 0%", objectFit: "contain" },
-  hero: { objectPosition: "50% 0%", objectFit: "contain" },
-  sidebar: { objectPosition: "5% 50%", objectFit: "cover" },
+  full: { objectPosition: "left top", objectFit: "contain" },
+  hero: { objectPosition: "left top", objectFit: "contain" },
+  heroNav: { objectPosition: "left top", objectFit: "contain" },
+  sidebar: { objectPosition: "left center", objectFit: "contain" },
   kpi: { objectPosition: "36% 14%", objectFit: "cover" },
   chart: { objectPosition: "50% 58%", objectFit: "cover" },
   calculation: { objectPosition: "38% 36%", objectFit: "cover" },
@@ -40,13 +42,13 @@ export const CBAM_SCREENSHOT_FOCUS: Record<
 
 export const SCREENSHOTS = {
   cbamEngine: CBAM_PRODUCT_SCREENSHOT,
-  cbamConsole: CBAM_PRODUCT_SCREENSHOT,
+  cbamConsole: "/assets/screenshots/cbam-console/dashboard.png",
   cbamProduct: CBAM_PRODUCT_SCREENSHOT,
   eudr: "/assets/screenshots/eudr/dashboard.png",
   ppwr: "/assets/screenshots/ppwr/dashboard.png",
   dpp: "/assets/screenshots/dpp/dashboard.png",
-  supplierEvidence: CBAM_PRODUCT_SCREENSHOT,
-  esgWorkspace: CBAM_PRODUCT_SCREENSHOT,
+  supplierEvidence: "/assets/screenshots/supplier-evidence/dashboard.png",
+  esgWorkspace: "/assets/screenshots/esg-workspace/dashboard.png",
   agriClimate: "/assets/screenshots/agri-climate/dashboard.png",
 } as const;
 
@@ -66,12 +68,12 @@ export type ModuleScreenshotKey = ModuleKey;
 
 export const MODULE_SCREENSHOTS: Record<ModuleKey, string> = {
   cbamCalc: CBAM_PRODUCT_SCREENSHOT,
-  cbamConsole: CBAM_PRODUCT_SCREENSHOT,
+  cbamConsole: SCREENSHOTS.cbamConsole,
   eudr: SCREENSHOTS.eudr,
   ppwr: SCREENSHOTS.ppwr,
   dpp: SCREENSHOTS.dpp,
-  supplier: CBAM_PRODUCT_SCREENSHOT,
-  esg: CBAM_PRODUCT_SCREENSHOT,
+  supplier: SCREENSHOTS.supplierEvidence,
+  esg: SCREENSHOTS.esgWorkspace,
   agri: SCREENSHOTS.agriClimate,
 };
 

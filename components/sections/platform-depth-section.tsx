@@ -4,11 +4,9 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { FadeIn } from "@/components/ui/fade-in";
-import { SafeImage } from "@/components/ui/safe-image";
-import {
-  MODULE_SCREENSHOTS,
-  type ModuleScreenshotKey,
-} from "@/lib/assets";
+import { ProductScreenshot } from "@/components/ui/product-screenshot";
+import { LEGACY_MODULE_KEY_TO_PLATFORM, legacyModuleHref } from "@/lib/platform-modules";
+import { type ModuleScreenshotKey } from "@/lib/assets";
 import {
   Calculator,
   Monitor,
@@ -23,8 +21,8 @@ import {
 
 const CBAM_MODULE_KEYS = new Set(["cbamCalc", "cbamConsole"]);
 
-function moduleHref(key: string): "/platform/cbam" | "/platform" {
-  return CBAM_MODULE_KEYS.has(key) ? "/platform/cbam" : "/platform";
+function moduleHref(key: ModuleScreenshotKey) {
+  return legacyModuleHref(key);
 }
 const moduleKeys: {
   key: ModuleScreenshotKey;
@@ -63,14 +61,13 @@ export function PlatformDepthSection() {
               <span className="accent-bar" aria-hidden="true" />
 
               {/* Screenshot preview */}
-              <div className="relative aspect-[16/9] overflow-hidden border-b border-border/50 bg-navy-dark">
-                <SafeImage
-                  src={MODULE_SCREENSHOTS[key]}
-                  alt=""
-                  fill
-                  objectFit="object-top"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="transition-transform duration-500 group-hover:scale-[1.02]"
+              <div className="relative overflow-hidden border-b border-border/50 bg-[#eef1f6]">
+                <ProductScreenshot
+                  moduleKey={LEGACY_MODULE_KEY_TO_PLATFORM[key]}
+                  presentation="thumbnail"
+                  alt={t(`items.${key}.title`)}
+                  size="feature"
+                  className="rounded-none border-0 shadow-none"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
               </div>

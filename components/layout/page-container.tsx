@@ -15,7 +15,7 @@ export function PageContainer({
   return (
     <Tag
       className={cn(
-        "mx-auto w-full max-w-[1360px] min-w-0 px-5 sm:px-8 lg:px-10 xl:px-12",
+        "mx-auto w-full max-w-[1360px] min-w-0 px-[max(1.25rem,env(safe-area-inset-left))] sm:px-8 lg:px-10 xl:px-12",
         className
       )}
     >

@@ -5,13 +5,13 @@ import { Link } from "@/i18n/routing";
 import { SectionShell, SectionIntro } from "@/components/ui/section-shell";
 import { FadeIn } from "@/components/ui/fade-in";
 import { BrowserMockup } from "@/components/ui/browser-mockup";
-import { MODULE_KEYS, MODULE_SCREENSHOTS, type ModuleKey } from "@/lib/assets";
+import { ProductScreenshot } from "@/components/ui/product-screenshot";
+import { MODULE_KEYS, type ModuleKey } from "@/lib/assets";
+import { LEGACY_MODULE_KEY_TO_PLATFORM, legacyModuleHref } from "@/lib/platform-modules";
 import { ArrowUpRight } from "lucide-react";
 
-const CBAM_MODULE_KEYS = new Set(["cbamCalc", "cbamConsole"]);
-
-function moduleHref(key: string): "/platform/cbam" | "/platform" {
-  return CBAM_MODULE_KEYS.has(key) ? "/platform/cbam" : "/platform";
+function moduleHref(key: ModuleKey) {
+  return legacyModuleHref(key);
 }
 
 export function ModuleSpotlightSection() {
@@ -54,14 +54,14 @@ export function ModuleSpotlightSection() {
                   </Link>
                 </div>
               </div>
-              <div className="bg-navy-dark/95 p-3 sm:p-4">
-                <BrowserMockup
-                  src={MODULE_SCREENSHOTS[key]}
+              <div className="bg-[#eef1f6] p-3 sm:p-4">
+                <ProductScreenshot
+                  moduleKey={LEGACY_MODULE_KEY_TO_PLATFORM[key]}
+                  presentation="thumbnail"
                   alt={t(`items.${key}.screenshotAlt`)}
-                  darkChrome
                   elevated
                   aspectClass="aspect-[16/9]"
-                  className="border-navy-mid/50"
+                  className="border-[#dde5f2]/50"
                 />
               </div>
             </article>

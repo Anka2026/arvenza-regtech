@@ -1,0 +1,174 @@
+{
+  "industriesPage": {
+    "heroChipsAriaLabel": "Industry highlights",
+    "heroChips": {
+      "item1": "Sector-specific workflows",
+      "item2": "Regulatory pressure mapping",
+      "item3": "Honest capability alignment"
+    },
+    "strategyVisual": {
+      "ariaLabel": "Vertical strategy from regulatory pressure to structured workflow",
+      "kicker": "Vertical strategy model",
+      "steps": {
+        "pressure": "Regulatory pressure",
+        "evidence": "Supplier evidence",
+        "workflow": "Structured workflow"
+      },
+      "sectors": {
+        "step1": "Materials & trade",
+        "step2": "Packaging & electronics",
+        "step3": "Agriculture & food"
+      }
+    },
+    "sectors": {
+      "label": "Target sectors",
+      "title": "Six sectors, one evidence operating model",
+      "description": "Each sector card maps regulatory pressure, workflow relevance and the Arvenza capabilities that support honest readiness — Ready, Pilot or Coming Soon"
+    },
+    "fields": {
+      "operationalChallenge": "Operational challenge",
+      "arvenzaWorkflow": "Arvenza workflow",
+      "relevantCapability": "Relevant capability",
+      "sectorSignal": "Sector signal",
+      "workflowSummary": "Workflow summary"
+    },
+    "items": {
+      "steelAluminium": {
+        "workflowSteps": {
+          "step1": "Map CN codes and installations",
+          "step2": "Collect supplier emissions data",
+          "step3": "Prepare declaration-ready evidence"
+        },
+        "cta": "Book a Demo",
+        "secondaryCta": "Explore CBAM Calculation Engine"
+      },
+      "automotive": {
+        "workflowSteps": {
+          "step1": "Coordinate multi-tier supplier data",
+          "step2": "Prepare CBAM material evidence",
+          "step3": "Extend to product-data workflows"
+        },
+        "cta": "Book a Demo",
+        "secondaryCta": "Explore CBAM Calculation Engine"
+      },
+      "packagingFmcg": {
+        "workflowSteps": {
+          "step1": "Structure packaging BOM scope",
+          "step2": "Collect supplier packaging evidence",
+          "step3": "Prepare PPWR-aligned documentation"
+        },
+        "cta": "Discuss pilot access",
+        "secondaryCta": "View PPWR module"
+      },
+      "electronicsBatteries": {
+        "workflowSteps": {
+          "step1": "Map component and product scope",
+          "step2": "Organize supplier documentation",
+          "step3": "Prepare passport-readiness data"
+        },
+        "cta": "Follow roadmap",
+        "secondaryCta": "View DPP module"
+      },
+      "agricultureFood": {
+        "workflowSteps": {
+          "step1": "Map producer and commodity scope",
+          "step2": "Collect farm-level evidence",
+          "step3": "Prepare diligence documentation"
+        },
+        "cta": "Discuss pilot access",
+        "secondaryCta": "View Agri-Climate module"
+      },
+      "importersExporters": {
+        "workflowSteps": {
+          "step1": "Scope CN codes and trade flows",
+          "step2": "Coordinate supplier evidence intake",
+          "step3": "Monitor reporting-cycle readiness"
+        },
+        "cta": "Book a Demo",
+        "secondaryCta": "Explore CBAM Calculation Engine"
+      }
+    }
+  },
+  "resourcesPage": {
+    "heroChipsAriaLabel": "Resource hub highlights",
+    "heroChips": {
+      "item1": "Available checklists",
+      "item2": "Honest resource status",
+      "item3": "Practical workflow value"
+    },
+    "fields": {
+      "valuePreview": "What you get"
+    },
+    "sections": {
+      "available": {
+        "label": "Available",
+        "title": "Request now",
+        "description": "Practical checklists and templates you can request today to structure CBAM readiness and supplier outreach"
+      },
+      "inPreparation": {
+        "label": "In preparation",
+        "title": "Guides in development",
+        "description": "Structured guides being prepared — subscribe to receive them when released"
+      },
+      "roadmap": {
+        "label": "Roadmap",
+        "title": "Regulation briefings",
+        "description": "Roadmap briefings for PPWR and EUDR workflows as Arvenza extends its resource library"
+      }
+    },
+    "resources": {
+      "cbamChecklist": {
+        "format": "Checklist",
+        "valuePreview": {
+          "item1": "CN-code and product scope mapping",
+          "item2": "Supplier data and evidence gap checklist"
+        }
+      },
+      "supplierTemplate": {
+        "format": "Template",
+        "valuePreview": {
+          "item1": "Structured supplier outreach fields",
+          "item2": "Installation-level data request format"
+        }
+      },
+      "embeddedEmissionsGuide": {
+        "format": "Guide",
+        "valuePreview": {
+          "item1": "Direct and indirect emissions explainer",
+          "item2": "Methodology traceability expectations"
+        }
+      },
+      "cbamCnScope": {
+        "format": "Guide",
+        "valuePreview": {
+          "item1": "CN-code screening workflow",
+          "item2": "Product scope check structure"
+        }
+      },
+      "ppwrPackaging": {
+        "format": "Briefing",
+        "valuePreview": {
+          "item1": "Packaging BOM preparation overview",
+          "item2": "Supplier evidence structuring logic"
+        }
+      },
+      "eudrBrief": {
+        "format": "Briefing",
+        "valuePreview": {
+          "item1": "Geolocation evidence preparation",
+          "item2": "Due diligence documentation structure"
+        }
+      }
+    },
+    "leadMagnet": {
+      "highlights": {
+        "item1": "Map product scope before the next reporting cycle",
+        "item2": "Identify supplier data and evidence gaps early"
+      }
+    },
+    "subscribe": {
+      "contactPrefix": "Prefer email? Contact",
+      "emailPlaceholder": "you@company.com"
+    }
+  }
+}

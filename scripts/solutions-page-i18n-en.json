@@ -1,0 +1,180 @@
+{
+  "heroChipsAriaLabel": "Solution highlights",
+  "heroChips": {
+    "item1": "Use-case workflows",
+    "item2": "Ready CBAM solution",
+    "item3": "Honest maturity model"
+  },
+  "workflowRailAriaLabel": "Solution workflow steps",
+  "fields": {
+    "problem": "The problem",
+    "approach": "Arvenza approach",
+    "capability": "Relevant capability",
+    "features": "Workflow focus",
+    "output": "Workflow output",
+    "targetTeam": "Target team"
+  },
+  "sections": {
+    "ready": {
+      "label": "Ready",
+      "title": "Ready solution workflow",
+      "description": "CBAM Compliance Workflows is the ready operational use case — powered by CBAM Calculation Engine for supplier data through declaration-ready evidence"
+    },
+    "pilot": {
+      "label": "Pilot",
+      "title": "Pilot solution workflows",
+      "description": "Extended use cases in structured pilot access — operational monitoring, packaging compliance and agricultural climate data workflows without implying full product availability"
+    },
+    "roadmap": {
+      "label": "Coming Soon",
+      "title": "Roadmap solution workflows",
+      "description": "Planned use cases that extend the same supplier evidence and documentation logic into EUDR and Digital Product Passport readiness"
+    }
+  },
+  "solutions": {
+    "cbamWorkflows": {
+      "title": "CBAM Compliance Workflows",
+      "poweredBy": "Powered by CBAM Calculation Engine",
+      "problem": "Quarterly CBAM preparation requires supplier-level embedded emissions data, installation information, methodology traceability and evidence quality checks that many teams still manage through fragmented spreadsheets and email threads",
+      "approach": "CBAM Calculation Engine structures supplier data collection, embedded emissions calculation, methodology notes and declaration-ready evidence into one controlled workflow",
+      "capability": "CBAM Calculation Engine",
+      "workflowSteps": {
+        "step1": "Scope products",
+        "step2": "Collect supplier data",
+        "step3": "Calculate emissions",
+        "step4": "Package evidence"
+      },
+      "features": {
+        "item1": "Supplier data intake",
+        "item2": "Methodology traceability",
+        "item3": "Declaration-ready outputs"
+      },
+      "output": "Audit-ready CBAM evidence pack per reporting cycle",
+      "targetTeam": "Export compliance, sustainability and procurement teams preparing quarterly CBAM declarations",
+      "cta": "Explore CBAM Calculation Engine",
+      "secondaryCta": "Book a Demo"
+    },
+    "cbamConsole": {
+      "title": "CBAM Compliance Console",
+      "problem": "Once supplier data collection begins, teams need a clear operational view of evidence status, follow-up actions, calculation readiness and reporting-cycle progress",
+      "approach": "The CBAM Compliance Console pilot is positioned as a monitoring and coordination layer for supplier evidence, calculation readiness and reporting preparation across CBAM cycles",
+      "capability": "CBAM Compliance Console",
+      "workflowSteps": {
+        "step1": "Monitor intake",
+        "step2": "Track evidence gaps",
+        "step3": "Coordinate follow-up",
+        "step4": "Review cycle readiness"
+      },
+      "features": {
+        "item1": "Evidence status view",
+        "item2": "Follow-up queue",
+        "item3": "Cycle progress tracking"
+      },
+      "output": "Operational CBAM readiness dashboard per reporting cycle",
+      "targetTeam": "CBAM program leads and compliance operations coordinating multi-supplier preparation",
+      "cta": "Discuss pilot access",
+      "secondaryCta": "View product module"
+    },
+    "ppwr": {
+      "title": "PPWR / Packaging Compliance",
+      "problem": "Packaging teams need to organize material-level BOM data, supplier documentation, recycled-content evidence and product-family logic before PPWR requirements become operationally binding",
+      "approach": "The PPWR / Packaging Compliance pilot structures packaging BOMs, supplier evidence and packaging data preparation around a repeatable evidence workflow",
+      "capability": "PPWR / Packaging Compliance",
+      "workflowSteps": {
+        "step1": "Map packaging scope",
+        "step2": "Collect supplier BOM data",
+        "step3": "Structure evidence links",
+        "step4": "Prepare review outputs"
+      },
+      "features": {
+        "item1": "Packaging BOM structure",
+        "item2": "Recycled-content evidence",
+        "item3": "Supplier documentation"
+      },
+      "output": "Structured packaging compliance data pack per product family",
+      "targetTeam": "Packaging, sustainability and procurement teams preparing PPWR-aligned documentation",
+      "cta": "Discuss pilot access",
+      "secondaryCta": "View product module"
+    },
+    "agriClimate": {
+      "title": "Agri-Climate Data Workflows",
+      "problem": "Agricultural and commodity-linked supply chains increasingly require producer-level records, geolocation evidence, farm-level data and traceability documentation",
+      "approach": "Agri-Climate Platform is positioned as a pilot product area for structuring agricultural climate data, farm-level records and evidence preparation workflows",
+      "capability": "Agri-Climate Platform",
+      "workflowSteps": {
+        "step1": "Map producer network",
+        "step2": "Collect farm-level data",
+        "step3": "Validate evidence quality",
+        "step4": "Prepare climate records"
+      },
+      "features": {
+        "item1": "Farm-level records",
+        "item2": "Geolocation evidence prep",
+        "item3": "Producer documentation"
+      },
+      "output": "Structured agricultural climate evidence per commodity scope",
+      "targetTeam": "Agricultural exporters, commodity traders and food supply chain compliance teams",
+      "cta": "Discuss pilot access",
+      "secondaryCta": "View product module"
+    },
+    "eudr": {
+      "title": "EUDR Due Diligence Workflows",
+      "problem": "Commodity-linked supply chains need to prepare for geolocation data, supplier declarations, risk classification and traceability documentation",
+      "approach": "The EUDR Due Diligence roadmap module is planned to build on the same supplier evidence and documentation logic used across the broader platform",
+      "capability": "EUDR Due Diligence",
+      "workflowSteps": {
+        "step1": "Scope commodities",
+        "step2": "Collect geolocation data",
+        "step3": "Structure declarations",
+        "step4": "Prepare diligence files"
+      },
+      "features": {
+        "item1": "Geolocation evidence",
+        "item2": "Supplier declarations",
+        "item3": "Traceability documentation"
+      },
+      "output": "Due diligence documentation pack per commodity workflow",
+      "targetTeam": "Commodity importers, brand supply chain teams and compliance functions",
+      "cta": "Follow roadmap",
+      "secondaryCta": "View roadmap module"
+    },
+    "dpp": {
+      "title": "Digital Product Passport Readiness",
+      "problem": "Manufacturers need product-level data structures, evidence layers, component documentation and traceability logic before DPP requirements become a practical data challenge",
+      "approach": "The Digital Product Passport roadmap module is planned around product data structures, supplier evidence layers and documentation traceability",
+      "capability": "Digital Product Passport",
+      "workflowSteps": {
+        "step1": "Define product scope",
+        "step2": "Collect component evidence",
+        "step3": "Structure passport data",
+        "step4": "Prepare readiness outputs"
+      },
+      "features": {
+        "item1": "Product data structures",
+        "item2": "Component documentation",
+        "item3": "Evidence traceability"
+      },
+      "output": "Product passport readiness data pack per SKU family",
+      "targetTeam": "Manufacturers, product compliance teams and sustainability data functions",
+      "cta": "Follow roadmap",
+      "secondaryCta": "View roadmap module"
+    }
+  },
+  "maturity": {
+    "title": "Solution maturity roadmap",
+    "description": "Arvenza starts with a ready CBAM compliance workflow, then extends the same evidence discipline into pilot and roadmap use cases",
+    "items": {
+      "cbamWorkflows": "CBAM Compliance Workflows",
+      "cbamConsole": "CBAM Compliance Console",
+      "ppwr": "PPWR / Packaging Compliance",
+      "agriClimate": "Agri-Climate Data Workflows",
+      "eudr": "EUDR Due Diligence Workflows",
+      "dpp": "Digital Product Passport Readiness"
+    }
+  },
+  "cta": {
+    "title": "Discuss your compliance workflow with our team",
+    "primary": "Book a Demo",
+    "secondary": "Explore CBAM Calculation Engine"
+  }
+}

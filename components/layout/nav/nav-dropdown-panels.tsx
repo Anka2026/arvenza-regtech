@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { NavStatusBadge, type NavStatusKey } from "@/components/layout/nav/nav-status-badge";
 import { cn } from "@/lib/utils";
-import { platformModuleHref } from "@/lib/platform-module-anchors";
+import { platformModuleHref } from "@/lib/platform-modules";
 
 const PLATFORM_MODULE_KEYS = [
   { key: "cbamComplianceConsole", status: "pilot" as const },
@@ -19,13 +19,13 @@ const PLATFORM_MODULE_KEYS = [
 
 const SOLUTION_KEYS = [
   { key: "cbam", status: "ready" as const, href: "/platform/cbam" as const },
-  { key: "cbamComplianceConsole", status: "pilot" as const, href: "/solutions" as const },
-  { key: "ppwr", status: "pilot" as const, href: "/solutions" as const },
-  { key: "agriClimate", status: "pilot" as const, href: "/solutions" as const },
-  { key: "eudr", status: "comingSoon" as const, href: "/solutions" as const },
-  { key: "dpp", status: "comingSoon" as const, href: "/solutions" as const },
-  { key: "supplierEvidence", status: "comingSoon" as const, href: "/solutions" as const },
-  { key: "esgReporting", status: "comingSoon" as const, href: "/solutions" as const },
+  { key: "cbamComplianceConsole", status: "pilot" as const, href: "/platform/cbam-console" as const },
+  { key: "ppwr", status: "pilot" as const, href: "/platform/ppwr" as const },
+  { key: "agriClimate", status: "pilot" as const, href: "/platform/agri-climate" as const },
+  { key: "eudr", status: "comingSoon" as const, href: "/platform/eudr" as const },
+  { key: "dpp", status: "comingSoon" as const, href: "/platform/digital-product-passport" as const },
+  { key: "supplierEvidence", status: "comingSoon" as const, href: "/platform/supplier-evidence" as const },
+  { key: "esgReporting", status: "comingSoon" as const, href: "/platform/esg-workspace" as const },
 ] as const;
 
 const INDUSTRY_KEYS = [

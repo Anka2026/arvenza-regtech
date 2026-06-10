@@ -64,7 +64,7 @@ export function CbamFeatureBlock({
         : { type: "evidencePack" });
 
   return (
-    <FullBleedSection id={id} ariaLabelledby={`${id}-heading`} className={sectionClass[variant]}>
+    <FullBleedSection id={id} ariaLabelledby={`${id}-heading`} className={cn(sectionClass[variant], "home-section-compact")}>
       <OrbitWaveMotif variant={motifVariant[variant]} orbitAlign={imageFirst ? "right" : "left"} />
       {dark ? (
         <div className="pointer-events-none absolute inset-0 dark-section-glow" aria-hidden="true" />
@@ -115,6 +115,7 @@ export function CbamFeatureBlock({
           </FadeIn>
 
           <FadeIn delay={0.06} className="relative min-w-0 w-full max-w-full">
+            <div className="home-feature-visual-panel">
             {resolvedVisual.type === "screenshot" ? (
               <>
                 <div
@@ -134,6 +135,7 @@ export function CbamFeatureBlock({
             ) : (
               <EvidencePackPanel namespace="home.evidence" variant={dark ? "dark" : "light"} />
             )}
+            </div>
           </FadeIn>
         </div>
       </PageContainer>

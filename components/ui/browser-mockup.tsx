@@ -32,7 +32,7 @@ const sizeClasses: Record<NonNullable<BrowserMockupProps["size"]>, string> = {
   showcase:
     "aspect-[16/10] min-h-[150px] max-h-[min(42vh,300px)] sm:min-h-[300px] sm:max-h-[min(50vh,360px)] lg:min-h-[460px] xl:min-h-[540px] 2xl:min-h-[560px] lg:max-h-none",
   feature:
-    "aspect-[16/9] min-h-[130px] max-h-[min(36vh,220px)] sm:min-h-[220px] sm:max-h-[min(40vh,240px)] lg:min-h-[300px] lg:max-h-[340px]",
+    "aspect-[16/9] min-h-[120px] max-h-[min(34vh,200px)] sm:min-h-[220px] sm:max-h-[min(40vh,240px)] lg:min-h-[300px] lg:max-h-[340px]",
   product:
     "aspect-[4/3] min-h-[150px] max-h-[min(38vh,260px)] sm:min-h-[280px] sm:max-h-[min(46vh,320px)] lg:min-h-[420px] xl:min-h-[460px] lg:max-h-none",
 };
@@ -59,7 +59,7 @@ export function BrowserMockup({
         className
       )}
     >
-      <div className="flex items-center gap-2 border-b border-white/10 bg-[#0f1a32] px-3 py-2.5 sm:gap-3 sm:px-5 sm:py-3.5">
+      <div className="premium-browser-chrome flex items-center gap-2 border-b border-white/10 px-3 py-2.5 sm:gap-3 sm:px-5 sm:py-3.5">
         <div className="flex shrink-0 gap-2" aria-hidden="true">
           <span className="h-3 w-3 rounded-full bg-[#ff5f57]/90" />
           <span className="h-3 w-3 rounded-full bg-[#febc2e]/90" />

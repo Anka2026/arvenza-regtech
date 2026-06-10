@@ -8,6 +8,7 @@ import { sectionHeadSpacing } from "@/components/home/home-section-shell";
 import { SectionHeading } from "@/components/home/section-heading";
 import { FadeIn } from "@/components/ui/fade-in";
 import { MODULE_KEYS, type ModuleKey } from "@/lib/assets";
+import { legacyModuleHref } from "@/lib/platform-modules";
 import {
   Calculator,
   LayoutDashboard,
@@ -31,10 +32,8 @@ const moduleIcons: Record<ModuleKey, typeof Calculator> = {
   agri: Sprout,
 };
 
-const CBAM_MODULE_KEYS = new Set(["cbamCalc", "cbamConsole"]);
-
-function moduleHref(key: string): "/platform/cbam" | "/platform" {
-  return CBAM_MODULE_KEYS.has(key) ? "/platform/cbam" : "/platform";
+function moduleHref(key: ModuleKey) {
+  return legacyModuleHref(key);
 }
 
 export function ModuleCardsSection() {

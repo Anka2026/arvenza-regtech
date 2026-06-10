@@ -1,0 +1,307 @@
+{
+  "platformModules": {
+    "shared": {
+      "capabilitiesEyebrow": "Capabilities",
+      "workflowEyebrow": "Workflow",
+      "useCasesEyebrow": "Use cases",
+      "backToPlatform": "Back to Platform",
+      "pilotNotice": "This module is in structured pilot access — previews reflect product direction, not full general availability",
+      "comingSoonNotice": "This module is on the product roadmap — previews reflect planned capability direction, not live product availability",
+      "discussPilot": "Discuss pilot access",
+      "followRoadmap": "Follow roadmap",
+      "requestDemo": "Request a Demo",
+      "explorePlatform": "Explore Platform"
+    },
+    "cbamComplianceConsole": {
+      "eyebrow": "CBAM Compliance Console",
+      "title": "Operational coordination for CBAM evidence and reporting readiness",
+      "description": "A pilot coordination layer for monitoring supplier evidence status, calculation readiness, follow-up actions and reporting-cycle progress across CBAM workflows.",
+      "chipsAriaLabel": "Console highlights",
+      "chips": {
+        "item1": "Evidence status monitoring",
+        "item2": "Reporting-cycle coordination",
+        "item3": "Supplier follow-up visibility"
+      },
+      "screenshotAlt": "CBAM Compliance Console dashboard",
+      "positioning": {
+        "title": "From calculation outputs to operational CBAM readiness",
+        "description": "Once supplier data collection and calculation work begins, teams need a structured view of evidence quality, open follow-ups and reporting-cycle readiness — without reverting to spreadsheet tracking."
+      },
+      "capabilities": {
+        "title": "What the console is designed to coordinate",
+        "description": "Pilot capability focused on operational visibility across CBAM preparation — not a replacement for the ready Calculation Engine.",
+        "items": {
+          "item1": { "title": "Evidence status overview", "description": "Track supplier submissions, quality marking and missing evidence across reporting cycles." },
+          "item2": { "title": "Calculation readiness signals", "description": "Surface which product lines, installations or suppliers are ready for calculation review." },
+          "item3": { "title": "Follow-up action queue", "description": "Organize supplier outreach, data gaps and internal review tasks in one operational view." },
+          "item4": { "title": "Reporting-cycle progress", "description": "Monitor preparation milestones from data intake through declaration-ready evidence packaging." }
+        }
+      },
+      "workflow": {
+        "title": "How teams use the console in CBAM cycles",
+        "description": "Structured coordination across recurring quarterly preparation — connected to the Calculation Engine workflow.",
+        "steps": {
+          "step1": { "title": "Scope reporting cycle", "description": "Define product scope, supplier list and evidence requirements for the active CBAM period." },
+          "step2": { "title": "Monitor evidence intake", "description": "Track supplier submissions, quality flags and outstanding data requests." },
+          "step3": { "title": "Review calculation readiness", "description": "Identify which records are ready for embedded emissions calculation and methodology review." },
+          "step4": { "title": "Prepare declaration handoff", "description": "Coordinate final evidence packaging and internal sign-off before submission preparation." }
+        }
+      },
+      "useCases": {
+        "title": "Who this pilot is for",
+        "items": {
+          "item1": { "title": "CBAM program leads", "description": "Teams coordinating supplier outreach and quarterly reporting preparation across multiple product lines." },
+          "item2": { "title": "Compliance operations", "description": "Functions needing visibility into evidence status without manual spreadsheet consolidation." },
+          "item3": { "title": "Export compliance teams", "description": "Organizations scaling CBAM preparation beyond a single calculation workflow." }
+        }
+      },
+      "cta": { "title": "Discuss CBAM Compliance Console pilot access with our team" }
+    },
+    "ppwr": {
+      "eyebrow": "PPWR / Packaging Compliance",
+      "title": "Structure packaging data and supplier evidence for PPWR readiness",
+      "description": "A pilot module for organizing packaging BOMs, supplier documentation, recycled-content evidence and product-family logic ahead of operational PPWR requirements.",
+      "chipsAriaLabel": "PPWR module highlights",
+      "chips": { "item1": "Packaging BOM structure", "item2": "Supplier documentation", "item3": "Recycled-content evidence" },
+      "screenshotAlt": "PPWR packaging compliance dashboard",
+      "positioning": {
+        "title": "Packaging compliance as a data and evidence problem",
+        "description": "PPWR preparation requires material-level packaging data, supplier evidence and product-family traceability — structured before requirements become operationally binding."
+      },
+      "capabilities": {
+        "title": "Pilot capability areas",
+        "description": "Focused on packaging data structuring and evidence preparation — not full regulatory certification.",
+        "items": {
+          "item1": { "title": "Packaging BOM organization", "description": "Structure material compositions, component references and product-family packaging logic." },
+          "item2": { "title": "Supplier evidence intake", "description": "Collect packaging-related supplier declarations and supporting documentation." },
+          "item3": { "title": "Recycled-content tracking", "description": "Organize recycled-content evidence and supplier attestations by material and SKU." },
+          "item4": { "title": "Documentation traceability", "description": "Link packaging data records to evidence files and review status." }
+        }
+      },
+      "workflow": {
+        "title": "PPWR preparation workflow",
+        "description": "Repeatable packaging data and evidence structuring aligned with the platform operating model.",
+        "steps": {
+          "step1": { "title": "Map product packaging scope", "description": "Identify SKUs, packaging components and supplier sources requiring documentation." },
+          "step2": { "title": "Collect supplier packaging data", "description": "Request material compositions, recycled-content claims and supporting evidence." },
+          "step3": { "title": "Structure BOM and evidence links", "description": "Organize packaging BOM records connected to supplier documentation." },
+          "step4": { "title": "Prepare review-ready outputs", "description": "Package structured packaging data for internal review and regulatory readiness planning." }
+        }
+      },
+      "useCases": {
+        "title": "Who this pilot is for",
+        "items": {
+          "item1": { "title": "FMCG and packaging teams", "description": "Organizations preparing packaging data across large product portfolios." },
+          "item2": { "title": "Brand owners with supplier networks", "description": "Teams coordinating packaging evidence from multiple material suppliers." },
+          "item3": { "title": "Sustainability and compliance functions", "description": "Groups building PPWR readiness before operational reporting cycles." }
+        }
+      },
+      "cta": { "title": "Discuss PPWR packaging compliance pilot access" }
+    },
+    "agriClimate": {
+      "eyebrow": "Agri-Climate Platform",
+      "title": "Structure agricultural climate data and farm-level evidence",
+      "description": "A pilot product area for organizing agricultural climate data, farm-level records, producer documentation and evidence preparation in commodity-linked supply chains.",
+      "chipsAriaLabel": "Agri-Climate highlights",
+      "chips": { "item1": "Farm-level records", "item2": "Producer documentation", "item3": "Climate data structuring" },
+      "screenshotAlt": "Agri-Climate Platform dashboard",
+      "positioning": {
+        "title": "Agricultural supply chains need structured climate evidence",
+        "description": "Commodity-linked supply chains increasingly require producer-level records, geolocation references and farm-level data organized before regulatory and buyer expectations intensify."
+      },
+      "capabilities": {
+        "title": "Pilot capability areas",
+        "description": "Focused on agricultural data structuring and evidence preparation workflows.",
+        "items": {
+          "item1": { "title": "Farm and producer records", "description": "Organize producer references, farm-level data and supplier documentation." },
+          "item2": { "title": "Climate data intake", "description": "Structure agricultural climate inputs and supporting evidence from field to supply chain." },
+          "item3": { "title": "Geolocation evidence prep", "description": "Prepare location-linked documentation aligned with traceability requirements." },
+          "item4": { "title": "Evidence quality marking", "description": "Mark data completeness and follow-up needs across producer networks." }
+        }
+      },
+      "workflow": {
+        "title": "Agri-climate evidence workflow",
+        "description": "Disciplined data structuring for agricultural supply chain compliance preparation.",
+        "steps": {
+          "step1": { "title": "Define supply chain scope", "description": "Map commodities, producers and data requirements across the network." },
+          "step2": { "title": "Collect farm-level data", "description": "Intake producer records, climate inputs and supporting documentation." },
+          "step3": { "title": "Structure and validate evidence", "description": "Organize records with quality marking and gap identification." },
+          "step4": { "title": "Prepare reporting-ready outputs", "description": "Package structured agricultural climate evidence for review and downstream use." }
+        }
+      },
+      "useCases": {
+        "title": "Who this pilot is for",
+        "items": {
+          "item1": { "title": "Agricultural exporters", "description": "Organizations preparing farm-level documentation for EU-linked supply chains." },
+          "item2": { "title": "Commodity traders", "description": "Teams coordinating producer evidence across distributed supplier networks." },
+          "item3": { "title": "Food and agri compliance teams", "description": "Functions building structured climate data workflows ahead of regulatory expansion." }
+        }
+      },
+      "cta": { "title": "Discuss Agri-Climate Platform pilot access" }
+    },
+    "eudr": {
+      "eyebrow": "EUDR Due Diligence",
+      "title": "Planned due diligence workflows for deforestation-linked supply chains",
+      "description": "A roadmap module for geolocation evidence, supplier declarations, risk classification and traceability documentation in commodity-linked supply chains.",
+      "chipsAriaLabel": "EUDR roadmap highlights",
+      "chips": { "item1": "Geolocation evidence", "item2": "Due diligence documentation", "item3": "Supplier declarations" },
+      "screenshotAlt": "EUDR due diligence dashboard preview",
+      "positioning": {
+        "title": "EUDR requires structured due diligence evidence",
+        "description": "Commodity-linked supply chains need repeatable workflows for geolocation data, supplier declarations and traceability documentation — built on the same supplier evidence model as CBAM."
+      },
+      "capabilities": {
+        "title": "Planned capability direction",
+        "description": "Roadmap module — previews reflect planned product direction.",
+        "items": {
+          "item1": { "title": "Geolocation evidence management", "description": "Organize plot-level location data and supporting documentation from suppliers." },
+          "item2": { "title": "Supplier declaration intake", "description": "Structured collection of supplier attestations and due diligence statements." },
+          "item3": { "title": "Risk classification support", "description": "Prepare documentation layers for risk assessment and review workflows." },
+          "item4": { "title": "Traceability documentation", "description": "Link commodity flows to evidence files across the supply chain." }
+        }
+      },
+      "workflow": {
+        "title": "Planned due diligence workflow",
+        "description": "Structured evidence preparation from supplier intake through documentation review.",
+        "steps": {
+          "step1": { "title": "Scope commodities and suppliers", "description": "Define EUDR-relevant products and supplier networks requiring documentation." },
+          "step2": { "title": "Collect geolocation and declarations", "description": "Intake location evidence and supplier due diligence statements." },
+          "step3": { "title": "Structure risk and traceability records", "description": "Organize evidence with quality marking and gap tracking." },
+          "step4": { "title": "Prepare review-ready documentation", "description": "Package due diligence evidence for internal review and regulatory preparation." }
+        }
+      },
+      "useCases": {
+        "title": "Intended use cases",
+        "items": {
+          "item1": { "title": "Commodity importers", "description": "Organizations preparing EUDR due diligence across timber, cocoa, coffee and other commodities." },
+          "item2": { "title": "Brand supply chain teams", "description": "Teams coordinating geolocation evidence from multi-tier supplier networks." },
+          "item3": { "title": "Compliance and legal functions", "description": "Groups building deforestation due diligence documentation workflows." }
+        }
+      },
+      "cta": { "title": "Follow the EUDR module roadmap and request updates" }
+    },
+    "dpp": {
+      "eyebrow": "Digital Product Passport",
+      "title": "Planned product data structures for Digital Product Passport readiness",
+      "description": "A roadmap module for product-level data structures, supplier evidence layers, component documentation and traceability logic ahead of DPP requirements.",
+      "chipsAriaLabel": "DPP roadmap highlights",
+      "chips": { "item1": "Product data structures", "item2": "Component documentation", "item3": "Evidence traceability" },
+      "screenshotAlt": "Digital Product Passport dashboard preview",
+      "positioning": {
+        "title": "DPP starts with structured product and supplier data",
+        "description": "Manufacturers need product-level data models, component references and supplier evidence layers organized before Digital Product Passport requirements become a practical operational challenge."
+      },
+      "capabilities": {
+        "title": "Planned capability direction",
+        "description": "Roadmap module — previews reflect planned product direction.",
+        "items": {
+          "item1": { "title": "Product data modeling", "description": "Structure product references, component hierarchies and material attributes." },
+          "item2": { "title": "Supplier evidence layers", "description": "Connect component-level supplier documentation to product records." },
+          "item3": { "title": "Documentation traceability", "description": "Link evidence files to product and component references with review status." },
+          "item4": { "title": "Passport readiness preparation", "description": "Organize data outputs aligned with emerging DPP data structure expectations." }
+        }
+      },
+      "workflow": {
+        "title": "Planned DPP preparation workflow",
+        "description": "From product scope definition through evidence-linked documentation.",
+        "steps": {
+          "step1": { "title": "Define product scope", "description": "Identify products, components and supplier sources requiring documentation." },
+          "step2": { "title": "Collect component evidence", "description": "Intake supplier documentation and material data for product structures." },
+          "step3": { "title": "Structure passport data layers", "description": "Organize product records connected to evidence and review status." },
+          "step4": { "title": "Prepare readiness outputs", "description": "Package structured product data for internal review and DPP planning." }
+        }
+      },
+      "useCases": {
+        "title": "Intended use cases",
+        "items": {
+          "item1": { "title": "Manufacturers", "description": "Product teams preparing component-level documentation for passport readiness." },
+          "item2": { "title": "Electronics and automotive suppliers", "description": "Organizations managing complex BOMs and multi-tier supplier evidence." },
+          "item3": { "title": "Sustainability data teams", "description": "Functions coordinating product-level sustainability data structures." }
+        }
+      },
+      "cta": { "title": "Follow the Digital Product Passport roadmap" }
+    },
+    "supplierEvidence": {
+      "eyebrow": "Supplier Evidence Workflow",
+      "title": "Planned shared supplier communication and evidence intake",
+      "description": "A roadmap module for supplier outreach, structured data requests, evidence upload, quality marking and follow-up workflows shared across platform modules.",
+      "chipsAriaLabel": "Supplier workflow highlights",
+      "chips": { "item1": "Structured data requests", "item2": "Evidence upload", "item3": "Follow-up tracking" },
+      "screenshotAlt": "Supplier evidence workflow dashboard preview",
+      "positioning": {
+        "title": "Supplier evidence is the shared foundation",
+        "description": "Every regulatory workflow in Arvenza depends on disciplined supplier communication, structured data intake and evidence quality marking — this module extends that model as a shared platform layer."
+      },
+      "capabilities": {
+        "title": "Planned capability direction",
+        "description": "Roadmap module — previews reflect planned product direction.",
+        "items": {
+          "item1": { "title": "Supplier outreach templates", "description": "Structured request formats for installation-level data and supporting evidence." },
+          "item2": { "title": "Evidence upload and intake", "description": "Organize supplier submissions with file references and metadata." },
+          "item3": { "title": "Quality marking and gaps", "description": "Flag incomplete submissions and trigger follow-up actions." },
+          "item4": { "title": "Cross-module evidence reuse", "description": "Connect supplier records to CBAM, PPWR, EUDR and other module workflows." }
+        }
+      },
+      "workflow": {
+        "title": "Planned supplier evidence workflow",
+        "description": "Repeatable supplier intake from outreach through evidence validation.",
+        "steps": {
+          "step1": { "title": "Define data requirements", "description": "Specify fields, evidence types and deadlines per supplier and product scope." },
+          "step2": { "title": "Send structured requests", "description": "Issue supplier outreach with clear data and documentation expectations." },
+          "step3": { "title": "Review and mark quality", "description": "Validate submissions, flag gaps and schedule follow-ups." },
+          "step4": { "title": "Feed downstream modules", "description": "Route validated evidence into calculation, reporting and compliance workflows." }
+        }
+      },
+      "useCases": {
+        "title": "Intended use cases",
+        "items": {
+          "item1": { "title": "Multi-regulation exporters", "description": "Teams collecting supplier data once and reusing evidence across CBAM and roadmap modules." },
+          "item2": { "title": "Procurement and supplier quality", "description": "Functions coordinating supplier documentation at scale." },
+          "item3": { "title": "Compliance operations", "description": "Groups replacing email-and-spreadsheet supplier tracking with structured workflows." }
+        }
+      },
+      "cta": { "title": "Follow the Supplier Evidence Workflow roadmap" }
+    },
+    "esgReporting": {
+      "eyebrow": "ESG Evidence & Reporting Workspace",
+      "title": "Planned ESG evidence coordination and reporting preparation",
+      "description": "A roadmap module for ESG evidence coordination, reporting inputs, documentation traceability and review-ready workspace outputs.",
+      "chipsAriaLabel": "ESG workspace highlights",
+      "chips": { "item1": "Evidence coordination", "item2": "Reporting inputs", "item3": "Documentation traceability" },
+      "screenshotAlt": "ESG evidence and reporting workspace preview",
+      "positioning": {
+        "title": "ESG reporting needs the same evidence discipline",
+        "description": "ESG and sustainability reporting functions face the same supplier evidence, data quality and documentation traceability challenges as regulatory compliance teams — structured in one workspace model."
+      },
+      "capabilities": {
+        "title": "Planned capability direction",
+        "description": "Roadmap module — previews reflect planned product direction.",
+        "items": {
+          "item1": { "title": "Evidence coordination", "description": "Organize ESG-related supplier and internal evidence in structured workflows." },
+          "item2": { "title": "Reporting input preparation", "description": "Structure data inputs aligned with reporting frameworks and internal review cycles." },
+          "item3": { "title": "Documentation traceability", "description": "Link evidence files to reporting line items with review status." },
+          "item4": { "title": "Review-ready workspace outputs", "description": "Package coordinated evidence for audit and disclosure preparation." }
+        }
+      },
+      "workflow": {
+        "title": "Planned ESG reporting workflow",
+        "description": "From evidence collection through reporting input preparation.",
+        "steps": {
+          "step1": { "title": "Define reporting scope", "description": "Map disclosure requirements, data owners and evidence needs." },
+          "step2": { "title": "Collect and structure evidence", "description": "Intake supplier and internal documentation with quality marking." },
+          "step3": { "title": "Prepare reporting inputs", "description": "Organize validated data for framework-aligned reporting preparation." },
+          "step4": { "title": "Review and package outputs", "description": "Coordinate internal sign-off and audit-ready evidence packaging." }
+        }
+      },
+      "useCases": {
+        "title": "Intended use cases",
+        "items": {
+          "item1": { "title": "ESG and sustainability teams", "description": "Functions coordinating disclosure evidence across business units." },
+          "item2": { "title": "CSRD preparation teams", "description": "Organizations structuring evidence ahead of reporting obligations." },
+          "item3": { "title": "Group compliance functions", "description": "Teams connecting regulatory and voluntary sustainability reporting workflows." }
+        }
+      },
+      "cta": { "title": "Follow the ESG Evidence & Reporting Workspace roadmap" }
+    }
+  }
+}

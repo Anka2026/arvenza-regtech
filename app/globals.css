@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./premium-system.css";
+
 /* Arvenza RegTech — approved premium RegTech visual system */
 
 @layer base {
@@ -20,9 +22,9 @@
     --input: 220 25% 88%;
     --ring: 262 83% 58%;
     --radius: 0.625rem;
-    --section-y: 4rem;
-    --section-y-md: 4.5rem;
-    --section-y-lg: 5rem;
+    --section-y: 3.5rem;
+    --section-y-md: 4rem;
+    --section-y-lg: 4.5rem;
     --content-max: 1360px;
   }
 }
@@ -1141,6 +1143,16 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     white-space: nowrap;
+    max-width: 100%;
+  }
+
+  @media (max-width: 639px) {
+    .nav-badge {
+      flex-shrink: 1;
+      white-space: normal;
+      line-height: 1.25;
+      hyphens: auto;
+    }
   }
 
   .nav-badge-available {
@@ -2395,6 +2407,221 @@
     font-weight: 700;
     letter-spacing: 0.08em;
     color: #94a3b8;
+  }
+
+  .platform-arch-diagram-panel {
+    min-width: 0;
+  }
+
+  .platform-arch-diagram-kicker {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #7c3aed;
+  }
+
+  .platform-arch-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-width: 0;
+  }
+
+  .platform-arch-flow-item {
+    min-width: 0;
+  }
+
+  .platform-arch-node {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    border-radius: 0.875rem;
+    border: 1px solid rgba(124, 58, 237, 0.16);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 255, 0.95) 100%);
+    padding: 0.75rem 0.875rem;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+  }
+
+  .platform-arch-node-icon {
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+    shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background: rgba(124, 58, 237, 0.1);
+    border: 1px solid rgba(124, 58, 237, 0.18);
+  }
+
+  .platform-arch-node-title {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #071225;
+  }
+
+  .platform-arch-node-desc {
+    margin-top: 0.2rem;
+    font-size: 0.6875rem;
+    line-height: 1.45;
+    color: #64748b;
+  }
+
+  .platform-arch-node-index {
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    shrink: 0;
+  }
+
+  .platform-arch-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.2rem 0;
+  }
+
+  .platform-arch-connector-line {
+    width: 2px;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background: linear-gradient(180deg, rgba(124, 58, 237, 0.35), rgba(37, 99, 235, 0.25));
+  }
+
+  .platform-flow-chip {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    border: 1px solid rgba(124, 58, 237, 0.16);
+    background: rgba(255, 255, 255, 0.92);
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #475569;
+    line-height: 1.35;
+  }
+
+  .platform-architecture-support {
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+  }
+
+  .solutions-workflow-diagram {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .solutions-workflow-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    border-radius: 1.25rem;
+    border: 1px solid rgba(124, 58, 237, 0.16);
+    background: rgba(255, 255, 255, 0.92);
+    padding: 0.875rem;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+  }
+
+  @media (min-width: 640px) {
+    .solutions-workflow-inner {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.25rem 0.125rem;
+      padding: 1rem;
+    }
+  }
+
+  .solutions-workflow-step-wrap {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  @media (max-width: 639px) {
+    .solutions-workflow-step-wrap {
+      width: 100%;
+    }
+
+    .solutions-workflow-connector {
+      padding-left: 1.125rem;
+    }
+  }
+
+  .solutions-workflow-step {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.625rem;
+    border: 1px solid rgba(221, 229, 242, 0.95);
+    background: rgba(248, 250, 255, 0.95);
+    padding: 0.5rem 0.625rem;
+  }
+
+  .solutions-workflow-step-final {
+    border-color: rgba(124, 58, 237, 0.22);
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.06) 0%, rgba(255, 255, 255, 0.98) 100%);
+  }
+
+  .solutions-workflow-step-icon {
+    display: flex;
+    height: 1.75rem;
+    width: 1.75rem;
+    shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4375rem;
+    background: rgba(124, 58, 237, 0.1);
+    border: 1px solid rgba(124, 58, 237, 0.16);
+  }
+
+  .solutions-workflow-step-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #071225;
+  }
+
+  @media (min-width: 1024px) {
+    .solutions-workflow-step-label {
+      font-size: 0.75rem;
+    }
+  }
+
+  .solutions-workflow-connector {
+    display: flex;
+    shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.125rem;
+  }
+
+  .credibility-panel-card {
+    border-color: rgba(199, 210, 231, 0.88);
+    transition: border-color 0.22s ease, box-shadow 0.22s ease;
+  }
+
+  .credibility-panel-card:hover {
+    border-color: rgba(124, 58, 237, 0.2);
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+  }
+
+  .header-logo-wordmark {
+    text-decoration: none;
+  }
+
+  .header-logo-text {
+    color: inherit;
+  }
+
+  .footer-contact-note {
+    word-break: break-word;
   }
 
   .solution-workflow-visual {

@@ -13,7 +13,7 @@ const buttonVariants = cva(
         accent:
           "rounded-xl bg-gradient-brand text-white shadow-btn-gradient hover:-translate-y-px hover:brightness-110 hover:shadow-btn-gradient-hover active:scale-[0.99] motion-reduce:hover:translate-y-0",
         "accent-outline":
-          "rounded-xl border border-[rgba(124,58,237,0.35)] bg-white/80 text-[#4338CA] shadow-soft hover:-translate-y-px hover:border-[rgba(124,58,237,0.5)] hover:bg-white hover:shadow-card active:scale-[0.99] motion-reduce:hover:translate-y-0",
+          "rounded-xl border border-[rgba(124,58,237,0.32)] bg-white/85 text-[#4338CA] shadow-[0_2px_12px_rgba(124,58,237,0.08)] hover:-translate-y-px hover:border-[rgba(124,58,237,0.48)] hover:bg-white hover:shadow-[0_6px_20px_rgba(124,58,237,0.12)] active:scale-[0.99] motion-reduce:hover:translate-y-0",
         secondary:
           "rounded-xl border border-[#dde5f2] bg-white/90 text-[#071225] shadow-soft hover:border-[rgba(120,130,180,0.45)] hover:bg-white active:scale-[0.99]",
         ghost:

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { SafeImage } from "@/components/ui/safe-image";
 import { getLogoSrc, BRAND, type LogoVariant } from "@/lib/assets";
@@ -48,24 +47,24 @@ interface HeaderLogoProps {
   className?: string;
 }
 
-/** Header ARVENZA wordmark — single horizontal logo asset, no duplicate text */
+/** Header wordmark — symbol + brand text for clear SaaS recognition */
 export function HeaderLogo({
   wordmark = "Arvenza RegTech",
   priority = true,
   className,
 }: HeaderLogoProps) {
   return (
-    <Image
-      src={BRAND.logoHeader}
-      alt={wordmark}
-      width={280}
-      height={64}
-      priority={priority}
-      className={cn(
-        "h-10 w-auto max-w-[148px] shrink-0 object-contain object-left sm:h-12 sm:max-w-none lg:h-16",
-        className
-      )}
-    />
+    <span className={cn("header-logo-wordmark flex min-w-0 max-w-[min(100%,14rem)] items-center gap-2 sm:max-w-none sm:gap-2.5", className)}>
+      <Logo
+        variant="symbol"
+        priority={priority}
+        className="h-8 w-8 shrink-0 sm:h-9 sm:w-9 lg:h-10 lg:w-10"
+        height={40}
+      />
+      <span className="header-logo-text min-w-0 truncate text-[15px] font-semibold leading-tight tracking-tight text-[#071225] sm:text-[17px] lg:text-[18px]">
+        {wordmark}
+      </span>
+    </span>
   );
 }
 

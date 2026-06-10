@@ -14,6 +14,7 @@ import {
   Users,
   Workflow,
 } from "lucide-react";
+import { Mail } from "lucide-react";
 import { ContactForm } from "@/components/forms/contact-form";
 import { OrbitWaveMotif, SectionWaveEdge } from "@/components/home/orbit-wave-motif";
 import { FullBleedSection, PageContainer } from "@/components/layout/page-container";
@@ -22,6 +23,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const heroBulletKeys = ["item1", "item2", "item3"] as const;
+const heroChipKeys = ["item1", "item2", "item3"] as const;
 const previewStepKeys = ["step1", "step2", "step3"] as const;
 const previewModuleKeys = ["module1", "module2", "module3"] as const;
 const expectationKeys = ["item1", "item2", "item3", "item4"] as const;
@@ -35,28 +37,42 @@ const audienceIcons = [Users, Workflow, Calculator, Sparkles] as const;
 
 export function DemoPage() {
   const t = useTranslations("demo");
+  const tCommon = useTranslations("common");
+  const tFooter = useTranslations("footer");
 
   return (
     <div className="demo-page">
-      <FullBleedSection ariaLabelledby="demo-hero-heading" className="section-hero-light border-b border-[#dde5f2]/80">
-        <div className="pointer-events-none absolute inset-0 bg-grid-dots opacity-[0.28]" aria-hidden="true" />
+      <FullBleedSection ariaLabelledby="demo-hero-heading" className="section-demo-hero pt-24 lg:pt-28">
+        <div className="pointer-events-none absolute inset-0 bg-grid-dots opacity-[0.3]" aria-hidden="true" />
         <div className="pointer-events-none absolute -left-20 top-12 h-64 w-64 rounded-full hero-glow-purple blur-3xl" aria-hidden="true" />
         <div className="pointer-events-none absolute -right-10 top-24 h-56 w-56 rounded-full hero-glow-cyan blur-3xl" aria-hidden="true" />
         <OrbitWaveMotif variant="hero" showOrbit showWaves />
 
-        <PageContainer className="section-content min-w-0 pb-12 pt-24 lg:pb-14 lg:pt-28">
+        <PageContainer className="section-content min-w-0 pb-10 lg:pb-12">
           <div className="grid min-w-0 grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-12 xl:gap-14">
             <div className="min-w-0 max-w-[580px]">
               <FadeIn immediate>
                 <p className="eyebrow-pill">{t("hero.eyebrow")}</p>
               </FadeIn>
               <FadeIn immediate>
-                <h1 id="demo-hero-heading" className="heading-hero mt-5 text-balance">
+                <h1 id="demo-hero-heading" className="heading-hero-gradient mt-4 text-balance lg:mt-5">
                   {t("hero.title")}
                 </h1>
               </FadeIn>
               <FadeIn immediate>
-                <p className="body-lead-hero mt-5">{t("hero.description")}</p>
+                <p className="body-lead-hero mt-4 lg:mt-5">{t("hero.description")}</p>
+              </FadeIn>
+              <FadeIn immediate>
+                <ul className="mt-5 flex flex-wrap gap-1.5" aria-label={t("hero.chipsAriaLabel")}>
+                  {heroChipKeys.map((key) => (
+                    <li key={key}>
+                      <span className="chip-dark demo-hero-chip">
+                        <span className="chip-dot" aria-hidden="true" />
+                        {t(`hero.chips.${key}`)}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </FadeIn>
               <FadeIn immediate>
                 <ul className="mt-6 space-y-2.5">
@@ -71,7 +87,7 @@ export function DemoPage() {
                 </ul>
               </FadeIn>
               <FadeIn immediate>
-                <div className="demo-hero-stat mt-7 inline-flex max-w-full items-center gap-3 rounded-xl border border-[rgba(120,130,180,0.22)] bg-white/85 px-4 py-3 shadow-soft backdrop-blur-sm">
+                <div className="demo-hero-stat stat-capsule mt-7 max-w-full">
                   <span className="text-xs font-semibold uppercase tracking-[0.12em] text-[#7c3aed]">
                     {t("hero.statLabel")}
                   </span>
@@ -131,23 +147,41 @@ export function DemoPage() {
             </FadeIn>
           </div>
         </PageContainer>
+        <SectionWaveEdge className="opacity-45" />
       </FullBleedSection>
 
-      <FullBleedSection ariaLabelledby="demo-form-heading" className="section-light py-12 lg:py-14">
+      <FullBleedSection ariaLabelledby="demo-form-heading" className="section-light demo-section-form">
         <OrbitWaveMotif variant="section" orbitAlign="right" />
-        <PageContainer className="section-content min-w-0">
+        <PageContainer className="section-content min-w-0 py-10 lg:py-12">
           <FadeIn>
-            <div className="mx-auto max-w-3xl text-center lg:max-w-none lg:text-left">
+            <div className="demo-form-section-head">
               <h2 id="demo-form-heading" className="heading-section-compact">
                 {t("formSection.title")}
               </h2>
-              <p className="body-lead mt-3 max-w-2xl lg:mx-0">{t("formSection.subtitle")}</p>
+              <p className="body-lead mt-3 max-w-2xl">{t("formSection.subtitle")}</p>
             </div>
           </FadeIn>
 
           <div className="mt-8 grid min-w-0 grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-10 xl:gap-12">
             <FadeIn>
-              <ContactForm namespace="demo" variant="premium" />
+              <div className="demo-form-shell">
+                <ContactForm namespace="demo" variant="premium" />
+              </div>
+              <div className="demo-contact-panel mt-5">
+                <div className="demo-contact-panel-icon" aria-hidden="true">
+                  <Mail className="h-5 w-5 text-[#7c3aed]" />
+                </div>
+                <div className="min-w-0">
+                  <p className="demo-contact-panel-title">{t("contactPanel.title")}</p>
+                  <a
+                    href={`mailto:${tCommon("email")}`}
+                    className="demo-contact-panel-email"
+                  >
+                    {tCommon("email")}
+                  </a>
+                  <p className="demo-contact-panel-note">{tFooter("contactNote")}</p>
+                </div>
+              </div>
             </FadeIn>
 
             <FadeIn delay={0.08}>
@@ -220,10 +254,11 @@ export function DemoPage() {
             </FadeIn>
           </div>
         </PageContainer>
+        <SectionWaveEdge />
       </FullBleedSection>
 
-      <FullBleedSection ariaLabelledby="demo-coverage-heading" className="border-y border-[#dde5f2]/70 bg-white/50 py-12 lg:py-14">
-        <PageContainer className="section-content min-w-0">
+      <FullBleedSection ariaLabelledby="demo-coverage-heading" className="section-muted demo-section-coverage">
+        <PageContainer className="section-content min-w-0 py-10 lg:py-12">
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">
               <h2 id="demo-coverage-heading" className="heading-section-compact">
@@ -251,10 +286,11 @@ export function DemoPage() {
             })}
           </div>
         </PageContainer>
+        <SectionWaveEdge />
       </FullBleedSection>
 
-      <FullBleedSection ariaLabelledby="demo-audience-heading" className="section-light py-12 lg:py-14">
-        <PageContainer className="section-content min-w-0">
+      <FullBleedSection ariaLabelledby="demo-audience-heading" className="section-light demo-section-audience">
+        <PageContainer className="section-content min-w-0 py-10 lg:py-12">
           <FadeIn>
             <div className="demo-audience-band">
               <h2 id="demo-audience-heading" className="text-lg font-semibold tracking-tight text-[#071225] lg:text-xl">
@@ -266,7 +302,7 @@ export function DemoPage() {
                   return (
                     <li key={key} className="demo-audience-item">
                       <Icon className="h-4 w-4 shrink-0 text-[#7c3aed]" aria-hidden="true" />
-                      <span>{t(`audience.items.${key}`)}</span>
+                      <span className="copy-safe">{t(`audience.items.${key}`)}</span>
                     </li>
                   );
                 })}
@@ -274,13 +310,14 @@ export function DemoPage() {
             </div>
           </FadeIn>
         </PageContainer>
+        <SectionWaveEdge />
       </FullBleedSection>
 
-      <FullBleedSection ariaLabelledby="demo-cta-heading" className="section-light pb-14 lg:pb-16">
+      <FullBleedSection ariaLabelledby="demo-cta-heading" className="section-light demo-section-cta page-end-cap">
         <OrbitWaveMotif variant="cta" orbitAlign="center" />
         <PageContainer className="section-content min-w-0">
           <FadeIn>
-            <div className="demo-cta-band relative overflow-hidden rounded-[1.75rem] bg-gradient-cta px-8 py-10 shadow-[0_24px_64px_rgba(124,58,237,0.28)] sm:px-12 sm:py-11 lg:px-14 lg:py-12">
+            <div className="demo-cta-band premium-cta-band relative overflow-hidden rounded-[1.75rem] px-8 py-10 sm:px-12 sm:py-11 lg:px-14 lg:py-12">
               <div
                 className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.2),transparent_55%)]"
                 aria-hidden="true"

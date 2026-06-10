@@ -15,23 +15,28 @@ export function ProblemSection() {
   const t = useTranslations("home.problem");
 
   return (
-    <FullBleedSection id="challenge" ariaLabelledby="problem-heading" className="section-light">
+    <FullBleedSection
+      id="challenge"
+      ariaLabelledby="problem-heading"
+      className="section-light home-section-compact section-home-bridge"
+    >
       <OrbitWaveMotif variant="section" orbitAlign="left" />
       <PageContainer className="section-content">
         <FadeIn>
           <SectionHeading
             id="problem-heading"
+            eyebrow={t("eyebrow")}
             title={t("title")}
             description={t("description")}
             className={sectionHeadSpacing}
           />
         </FadeIn>
-        <div className="grid gap-4 lg:grid-cols-3">
+        <div className="grid gap-3.5 lg:grid-cols-3 lg:gap-4">
           {problemKeys.map((key, i) => {
             const Icon = icons[i];
             return (
               <FadeIn key={key} delay={i * 0.04}>
-                <article className="card-glass card-risk flex h-full flex-col">
+                <article className="card-glass card-risk flex h-full flex-col p-5">
                   <div className="icon-accent-wrap mb-3">
                     <Icon className="h-[19px] w-[19px] text-[#7c3aed]" aria-hidden="true" />
                   </div>
