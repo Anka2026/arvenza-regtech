@@ -20,6 +20,7 @@ const PATHS = [
   "/assets/screenshots/supplier-evidence/dashboard.png",
   "/assets/screenshots/supplier-evidence/dashboard-en.png",
   "/assets/screenshots/esg-workspace/dashboard.png",
+  "/assets/screenshots/esg-workspace/dashboard-en.png",
 ];
 
 const missing = [];
