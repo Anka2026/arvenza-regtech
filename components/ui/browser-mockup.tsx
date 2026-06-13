@@ -14,6 +14,8 @@ export interface BrowserMockupProps {
   size?: "default" | "large" | "hero" | "heroCompact" | "xl" | "showcase" | "feature" | "product";
   objectFit?: "contain" | "cover" | "object-top";
   objectPosition?: string;
+  /** When false, skips synthetic browser chrome (use for assets that already include chrome). */
+  showChrome?: boolean;
   /** @deprecated Always uses dark chrome */
   darkChrome?: boolean;
 }
@@ -47,30 +49,35 @@ export function BrowserMockup({
   size = "default",
   objectFit = "object-top",
   objectPosition,
+  showChrome = true,
 }: BrowserMockupProps) {
   return (
     <div
       className={cn(
-        size === "hero" || size === "heroCompact" || size === "xl" || size === "showcase"
-          ? "product-frame-hero"
-          : "product-frame",
+        showChrome
+          ? size === "hero" || size === "heroCompact" || size === "xl" || size === "showcase"
+            ? "product-frame-hero"
+            : "product-frame"
+          : "product-frame-chromeless",
         "w-full max-w-full",
         elevated && "shadow-product",
         className
       )}
     >
-      <div className="premium-browser-chrome flex items-center gap-2 border-b border-white/10 px-3 py-2.5 sm:gap-3 sm:px-5 sm:py-3.5">
-        <div className="flex shrink-0 gap-2" aria-hidden="true">
-          <span className="h-3 w-3 rounded-full bg-[#ff5f57]/90" />
-          <span className="h-3 w-3 rounded-full bg-[#febc2e]/90" />
-          <span className="h-3 w-3 rounded-full bg-[#28c840]/90" />
+      {showChrome ? (
+        <div className="premium-browser-chrome flex items-center gap-2 border-b border-white/10 px-3 py-2.5 sm:gap-3 sm:px-5 sm:py-3.5">
+          <div className="flex shrink-0 gap-2" aria-hidden="true">
+            <span className="h-3 w-3 rounded-full bg-[#ff5f57]/90" />
+            <span className="h-3 w-3 rounded-full bg-[#febc2e]/90" />
+            <span className="h-3 w-3 rounded-full bg-[#28c840]/90" />
+          </div>
+          <div className="mx-auto hidden h-8 max-w-[320px] flex-1 items-center rounded-lg bg-white/[0.07] px-4 ring-1 ring-inset ring-white/[0.08] sm:flex">
+            <span className="truncate text-xs font-medium tracking-wide text-slate-400">
+              app.arvenza.net
+            </span>
+          </div>
         </div>
-        <div className="mx-auto hidden h-8 max-w-[320px] flex-1 items-center rounded-lg bg-white/[0.07] px-4 ring-1 ring-inset ring-white/[0.08] sm:flex">
-          <span className="truncate text-xs font-medium tracking-wide text-slate-400">
-            app.arvenza.net
-          </span>
-        </div>
-      </div>
+      ) : null}
 
       <div
         className={cn(

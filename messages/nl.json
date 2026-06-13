@@ -162,7 +162,8 @@
         "calculationWorkflow": "Berekeningsworkflow"
       },
       "earlyAccessLabel": "Capabilities in vroege toegang",
-      "viewSolutionsCta": "Alle oplossingen bekijken"
+      "viewSolutionsCta": "Alle oplossingen bekijken",
+      "roadmapModulesLabel": "Roadmapmodules"
     },
     "solutionsMenu": {
       "featuredLabel": "Uitgelicht",
@@ -207,7 +208,8 @@
         "legal": "Juridische kennisgeving",
         "contact": "Demo aanvragen"
       }
-    }
+    },
+    "regulations": "Regelgeving"
   },
   "common": {
     "learnMore": "Meer informatie",
@@ -1293,7 +1295,9 @@
     "openMenu": "Navigatiemenu openen",
     "closeMenu": "Navigatiemenu sluiten",
     "languageMenu": "Selecteer taal",
-    "dashboardPreview": "Arvenza RegTech compliance dashboard preview"
+    "dashboardPreview": "Arvenza RegTech compliance dashboard preview",
+    "mobileNavDialog": "Mobiel navigatiemenu",
+    "mobileNavMain": "Mobiele sitenavigatie"
   },
   "platformHub": {
     "eyebrow": "Platform",
@@ -1968,7 +1972,8 @@
     "status": {
       "available": "Beschikbaar",
       "inPreparation": "In voorbereiding",
-      "roadmap": "Roadmap"
+      "roadmap": "Roadmap",
+      "availableOnRequest": "Beschikbaar op aanvraag"
     },
     "metadata": {
       "formatLabel": "Formaat",
@@ -2006,12 +2011,12 @@
         "format": "Implementatiegids",
         "valuePreview": {
           "item1": "Datavelden voor directe en indirecte emissies",
-          "item2": "Verwachtingen voor methodologie-traceerbaarheid"
+          "item2": "Activiteitsdata, leveranciersbewijs en berekeningsinput"
         },
-        "title": "Gids voor ingebedde-emissiedata",
-        "description": "Een praktische gids voor datavelden, leveranciersbewijs en berekeningsinput voor workflows rond ingebedde emissies.",
-        "cta": "Gids bekijken",
-        "detail": "Gids in voorbereiding. Abonneer u hieronder om deze te ontvangen wanneer beschikbaar."
+        "title": "Gids voor directe en indirecte ingebedde emissies",
+        "description": "Een praktische gids voor directe emissies, indirecte emissies, activiteitsdata, leveranciersbewijs en berekeningsinput in CBAM-workflows.",
+        "cta": "Gids aanvragen",
+        "detail": "Vraag de gids aan via ons team — geen downloadbaar bestand."
       },
       "cbamCnScope": {
         "format": "Interactieve tool",
@@ -2067,6 +2072,28 @@
           "item2": "Rapportagevoorbereiding en reviewcontroles"
         },
         "detail": "Templatestructuur in voorbereiding voor ESG-bewijs- en rapportageworkflows."
+      },
+      "cbamRegulationBriefing": {
+        "title": "CBAM-rapportagevereisten briefing",
+        "description": "Een beknopte briefing over CBAM-rapportageverplichtingen, productscope, leveranciersbewijs en de stap van dataverzameling naar aangifteklare voorbereiding.",
+        "format": "Regelgevingsbriefing",
+        "cta": "Briefing aanvragen",
+        "valuePreview": {
+          "item1": "Overzicht rapportageverplichtingen en productscope",
+          "item2": "Leveranciersbewijs en aangifteklare voorbereidingsstappen"
+        },
+        "detail": "Vraag de briefing aan via ons team — geen automatische download."
+      },
+      "scopeAssessmentChecklist": {
+        "title": "CBAM-checklist voor productscopebeoordeling",
+        "description": "Een checklist voor het beoordelen van CN-codes, productomschrijvingen, douaneclassificatie en leveranciersdocumentatie vóór rapportagevoorbereiding.",
+        "format": "Checklist",
+        "cta": "Checklist aanvragen",
+        "valuePreview": {
+          "item1": "Screening van CN-codes en productomschrijvingen",
+          "item2": "Douaneclassificatie en leveranciersdocumentatie"
+        },
+        "detail": "Vraag de checklist aan om scopebeoordeling te structureren vóór de volgende rapportagecyclus."
       }
     },
     "cnScopeChecker": {
@@ -2106,7 +2133,7 @@
       },
       "nextStep": {
         "included": "Deze code komt voor in de vermelde CBAM-productscope. Controleer leveranciersbewijs, ingebedde emissiedata en productdocumentatie vóór rapportage.",
-        "notFound": "Deze CN-code valt niet binnen het verplichte CBAM-productbereik zoals vermeld in bijlage I van Verordening (EU) 2023/956. Voor een definitieve beoordeling kunnen productomschrijving, douaneclassificatie en technische toetsing nodig zijn."
+        "notFound": "Deze CN-code valt niet binnen het verplichte CBAM-productbereik zoals vermeld in bijlage I van Verordening (EU) 2023/956. Voor een definitieve beoordeling zijn productomschrijving, douaneclassificatie en technische toetsing vereist."
       },
       "disclaimer": "Deze tool biedt een eerste scopecontrole op basis van vermelde CN-codes. Definitieve CBAM-toepasselijkheid kan productomschrijving, douaneclassificatie en technische beoordeling vereisen."
     },
@@ -2379,7 +2406,7 @@
       "followRoadmap": "Roadmap volgen",
       "requestDemo": "Demo aanvragen",
       "explorePlatform": "Platform verkennen",
-      "whyEyebrow": "Waarom dit product bestaat",
+      "whyEyebrow": "Waarom deze module ertoe doet",
       "audienceEyebrow": "Voor wie",
       "outputsEyebrow": "Outputs",
       "architectureEyebrow": "Platformarchitectuur",
@@ -2489,7 +2516,7 @@
       },
       "category": "Operationele control-laag",
       "why": {
-        "title": "Waarom dit product bestaat",
+        "title": "Van berekeningsoutput naar operationele CBAM-gereedheid",
         "description": "Zodra berekeningswerk start, hebben CBAM-teams een gestructureerd beeld nodig van bewijskwaliteit, open opvolgingen en rapportagecyclus-gereedheid — zonder terug te vallen op spreadsheet-tracking."
       },
       "outputs": {
@@ -2625,7 +2652,7 @@
       },
       "category": "Verpakkingsdatalaag",
       "why": {
-        "title": "Waarom dit product bestaat",
+        "title": "Verpakkingsdata omzetten in bewijs- en rapportagegereedheid",
         "description": "PPWR-voorbereiding vereist verpakkingsdata op materiaalniveau, leveranciersbewijs en productfamilie-traceerbaarheid — gestructureerd voordat vereisten operationeel bindend worden."
       },
       "outputs": {
@@ -2751,7 +2778,7 @@
       },
       "category": "Boerderijniveau-bewijsworkflow",
       "why": {
-        "title": "Waarom dit product bestaat"
+        "title": "Van farm-level data naar verifieerbaar klimatebewijs"
       },
       "outputs": {
         "title": "Wat teams ontvangen"
@@ -2859,7 +2886,7 @@
       },
       "category": "Due diligence-workflow",
       "why": {
-        "title": "Waarom dit product bestaat"
+        "title": "Supplychain-traceerbaarheid koppelen aan risicogebaseerd bewijs"
       },
       "outputs": {
         "title": "Geplande outputs"
@@ -2967,7 +2994,7 @@
       },
       "category": "Productdatalaag",
       "why": {
-        "title": "Waarom dit product bestaat"
+        "title": "Productdata structureren voor paspoortgereedheid"
       },
       "outputs": {
         "title": "Geplande outputs"
@@ -3075,7 +3102,7 @@
       },
       "category": "Leveranciersbewijslaag",
       "why": {
-        "title": "Waarom dit product bestaat"
+        "title": "Leveranciersdata omzetten in traceerbare bewijsworkflows"
       },
       "outputs": {
         "title": "Wat teams ontvangen"
@@ -3183,7 +3210,7 @@
       },
       "category": "Rapportageworkspace",
       "why": {
-        "title": "Waarom dit product bestaat"
+        "title": "ESG-documentatie omzetten in rapportageklare bewijsbestanden"
       },
       "outputs": {
         "title": "Geplande outputs"

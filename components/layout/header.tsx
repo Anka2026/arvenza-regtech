@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback, type ComponentType } from "react";
-import { createPortal } from "react-dom";
 import { useTranslations, useLocale } from "next-intl";
 import { Menu, X, ChevronDown, Globe } from "lucide-react";
+import { MobileNavDrawer } from "@/components/layout/nav/mobile-nav-drawer";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
 import { HeaderLogo } from "@/components/brand/logo";
 import { buttonVariants } from "@/components/ui/button";
@@ -157,113 +157,11 @@ export function Header() {
     setMobileExpanded((prev) => (prev === key ? null : key));
   };
 
-  const mobileNavDrawer = (
-    <div className="mobile-nav-root xl:hidden">
-      <button
-        type="button"
-        className="mobile-nav-backdrop fixed inset-0 z-[100] bg-[#071225]/40"
-        onClick={closeMobile}
-        aria-label={tA11y("closeMenu")}
-      />
-      <div
-        id="mobile-nav-drawer"
-        className="mobile-nav-drawer fixed bottom-0 right-0 top-0 z-[101] flex w-full max-w-[min(100%,420px)] flex-col overflow-y-auto overflow-x-clip border-l border-[#dde5f2] bg-white shadow-[-12px_0_48px_rgba(11,20,38,0.16)]"
-        role="dialog"
-        aria-modal="true"
-        aria-label="Mobile navigation"
-      >
-        <nav className="flex flex-col px-4 pb-4 pt-[4.75rem] sm:pt-20" aria-label="Main navigation">
-          {NAV_DROPDOWNS.map(({ key, labelKey, activePaths }) => {
-            const Panel = DROPDOWN_PANELS[key];
-            const isExpanded = mobileExpanded === key;
-            const isActive = isNavActive(activePaths);
-
-            return (
-              <div key={key} className="border-b border-[#dde5f2]/60">
-                <div className="flex items-center justify-between py-4">
-                  <Link
-                    href={NAV_HREFS[key]}
-                    onClick={closeMobile}
-                    className={cn(
-                      "text-lg font-medium transition-colors",
-                      isActive ? "text-[#7c3aed]" : "text-[#071225]"
-                    )}
-                  >
-                    {t(labelKey)}
-                  </Link>
-                  <button
-                    type="button"
-                    onClick={() => toggleMobileSection(key)}
-                    className="rounded-lg p-2 text-[#64748b]"
-                    aria-expanded={isExpanded}
-                    aria-label={t(labelKey)}
-                  >
-                    <ChevronDown
-                      className={cn(
-                        "h-5 w-5 transition-transform duration-200",
-                        isExpanded && "rotate-180"
-                      )}
-                      aria-hidden="true"
-                    />
-                  </button>
-                </div>
-                {isExpanded ? (
-                  <div className="pb-4">
-                    <Panel onNavigate={closeMobile} className="!w-full !max-w-none shadow-none" />
-                  </div>
-                ) : null}
-              </div>
-            );
-          })}
-
-          <div className="mt-6 flex flex-wrap gap-2 px-2">
-            {locales.map((loc) => (
-              <button
-                key={loc}
-                type="button"
-                onClick={() => {
-                  switchLocale(loc);
-                  closeMobile();
-                }}
-                className={cn(
-                  "rounded-lg border px-4 py-2 text-sm font-semibold transition-colors",
-                  loc === locale
-                    ? "border-[#7c3aed]/30 bg-[#7c3aed]/5 text-[#7c3aed]"
-                    : "border-[#dde5f2] text-[#64748b]"
-                )}
-              >
-                {localeLabels[loc]}
-              </button>
-            ))}
-          </div>
-
-          <div className="mt-6 flex flex-col gap-3 px-2 pb-8">
-            <a
-              href="https://app.arvenza.net"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={cn(buttonVariants({ variant: "secondary", size: "lg" }))}
-            >
-              {t("login")}
-            </a>
-            <Link
-              href="/demo"
-              onClick={closeMobile}
-              className={cn(buttonVariants({ variant: "default", size: "lg" }))}
-            >
-              {t("bookDemo")}
-            </Link>
-          </div>
-        </nav>
-      </div>
-    </div>
-  );
-
   return (
     <header
       className={cn(
         "fixed inset-x-0 top-0 transition-all duration-300",
-        mobileOpen ? "z-[110]" : "z-50",
+        mobileOpen ? "z-[210]" : "z-50",
         scrolled ? "glass-nav-scrolled" : "glass-nav"
       )}
     >
@@ -412,7 +310,15 @@ export function Header() {
         </button>
       </PageContainer>
 
-      {mounted && mobileOpen ? createPortal(mobileNavDrawer, document.body) : null}
+      {mounted ? (
+        <MobileNavDrawer
+          open={mobileOpen}
+          onClose={closeMobile}
+          expanded={mobileExpanded}
+          onToggleExpanded={toggleMobileSection}
+          onSwitchLocale={switchLocale}
+        />
+      ) : null}
     </header>
   );
 }

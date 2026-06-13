@@ -2273,9 +2273,140 @@
   .company-product-context-layer-label {
     font-size: 0.625rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    letter-spacing: 0.06em;
     color: #94a3b8;
+  }
+
+  .product-frame-chromeless {
+    overflow: hidden;
+    border-radius: 1.05rem;
+    box-shadow:
+      0 32px 80px rgba(7, 18, 37, 0.44),
+      0 16px 40px rgba(124, 58, 237, 0.12),
+      0 0 0 1px rgba(255, 255, 255, 0.07) inset;
+  }
+
+  .resource-library-card-on-request {
+    border-color: rgba(37, 99, 235, 0.22);
+    background: linear-gradient(165deg, rgba(255, 255, 255, 0.99) 0%, rgba(239, 246, 255, 0.55) 100%);
+  }
+
+  .mobile-nav-root {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    pointer-events: auto;
+  }
+
+  .mobile-nav-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 201;
+    border: 0;
+    background: rgba(7, 18, 37, 0.45);
+    cursor: pointer;
+  }
+
+  .mobile-nav-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 202;
+    display: flex;
+    width: min(100%, 420px);
+    flex-direction: column;
+    overflow: hidden;
+    border-left: 1px solid #dde5f2;
+    background: #ffffff;
+    box-shadow: -12px 0 48px rgba(11, 20, 38, 0.18);
+    outline: none;
+  }
+
+  .mobile-nav-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dde5f2;
+    padding: 1rem 1.125rem;
+  }
+
+  .mobile-nav-close {
+    display: inline-flex;
+    height: 2.25rem;
+    width: 2.25rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: 1px solid #dde5f2;
+    background: #fff;
+    color: #64748b;
+  }
+
+  .mobile-nav-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  .mobile-nav-section {
+    border-bottom: 1px solid rgba(221, 229, 242, 0.85);
+  }
+
+  .mobile-nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.875rem 0;
+  }
+
+  .mobile-nav-link {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: #071225;
+  }
+
+  .mobile-nav-expand {
+    display: inline-flex;
+    height: 2.25rem;
+    width: 2.25rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    color: #64748b;
+  }
+
+  .mobile-nav-panel {
+    padding-bottom: 0.875rem;
+  }
+
+  .mobile-nav-footer {
+    border-top: 1px solid #dde5f2;
+    padding: 1rem 1.125rem 1.25rem;
+    background: #f8fafc;
+  }
+
+  .mobile-nav-locale {
+    border-radius: 0.5rem;
+    border: 1px solid #dde5f2;
+    background: #fff;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #64748b;
+  }
+
+  .mobile-nav-locale-active {
+    border-color: rgba(124, 58, 237, 0.35);
+    background: rgba(124, 58, 237, 0.08);
+    color: #6d28d9;
+  }
+
+  @media (min-width: 1280px) {
+    .mobile-nav-root {
+      display: none !important;
+    }
   }
 
   .company-product-context-layer-value {

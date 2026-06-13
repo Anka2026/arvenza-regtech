@@ -4,6 +4,7 @@ import {
   resolveModuleScreenshotPath,
   PRODUCT_SCREENSHOT_FOCUS,
   resolveModuleScreenshotFocus,
+  moduleScreenshotIncludesChrome,
   type PlatformModuleKey,
   type ProductScreenshotFocus,
   type ProductScreenshotPresentation,
@@ -17,6 +18,7 @@ type ProductScreenshotProps = Omit<BrowserMockupProps, "src"> & {
   focus?: ProductScreenshotFocus;
   /** hero = full UI for detail pages; thumbnail = hub cards; detail = tight crop */
   presentation?: ProductScreenshotPresentation;
+  showChrome?: boolean;
 };
 
 export function ProductScreenshot({
@@ -40,6 +42,9 @@ export function ProductScreenshot({
     ? resolveModuleScreenshotFocus(moduleKey, presentation, focus)
     : focus ?? "full";
   const preset = PRODUCT_SCREENSHOT_FOCUS[resolvedFocus];
+  const resolvedShowChrome =
+    props.showChrome ?? (moduleKey ? moduleScreenshotIncludesChrome(moduleKey) : true);
+  const { showChrome: _showChrome, ...browserProps } = props;
 
   return (
     <BrowserMockup
@@ -47,7 +52,8 @@ export function ProductScreenshot({
       alt={alt}
       objectFit={objectFit ?? preset.objectFit}
       objectPosition={objectPosition ?? preset.objectPosition}
-      {...props}
+      showChrome={resolvedShowChrome}
+      {...browserProps}
     />
   );
 }

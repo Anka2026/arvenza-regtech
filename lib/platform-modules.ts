@@ -107,6 +107,15 @@ export const PLATFORM_MODULE_THUMBNAIL_FOCUS: Record<PlatformModuleKey, ProductS
   esgReporting: "thumbnail",
 };
 
+/** Screenshots that already include browser chrome in the asset — skip synthetic chrome wrapper. */
+export const PLATFORM_MODULE_SCREENSHOT_INCLUDES_CHROME: Partial<Record<PlatformModuleKey, boolean>> = {
+  cbamComplianceConsole: true,
+};
+
+export function moduleScreenshotIncludesChrome(moduleKey: PlatformModuleKey): boolean {
+  return PLATFORM_MODULE_SCREENSHOT_INCLUDES_CHROME[moduleKey] ?? false;
+}
+
 export function resolveModuleScreenshotFocus(
   moduleKey: PlatformModuleKey,
   presentation: ProductScreenshotPresentation = "hero",

@@ -162,7 +162,8 @@
         "calculationWorkflow": "Calculation workflow"
       },
       "earlyAccessLabel": "Early access capabilities",
-      "viewSolutionsCta": "View all solutions"
+      "viewSolutionsCta": "View all solutions",
+      "roadmapModulesLabel": "Roadmap modules"
     },
     "solutionsMenu": {
       "featuredLabel": "Featured",
@@ -207,7 +208,8 @@
         "legal": "Legal Notice",
         "contact": "Request a Demo"
       }
-    }
+    },
+    "regulations": "Regulations"
   },
   "common": {
     "learnMore": "Learn more",
@@ -1290,7 +1292,9 @@
     "openMenu": "Open navigation menu",
     "closeMenu": "Close navigation menu",
     "languageMenu": "Select language",
-    "dashboardPreview": "Arvenza RegTech compliance dashboard preview"
+    "dashboardPreview": "Arvenza RegTech compliance dashboard preview",
+    "mobileNavDialog": "Mobile navigation menu",
+    "mobileNavMain": "Mobile site navigation"
   },
   "platformHub": {
     "eyebrow": "Platform",
@@ -1965,7 +1969,8 @@
     "status": {
       "available": "Available",
       "inPreparation": "In preparation",
-      "roadmap": "Roadmap"
+      "roadmap": "Roadmap",
+      "availableOnRequest": "Available on request"
     },
     "metadata": {
       "formatLabel": "Format",
@@ -2003,12 +2008,12 @@
         "format": "Implementation guide",
         "valuePreview": {
           "item1": "Direct and indirect emissions data fields",
-          "item2": "Methodology traceability expectations"
+          "item2": "Activity data, supplier evidence and calculation inputs"
         },
-        "title": "Embedded Emissions Data Guide",
-        "description": "A practical guide to the data fields, supplier evidence and calculation inputs required for embedded emissions workflows.",
-        "cta": "Read guide",
-        "detail": "Guide in preparation. Subscribe below to receive it when released. Covers calculation inputs and supplier evidence — not a downloadable file yet."
+        "title": "Direct and Indirect Embedded Emissions Guide",
+        "description": "A practical guide to direct emissions, indirect emissions, activity data, supplier evidence and calculation inputs used in CBAM workflows.",
+        "cta": "Request guide",
+        "detail": "Request the guide through our team — shared when you request access, not a downloadable file."
       },
       "cbamCnScope": {
         "format": "Interactive tool",
@@ -2064,6 +2069,28 @@
           "item2": "Disclosure preparation and review checkpoints"
         },
         "detail": "Template structure in preparation for ESG evidence and reporting workflows. Subscribe to receive it when released."
+      },
+      "cbamRegulationBriefing": {
+        "title": "CBAM Reporting Requirements Briefing",
+        "description": "A concise briefing on CBAM reporting obligations, product scope, supplier evidence and the transition from data collection to declaration-ready preparation.",
+        "format": "Regulatory briefing",
+        "cta": "Request briefing",
+        "valuePreview": {
+          "item1": "Reporting obligations and product scope overview",
+          "item2": "Supplier evidence and declaration-ready preparation steps"
+        },
+        "detail": "Request the briefing through our team to structure CBAM reporting preparation — not an automated download."
+      },
+      "scopeAssessmentChecklist": {
+        "title": "CBAM Product Scope Assessment Checklist",
+        "description": "A checklist for screening CN codes, product descriptions, customs classification and supplier documentation before reporting preparation.",
+        "format": "Checklist",
+        "cta": "Request checklist",
+        "valuePreview": {
+          "item1": "CN code and product description screening",
+          "item2": "Customs classification and supplier documentation review"
+        },
+        "detail": "Request the checklist to structure scope assessment before your next reporting cycle."
       }
     },
     "cnScopeChecker": {
@@ -2103,7 +2130,7 @@
       },
       "nextStep": {
         "included": "This code appears in the listed CBAM product scope. Review supplier evidence, embedded emissions data and product documentation before reporting.",
-        "notFound": "This CN code does not fall within the mandatory CBAM product scope listed in Annex I of Regulation (EU) 2023/956. Final assessment may still require product description, customs classification and technical review."
+        "notFound": "This CN code does not fall within the mandatory CBAM product scope listed in Annex I of Regulation (EU) 2023/956. Final determination requires product description, customs classification and technical review."
       },
       "disclaimer": "This tool provides an initial scope screening based on listed CN codes. Final CBAM applicability may require product description, customs classification and technical review."
     },
@@ -2376,7 +2403,7 @@
       "followRoadmap": "Follow roadmap",
       "requestDemo": "Request a demo",
       "explorePlatform": "Explore Platform",
-      "whyEyebrow": "Why this product exists",
+      "whyEyebrow": "Why this module matters",
       "audienceEyebrow": "Who it is for",
       "outputsEyebrow": "Outputs",
       "architectureEyebrow": "Platform architecture",
@@ -2486,7 +2513,7 @@
       },
       "category": "Operational control layer",
       "why": {
-        "title": "Why this product exists",
+        "title": "From calculation outputs to operational CBAM readiness",
         "description": "Once calculation work begins, CBAM teams need a structured view of evidence quality, open follow-ups and reporting-cycle readiness — without reverting to spreadsheet tracking."
       },
       "outputs": {
@@ -2622,7 +2649,7 @@
       },
       "category": "Packaging data layer",
       "why": {
-        "title": "Why this product exists",
+        "title": "Turn packaging data into evidence and reporting readiness",
         "description": "PPWR preparation requires material-level packaging data, supplier evidence and product-family traceability — structured before requirements become operationally binding."
       },
       "outputs": {
@@ -2758,7 +2785,7 @@
       },
       "category": "Farm-level evidence workflow",
       "why": {
-        "title": "Why this product exists",
+        "title": "From farm-level data to verifiable climate evidence",
         "description": "Commodity-linked supply chains increasingly require producer-level records, geolocation references and farm-level data organized before regulatory and buyer expectations intensify."
       },
       "outputs": {
@@ -2892,7 +2919,7 @@
       },
       "category": "Due diligence workflow",
       "why": {
-        "title": "Why this product exists",
+        "title": "Connect supply chain traceability to risk-based evidence",
         "description": "Commodity-linked supply chains need repeatable workflows for geolocation data, supplier declarations and traceability documentation — built on the same supplier evidence model as CBAM."
       },
       "outputs": {
@@ -3026,7 +3053,7 @@
       },
       "category": "Product data layer",
       "why": {
-        "title": "Why this product exists",
+        "title": "Structure product data for passport readiness",
         "description": "Digital product passport requirements demand structured product identity, material data and sustainability evidence before passports can be assembled for market access."
       },
       "outputs": {
@@ -3160,7 +3187,7 @@
       },
       "category": "Supplier evidence layer",
       "why": {
-        "title": "Why this product exists",
+        "title": "Turn supplier data into traceable evidence workflows",
         "description": "Compliance teams need repeatable supplier outreach, data requests, evidence upload and follow-up workflows shared across CBAM, packaging and product-data programs."
       },
       "outputs": {
@@ -3294,7 +3321,7 @@
       },
       "category": "Reporting workspace",
       "why": {
-        "title": "Why this product exists",
+        "title": "Turn ESG documentation into reporting-ready evidence files",
         "description": "ESG disclosure cycles require structured evidence libraries, source documentation and internal review workflows — not ad hoc folder management."
       },
       "outputs": {

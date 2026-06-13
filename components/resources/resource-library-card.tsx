@@ -10,8 +10,12 @@ import { cn } from "@/lib/utils";
 
 const VALUE_KEYS = ["item1", "item2"] as const;
 
-const STATUS_VARIANT: Record<ResourceStatus, "available" | "inPreparation" | "roadmap"> = {
+const STATUS_VARIANT: Record<
+  ResourceStatus,
+  "available" | "inPreparation" | "roadmap"
+> = {
   available: "available",
+  availableOnRequest: "available",
   inPreparation: "inPreparation",
   roadmap: "roadmap",
 };
@@ -40,7 +44,8 @@ export function ResourceLibraryCard({
 
   const ctaButtonClass = cn(
     buttonVariants({
-      variant: status === "available" ? "default" : "accent-outline",
+      variant:
+        status === "available" || status === "availableOnRequest" ? "default" : "accent-outline",
       size: "sm",
     }),
     "inline-flex w-full justify-center sm:w-auto"
@@ -51,6 +56,7 @@ export function ResourceLibraryCard({
       className={cn(
         "resource-library-card card-premium flex h-full min-w-0 flex-col",
         status === "available" && "resource-library-card-available",
+        status === "availableOnRequest" && "resource-library-card-on-request",
         status === "inPreparation" && "resource-library-card-preparation",
         status === "roadmap" && "resource-library-card-roadmap",
         isExpanded && "resource-library-card-expanded"

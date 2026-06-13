@@ -12,6 +12,7 @@ const VALUE_KEYS = ["item1", "item2"] as const;
 
 const STATUS_VARIANT = {
   available: "available",
+  availableOnRequest: "available",
   inPreparation: "inPreparation",
   roadmap: "roadmap",
 } as const;
@@ -32,11 +33,15 @@ export function ResourceDetailPanel({
   const t = useTranslations("resourcesPage");
 
   const secondaryHref =
-    status === "roadmap" ? "/solutions#roadmap" : status === "available" ? "/demo" : "/resources#subscribe";
+    status === "roadmap"
+      ? "/solutions#roadmap"
+      : status === "available" || status === "availableOnRequest"
+        ? "/demo"
+        : "/resources#subscribe";
   const secondaryLabel =
     status === "roadmap"
       ? t("detailPanel.followRoadmap")
-      : status === "available"
+      : status === "available" || status === "availableOnRequest"
         ? t("detailPanel.requestAccess")
         : t("detailPanel.getNotified");
 
