@@ -1,19 +1,19 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { ArrowRight, LucideIcon } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { StatusPill } from "@/components/pages/shared/status-pill";
 import { buttonVariants } from "@/components/ui/button";
+import {
+  industrySectorAnchor,
+  industrySectorHref,
+  type IndustrySectorKey,
+} from "@/lib/industry-sector-anchors";
+import type { Locale } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 
-type IndustryKey =
-  | "steelAluminium"
-  | "automotive"
-  | "packagingFmcg"
-  | "electronicsBatteries"
-  | "agricultureFood"
-  | "importersExporters";
+type IndustryKey = IndustrySectorKey;
 
 type ProductKey =
   | "cbamEngine"
@@ -54,15 +54,28 @@ export interface IndustrySectorCardProps {
 export function IndustrySectorCard({ industryKey, icon: Icon, capabilities }: IndustrySectorCardProps) {
   const t = useTranslations("industriesPage");
   const tStatus = useTranslations("nav.status");
+  const locale = useLocale() as Locale;
 
   const primaryCapability = capabilities[0];
   const primaryHref = PRODUCT_HREF[primaryCapability.productKey];
+  const sectorAnchor = industrySectorAnchor(locale, industryKey);
+  const sectorHref = industrySectorHref(locale, industryKey);
 
   return (
-    <article className={cn("industry-sector-card card-premium flex h-full min-w-0 flex-col", ACCENT_CLASS[industryKey])}>
-      <div className="industry-sector-card-visual" aria-hidden="true">
-        <div className="industry-sector-card-visual-glow" />
-        <Icon className="industry-sector-card-visual-icon h-8 w-8" />
+    <article
+      id={sectorAnchor}
+      className={cn(
+        "industry-sector-card card-premium flex h-full min-w-0 scroll-mt-28 flex-col",
+        ACCENT_CLASS[industryKey]
+      )}
+    >
+      <Link
+        href={sectorHref}
+        className="industry-sector-card-visual industry-sector-card-link group/visual block"
+        aria-labelledby={`${sectorAnchor}-title`}
+      >
+        <div className="industry-sector-card-visual-glow" aria-hidden="true" />
+        <Icon className="industry-sector-card-visual-icon h-8 w-8 transition-transform duration-200 group-hover/visual:scale-105" />
         <div className="industry-sector-card-visual-rail">
           {WORKFLOW_KEYS.map((key, i) => (
             <span key={key} className="industry-sector-visual-node">
@@ -70,16 +83,28 @@ export function IndustrySectorCard({ industryKey, icon: Icon, capabilities }: In
             </span>
           ))}
         </div>
-      </div>
+      </Link>
 
       <div className="industry-sector-card-body flex flex-1 flex-col">
         <div className="flex items-start justify-between gap-2">
-          <h3 className="text-base font-bold leading-snug tracking-[-0.02em] text-[#071225] lg:text-[17px]">
-            {t(`items.${industryKey}.title`)}
+          <h3
+            id={`${sectorAnchor}-title`}
+            className="text-base font-bold leading-snug tracking-[-0.02em] text-[#071225] lg:text-[17px]"
+          >
+            <Link
+              href={sectorHref}
+              className="industry-sector-card-title-link transition-colors hover:text-[#7c3aed] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7c3aed]/40 focus-visible:ring-offset-2"
+            >
+              {t(`items.${industryKey}.title`)}
+            </Link>
           </h3>
-          <div className="industry-sector-icon-badge shrink-0" aria-hidden="true">
+          <Link
+            href={sectorHref}
+            className="industry-sector-icon-badge shrink-0 transition-colors hover:border-[#7c3aed]/35 hover:bg-[#7c3aed]/10"
+            aria-label={t(`items.${industryKey}.title`)}
+          >
             <Icon className="h-4 w-4 text-[#7c3aed]" />
-          </div>
+          </Link>
         </div>
 
         <p className="industry-regulation-chip mt-3">{t(`items.${industryKey}.regulatoryPressure`)}</p>
@@ -128,15 +153,24 @@ export function IndustrySectorCard({ industryKey, icon: Icon, capabilities }: In
 
       <div className="industry-sector-card-cta mt-5 flex flex-col gap-2 border-t border-[#dde5f2]/80 pt-4 sm:flex-row sm:flex-wrap">
         <Link
-          href="/demo"
+          href={primaryHref}
           className={cn(buttonVariants({ variant: "default", size: "sm" }), "w-full justify-center sm:w-auto")}
         >
-          {t(`items.${industryKey}.cta`)}
+          {t("viewSectorWorkflow")}
           <ArrowRight className="ml-1.5 h-3.5 w-3.5" aria-hidden="true" />
         </Link>
         <Link
-          href={primaryHref}
+          href="/demo"
           className={cn(buttonVariants({ variant: "accent-outline", size: "sm" }), "w-full justify-center sm:w-auto")}
+        >
+          {t(`items.${industryKey}.cta`)}
+        </Link>
+        <Link
+          href={primaryHref}
+          className={cn(
+            buttonVariants({ variant: "ghost", size: "sm" }),
+            "w-full justify-center text-[#64748b] sm:w-auto"
+          )}
         >
           {t(`items.${industryKey}.secondaryCta`)}
         </Link>

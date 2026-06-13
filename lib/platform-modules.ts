@@ -1,6 +1,15 @@
 /** Platform module registry — routes, maturity, screenshots, i18n keys */
 
-export type PlatformModuleStatus = "ready" | "pilot" | "comingSoon";
+export type PlatformModuleStatus =
+  | "ready"
+  | "availableOnRequest"
+  | "earlyAccess"
+  | "roadmap";
+
+/** @deprecated Use earlyAccess */
+export type LegacyPilotStatus = "pilot";
+/** @deprecated Use roadmap */
+export type LegacyComingSoonStatus = "comingSoon";
 
 export type PlatformModuleKey =
   | "cbamCalc"
@@ -136,7 +145,7 @@ const MODULE_DEFINITIONS: PlatformModuleDefinition[] = [
     key: "cbamComplianceConsole",
     slug: "cbam-console",
     route: "/platform/cbam-console",
-    status: "pilot",
+    status: "availableOnRequest",
     screenshot: PLATFORM_MODULE_SCREENSHOTS.cbamComplianceConsole,
     screenshotFocus: "full",
     i18nKey: "cbamComplianceConsole",
@@ -146,7 +155,7 @@ const MODULE_DEFINITIONS: PlatformModuleDefinition[] = [
     key: "ppwr",
     slug: "ppwr",
     route: "/platform/ppwr",
-    status: "pilot",
+    status: "earlyAccess",
     screenshot: PLATFORM_MODULE_SCREENSHOTS.ppwr,
     screenshotFocus: "full",
     i18nKey: "ppwr",
@@ -156,7 +165,7 @@ const MODULE_DEFINITIONS: PlatformModuleDefinition[] = [
     key: "agriClimate",
     slug: "agri-climate",
     route: "/platform/agri-climate",
-    status: "pilot",
+    status: "earlyAccess",
     screenshot: PLATFORM_MODULE_SCREENSHOTS.agriClimate,
     screenshotFocus: "full",
     i18nKey: "agriClimate",
@@ -166,7 +175,7 @@ const MODULE_DEFINITIONS: PlatformModuleDefinition[] = [
     key: "eudr",
     slug: "eudr",
     route: "/platform/eudr",
-    status: "comingSoon",
+    status: "roadmap",
     screenshot: PLATFORM_MODULE_SCREENSHOTS.eudr,
     screenshotFocus: "full",
     i18nKey: "eudr",
@@ -176,7 +185,7 @@ const MODULE_DEFINITIONS: PlatformModuleDefinition[] = [
     key: "dpp",
     slug: "digital-product-passport",
     route: "/platform/digital-product-passport",
-    status: "comingSoon",
+    status: "roadmap",
     screenshot: PLATFORM_MODULE_SCREENSHOTS.dpp,
     screenshotFocus: "full",
     i18nKey: "dpp",
@@ -186,7 +195,7 @@ const MODULE_DEFINITIONS: PlatformModuleDefinition[] = [
     key: "supplierEvidence",
     slug: "supplier-evidence",
     route: "/platform/supplier-evidence",
-    status: "comingSoon",
+    status: "availableOnRequest",
     screenshot: PLATFORM_MODULE_SCREENSHOTS.supplierEvidence,
     screenshotFocus: "full",
     i18nKey: "supplierEvidence",
@@ -196,7 +205,7 @@ const MODULE_DEFINITIONS: PlatformModuleDefinition[] = [
     key: "esgReporting",
     slug: "esg-workspace",
     route: "/platform/esg-workspace",
-    status: "comingSoon",
+    status: "roadmap",
     screenshot: PLATFORM_MODULE_SCREENSHOTS.esgReporting,
     screenshotFocus: "full",
     i18nKey: "esgReporting",
@@ -222,9 +231,16 @@ export const PLATFORM_DYNAMIC_MODULE_SLUGS = MODULE_DEFINITIONS.filter(
   (m) => m.slug !== "cbam"
 ).map((m) => m.slug);
 
-export const PLATFORM_PILOT_MODULES = MODULE_DEFINITIONS.filter((m) => m.status === "pilot");
-export const PLATFORM_COMING_SOON_MODULES = MODULE_DEFINITIONS.filter(
-  (m) => m.status === "comingSoon"
+export const PLATFORM_EARLY_ACCESS_MODULES = MODULE_DEFINITIONS.filter(
+  (m) => m.status === "earlyAccess"
+);
+/** @deprecated Use PLATFORM_EARLY_ACCESS_MODULES */
+export const PLATFORM_PILOT_MODULES = PLATFORM_EARLY_ACCESS_MODULES;
+export const PLATFORM_ROADMAP_MODULES = MODULE_DEFINITIONS.filter((m) => m.status === "roadmap");
+/** @deprecated Use PLATFORM_ROADMAP_MODULES */
+export const PLATFORM_COMING_SOON_MODULES = PLATFORM_ROADMAP_MODULES;
+export const PLATFORM_AVAILABLE_ON_REQUEST_MODULES = MODULE_DEFINITIONS.filter(
+  (m) => m.status === "availableOnRequest"
 );
 export const PLATFORM_READY_MODULE = MODULE_DEFINITIONS.find((m) => m.status === "ready")!;
 

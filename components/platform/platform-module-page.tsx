@@ -6,6 +6,7 @@ import {
   BarChart3,
   Check,
   Fingerprint,
+  Layers,
   LayoutDashboard,
   Package,
   Sprout,
@@ -22,6 +23,13 @@ import { StatusPill } from "@/components/pages/shared/status-pill";
 import { PageCtaBand } from "@/components/pages/shared/page-cta-band";
 import { buttonVariants } from "@/components/ui/button";
 import type { PlatformModuleDefinition } from "@/lib/platform-modules";
+import {
+  isAvailableOnRequestModule,
+  isEarlyAccessModule,
+  isRoadmapModule,
+  moduleStatusNavKey,
+  moduleStatusPillVariant,
+} from "@/lib/module-status-display";
 import { cn } from "@/lib/utils";
 
 const MODULE_ICONS = {
@@ -34,9 +42,10 @@ const MODULE_ICONS = {
   esgReporting: BarChart3,
 } as const;
 
-const CAPABILITY_KEYS = ["item1", "item2", "item3", "item4"] as const;
+const CAPABILITY_KEYS = ["item1", "item2", "item3", "item4", "item5", "item6"] as const;
 const WORKFLOW_KEYS = ["step1", "step2", "step3", "step4"] as const;
-const USE_CASE_KEYS = ["item1", "item2", "item3"] as const;
+const AUDIENCE_KEYS = ["item1", "item2", "item3"] as const;
+const OUTPUT_KEYS = ["item1", "item2", "item3"] as const;
 const CHIP_KEYS = ["item1", "item2", "item3"] as const;
 
 interface PlatformModulePageProps {
@@ -49,19 +58,41 @@ export function PlatformModulePage({ module }: PlatformModulePageProps) {
   const tStatus = useTranslations("nav.status");
   const Icon = MODULE_ICONS[module.i18nKey as keyof typeof MODULE_ICONS] ?? LayoutDashboard;
 
-  const isPilot = module.status === "pilot";
-  const isComingSoon = module.status === "comingSoon";
+  const statusKey = moduleStatusNavKey(module.status);
+  const roadmap = isRoadmapModule(module.status);
+  const earlyAccess = isEarlyAccessModule(module.status);
+  const onRequest = isAvailableOnRequestModule(module.status);
 
-  const primaryCtaLabel = isComingSoon
+  const primaryCtaLabel = roadmap
     ? tShared("followRoadmap")
-    : isPilot
-      ? tShared("discussPilot")
+    : earlyAccess || onRequest
+      ? tShared("requestAccess")
       : tShared("requestDemo");
 
-  const secondaryCtaLabel = isComingSoon ? tShared("requestDemo") : tShared("explorePlatform");
+  const secondaryCtaLabel = roadmap ? tShared("requestDemo") : tShared("viewWorkflow");
+  const secondaryHref = roadmap ? "/resources" : "#module-workflow-heading";
+
+  const maturityNotice = roadmap
+    ? tShared("roadmapNotice")
+    : onRequest
+      ? tShared("availableOnRequestNotice")
+      : tShared("earlyAccessNotice");
+
+  const whyTitle = t.has("why.title") ? t("why.title") : t("positioning.title");
+  const whyDescription = t.has("why.description") ? t("why.description") : t("positioning.description");
+  const audienceTitle = t.has("audience.title") ? t("audience.title") : t("useCases.title");
+  const layerKeys = {
+    supplierEvidence: tShared("architectureLayers.supplierEvidence"),
+    productData: tShared("architectureLayers.productData"),
+    calculationMethodology: tShared("architectureLayers.calculationMethodology"),
+    documentationReporting: tShared("architectureLayers.documentationReporting"),
+  };
+  const architectureLayerKey = t.has("architecture.layerKey")
+    ? (t("architecture.layerKey") as keyof typeof layerKeys)
+    : "documentationReporting";
 
   return (
-    <>
+    <div className="platform-module-page">
       <FullBleedSection
         ariaLabelledby="module-hero-heading"
         className="section-hero-light section-hero-home page-hero-top"
@@ -88,20 +119,27 @@ export function PlatformModulePage({ module }: PlatformModulePageProps) {
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#7c3aed]/10 ring-1 ring-[#7c3aed]/18">
                     <Icon className="h-5 w-5 text-[#7c3aed]" aria-hidden="true" />
                   </div>
-                  {isPilot && <StatusPill variant="pilot" label={tStatus("pilot")} />}
-                  {isComingSoon && <StatusPill variant="comingSoon" label={tStatus("comingSoon")} />}
+                  <StatusPill
+                    variant={moduleStatusPillVariant(module.status)}
+                    label={tStatus(statusKey)}
+                  />
                 </div>
                 <p className="eyebrow-pill mt-4">{t("eyebrow")}</p>
-                <h1 id="module-hero-heading" className="heading-hero-gradient mt-4 text-balance lg:mt-5">
+                {t.has("category") && (
+                  <p className="mt-2 text-xs font-semibold uppercase tracking-[0.08em] text-[#64748b]">
+                    {t("category")}
+                  </p>
+                )}
+                <h1 id="module-hero-heading" className="heading-hero-gradient mt-3 text-balance lg:mt-4">
                   {t("title")}
                 </h1>
                 <p className="body-lead-hero mt-4 lg:mt-5">{t("description")}</p>
               </FadeIn>
 
-              {(isPilot || isComingSoon) && (
+              {(roadmap || earlyAccess || onRequest) && (
                 <FadeIn immediate>
                   <p className="mt-4 rounded-xl border border-[#7c3aed]/14 bg-[#7c3aed]/[0.04] px-4 py-3 text-sm leading-relaxed text-[#475569]">
-                    {isPilot ? tShared("pilotNotice") : tShared("comingSoonNotice")}
+                    {maturityNotice}
                   </p>
                 </FadeIn>
               )}
@@ -116,7 +154,7 @@ export function PlatformModulePage({ module }: PlatformModulePageProps) {
                       {primaryCtaLabel}
                     </Link>
                     <Link
-                      href={isComingSoon ? "/resources" : "/platform"}
+                      href={secondaryHref}
                       className={cn(
                         buttonVariants({ variant: "accent-outline", size: "lg" }),
                         "w-full sm:w-auto"
@@ -164,25 +202,22 @@ export function PlatformModulePage({ module }: PlatformModulePageProps) {
         <SectionWaveEdge className="opacity-50" />
       </FullBleedSection>
 
-      <FullBleedSection ariaLabelledby="module-positioning-heading" className="section-light home-section-compact">
-        <OrbitWaveMotif variant="section" orbitAlign="left" />
+      <FullBleedSection ariaLabelledby="module-why-heading" className="section-light home-section-compact">
         <PageContainer className="section-content">
           <FadeIn>
-            <div className="platform-positioning-panel">
-              <h2 id="module-positioning-heading" className="text-[clamp(1.125rem,1.5vw+0.5rem,1.5rem)] font-bold tracking-[-0.02em] text-[#071225]">
-                {t("positioning.title")}
-              </h2>
-              <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
-                {t("positioning.description")}
-              </p>
-            </div>
+            <SectionHeading
+              id="module-why-heading"
+              eyebrow={tShared("whyEyebrow")}
+              title={whyTitle}
+              description={whyDescription}
+              className="mb-0"
+            />
           </FadeIn>
         </PageContainer>
         <SectionWaveEdge />
       </FullBleedSection>
 
       <FullBleedSection ariaLabelledby="module-capabilities-heading" className="section-muted home-section-compact">
-        <OrbitWaveMotif variant="muted" orbitAlign="right" />
         <PageContainer className="section-content">
           <FadeIn>
             <SectionHeading
@@ -193,38 +228,44 @@ export function PlatformModulePage({ module }: PlatformModulePageProps) {
               className="mb-5 lg:mb-6"
             />
           </FadeIn>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {CAPABILITY_KEYS.map((key, i) => (
-              <FadeIn key={key} delay={i * 0.04}>
-                <article className="platform-capability-card card-glass flex h-full gap-3 p-4 lg:p-5">
-                  <span
-                    className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-[#7c3aed]/10 ring-1 ring-[#7c3aed]/18"
-                    aria-hidden="true"
-                  >
-                    <Check className="h-3 w-3 text-[#7c3aed]" />
-                  </span>
-                  <div className="min-w-0">
-                    <h3 className="text-sm font-semibold leading-snug text-[#071225] lg:text-[15px]">
-                      {t(`capabilities.items.${key}.title`)}
-                    </h3>
-                    <p className="mt-1.5 text-xs leading-relaxed text-[#64748b] lg:text-sm">
-                      {t(`capabilities.items.${key}.description`)}
-                    </p>
-                  </div>
-                </article>
-              </FadeIn>
-            ))}
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {CAPABILITY_KEYS.map((key, i) => {
+              if (!t.has(`capabilities.items.${key}.title`)) return null;
+              return (
+                <FadeIn key={key} delay={i * 0.04}>
+                  <article className="platform-capability-card card-glass flex h-full gap-3 p-4 lg:p-5">
+                    <span
+                      className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-[#7c3aed]/10 ring-1 ring-[#7c3aed]/18"
+                      aria-hidden="true"
+                    >
+                      <Check className="h-3 w-3 text-[#7c3aed]" />
+                    </span>
+                    <div className="min-w-0">
+                      <h3 className="text-sm font-semibold leading-snug text-[#071225] lg:text-[15px]">
+                        {t(`capabilities.items.${key}.title`)}
+                      </h3>
+                      <p className="mt-1.5 text-xs leading-relaxed text-[#64748b] lg:text-sm">
+                        {t(`capabilities.items.${key}.description`)}
+                      </p>
+                    </div>
+                  </article>
+                </FadeIn>
+              );
+            })}
           </div>
         </PageContainer>
         <SectionWaveEdge />
       </FullBleedSection>
 
-      <FullBleedSection ariaLabelledby="module-workflow-heading" className="section-light home-section-compact">
-        <OrbitWaveMotif variant="section" orbitAlign="center" />
+      <FullBleedSection
+        id="module-workflow-heading"
+        ariaLabelledby="module-workflow-title"
+        className="section-light home-section-compact"
+      >
         <PageContainer className="section-content">
           <FadeIn>
             <SectionHeading
-              id="module-workflow-heading"
+              id="module-workflow-title"
               eyebrow={tShared("workflowEyebrow")}
               title={t("workflow.title")}
               description={t("workflow.description")}
@@ -256,43 +297,153 @@ export function PlatformModulePage({ module }: PlatformModulePageProps) {
         <SectionWaveEdge />
       </FullBleedSection>
 
-      <FullBleedSection ariaLabelledby="module-usecases-heading" className="section-muted home-section-compact page-end-cap">
-        <PageContainer className="section-content min-w-0">
+      <FullBleedSection ariaLabelledby="module-audience-heading" className="section-muted home-section-compact">
+        <PageContainer className="section-content">
           <FadeIn>
             <SectionHeading
-              id="module-usecases-heading"
-              eyebrow={tShared("useCasesEyebrow")}
-              title={t("useCases.title")}
+              id="module-audience-heading"
+              eyebrow={tShared("audienceEyebrow")}
+              title={audienceTitle}
               className="mb-5 lg:mb-6"
             />
           </FadeIn>
           <div className="grid gap-3 lg:grid-cols-3">
-            {USE_CASE_KEYS.map((key, i) => (
+            {AUDIENCE_KEYS.map((key, i) => (
               <FadeIn key={key} delay={i * 0.04}>
-                <article className="card-premium flex h-full flex-col p-5">
+                <article className="card-premium flex h-full flex-col p-4">
                   <h3 className="text-sm font-semibold leading-snug text-[#071225] lg:text-[15px]">
-                    {t(`useCases.items.${key}.title`)}
+                    {t.has(`audience.items.${key}.title`)
+                      ? t(`audience.items.${key}.title`)
+                      : t(`useCases.items.${key}.title`)}
                   </h3>
                   <p className="mt-2 text-xs leading-relaxed text-[#64748b] lg:text-sm">
-                    {t(`useCases.items.${key}.description`)}
+                    {t.has(`audience.items.${key}.description`)
+                      ? t(`audience.items.${key}.description`)
+                      : t(`useCases.items.${key}.description`)}
                   </p>
                 </article>
               </FadeIn>
             ))}
           </div>
+        </PageContainer>
+        <SectionWaveEdge />
+      </FullBleedSection>
 
-          <div className="mt-10 lg:mt-12">
+      {t.has("outputs.title") && (
+        <FullBleedSection ariaLabelledby="module-outputs-heading" className="section-light home-section-compact">
+          <PageContainer className="section-content">
+            <FadeIn>
+              <SectionHeading
+                id="module-outputs-heading"
+                eyebrow={tShared("outputsEyebrow")}
+                title={t("outputs.title")}
+                description={t.has("outputs.description") ? t("outputs.description") : undefined}
+                className="mb-5 lg:mb-6"
+              />
+            </FadeIn>
+            <div className="grid gap-3 lg:grid-cols-3">
+              {OUTPUT_KEYS.map((key, i) => {
+                if (!t.has(`outputs.items.${key}.title`)) return null;
+                return (
+                  <FadeIn key={key} delay={i * 0.04}>
+                    <article className="card-glass flex h-full flex-col p-4 lg:p-5">
+                      <h3 className="text-sm font-semibold leading-snug text-[#071225] lg:text-[15px]">
+                        {t(`outputs.items.${key}.title`)}
+                      </h3>
+                      <p className="mt-2 text-xs leading-relaxed text-[#64748b] lg:text-sm">
+                        {t(`outputs.items.${key}.description`)}
+                      </p>
+                    </article>
+                  </FadeIn>
+                );
+              })}
+            </div>
+          </PageContainer>
+          <SectionWaveEdge />
+        </FullBleedSection>
+      )}
+
+      {t.has("architecture.title") && (
+        <FullBleedSection ariaLabelledby="module-architecture-heading" className="section-muted home-section-compact">
+          <PageContainer className="section-content">
+            <FadeIn>
+              <div className="platform-architecture-module-panel">
+                <div className="flex items-start gap-3">
+                  <div className="icon-accent-wrap shrink-0">
+                    <Layers className="h-[19px] w-[19px] text-[#7c3aed]" aria-hidden="true" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[#7c3aed]">
+                      {tShared("architectureEyebrow")}
+                    </p>
+                    <h2
+                      id="module-architecture-heading"
+                      className="mt-2 text-[clamp(1.125rem,1.5vw+0.5rem,1.5rem)] font-bold tracking-[-0.02em] text-[#071225]"
+                    >
+                      {t("architecture.title")}
+                    </h2>
+                    {t.has("architecture.description") && (
+                      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
+                        {t("architecture.description")}
+                      </p>
+                    )}
+                  </div>
+                </div>
+                <dl className="mt-6 grid gap-3 sm:grid-cols-2">
+                  <div className="platform-architecture-fact card-glass p-4">
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#64748b]">
+                      {tShared("architectureLayerLabel")}
+                    </dt>
+                    <dd className="mt-1.5 text-sm font-semibold text-[#071225]">
+                      {layerKeys[architectureLayerKey] ?? layerKeys.documentationReporting}
+                    </dd>
+                  </div>
+                  <div className="platform-architecture-fact card-glass p-4">
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#64748b]">
+                      {tShared("architectureDataLabel")}
+                    </dt>
+                    <dd className="mt-1.5 text-sm leading-relaxed text-[#475569]">
+                      {t("architecture.dataStructured")}
+                    </dd>
+                  </div>
+                  <div className="platform-architecture-fact card-glass p-4">
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#64748b]">
+                      {tShared("architectureEvidenceLabel")}
+                    </dt>
+                    <dd className="mt-1.5 text-sm leading-relaxed text-[#475569]">
+                      {t("architecture.evidenceManaged")}
+                    </dd>
+                  </div>
+                  <div className="platform-architecture-fact card-glass p-4">
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#64748b]">
+                      {tShared("architectureOutputLabel")}
+                    </dt>
+                    <dd className="mt-1.5 text-sm leading-relaxed text-[#475569]">
+                      {t("architecture.outputSupported")}
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </FadeIn>
+          </PageContainer>
+          <SectionWaveEdge />
+        </FullBleedSection>
+      )}
+
+      <FullBleedSection ariaLabelledby="module-cta-heading" className="section-light home-section-compact page-end-cap">
+        <PageContainer className="section-content min-w-0">
+          <div className="mt-2">
             <PageCtaBand
               title={t("cta.title")}
               primaryLabel={primaryCtaLabel}
               primaryHref="/demo"
-              secondaryLabel={tShared("backToPlatform")}
+              secondaryLabel={tShared("exploreProduct")}
               secondaryHref="/platform"
             />
           </div>
         </PageContainer>
         <SectionWaveEdge />
       </FullBleedSection>
-    </>
+    </div>
   );
 }

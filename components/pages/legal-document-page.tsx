@@ -37,7 +37,7 @@ export function LegalDocumentPage({ documentKey }: LegalDocumentPageProps) {
     <div className="legal-page">
       <FullBleedSection ariaLabelledby="legal-heading" className="section-legal-hero page-hero-top">
         <div className="pointer-events-none absolute inset-0 bg-grid-dots opacity-[0.24]" aria-hidden="true" />
-        <OrbitWaveMotif variant="legal" orbitAlign="right" intensity="subtle" showWaves={false} />
+        <OrbitWaveMotif variant="legal" orbitAlign="right" intensity="subtle" showOrbit={false} showWaves={false} />
 
         <PageContainer className="section-content min-w-0 page-hero-bottom">
           <FadeIn immediate>
@@ -57,14 +57,14 @@ export function LegalDocumentPage({ documentKey }: LegalDocumentPageProps) {
         <SectionWaveEdge className="opacity-40" />
       </FullBleedSection>
 
-      <FullBleedSection className="section-light legal-section-body">
-        <PageContainer className="section-content page-section-y-tight legal-section-body">
+      <FullBleedSection className="section-light legal-section-body section-inner-pad">
+        <PageContainer className="section-content page-section-y-tight">
           <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,260px)] lg:gap-8">
             <aside className="order-first min-w-0 lg:order-2 lg:sticky lg:top-28 lg:self-start">
               <FadeIn delay={0.06}>
                 <div className="legal-sidebar">
                   <h2 className="legal-sidebar-title">{tPage("sidebarTitle")}</h2>
-                  <ul className="mt-4 space-y-3.5">
+                  <ul className="mt-3 space-y-2.5">
                     <li className="legal-sidebar-item">
                       <FileText className="h-4 w-4 shrink-0 text-[#7c3aed]" aria-hidden="true" />
                       <div className="min-w-0">
@@ -90,7 +90,10 @@ export function LegalDocumentPage({ documentKey }: LegalDocumentPageProps) {
                       <Mail className="h-4 w-4 shrink-0 text-[#7c3aed]" aria-hidden="true" />
                       <div className="min-w-0">
                         <p className="legal-sidebar-label">{tPage("emailLabel")}</p>
-                        <a href={`mailto:${tCommon("email")}`} className="legal-sidebar-value legal-inline-link copy-safe">
+                        <a
+                          href={`mailto:${tCommon("email")}`}
+                          className="legal-sidebar-value legal-sidebar-email legal-inline-link"
+                        >
                           {tCommon("email")}
                         </a>
                         <p className="mt-1.5 text-xs leading-relaxed text-[#64748b]">{tFooter("contactNote")}</p>
@@ -140,7 +143,7 @@ export function LegalDocumentPage({ documentKey }: LegalDocumentPageProps) {
                 </p>
                 <p className="mt-3 text-sm text-[#64748b]">
                   {tPage("emailLabel")}:{" "}
-                  <a href={`mailto:${tCommon("email")}`} className="legal-inline-link">
+                  <a href={`mailto:${tCommon("email")}`} className="legal-inline-link legal-sidebar-email">
                     {tCommon("email")}
                   </a>
                 </p>

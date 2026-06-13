@@ -22,6 +22,27 @@ function hasPath(obj, keyPath) {
   return typeof cur === "string" && cur.trim().length > 0;
 }
 
+const RESOURCE_KEYS = [
+  "cbamCnScope",
+  "cbamChecklist",
+  "supplierTemplate",
+  "embeddedEmissionsGuide",
+  "ppwrPackaging",
+  "eudrBrief",
+  "dppDataModelBrief",
+  "esgEvidenceStructure",
+];
+
+const RESOURCE_FIELD_KEYS = RESOURCE_KEYS.flatMap((key) => [
+  `resources.${key}.title`,
+  `resources.${key}.description`,
+  `resources.${key}.format`,
+  `resources.${key}.cta`,
+  `resources.${key}.valuePreview.item1`,
+  `resources.${key}.valuePreview.item2`,
+  `resources.${key}.detail`,
+]);
+
 /** Keys referenced by resources page components */
 const REQUIRED_RESOURCES_KEYS = [
   "eyebrow",
@@ -29,25 +50,30 @@ const REQUIRED_RESOURCES_KEYS = [
   "description",
   "positioning",
   "heroChipsAriaLabel",
+  "heroChips.item1",
+  "heroChips.item2",
+  "heroChips.item3",
   "categoryTagsAriaLabel",
   "categories.all",
-  "categories.cbamGuides",
+  "categories.tools",
   "categories.checklists",
-  "categories.regulationUpdates",
+  "categories.templates",
+  "categories.regulatoryNotes",
+  "categories.implementationGuides",
   "status.available",
   "status.inPreparation",
   "status.roadmap",
   "library.title",
   "library.description",
-  "sections.available.label",
-  "sections.available.title",
-  "sections.available.description",
-  "sections.inPreparation.label",
-  "sections.inPreparation.title",
-  "sections.inPreparation.description",
-  "sections.roadmap.label",
-  "sections.roadmap.title",
-  "sections.roadmap.description",
+  "toolSpotlight.badge",
+  "toolSpotlight.title",
+  "toolSpotlight.description",
+  "toolSpotlight.cta",
+  "toolSpotlight.secondaryCta",
+  "detailPanel.close",
+  "detailPanel.requestAccess",
+  "detailPanel.followRoadmap",
+  "detailPanel.getNotified",
   "fields.valuePreview",
   "metadata.formatLabel",
   "metadata.statusLabel",
@@ -77,7 +103,10 @@ const REQUIRED_RESOURCES_KEYS = [
   "subscribe.interests.eudr",
   "subscribe.interests.dpp",
   "subscribe.interests.general",
-  "cnScopeChecker.eyebrow",
+  "cnScopeChecker.backToResources",
+  "cnScopeChecker.invalidCodeTitle",
+  "cnScopeChecker.invalidCodeMessage",
+  "cnScopeChecker.numericCodeRecommended",
   "cnScopeChecker.title",
   "cnScopeChecker.description",
   "cnScopeChecker.searchLabel",
@@ -104,9 +133,7 @@ const REQUIRED_RESOURCES_KEYS = [
   "cnScopeChecker.nextStep.included",
   "cnScopeChecker.nextStep.notFound",
   "cnScopeChecker.disclaimer",
-  "resources.cbamChecklist.title",
-  "resources.cbamCnScope.title",
-  "resources.cbamCnScope.cta",
+  ...RESOURCE_FIELD_KEYS,
 ];
 
 let failed = false;

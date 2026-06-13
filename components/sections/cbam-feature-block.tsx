@@ -77,7 +77,7 @@ export function CbamFeatureBlock({
       <PageContainer className="section-content">
         <div
           className={cn(
-            "grid min-w-0 items-center gap-8 lg:grid-cols-2 lg:gap-12",
+            "grid min-w-0 items-center gap-6 lg:grid-cols-2 lg:gap-8",
             imageFirst && "lg:[&>*:first-child]:order-2 lg:[&>*:last-child]:order-1"
           )}
         >

@@ -27,7 +27,7 @@ export function JourneySection() {
       ariaLabelledby="journey-heading"
       className="section-muted section-rhythm-soft home-section-compact"
     >
-      <OrbitWaveMotif variant="muted" orbitAlign="center" />
+      <OrbitWaveMotif variant="muted" orbitAlign="center" showOrbit={false} />
       <PageContainer className="section-content">
         <FadeIn staticReveal>
           <SectionHeading

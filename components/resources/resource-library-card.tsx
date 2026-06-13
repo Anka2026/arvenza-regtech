@@ -5,18 +5,8 @@ import { ArrowRight, type LucideIcon } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { StatusPill } from "@/components/pages/shared/status-pill";
 import { buttonVariants } from "@/components/ui/button";
+import type { ResourceCategoryKey, ResourceKey, ResourceStatus } from "@/lib/resources-config";
 import { cn } from "@/lib/utils";
-
-type CategoryKey = "cbamGuides" | "checklists" | "sectorBriefings" | "regulationUpdates";
-type ResourceStatus = "available" | "inPreparation" | "roadmap";
-
-export type ResourceKey =
-  | "cbamChecklist"
-  | "supplierTemplate"
-  | "embeddedEmissionsGuide"
-  | "cbamCnScope"
-  | "ppwrPackaging"
-  | "eudrBrief";
 
 const VALUE_KEYS = ["item1", "item2"] as const;
 
@@ -28,12 +18,12 @@ const STATUS_VARIANT: Record<ResourceStatus, "available" | "inPreparation" | "ro
 
 export interface ResourceLibraryCardProps {
   resourceKey: ResourceKey;
-  category: CategoryKey;
+  category: ResourceCategoryKey;
   status: ResourceStatus;
   icon: LucideIcon;
-  href: "/demo" | "/solutions#roadmap";
-  anchorToSubscribe?: boolean;
-  anchorToChecker?: boolean;
+  isExpanded?: boolean;
+  onExpand?: (key: ResourceKey) => void;
+  ctaAction: "checker" | "request" | "expand";
 }
 
 export function ResourceLibraryCard({
@@ -41,13 +31,20 @@ export function ResourceLibraryCard({
   category,
   status,
   icon: Icon,
-  href,
-  anchorToSubscribe = false,
-  anchorToChecker = false,
+  isExpanded = false,
+  onExpand,
+  ctaAction,
 }: ResourceLibraryCardProps) {
   const t = useTranslations("resourcesPage");
-
   const ctaLabel = t(`resources.${resourceKey}.cta`);
+
+  const ctaButtonClass = cn(
+    buttonVariants({
+      variant: status === "available" ? "default" : "accent-outline",
+      size: "sm",
+    }),
+    "inline-flex w-full justify-center sm:w-auto"
+  );
 
   return (
     <article
@@ -55,7 +52,8 @@ export function ResourceLibraryCard({
         "resource-library-card card-premium flex h-full min-w-0 flex-col",
         status === "available" && "resource-library-card-available",
         status === "inPreparation" && "resource-library-card-preparation",
-        status === "roadmap" && "resource-library-card-roadmap"
+        status === "roadmap" && "resource-library-card-roadmap",
+        isExpanded && "resource-library-card-expanded"
       )}
     >
       <div className="resource-library-card-header">
@@ -71,10 +69,9 @@ export function ResourceLibraryCard({
       </div>
 
       <h3 className="resource-library-card-title">{t(`resources.${resourceKey}.title`)}</h3>
-
       <p className="resource-library-card-desc">{t(`resources.${resourceKey}.description`)}</p>
 
-      <div className="resource-value-preview mt-4">
+      <div className="resource-value-preview mt-3">
         <p className="resource-cluster-label">{t("fields.valuePreview")}</p>
         <ul className="resource-value-list mt-2 list-none">
           {VALUE_KEYS.map((key) => (
@@ -86,7 +83,7 @@ export function ResourceLibraryCard({
         </ul>
       </div>
 
-      <dl className="resource-library-meta mt-4">
+      <dl className="resource-library-meta mt-3">
         <div>
           <dt>{t("metadata.formatLabel")}</dt>
           <dd>{t(`resources.${resourceKey}.format`)}</dd>
@@ -97,51 +94,32 @@ export function ResourceLibraryCard({
         </div>
       </dl>
 
-      <div className="resource-library-card-cta mt-auto pt-4">
-        {anchorToChecker ? (
-          <a
-            href="#cbam-cn-scope-checker"
-            className={cn(
-              buttonVariants({
-                variant: status === "available" ? "default" : "accent-outline",
-                size: "sm",
-              }),
-              "inline-flex w-full justify-center sm:w-auto"
-            )}
-          >
-            {ctaLabel}
-            <ArrowRight className="ml-1.5 h-3.5 w-3.5" aria-hidden="true" />
-          </a>
-        ) : anchorToSubscribe ? (
-          <a
-            href="#subscribe"
-            className={cn(
-              buttonVariants({
-                variant: status === "available" ? "default" : "accent-outline",
-                size: "sm",
-              }),
-              "inline-flex w-full justify-center sm:w-auto"
-            )}
-          >
-            {ctaLabel}
-            <ArrowRight className="ml-1.5 h-3.5 w-3.5" aria-hidden="true" />
-          </a>
-        ) : (
-          <Link
-            href={href}
-            className={cn(
-              buttonVariants({
-                variant: status === "available" ? "default" : "accent-outline",
-                size: "sm",
-              }),
-              "inline-flex w-full justify-center sm:w-auto"
-            )}
-          >
+      <div className="resource-library-card-cta mt-auto pt-3">
+        {ctaAction === "checker" ? (
+          <Link href="/resources/cbam-cn-scope-checker" className={ctaButtonClass}>
             {ctaLabel}
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" aria-hidden="true" />
           </Link>
+        ) : ctaAction === "request" ? (
+          <Link href="/demo" className={ctaButtonClass}>
+            {ctaLabel}
+            <ArrowRight className="ml-1.5 h-3.5 w-3.5" aria-hidden="true" />
+          </Link>
+        ) : (
+          <button
+            type="button"
+            aria-expanded={isExpanded}
+            aria-controls={`resource-detail-${resourceKey}`}
+            onClick={() => onExpand?.(resourceKey)}
+            className={ctaButtonClass}
+          >
+            {ctaLabel}
+            <ArrowRight className="ml-1.5 h-3.5 w-3.5" aria-hidden="true" />
+          </button>
         )}
       </div>
     </article>
   );
 }
+
+export type { ResourceKey, ResourceCategoryKey };

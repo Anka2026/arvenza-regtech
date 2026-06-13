@@ -1,21 +1,17 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { NavStatusBadge, type NavStatusKey } from "@/components/layout/nav/nav-status-badge";
 import { cn } from "@/lib/utils";
 import { platformModuleHref } from "@/lib/platform-modules";
+import { industryNavHref, type IndustryNavKey } from "@/lib/industry-sector-anchors";
+import type { Locale } from "@/i18n/routing";
 
-const PLATFORM_MODULE_KEYS = [
-  { key: "cbamComplianceConsole", status: "pilot" as const },
-  { key: "ppwr", status: "pilot" as const },
-  { key: "agriClimate", status: "pilot" as const },
-  { key: "eudr", status: "comingSoon" as const },
-  { key: "dpp", status: "comingSoon" as const },
-  { key: "supplierEvidence", status: "comingSoon" as const },
-  { key: "esgReporting", status: "comingSoon" as const },
-] as const;
+const ARCHITECTURE_LINK_KEYS = ["platformArchitecture", "evidenceModel", "calculationWorkflow"] as const;
+
+const EARLY_ACCESS_NAV_KEYS = ["cbamComplianceConsole", "ppwr", "agriClimate"] as const;
 
 const SOLUTION_KEYS = [
   { key: "cbam", status: "ready" as const, href: "/platform/cbam" as const },
@@ -28,20 +24,21 @@ const SOLUTION_KEYS = [
   { key: "esgReporting", status: "comingSoon" as const, href: "/platform/esg-workspace" as const },
 ] as const;
 
-const INDUSTRY_KEYS = [
+const INDUSTRY_KEYS: IndustryNavKey[] = [
   "steelAluminium",
   "packagingFmcg",
   "automotive",
   "electronics",
   "agriculture",
   "importers",
-] as const;
+];
 
 const RESOURCE_KEYS = [
   { key: "regulationUpdates", href: "/regulations" as const },
   { key: "guides", href: "/resources" as const },
   { key: "cbamChecklist", href: "/resources" as const },
-  { key: "insights", href: "/resources" as const },
+  { key: "cbamCnScopeChecker", href: "/resources/cbam-cn-scope-checker" as const },
+  { key: "updates", href: "/resources" as const },
 ] as const;
 
 const COMPANY_KEYS = [
@@ -102,29 +99,42 @@ export function PlatformDropdownPanel({ onNavigate, className }: PanelProps) {
         </div>
         <div className="p-4 md:p-5">
           <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#64748b]">
-            {t("modulesLabel")}
+            {t("architectureLabel")}
           </p>
-          <ul className="mt-3 max-h-[280px] space-y-1 overflow-y-auto pr-1">
-            {PLATFORM_MODULE_KEYS.map(({ key, status }) => {
-              const moduleTitle = t(`modules.${key}.title`);
-              const href = platformModuleHref(key);
-              return (
+          <ul className="mt-2 space-y-1">
+            {ARCHITECTURE_LINK_KEYS.map((key) => (
               <li key={key}>
-                <Link
-                  href={href}
-                  onClick={onNavigate}
-                  className="nav-dropdown-row group"
-                  aria-label={moduleTitle}
-                >
-                  <span className="min-w-0 flex-1 break-words text-sm font-medium text-[#071225] group-hover:text-[#7c3aed]">
-                    {moduleTitle}
-                  </span>
-                  <NavStatusBadge status={status} label={statusLabel(tNav, status)} />
+                <Link href="/platform" onClick={onNavigate} className="nav-dropdown-row-simple">
+                  {t(`architectureLinks.${key}`)}
                 </Link>
               </li>
-            );
-            })}
+            ))}
           </ul>
+
+          <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#64748b]">
+            {t("earlyAccessLabel")}
+          </p>
+          <ul className="mt-2 space-y-1">
+            {EARLY_ACCESS_NAV_KEYS.map((key) => (
+              <li key={key}>
+                <Link href={platformModuleHref(key)} onClick={onNavigate} className="nav-dropdown-row group">
+                  <span className="min-w-0 flex-1 text-sm font-medium text-[#071225] group-hover:text-[#7c3aed]">
+                    {t(`modules.${key}.title`)}
+                  </span>
+                  <NavStatusBadge status="pilot" label={statusLabel(tNav, "pilot")} />
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <Link
+            href="/solutions"
+            onClick={onNavigate}
+            className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-[#7c3aed] hover:text-[#6d28d9]"
+          >
+            {t("viewSolutionsCta")}
+            <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </div>
@@ -170,13 +180,18 @@ export function SolutionsDropdownPanel({ onNavigate, className }: PanelProps) {
 
 export function IndustriesDropdownPanel({ onNavigate, className }: PanelProps) {
   const t = useTranslations("nav.industriesMenu");
+  const locale = useLocale() as Locale;
 
   return (
     <div className={cn("nav-dropdown-panel w-[min(100vw-2rem,320px)]", className)}>
       <ul className="p-2">
         {INDUSTRY_KEYS.map((key) => (
           <li key={key}>
-            <Link href="/industries" onClick={onNavigate} className="nav-dropdown-row-simple">
+            <Link
+              href={industryNavHref(locale, key)}
+              onClick={onNavigate}
+              className="nav-dropdown-row-simple"
+            >
               {t(`items.${key}`)}
             </Link>
           </li>
@@ -227,10 +242,4 @@ export function CompanyDropdownPanel({ onNavigate, className }: PanelProps) {
   );
 }
 
-export {
-  PLATFORM_MODULE_KEYS,
-  SOLUTION_KEYS,
-  INDUSTRY_KEYS,
-  RESOURCE_KEYS,
-  COMPANY_KEYS,
-};
+export { SOLUTION_KEYS, INDUSTRY_KEYS, RESOURCE_KEYS, COMPANY_KEYS };

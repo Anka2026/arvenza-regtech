@@ -11,7 +11,7 @@ interface PageCtaBandProps {
   primaryLabel: string;
   primaryHref: "/demo" | "/platform/cbam" | "/platform" | "/resources";
   secondaryLabel?: string;
-  secondaryHref?: "/demo" | "/platform/cbam" | "/platform" | "/resources";
+  secondaryHref?: "/demo" | "/platform/cbam" | "/platform" | "/resources" | "/solutions";
   className?: string;
 }
 

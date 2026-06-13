@@ -12,7 +12,7 @@ import { SolutionsWorkflowDiagram } from "@/components/solutions/solutions-workf
 
 const HERO_CHIP_KEYS = ["item1", "item2", "item3"] as const;
 const PILOT_KEYS = ["cbamConsole", "ppwr", "agriClimate"] as const;
-const ROADMAP_KEYS = ["eudr", "dpp"] as const;
+const ROADMAP_KEYS = ["eudr", "dpp", "supplierEvidence", "esgReporting"] as const;
 
 export function SolutionsPage() {
   const t = useTranslations("solutionsPage");

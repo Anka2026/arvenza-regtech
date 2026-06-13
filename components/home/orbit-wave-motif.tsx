@@ -216,7 +216,7 @@ export function SectionWaveEdge({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "decorative-motif-orbit inset-x-0 bottom-0 z-[1] h-10 bg-wave-lines wave-drift opacity-30 motion-reduce:animate-none",
+        "decorative-motif-orbit inset-x-0 bottom-0 z-[1] h-6 bg-wave-lines wave-drift opacity-30 motion-reduce:animate-none",
         className
       )}
       aria-hidden="true"

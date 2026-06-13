@@ -48,7 +48,7 @@ export function DemoPage() {
         <OrbitWaveMotif variant="hero" showOrbit showWaves />
 
         <PageContainer className="section-content min-w-0 page-hero-bottom">
-          <div className="grid min-w-0 grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-12 xl:gap-14">
+          <div className="grid min-w-0 grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-10 xl:gap-12">
             <div className="min-w-0 max-w-[580px]">
               <FadeIn staticReveal>
                 <p className="eyebrow-pill">{t("hero.eyebrow")}</p>
@@ -149,8 +149,7 @@ export function DemoPage() {
         <SectionWaveEdge className="opacity-45" />
       </FullBleedSection>
 
-      <FullBleedSection ariaLabelledby="demo-form-heading" className="section-light demo-section-form">
-        <OrbitWaveMotif variant="section" orbitAlign="right" />
+      <FullBleedSection ariaLabelledby="demo-form-heading" className="section-light demo-section-form section-inner-pad">
         <PageContainer className="section-content min-w-0 page-section-y-tight">
           <FadeIn staticReveal>
             <div className="demo-form-section-head">
@@ -161,7 +160,7 @@ export function DemoPage() {
             </div>
           </FadeIn>
 
-          <div className="mt-6 grid min-w-0 grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-8 xl:gap-10">
+          <div className="mt-5 grid min-w-0 grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-7 xl:gap-8">
             <FadeIn staticReveal>
               <div className="demo-form-shell">
                 <ContactForm namespace="demo" variant="premium" />
@@ -256,7 +255,7 @@ export function DemoPage() {
         <SectionWaveEdge />
       </FullBleedSection>
 
-      <FullBleedSection ariaLabelledby="demo-coverage-heading" className="section-muted demo-section-coverage">
+      <FullBleedSection ariaLabelledby="demo-coverage-heading" className="section-muted demo-section-coverage section-inner-pad">
         <PageContainer className="section-content min-w-0 page-section-y-tight">
           <FadeIn staticReveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -288,7 +287,7 @@ export function DemoPage() {
         <SectionWaveEdge />
       </FullBleedSection>
 
-      <FullBleedSection ariaLabelledby="demo-audience-heading" className="section-light demo-section-audience">
+      <FullBleedSection ariaLabelledby="demo-audience-heading" className="section-light demo-section-audience section-inner-pad">
         <PageContainer className="section-content min-w-0 page-section-y-tight">
           <FadeIn staticReveal>
             <div className="demo-audience-band">
@@ -312,11 +311,10 @@ export function DemoPage() {
         <SectionWaveEdge />
       </FullBleedSection>
 
-      <FullBleedSection ariaLabelledby="demo-cta-heading" className="section-light demo-section-cta page-end-cap">
-        <OrbitWaveMotif variant="cta" orbitAlign="center" />
-        <PageContainer className="section-content min-w-0">
+      <FullBleedSection ariaLabelledby="demo-cta-heading" className="section-light demo-section-cta section-inner-pad page-end-cap">
+        <PageContainer className="section-content min-w-0 page-section-y-tight">
           <FadeIn staticReveal>
-            <div className="demo-cta-band premium-cta-band relative overflow-hidden rounded-[1.75rem] px-8 py-10 sm:px-12 sm:py-11 lg:px-14 lg:py-12">
+            <div className="demo-cta-band premium-cta-band relative overflow-hidden rounded-[1.75rem] px-7 py-8 sm:px-10 sm:py-9 lg:px-12 lg:py-10">
               <div
                 className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.2),transparent_55%)]"
                 aria-hidden="true"

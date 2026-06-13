@@ -20,7 +20,7 @@ const STAGE_CONFIG = [
   {
     key: "comingSoon" as const,
     icon: Map,
-    solutionKeys: ["eudr", "dpp"] as const,
+    solutionKeys: ["eudr", "dpp", "supplierEvidence", "esgReporting"] as const,
     className: "solution-maturity-lane-roadmap",
   },
 ];

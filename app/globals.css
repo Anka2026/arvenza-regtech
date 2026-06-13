@@ -22,9 +22,9 @@
     --input: 220 25% 88%;
     --ring: 262 83% 58%;
     --radius: 0.625rem;
-    --section-y: 2.75rem;
-    --section-y-md: 3rem;
-    --section-y-lg: 3.5rem;
+    --section-y: 2.25rem;
+    --section-y-md: 2.75rem;
+    --section-y-lg: 3rem;
     --content-max: 1360px;
   }
 }
@@ -2285,7 +2285,7 @@
   .legal-sidebar-label {
     font-size: 0.6875rem;
     font-weight: 600;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #94a3b8;
   }
@@ -2296,6 +2296,16 @@
     font-weight: 500;
     line-height: 1.4;
     color: #071225;
+  }
+
+  .legal-sidebar-email {
+    display: inline-block;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-all;
+    hyphens: none;
+    font-size: 0.8125rem;
+    line-height: 1.45;
   }
 
   .legal-sidebar-updated {
@@ -2363,13 +2373,13 @@
 
   .journey-compact-list {
     display: grid;
-    gap: 0.75rem;
+    gap: 0.625rem;
   }
 
   @media (min-width: 768px) {
     .journey-compact-list {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.875rem;
+      gap: 0.75rem;
     }
   }
 
@@ -2378,7 +2388,7 @@
     border-radius: 1rem;
     border: 1px solid rgba(221, 229, 242, 0.9);
     background: rgba(255, 255, 255, 0.92);
-    padding: 1rem 1.125rem;
+    padding: 0.875rem 1rem;
     box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
   }
 

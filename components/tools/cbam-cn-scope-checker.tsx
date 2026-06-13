@@ -47,7 +47,11 @@ export function CbamCnScopeChecker({ className }: CbamCnScopeCheckerProps) {
   }, []);
 
   const normalizedQuery = normalizeCnInput(query);
-  const hasQuery = normalizedQuery.length > 0 || query.trim().length >= 3;
+  const trimmedQuery = query.trim();
+  const hasQuery = normalizedQuery.length > 0 || trimmedQuery.length >= 3;
+  const isShortNumericCode =
+    normalizedQuery.length > 0 && /^\d+$/.test(normalizedQuery) && normalizedQuery.length < 8;
+  const isKeywordQuery = trimmedQuery.length >= 3 && !/^\d+$/.test(normalizedQuery);
 
   const { exact, partial } = useMemo(
     () => (hasQuery && entries.length ? searchCbamCnCodes(entries, query) : { exact: [], partial: [] }),
@@ -55,14 +59,21 @@ export function CbamCnScopeChecker({ className }: CbamCnScopeCheckerProps) {
   );
 
   const allMatches = useMemo(() => {
+    if (isShortNumericCode && exact.length === 0) {
+      return [];
+    }
+
     const combined = [
       ...exact,
       ...partial.filter((p) => !exact.some((e) => e.entry.normalizedCode === p.entry.normalizedCode)),
     ];
     return combined;
-  }, [exact, partial]);
+  }, [exact, partial, isShortNumericCode]);
 
-  const showNotFound = hasQuery && !loading && !loadError && allMatches.length === 0;
+  const showInvalidCode =
+    hasQuery && !loading && !loadError && isShortNumericCode && exact.length === 0;
+  const showNotFound =
+    hasQuery && !loading && !loadError && !showInvalidCode && allMatches.length === 0;
 
   const runSearch = useCallback((value: string) => {
     setQuery(value);
@@ -113,6 +124,24 @@ export function CbamCnScopeChecker({ className }: CbamCnScopeCheckerProps) {
           </div>
         ) : null}
 
+        {showInvalidCode ? (
+          <div className="cn-scope-checker-result cn-scope-checker-result-not-found" role="alert">
+            <div className="cn-scope-checker-result-head">
+              <AlertCircle className="h-5 w-5 shrink-0 text-[#b45309]" aria-hidden="true" />
+              <div className="min-w-0">
+                <p className="cn-scope-checker-result-title">{t("invalidCodeTitle")}</p>
+                <p className="cn-scope-checker-result-subtitle">{t("invalidCodeMessage")}</p>
+              </div>
+            </div>
+            {normalizedQuery ? (
+              <p className="cn-scope-checker-query-display">
+                {t("searchedCode")}:{" "}
+                <span className="font-mono">{normalizedQuery}</span>
+              </p>
+            ) : null}
+          </div>
+        ) : null}
+
         {showNotFound ? (
           <div className="cn-scope-checker-result cn-scope-checker-result-not-found">
             <div className="cn-scope-checker-result-head">
@@ -129,6 +158,9 @@ export function CbamCnScopeChecker({ className }: CbamCnScopeCheckerProps) {
               </p>
             ) : null}
             <p className="cn-scope-checker-next-step">{t("nextStep.notFound")}</p>
+            {isKeywordQuery ? (
+              <p className="cn-scope-checker-match-note">{t("numericCodeRecommended")}</p>
+            ) : null}
           </div>
         ) : null}
 

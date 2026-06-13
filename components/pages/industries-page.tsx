@@ -76,7 +76,7 @@ export function IndustriesPage() {
           className="pointer-events-none absolute -left-20 top-16 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(124,58,237,0.16),transparent_70%)] blur-3xl"
           aria-hidden="true"
         />
-        <OrbitWaveMotif variant="hero" showOrbit showWaves />
+        <OrbitWaveMotif variant="hero" showOrbit={false} showWaves intensity="subtle" />
 
         <PageContainer className="section-content min-w-0 page-hero-bottom">
           <div className="grid min-w-0 grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-10">
@@ -106,8 +106,7 @@ export function IndustriesPage() {
         <SectionWaveEdge className="opacity-45" />
       </FullBleedSection>
 
-      <FullBleedSection className="section-light industries-section-grid">
-        <OrbitWaveMotif variant="section" orbitAlign="left" />
+      <FullBleedSection className="section-light industries-section-grid section-inner-pad">
         <PageContainer className="section-content min-w-0 page-section-y">
           <FadeIn>
             <div className="industry-segment-head">

@@ -10,6 +10,7 @@ import {
   Sprout,
   TreePine,
   Users,
+  BarChart3,
 } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { StatusPill } from "@/components/pages/shared/status-pill";
@@ -28,11 +29,22 @@ const SOLUTION_ICONS: Record<SolutionWorkflowKey, typeof Calculator> = {
   agriClimate: Sprout,
   eudr: TreePine,
   dpp: Fingerprint,
+  supplierEvidence: Users,
+  esgReporting: BarChart3,
 };
 
 const SOLUTION_HREF: Record<
   SolutionWorkflowKey,
-  "/platform/cbam" | "/platform/cbam-console" | "/platform/ppwr" | "/platform/agri-climate" | "/platform/eudr" | "/platform/digital-product-passport" | "/demo" | "/resources"
+  | "/platform/cbam"
+  | "/platform/cbam-console"
+  | "/platform/ppwr"
+  | "/platform/agri-climate"
+  | "/platform/eudr"
+  | "/platform/digital-product-passport"
+  | "/platform/supplier-evidence"
+  | "/platform/esg-workspace"
+  | "/demo"
+  | "/resources"
 > = {
   cbamWorkflows: "/platform/cbam",
   cbamConsole: "/platform/cbam-console",
@@ -40,6 +52,8 @@ const SOLUTION_HREF: Record<
   agriClimate: "/platform/agri-climate",
   eudr: "/platform/eudr",
   dpp: "/platform/digital-product-passport",
+  supplierEvidence: "/platform/supplier-evidence",
+  esgReporting: "/platform/esg-workspace",
 };
 
 const STATUS_VARIANT: Record<SolutionStatus, "ready" | "pilot" | "comingSoon"> = {

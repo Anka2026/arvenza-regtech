@@ -2,98 +2,51 @@
 
 import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
-import {
-  BookOpen,
-  ClipboardCheck,
-  FileText,
-  Library,
-  Package,
-  Search,
-  TreePine,
-} from "lucide-react";
+import { ArrowRight, Library, Search, Sparkles } from "lucide-react";
+import { Link } from "@/i18n/routing";
 import { FullBleedSection, PageContainer } from "@/components/layout/page-container";
 import { OrbitWaveMotif, SectionWaveEdge } from "@/components/home/orbit-wave-motif";
 import { SectionHeading } from "@/components/home/section-heading";
 import { FadeIn } from "@/components/ui/fade-in";
-import {
-  ResourceLibraryCard,
-  type ResourceKey,
-} from "@/components/resources/resource-library-card";
+import { buttonVariants } from "@/components/ui/button";
+import { ResourceLibraryCard } from "@/components/resources/resource-library-card";
+import { ResourceDetailPanel } from "@/components/resources/resource-detail-panel";
 import { ResourcesSubscribePanel } from "@/components/resources/resources-subscribe-panel";
-import { CbamCnScopeChecker } from "@/components/tools/cbam-cn-scope-checker";
+import {
+  RESOURCE_CATEGORIES,
+  RESOURCE_LIBRARY,
+  sortResources,
+  type ResourceCategoryKey,
+  type ResourceKey,
+} from "@/lib/resources-config";
 import { cn } from "@/lib/utils";
 
 const HERO_CHIP_KEYS = ["item1", "item2", "item3"] as const;
 
-type CategoryKey = "cbamGuides" | "checklists" | "regulationUpdates";
-type ResourceStatus = "available" | "inPreparation" | "roadmap";
-type FilterKey = "all" | CategoryKey;
-
-/** Categories that have at least one resource card */
-const FILTER_CATEGORIES: FilterKey[] = ["all", "checklists", "cbamGuides", "regulationUpdates"];
-
-const RESOURCE_SECTIONS: {
-  sectionKey: "available" | "inPreparation" | "roadmap";
-  status: ResourceStatus;
-  resources: {
-    key: ResourceKey;
-    category: CategoryKey;
-    icon: typeof ClipboardCheck;
-    href: "/demo" | "/solutions#roadmap";
-    anchorToSubscribe?: boolean;
-    anchorToChecker?: boolean;
-  }[];
-}[] = [
-  {
-    sectionKey: "available",
-    status: "available",
-    resources: [
-      { key: "cbamChecklist", category: "checklists", icon: ClipboardCheck, href: "/demo" },
-      { key: "supplierTemplate", category: "checklists", icon: FileText, href: "/demo" },
-      {
-        key: "cbamCnScope",
-        category: "cbamGuides",
-        icon: Search,
-        href: "/demo",
-        anchorToChecker: true,
-      },
-    ],
-  },
-  {
-    sectionKey: "inPreparation",
-    status: "inPreparation",
-    resources: [
-      {
-        key: "embeddedEmissionsGuide",
-        category: "cbamGuides",
-        icon: BookOpen,
-        href: "/demo",
-        anchorToSubscribe: true,
-      },
-    ],
-  },
-  {
-    sectionKey: "roadmap",
-    status: "roadmap",
-    resources: [
-      { key: "ppwrPackaging", category: "regulationUpdates", icon: Package, href: "/solutions#roadmap" },
-      { key: "eudrBrief", category: "regulationUpdates", icon: TreePine, href: "/solutions#roadmap" },
-    ],
-  },
-];
+type FilterKey = (typeof RESOURCE_CATEGORIES)[number];
 
 export function ResourcesPageContent() {
   const t = useTranslations("resourcesPage");
   const [activeFilter, setActiveFilter] = useState<FilterKey>("all");
+  const [expandedResource, setExpandedResource] = useState<ResourceKey | null>(null);
 
-  const filteredSections = useMemo(() => {
-    if (activeFilter === "all") return RESOURCE_SECTIONS;
-
-    return RESOURCE_SECTIONS.map((section) => ({
-      ...section,
-      resources: section.resources.filter((r) => r.category === activeFilter),
-    })).filter((section) => section.resources.length > 0);
+  const filteredResources = useMemo(() => {
+    const list =
+      activeFilter === "all"
+        ? RESOURCE_LIBRARY
+        : RESOURCE_LIBRARY.filter((r) => r.category === activeFilter);
+    return sortResources(list);
   }, [activeFilter]);
+
+  const expandedDef = expandedResource
+    ? RESOURCE_LIBRARY.find((r) => r.key === expandedResource)
+    : null;
+
+  const handleExpand = (key: ResourceKey) => {
+    setExpandedResource((prev) => (prev === key ? null : key));
+  };
+
+  const showToolSpotlight = activeFilter === "all" || activeFilter === "tools";
 
   return (
     <>
@@ -106,7 +59,7 @@ export function ResourcesPageContent() {
           className="pointer-events-none absolute -right-16 top-20 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(124,58,237,0.16),transparent_70%)] blur-3xl"
           aria-hidden="true"
         />
-        <OrbitWaveMotif variant="hero" showOrbit showWaves />
+        <OrbitWaveMotif variant="hero" showOrbit={false} showWaves intensity="subtle" />
 
         <PageContainer className="section-content min-w-0 page-hero-bottom">
           <FadeIn immediate>
@@ -134,14 +87,17 @@ export function ResourcesPageContent() {
               role="group"
               aria-label={t("categoryTagsAriaLabel")}
             >
-              {FILTER_CATEGORIES.map((key) => {
+              {RESOURCE_CATEGORIES.map((key) => {
                 const isActive = activeFilter === key;
                 return (
                   <button
                     key={key}
                     type="button"
                     aria-pressed={isActive}
-                    onClick={() => setActiveFilter(key)}
+                    onClick={() => {
+                      setActiveFilter(key);
+                      setExpandedResource(null);
+                    }}
                     className={cn(
                       "resource-category-filter",
                       isActive && "resource-category-filter-active"
@@ -157,8 +113,7 @@ export function ResourcesPageContent() {
         <SectionWaveEdge className="section-wave-edge-compact opacity-45" />
       </FullBleedSection>
 
-      <FullBleedSection className="section-light resources-section-library">
-        <OrbitWaveMotif variant="section" orbitAlign="right" />
+      <FullBleedSection className="section-light resources-section-library section-inner-pad">
         <PageContainer className="section-content min-w-0 page-section-y">
           <FadeIn staticReveal>
             <div className="resource-library-head">
@@ -176,58 +131,80 @@ export function ResourcesPageContent() {
             </div>
           </FadeIn>
 
-          {filteredSections.map(({ sectionKey, status, resources }, sectionIndex) => (
-            <div key={sectionKey} className={sectionIndex > 0 ? "resource-status-section page-stack-gap" : "mt-6"}>
-              <FadeIn staticReveal delay={sectionIndex * 0.02}>
-                <div className="resource-status-head">
-                  <span className={`resource-status-badge resource-status-badge-${status}`}>
-                    {t(`sections.${sectionKey}.label`)}
-                  </span>
-                  <h3 className="mt-2 text-base font-bold text-[#071225] lg:text-lg">
-                    {t(`sections.${sectionKey}.title`)}
-                  </h3>
-                  <p className="mt-1.5 max-w-3xl text-sm leading-relaxed text-[#64748b]">
-                    {t(`sections.${sectionKey}.description`)}
-                  </p>
+          {showToolSpotlight ? (
+            <FadeIn staticReveal>
+              <div className="resource-tool-spotlight mt-6">
+                <div className="resource-tool-spotlight-glow" aria-hidden="true" />
+                <div className="relative grid min-w-0 gap-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
+                  <div className="min-w-0">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="resource-tool-spotlight-badge">
+                        <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
+                        {t("toolSpotlight.badge")}
+                      </span>
+                    </div>
+                    <h3 className="mt-3 text-[clamp(1.125rem,1.5vw+0.5rem,1.375rem)] font-bold tracking-[-0.02em] text-[#071225]">
+                      {t("toolSpotlight.title")}
+                    </h3>
+                    <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
+                      {t("toolSpotlight.description")}
+                    </p>
+                  </div>
+                  <div className="flex flex-col gap-2 sm:flex-row lg:flex-col lg:items-stretch">
+                    <Link
+                      href="/resources/cbam-cn-scope-checker"
+                      className={cn(
+                        buttonVariants({ variant: "default", size: "lg" }),
+                        "inline-flex w-full items-center justify-center gap-2 sm:w-auto lg:min-w-[12rem]"
+                      )}
+                    >
+                      <Search className="h-4 w-4" aria-hidden="true" />
+                      {t("toolSpotlight.cta")}
+                    </Link>
+                    {activeFilter !== "tools" ? (
+                      <button
+                        type="button"
+                        onClick={() => setActiveFilter("tools")}
+                        className={cn(
+                          buttonVariants({ variant: "accent-outline", size: "lg" }),
+                          "inline-flex w-full items-center justify-center sm:w-auto lg:min-w-[12rem]"
+                        )}
+                      >
+                        {t("toolSpotlight.secondaryCta")}
+                      </button>
+                    ) : null}
+                  </div>
                 </div>
-              </FadeIn>
-              <div className="resource-library-grid mt-5">
-                {resources.map((resource, i) => (
-                  <FadeIn key={resource.key} staticReveal delay={0.02 + i * 0.02}>
-                    <ResourceLibraryCard
-                      resourceKey={resource.key}
-                      category={resource.category}
-                      status={status}
-                      icon={resource.icon}
-                      href={resource.href}
-                      anchorToSubscribe={resource.anchorToSubscribe}
-                      anchorToChecker={resource.anchorToChecker}
-                    />
-                  </FadeIn>
-                ))}
               </div>
-            </div>
-          ))}
+            </FadeIn>
+          ) : null}
 
-          <FadeIn staticReveal>
-            <section
-              id="cbam-cn-scope-checker"
-              className="cn-scope-checker-section mt-10 scroll-mt-28 lg:mt-12"
-              aria-labelledby="cn-scope-checker-heading"
-            >
-              <p className="eyebrow-pill">{t("cnScopeChecker.eyebrow")}</p>
-              <h2
-                id="cn-scope-checker-heading"
-                className="mt-3 text-[clamp(1.25rem,1.75vw+0.5rem,1.75rem)] font-bold tracking-[-0.02em] text-[#071225]"
-              >
-                {t("cnScopeChecker.title")}
-              </h2>
-              <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
-                {t("cnScopeChecker.description")}
-              </p>
-              <CbamCnScopeChecker className="mt-6" />
-            </section>
-          </FadeIn>
+          <div className="resource-library-grid mt-6">
+            {filteredResources.map((resource, i) => (
+              <FadeIn key={resource.key} staticReveal delay={0.02 + i * 0.02}>
+                <ResourceLibraryCard
+                  resourceKey={resource.key}
+                  category={resource.category}
+                  status={resource.status}
+                  icon={resource.icon}
+                  ctaAction={resource.ctaAction}
+                  isExpanded={expandedResource === resource.key}
+                  onExpand={handleExpand}
+                />
+              </FadeIn>
+            ))}
+          </div>
+
+          {expandedDef ? (
+            <FadeIn staticReveal>
+              <ResourceDetailPanel
+                resourceKey={expandedDef.key}
+                category={expandedDef.category}
+                status={expandedDef.status}
+                onClose={() => setExpandedResource(null)}
+              />
+            </FadeIn>
+          ) : null}
 
           <FadeIn staticReveal delay={0.08}>
             <ResourcesSubscribePanel />

@@ -1,0 +1,425 @@
+{
+  "modules": {
+    "agriClimate": {
+      "en": {
+        "category": "Farm-level evidence workflow",
+        "description": "A farm-level evidence and climate-data workflow for producer records, agricultural activity data, location evidence and supply-chain readiness.",
+        "why": {
+          "title": "Why this product exists",
+          "description": "Commodity-linked supply chains increasingly require producer-level records, geolocation references and farm-level data organized before regulatory and buyer expectations intensify."
+        },
+        "capabilities": {
+          "title": "Core capabilities",
+          "description": "Agricultural data structuring and evidence preparation for supply-chain readiness.",
+          "items": {
+            "item1": { "title": "Producer record structure", "description": "Organize producer references, farm identifiers and supplier documentation." },
+            "item2": { "title": "Farm-level activity data", "description": "Structure agricultural activity inputs and supporting field records." },
+            "item3": { "title": "Geolocation evidence", "description": "Prepare location-linked documentation aligned with traceability requirements." },
+            "item4": { "title": "Chain-of-custody preparation", "description": "Map commodity flows to producer evidence across the network." },
+            "item5": { "title": "Climate-data inputs", "description": "Intake and organize climate-related agricultural data from producers." },
+            "item6": { "title": "Verification readiness", "description": "Mark data completeness and follow-up needs before review cycles." }
+          }
+        },
+        "outputs": {
+          "title": "What teams receive",
+          "items": {
+            "item1": { "title": "Producer evidence register", "description": "Structured farm-level records linked to supply-chain scope." },
+            "item2": { "title": "Geolocation documentation pack", "description": "Location evidence organized for traceability review." },
+            "item3": { "title": "Readiness summary", "description": "Gap overview before buyer or regulatory review preparation." }
+          }
+        },
+        "architecture": {
+          "title": "How this product fits the Arvenza architecture",
+          "layerKey": "supplierEvidence",
+          "dataStructured": "Producer records, farm-level activity data and commodity scope mapping",
+          "evidenceManaged": "Geolocation documentation, climate inputs and chain-of-custody records",
+          "outputSupported": "Structured agricultural evidence bundles and verification-ready summaries"
+        },
+        "audience": { "title": "Who it is for" },
+        "cta": { "title": "Request access to Agri-Climate Platform" }
+      },
+      "tr": {
+        "category": "Çiftlik düzeyinde kanıt iş akışı",
+        "description": "Üretici kayıtları, tarımsal faaliyet verileri, konum kanıtı ve tedarik zinciri hazırlığı için çiftlik düzeyinde kanıt ve iklim verisi iş akışı.",
+        "why": {
+          "title": "Bu ürün neden var",
+          "description": "Emtia bağlantılı tedarik zincirleri, düzenleyici ve alıcı beklentileri yoğunlaşmadan önce üretici düzeyinde kayıt, coğrafi konum referansları ve çiftlik düzeyinde verinin yapılandırılmasını gerektirir."
+        },
+        "capabilities": {
+          "title": "Temel yetenekler",
+          "items": {
+            "item1": { "title": "Üretici kayıt yapısı", "description": "Üretici referansları, çiftlik tanımlayıcıları ve tedarikçi dokümantasyonunu düzenleyin." },
+            "item2": { "title": "Çiftlik düzeyinde faaliyet verisi", "description": "Tarımsal faaliyet girdilerini ve destekleyici saha kayıtlarını yapılandırın." },
+            "item3": { "title": "Coğrafi konum kanıtı", "description": "İzlenebilirlik gereksinimleriyle uyumlu konum bağlantılı dokümantasyon hazırlayın." },
+            "item4": { "title": "Zincir of custody hazırlığı", "description": "Emtia akışlarını ağ genelinde üretici kanıtına eşleyin." },
+            "item5": { "title": "İklim verisi girdileri", "description": "Üreticilerden iklimle ilgili tarımsal verileri alın ve düzenleyin." },
+            "item6": { "title": "Doğrulama hazırlığı", "description": "İnceleme döngüleri öncesinde veri tamlığını ve takip ihtiyaçlarını işaretleyin." }
+          }
+        },
+        "outputs": {
+          "title": "Ekiplerin elde ettiği çıktılar",
+          "items": {
+            "item1": { "title": "Üretici kanıt kaydı", "description": "Tedarik zinciri kapsamına bağlı yapılandırılmış çiftlik düzeyinde kayıtlar." },
+            "item2": { "title": "Coğrafi konum dokümantasyon paketi", "description": "İzlenebilirlik incelemesi için düzenlenmiş konum kanıtı." },
+            "item3": { "title": "Hazırlık özeti", "description": "Alıcı veya düzenleyici inceleme hazırlığı öncesinde boşluk genel bakışı." }
+          }
+        },
+        "architecture": {
+          "title": "Bu ürün Arvenza mimarisinde nereye oturur",
+          "layerKey": "supplierEvidence",
+          "dataStructured": "Üretici kayıtları, çiftlik düzeyinde faaliyet verisi ve emtia kapsam eşlemesi",
+          "evidenceManaged": "Coğrafi konum dokümantasyonu, iklim girdileri ve zincir of custody kayıtları",
+          "outputSupported": "Yapılandırılmış tarımsal kanıt paketleri ve doğrulamaya hazır özetler"
+        },
+        "audience": { "title": "Kimler için" },
+        "cta": { "title": "Agri-Climate Platform erişimi talep edin" }
+      },
+      "nl": {
+        "category": "Boerderijniveau-bewijsworkflow",
+        "description": "Een boerderijniveau-bewijs- en klimaatdataworkflow voor producentenrecords, landbouwactiviteitsdata, locatiebewijs en supplychain-gereedheid.",
+        "why": { "title": "Waarom dit product bestaat" },
+        "capabilities": { "title": "Kernmogelijkheden" },
+        "outputs": { "title": "Wat teams ontvangen" },
+        "architecture": {
+          "title": "Hoe dit product past binnen de Arvenza-architectuur",
+          "layerKey": "supplierEvidence"
+        },
+        "audience": { "title": "Voor wie" },
+        "cta": { "title": "Toegang aanvragen tot Agri-Climate Platform" }
+      }
+    },
+    "eudr": {
+      "en": {
+        "category": "Due diligence workflow",
+        "description": "A roadmap workflow for supplier traceability, geolocation evidence, deforestation-risk screening and due-diligence documentation.",
+        "why": {
+          "title": "Why this product exists",
+          "description": "Commodity-linked supply chains need repeatable workflows for geolocation data, supplier declarations and traceability documentation — built on the same supplier evidence model as CBAM."
+        },
+        "capabilities": {
+          "title": "Core capabilities",
+          "description": "Planned due diligence capability direction on the product roadmap.",
+          "items": {
+            "item1": { "title": "Supplier traceability", "description": "Map suppliers and commodity flows requiring due diligence documentation." },
+            "item2": { "title": "Geolocation evidence", "description": "Organize plot-level location data and supporting documentation." },
+            "item3": { "title": "Risk screening", "description": "Prepare documentation layers for deforestation-risk assessment workflows." },
+            "item4": { "title": "Due-diligence documentation", "description": "Structured collection of supplier attestations and statements." },
+            "item5": { "title": "Chain-of-custody logic", "description": "Link commodity batches to evidence files across the supply chain." },
+            "item6": { "title": "Evidence archive", "description": "Maintain traceable documentation history for review cycles." }
+          }
+        },
+        "outputs": {
+          "title": "Planned outputs",
+          "items": {
+            "item1": { "title": "Due diligence evidence pack", "description": "Structured supplier and geolocation documentation bundle." },
+            "item2": { "title": "Risk screening summary", "description": "Review-ready overview of screening inputs and gaps." },
+            "item3": { "title": "Traceability register", "description": "Commodity flow records linked to evidence files." }
+          }
+        },
+        "architecture": {
+          "title": "How this product fits the Arvenza architecture",
+          "layerKey": "supplierEvidence",
+          "dataStructured": "Supplier networks, commodity scope and geolocation references",
+          "evidenceManaged": "Due diligence declarations, plot evidence and risk screening documentation",
+          "outputSupported": "Traceability registers and review-ready due diligence packs"
+        },
+        "audience": { "title": "Who it is for" },
+        "cta": { "title": "Follow EUDR due diligence roadmap" }
+      },
+      "tr": {
+        "category": "Durum tespiti iş akışı",
+        "description": "Tedarikçi izlenebilirliği, coğrafi konum kanıtı, ormansızlaşma riski taraması ve durum tespiti dokümantasyonu için yol haritası iş akışı.",
+        "why": {
+          "title": "Bu ürün neden var",
+          "description": "Emtia bağlantılı tedarik zincirleri; coğrafi konum verisi, tedarikçi beyanları ve izlenebilirlik dokümantasyonu için CBAM ile aynı tedarikçi kanıtı modeli üzerine kurulu tekrarlanabilir iş akışları gerektirir."
+        },
+        "capabilities": {
+          "title": "Temel yetenekler",
+          "items": {
+            "item1": { "title": "Tedarikçi izlenebilirliği", "description": "Durum tespiti dokümantasyonu gerektiren tedarikçi ve emtia akışlarını haritalayın." },
+            "item2": { "title": "Coğrafi konum kanıtı", "description": "Parsel düzeyinde konum verisi ve destekleyici dokümantasyonu düzenleyin." },
+            "item3": { "title": "Risk taraması", "description": "Ormansızlaşma riski değerlendirme iş akışları için dokümantasyon katmanları hazırlayın." },
+            "item4": { "title": "Durum tespiti dokümantasyonu", "description": "Tedarikçi beyanları ve açıklamalarının yapılandırılmış toplanması." },
+            "item5": { "title": "Zincir of custody mantığı", "description": "Emtia partilerini tedarik zinciri genelinde kanıt dosyalarına bağlayın." },
+            "item6": { "title": "Kanıt arşivi", "description": "İnceleme döngüleri için izlenebilir dokümantasyon geçmişini koruyun." }
+          }
+        },
+        "outputs": {
+          "title": "Planlanan çıktılar",
+          "items": {
+            "item1": { "title": "Durum tespiti kanıt paketi", "description": "Yapılandırılmış tedarikçi ve coğrafi konum dokümantasyon paketi." },
+            "item2": { "title": "Risk taraması özeti", "description": "Tarama girdileri ve boşlukların incelemeye hazır genel bakışı." },
+            "item3": { "title": "İzlenebilirlik kaydı", "description": "Kanıt dosyalarına bağlı emtia akış kayıtları." }
+          }
+        },
+        "architecture": {
+          "title": "Bu ürün Arvenza mimarisinde nereye oturur",
+          "layerKey": "supplierEvidence",
+          "dataStructured": "Tedarikçi ağları, emtia kapsamı ve coğrafi konum referansları",
+          "evidenceManaged": "Durum tespiti beyanları, parsel kanıtı ve risk taraması dokümantasyonu",
+          "outputSupported": "İzlenebilirlik kayıtları ve incelemeye hazır durum tespiti paketleri"
+        },
+        "audience": { "title": "Kimler için" },
+        "cta": { "title": "EUDR durum tespiti yol haritasını takip edin" }
+      },
+      "nl": {
+        "category": "Due diligence-workflow",
+        "why": { "title": "Waarom dit product bestaat" },
+        "capabilities": { "title": "Kernmogelijkheden" },
+        "outputs": { "title": "Geplande outputs" },
+        "architecture": { "title": "Hoe dit product past binnen de Arvenza-architectuur", "layerKey": "supplierEvidence" },
+        "audience": { "title": "Voor wie" },
+        "cta": { "title": "EUDR due diligence-roadmap volgen" }
+      }
+    },
+    "dpp": {
+      "en": {
+        "category": "Product data layer",
+        "description": "A roadmap product-data layer for product identity, material composition, sustainability evidence, lifecycle data and traceable documentation.",
+        "why": {
+          "title": "Why this product exists",
+          "description": "Digital product passport requirements demand structured product identity, material data and sustainability evidence before passports can be assembled for market access."
+        },
+        "capabilities": {
+          "title": "Core capabilities",
+          "items": {
+            "item1": { "title": "Product identity structure", "description": "Define product identifiers, variants and passport scope." },
+            "item2": { "title": "Material composition data", "description": "Organize material breakdowns and component references." },
+            "item3": { "title": "Sustainability evidence", "description": "Link environmental and compliance evidence to product records." },
+            "item4": { "title": "Lifecycle indicators", "description": "Structure lifecycle data points required for passport models." },
+            "item5": { "title": "Documentation links", "description": "Connect certificates, test reports and supplier declarations." },
+            "item6": { "title": "Passport-ready data model", "description": "Prepare structured data aligned with passport schema direction." }
+          }
+        },
+        "outputs": {
+          "title": "Planned outputs",
+          "items": {
+            "item1": { "title": "Product passport data bundle", "description": "Structured identity, material and evidence records per product." },
+            "item2": { "title": "Documentation index", "description": "Traceable links to sustainability and compliance evidence." },
+            "item3": { "title": "Review-ready summary", "description": "Internal readiness overview before passport publication planning." }
+          }
+        },
+        "architecture": {
+          "title": "How this product fits the Arvenza architecture",
+          "layerKey": "productData",
+          "dataStructured": "Product identity, material composition and lifecycle indicator records",
+          "evidenceManaged": "Sustainability certificates, supplier declarations and compliance documentation",
+          "outputSupported": "Passport-ready data bundles and traceable documentation indexes"
+        },
+        "audience": { "title": "Who it is for" },
+        "cta": { "title": "Follow Digital Product Passport roadmap" }
+      },
+      "tr": {
+        "category": "Ürün verisi katmanı",
+        "description": "Ürün kimliği, malzeme bileşimi, sürdürülebilirlik kanıtı, yaşam döngüsü verisi ve izlenebilir dokümantasyon için yol haritası ürün verisi katmanı.",
+        "why": {
+          "title": "Bu ürün neden var",
+          "description": "Dijital ürün pasaportu gereksinimleri; pasaportların pazar erişimi için bir araya getirilebilmesi öncesinde yapılandırılmış ürün kimliği, malzeme verisi ve sürdürülebilirlik kanıtı gerektirir."
+        },
+        "capabilities": {
+          "title": "Temel yetenekler",
+          "items": {
+            "item1": { "title": "Ürün kimliği yapısı", "description": "Ürün tanımlayıcıları, varyantlar ve pasaport kapsamını tanımlayın." },
+            "item2": { "title": "Malzeme bileşimi verisi", "description": "Malzeme dökümlerini ve bileşen referanslarını düzenleyin." },
+            "item3": { "title": "Sürdürülebilirlik kanıtı", "description": "Çevresel ve uyum kanıtını ürün kayıtlarına bağlayın." },
+            "item4": { "title": "Yaşam döngüsü göstergeleri", "description": "Pasaport modelleri için gerekli yaşam döngüsü veri noktalarını yapılandırın." },
+            "item5": { "title": "Dokümantasyon bağlantıları", "description": "Sertifikalar, test raporları ve tedarikçi beyanlarını bağlayın." },
+            "item6": { "title": "Pasaporta hazır veri modeli", "description": "Pasaport şema yönüyle uyumlu yapılandırılmış veri hazırlayın." }
+          }
+        },
+        "outputs": {
+          "title": "Planlanan çıktılar",
+          "items": {
+            "item1": { "title": "Ürün pasaportu veri paketi", "description": "Ürün başına yapılandırılmış kimlik, malzeme ve kanıt kayıtları." },
+            "item2": { "title": "Dokümantasyon dizini", "description": "Sürdürülebilirlik ve uyum kanıtına izlenebilir bağlantılar." },
+            "item3": { "title": "İncelemeye hazır özet", "description": "Pasaport yayın planlaması öncesinde iç hazırlık genel bakışı." }
+          }
+        },
+        "architecture": {
+          "title": "Bu ürün Arvenza mimarisinde nereye oturur",
+          "layerKey": "productData",
+          "dataStructured": "Ürün kimliği, malzeme bileşimi ve yaşam döngüsü gösterge kayıtları",
+          "evidenceManaged": "Sürdürülebilirlik sertifikaları, tedarikçi beyanları ve uyum dokümantasyonu",
+          "outputSupported": "Pasaporta hazır veri paketleri ve izlenebilir dokümantasyon dizinleri"
+        },
+        "audience": { "title": "Kimler için" },
+        "cta": { "title": "Dijital Ürün Pasaportu yol haritasını takip edin" }
+      },
+      "nl": {
+        "category": "Productdatalaag",
+        "why": { "title": "Waarom dit product bestaat" },
+        "capabilities": { "title": "Kernmogelijkheden" },
+        "outputs": { "title": "Geplande outputs" },
+        "architecture": { "title": "Hoe dit product past binnen de Arvenza-architectuur", "layerKey": "productData" },
+        "audience": { "title": "Voor wie" },
+        "cta": { "title": "Digital Product Passport-roadmap volgen" }
+      }
+    },
+    "supplierEvidence": {
+      "en": {
+        "category": "Supplier evidence layer",
+        "description": "A supplier evidence operating model for data requests, document collection, evidence quality checks and follow-up tracking.",
+        "why": {
+          "title": "Why this product exists",
+          "description": "Compliance teams need repeatable supplier outreach, data requests, evidence upload and follow-up workflows shared across CBAM, packaging and product-data programs."
+        },
+        "capabilities": {
+          "title": "Core capabilities",
+          "items": {
+            "item1": { "title": "Supplier data request flows", "description": "Issue structured requests by product scope, period and evidence type." },
+            "item2": { "title": "Document collection", "description": "Controlled intake of supplier declarations and supporting files." },
+            "item3": { "title": "Evidence quality review", "description": "Mark completeness, quality flags and resolution status." },
+            "item4": { "title": "Missing evidence tracking", "description": "Surface gaps before they block downstream calculation or reporting." },
+            "item5": { "title": "Supplier reminders", "description": "Track outreach and follow-up actions across supplier networks." },
+            "item6": { "title": "Audit trail", "description": "Maintain traceable history of submissions, reviews and changes." }
+          }
+        },
+        "outputs": {
+          "title": "What teams receive",
+          "items": {
+            "item1": { "title": "Structured evidence trail", "description": "Per-scope supplier evidence history with quality marking." },
+            "item2": { "title": "Follow-up queue", "description": "Prioritized supplier actions and internal review tasks." },
+            "item3": { "title": "Completeness summary", "description": "Overview of evidence status before downstream workflows." }
+          }
+        },
+        "architecture": {
+          "title": "How this product fits the Arvenza architecture",
+          "layerKey": "supplierEvidence",
+          "dataStructured": "Supplier scope, request templates and submission records",
+          "evidenceManaged": "Declarations, uploaded documents and quality review status",
+          "outputSupported": "Structured evidence trails and follow-up queues for downstream modules"
+        },
+        "audience": { "title": "Who it is for" },
+        "cta": { "title": "Request access to Supplier Evidence Workflow" }
+      },
+      "tr": {
+        "category": "Tedarikçi kanıtı katmanı",
+        "description": "Veri talepleri, doküman toplama, kanıt kalitesi kontrolleri ve tedarikçi takibi için tedarikçi kanıtı operasyon modeli.",
+        "why": {
+          "title": "Bu ürün neden var",
+          "description": "Uyum ekipleri; CBAM, ambalaj ve ürün verisi programları genelinde paylaşılan tekrarlanabilir tedarikçi iletişimi, veri talebi, kanıt yükleme ve takip iş akışlarına ihtiyaç duyar."
+        },
+        "capabilities": {
+          "title": "Temel yetenekler",
+          "items": {
+            "item1": { "title": "Tedarikçi veri talep akışları", "description": "Ürün kapsamı, dönem ve kanıt türüne göre yapılandırılmış talepler gönderin." },
+            "item2": { "title": "Doküman toplama", "description": "Tedarikçi beyanları ve destekleyici dosyaların kontrollü alımı." },
+            "item3": { "title": "Kanıt kalitesi incelemesi", "description": "Tamlık, kalite işaretleri ve çözüm durumunu işaretleyin." },
+            "item4": { "title": "Eksik kanıt takibi", "description": "Aşağı akış hesaplama veya raporlamayı engellemeden önce boşlukları görün." },
+            "item5": { "title": "Tedarikçi hatırlatmaları", "description": "Tedarikçi ağları genelinde iletişim ve takip eylemlerini izleyin." },
+            "item6": { "title": "Denetim izi", "description": "Gönderimler, incelemeler ve değişikliklerin izlenebilir geçmişini koruyun." }
+          }
+        },
+        "outputs": {
+          "title": "Ekiplerin elde ettiği çıktılar",
+          "items": {
+            "item1": { "title": "Yapılandırılmış kanıt izi", "description": "Kalite işaretleme ile kapsam başına tedarikçi kanıt geçmişi." },
+            "item2": { "title": "Takip kuyruğu", "description": "Önceliklendirilmiş tedarikçi eylemleri ve iç inceleme görevleri." },
+            "item3": { "title": "Tamlık özeti", "description": "Aşağı akış iş akışları öncesinde kanıt durumu genel bakışı." }
+          }
+        },
+        "architecture": {
+          "title": "Bu ürün Arvenza mimarisinde nereye oturur",
+          "layerKey": "supplierEvidence",
+          "dataStructured": "Tedarikçi kapsamı, talep şablonları ve gönderim kayıtları",
+          "evidenceManaged": "Beyanlar, yüklenen dokümanlar ve kalite inceleme durumu",
+          "outputSupported": "Aşağı akış modülleri için yapılandırılmış kanıt izleri ve takip kuyrukları"
+        },
+        "audience": { "title": "Kimler için" },
+        "cta": { "title": "Tedarikçi Kanıt İş Akışı erişimi talep edin" }
+      },
+      "nl": {
+        "category": "Leveranciersbewijslaag",
+        "why": { "title": "Waarom dit product bestaat" },
+        "capabilities": { "title": "Kernmogelijkheden" },
+        "outputs": { "title": "Wat teams ontvangen" },
+        "architecture": { "title": "Hoe dit product past binnen de Arvenza-architectuur", "layerKey": "supplierEvidence" },
+        "audience": { "title": "Voor wie" },
+        "cta": { "title": "Toegang aanvragen tot Leveranciersbewijsworkflow" }
+      }
+    },
+    "esgReporting": {
+      "en": {
+        "category": "Reporting workspace",
+        "description": "A reporting workspace for ESG evidence, source documentation, disclosure preparation and internal review readiness.",
+        "why": {
+          "title": "Why this product exists",
+          "description": "ESG disclosure cycles require structured evidence libraries, source documentation and internal review workflows — not ad hoc folder management."
+        },
+        "capabilities": {
+          "title": "Core capabilities",
+          "items": {
+            "item1": { "title": "ESG evidence library", "description": "Organize evidence by disclosure topic, source and review status." },
+            "item2": { "title": "Source documentation", "description": "Link primary sources, calculations and supporting files to disclosure items." },
+            "item3": { "title": "Disclosure preparation", "description": "Structure draft disclosure content with evidence backing." },
+            "item4": { "title": "Internal review status", "description": "Track review cycles, sign-off and open questions." },
+            "item5": { "title": "Evidence ownership", "description": "Assign responsibility for evidence completeness by topic." },
+            "item6": { "title": "Reporting readiness", "description": "Overview of disclosure readiness before publication windows." }
+          }
+        },
+        "outputs": {
+          "title": "Planned outputs",
+          "items": {
+            "item1": { "title": "Disclosure evidence pack", "description": "Structured evidence bundle per disclosure cycle." },
+            "item2": { "title": "Review status dashboard", "description": "Internal sign-off and open item overview." },
+            "item3": { "title": "Source traceability index", "description": "Linked documentation trail for audit support." }
+          }
+        },
+        "architecture": {
+          "title": "How this product fits the Arvenza architecture",
+          "layerKey": "documentationReporting",
+          "dataStructured": "Disclosure topics, evidence taxonomy and review checkpoints",
+          "evidenceManaged": "ESG source documents, calculations and supporting files",
+          "outputSupported": "Disclosure evidence packs and reporting readiness summaries"
+        },
+        "audience": { "title": "Who it is for" },
+        "cta": { "title": "Follow ESG Evidence & Reporting Workspace roadmap" }
+      },
+      "tr": {
+        "category": "Raporlama çalışma alanı",
+        "description": "ESG kanıtları, kaynak dokümantasyonu, beyan hazırlığı ve iç gözden geçirme hazırlığı için raporlama çalışma alanı.",
+        "why": {
+          "title": "Bu ürün neden var",
+          "description": "ESG beyan döngüleri; yapılandırılmış kanıt kütüphaneleri, kaynak dokümantasyonu ve iç inceleme iş akışları gerektirir — rastgele klasör yönetimi yerine."
+        },
+        "capabilities": {
+          "title": "Temel yetenekler",
+          "items": {
+            "item1": { "title": "ESG kanıt kütüphanesi", "description": "Kanıtı beyan konusu, kaynak ve inceleme durumuna göre düzenleyin." },
+            "item2": { "title": "Kaynak dokümantasyonu", "description": "Birincil kaynakları, hesaplamaları ve destekleyici dosyaları beyan kalemlerine bağlayın." },
+            "item3": { "title": "Beyan hazırlığı", "description": "Kanıt destekli taslak beyan içeriğini yapılandırın." },
+            "item4": { "title": "İç inceleme durumu", "description": "İnceleme döngülerini, onayı ve açık soruları izleyin." },
+            "item5": { "title": "Kanıt sahipliği", "description": "Konu bazında kanıt tamlığı sorumluluğunu atayın." },
+            "item6": { "title": "Raporlama hazırlığı", "description": "Yayın pencereleri öncesinde beyan hazırlığı genel bakışı." }
+          }
+        },
+        "outputs": {
+          "title": "Planlanan çıktılar",
+          "items": {
+            "item1": { "title": "Beyan kanıt paketi", "description": "Beyan döngüsü başına yapılandırılmış kanıt paketi." },
+            "item2": { "title": "İnceleme durumu panosu", "description": "İç onay ve açık kalem genel bakışı." },
+            "item3": { "title": "Kaynak izlenebilirlik dizini", "description": "Denetim desteği için bağlantılı dokümantasyon izi." }
+          }
+        },
+        "architecture": {
+          "title": "Bu ürün Arvenza mimarisinde nereye oturur",
+          "layerKey": "documentationReporting",
+          "dataStructured": "Beyan konuları, kanıt taksonomisi ve inceleme kontrol noktaları",
+          "evidenceManaged": "ESG kaynak dokümanları, hesaplamalar ve destekleyici dosyalar",
+          "outputSupported": "Beyan kanıt paketleri ve raporlama hazırlığı özetleri"
+        },
+        "audience": { "title": "Kimler için" },
+        "cta": { "title": "ESG Kanıt ve Raporlama Çalışma Alanı yol haritasını takip edin" }
+      },
+      "nl": {
+        "category": "Rapportageworkspace",
+        "why": { "title": "Waarom dit product bestaat" },
+        "capabilities": { "title": "Kernmogelijkheden" },
+        "outputs": { "title": "Geplande outputs" },
+        "architecture": { "title": "Hoe dit product past binnen de Arvenza-architectuur", "layerKey": "documentationReporting" },
+        "audience": { "title": "Voor wie" },
+        "cta": { "title": "ESG Evidence & Reporting Workspace-roadmap volgen" }
+      }
+    }
+  }
+}

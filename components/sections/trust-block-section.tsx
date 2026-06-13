@@ -16,7 +16,7 @@ export function TrustBlockSection() {
 
   return (
     <FullBleedSection id="trust" ariaLabelledby="trust-heading" className="section-muted home-section-compact">
-      <OrbitWaveMotif variant="muted" orbitAlign="center" />
+      <OrbitWaveMotif variant="muted" orbitAlign="center" showOrbit={false} />
       <PageContainer className="section-content">
         <FadeIn staticReveal>
           <SectionHeading
@@ -32,7 +32,7 @@ export function TrustBlockSection() {
             const Icon = credibilityIcons[i];
             return (
               <li key={key}>
-                <article className="credibility-panel-card card-glass flex h-full flex-col p-5">
+                <article className="credibility-panel-card card-glass flex h-full flex-col p-4">
                   <div className="icon-accent-wrap mb-3">
                     <Icon className="h-[19px] w-[19px] text-[#7c3aed]" aria-hidden="true" />
                   </div>
@@ -47,7 +47,7 @@ export function TrustBlockSection() {
             );
           })}
         </ul>
-        <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-relaxed text-[#64748b]">
+        <p className="mx-auto mt-5 max-w-3xl text-center text-sm leading-relaxed text-[#64748b]">
           {t("legalNote")}
         </p>
       </PageContainer>

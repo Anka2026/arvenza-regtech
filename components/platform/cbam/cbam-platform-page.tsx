@@ -12,7 +12,8 @@ import { ProductFeatureSection } from "@/components/platform/cbam/product-featur
 import { ComplianceControlPanel } from "@/components/platform/cbam/product-ui-compositions";
 import { CBAM_JOURNEY_STEP_KEYS } from "@/lib/assets";
 import { cn } from "@/lib/utils";
-import { Mail, Calculator, FileCheck, Factory, Users, Building2, Truck, ShieldCheck, Check } from "lucide-react";
+import { StatusPill } from "@/components/pages/shared/status-pill";
+import { Mail, Calculator, FileCheck, Factory, Users, Building2, Truck, ShieldCheck, Check, Layers } from "lucide-react";
 
 const chipKeys = ["item1", "item2", "item3", "item4"] as const;
 const trustBulletKeys = ["item1", "item2", "item3", "item4"] as const;
@@ -22,9 +23,12 @@ const complianceToolKeys = ["item1", "item2", "item3", "item4"] as const;
 const audienceKeys = ["item1", "item2", "item3", "item4"] as const;
 const audienceIcons = [Factory, Users, Building2, Truck];
 const faqKeys = ["item1", "item2", "item3", "item4"] as const;
+const outputKeys = ["item1", "item2", "item3"] as const;
 
 export function CbamPlatformPage() {
   const t = useTranslations("cbamPlatform");
+  const tShared = useTranslations("platformModules.shared");
+  const tStatus = useTranslations("nav.status");
 
   return (
     <div className="cbam-platform-page">
@@ -38,7 +42,10 @@ export function CbamPlatformPage() {
           <div className="grid w-full min-w-0 grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-10">
             <div className="min-w-0 max-w-[540px]">
               <FadeIn immediate>
-                <p className="eyebrow-pill">{t("hero.eyebrow")}</p>
+                <div className="flex flex-wrap items-center gap-2">
+                  <StatusPill variant="ready" label={tStatus("ready")} />
+                </div>
+                <p className="eyebrow-pill mt-4">{t("hero.eyebrow")}</p>
               </FadeIn>
               <FadeIn immediate>
                 <h1 id="cbam-hero-heading" className="heading-hero-gradient mt-4 text-balance lg:mt-5">
@@ -301,6 +308,96 @@ export function CbamPlatformPage() {
         </PageContainer>
         <SectionWaveEdge />
       </FullBleedSection>
+
+      {t.has("outputs.title") && (
+        <FullBleedSection id="outputs" ariaLabelledby="cbam-outputs-heading" className="section-muted cbam-section">
+          <PageContainer className="section-content">
+            <FadeIn>
+              <SectionHeading
+                id="cbam-outputs-heading"
+                eyebrow={t("outputs.eyebrow")}
+                title={t("outputs.title")}
+                description={t.has("outputs.description") ? t("outputs.description") : undefined}
+                className="mb-4 lg:mb-5"
+              />
+            </FadeIn>
+            <div className="grid gap-3 lg:grid-cols-3">
+              {outputKeys.map((key, i) => (
+                <FadeIn key={key} delay={i * 0.04}>
+                  <article className="card-glass flex h-full flex-col p-4 lg:p-5">
+                    <h3 className="text-[15px] font-semibold leading-snug text-[#071225]">
+                      {t(`outputs.items.${key}.title`)}
+                    </h3>
+                    <p className="body-sm mt-2 text-[13px] leading-snug">
+                      {t(`outputs.items.${key}.description`)}
+                    </p>
+                  </article>
+                </FadeIn>
+              ))}
+            </div>
+          </PageContainer>
+          <SectionWaveEdge />
+        </FullBleedSection>
+      )}
+
+      {t.has("architecture.title") && (
+        <FullBleedSection id="architecture" ariaLabelledby="cbam-architecture-heading" className="section-light cbam-section">
+          <PageContainer className="section-content">
+            <FadeIn>
+              <div className="platform-architecture-module-panel">
+                <div className="flex items-start gap-3">
+                  <div className="icon-accent-wrap shrink-0">
+                    <Layers className="h-[19px] w-[19px] text-[#7c3aed]" aria-hidden="true" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[#7c3aed]">
+                      {tShared("architectureEyebrow")}
+                    </p>
+                    <h2
+                      id="cbam-architecture-heading"
+                      className="mt-2 text-[clamp(1.125rem,1.5vw+0.5rem,1.5rem)] font-bold tracking-[-0.02em] text-[#071225]"
+                    >
+                      {t("architecture.title")}
+                    </h2>
+                    <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
+                      {t("architecture.description")}
+                    </p>
+                  </div>
+                </div>
+                <dl className="mt-6 grid gap-3 sm:grid-cols-2">
+                  <div className="platform-architecture-fact card-glass p-4">
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#64748b]">
+                      {tShared("architectureLayerLabel")}
+                    </dt>
+                    <dd className="mt-1.5 text-sm font-semibold text-[#071225]">
+                      {tShared("architectureLayers.calculationMethodology")}
+                    </dd>
+                  </div>
+                  <div className="platform-architecture-fact card-glass p-4">
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#64748b]">
+                      {tShared("architectureDataLabel")}
+                    </dt>
+                    <dd className="mt-1.5 text-sm leading-relaxed text-[#475569]">{t("architecture.dataStructured")}</dd>
+                  </div>
+                  <div className="platform-architecture-fact card-glass p-4">
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#64748b]">
+                      {tShared("architectureEvidenceLabel")}
+                    </dt>
+                    <dd className="mt-1.5 text-sm leading-relaxed text-[#475569]">{t("architecture.evidenceManaged")}</dd>
+                  </div>
+                  <div className="platform-architecture-fact card-glass p-4">
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#64748b]">
+                      {tShared("architectureOutputLabel")}
+                    </dt>
+                    <dd className="mt-1.5 text-sm leading-relaxed text-[#475569]">{t("architecture.outputSupported")}</dd>
+                  </div>
+                </dl>
+              </div>
+            </FadeIn>
+          </PageContainer>
+          <SectionWaveEdge />
+        </FullBleedSection>
+      )}
 
       <FullBleedSection id="faq" ariaLabelledby="cbam-faq-heading" className="section-muted cbam-section">
         <OrbitWaveMotif variant="muted" orbitAlign="center" />

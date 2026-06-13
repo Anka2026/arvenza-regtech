@@ -11,7 +11,9 @@ export type SolutionWorkflowKey =
   | "ppwr"
   | "agriClimate"
   | "eudr"
-  | "dpp";
+  | "dpp"
+  | "supplierEvidence"
+  | "esgReporting";
 
 type SolutionStatus = "ready" | "pilot" | "comingSoon";
 

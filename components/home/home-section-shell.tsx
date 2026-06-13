@@ -34,4 +34,4 @@ export function HomeSectionShell({
   );
 }
 
-export const sectionHeadSpacing = "mb-7 lg:mb-9";
+export const sectionHeadSpacing = "mb-5 lg:mb-7";
