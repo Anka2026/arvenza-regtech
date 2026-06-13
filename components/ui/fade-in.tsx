@@ -50,15 +50,15 @@ export function FadeIn({
   return (
     <motion.div
       initial={{
-        opacity: 0.92,
-        y: direction === "up" ? 16 : 0,
+        opacity: 1,
+        y: direction === "up" ? 6 : 0,
       }}
       whileInView={{
         opacity: 1,
         y: 0,
       }}
-      viewport={{ once: true, margin: "0px 0px -8% 0px", amount: 0.03 }}
-      transition={{ duration: 0.35, delay, ease: [0.22, 1, 0.36, 1] }}
+      viewport={{ once: true, margin: "0px 0px 200px 0px", amount: 0 }}
+      transition={{ duration: 0.4, delay, ease: [0.22, 1, 0.36, 1] }}
       className={cn("fade-in-safe", className)}
     >
       {children}

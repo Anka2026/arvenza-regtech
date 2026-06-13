@@ -96,7 +96,7 @@ export function CompanyPage() {
       <FullBleedSection className="section-light company-section-narrative page-end-cap">
         <OrbitWaveMotif variant="section" orbitAlign="left" />
         <PageContainer className="section-content min-w-0 page-section-y">
-          <FadeIn>
+          <FadeIn staticReveal>
             <article className="company-why-now-panel">
               <div className="company-why-now-panel-glow" aria-hidden="true" />
               <div className="relative">
@@ -120,7 +120,7 @@ export function CompanyPage() {
             </article>
           </FadeIn>
 
-          <FadeIn delay={0.04}>
+          <FadeIn staticReveal delay={0.04}>
             <article className="corporate-section-card corporate-section-card-featured mt-5">
               <div className="corporate-section-icon">
                 <Building2 className="h-[18px] w-[18px] text-[#7c3aed]" aria-hidden="true" />
@@ -146,7 +146,7 @@ export function CompanyPage() {
               const Icon = SECTION_ICONS[i];
               const featured = key === "whatIs";
               return (
-                <FadeIn key={key} delay={0.06 + i * 0.03}>
+                <FadeIn key={key} staticReveal delay={0.06 + i * 0.03}>
                   <article
                     className={cn(
                       "corporate-section-card h-full",
@@ -168,7 +168,7 @@ export function CompanyPage() {
             })}
           </div>
 
-          <FadeIn delay={0.12}>
+          <FadeIn staticReveal delay={0.12}>
             <div className="company-trust-strip page-stack-gap" aria-label={t("trust.ariaLabel")}>
               <p className="company-trust-strip-title">{t("trust.title")}</p>
               <ul className="mt-4 flex flex-wrap gap-2">

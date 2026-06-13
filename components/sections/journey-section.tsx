@@ -29,7 +29,7 @@ export function JourneySection() {
     >
       <OrbitWaveMotif variant="muted" orbitAlign="center" />
       <PageContainer className="section-content">
-        <FadeIn immediate>
+        <FadeIn staticReveal>
           <SectionHeading
             id="journey-heading"
             eyebrow={t("eyebrow")}

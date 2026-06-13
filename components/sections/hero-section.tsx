@@ -28,20 +28,20 @@ export function HeroSection() {
       <PageContainer className="section-content min-w-0 page-hero-bottom page-hero-top">
         <div className="grid w-full min-w-0 grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,44%)_minmax(0,56%)] lg:gap-8 xl:gap-10">
           <div className="min-w-0 lg:max-w-[540px]">
-            <FadeIn immediate>
+            <FadeIn staticReveal>
               <p className="eyebrow-pill">{t("eyebrow")}</p>
               <p className="mt-3 text-sm font-semibold tracking-wide text-[#4338ca]">{t("platformTagline")}</p>
             </FadeIn>
-            <FadeIn immediate>
+            <FadeIn staticReveal>
               <h1 id="hero-heading" className="heading-hero-gradient mt-4 text-balance lg:mt-5">
                 {t("title")}
               </h1>
             </FadeIn>
-            <FadeIn immediate>
+            <FadeIn staticReveal>
               <p className="body-lead-hero mt-4 lg:mt-5">{t("description")}</p>
             </FadeIn>
 
-            <FadeIn immediate>
+            <FadeIn staticReveal>
               <div className="hero-cta-panel mt-6">
                 <div className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
                   <Link
@@ -63,7 +63,7 @@ export function HeroSection() {
               </div>
             </FadeIn>
 
-            <FadeIn immediate>
+            <FadeIn staticReveal>
               <ul className="hero-signal-grid mt-6" aria-label={t("signalsAriaLabel")}>
                 {signalKeys.map((key, i) => {
                   const Icon = signalIcons[i];
@@ -88,7 +88,7 @@ export function HeroSection() {
               </ul>
             </FadeIn>
 
-            <FadeIn immediate>
+            <FadeIn staticReveal>
               <ul className="mt-5 flex flex-wrap gap-1.5" aria-label={t("trustAriaLabel")}>
                 {trustKeys.map((key) => (
                   <li key={key}>
@@ -102,7 +102,7 @@ export function HeroSection() {
             </FadeIn>
           </div>
 
-          <FadeIn immediate direction="none" className="min-w-0 w-full lg:justify-self-end">
+          <FadeIn staticReveal direction="none" className="min-w-0 w-full lg:justify-self-end">
             <HeroProductStage />
           </FadeIn>
         </div>

@@ -60,12 +60,18 @@ export const PLATFORM_MODULE_SCREENSHOTS: Record<PlatformModuleKey, string> = {
 /** EUDR Turkish UI — English mock for EN/NL locales */
 export const EUDR_SCREENSHOT_EN = "/assets/screenshots/eudr/dashboard-en.png";
 
+/** Supplier Evidence Turkish UI — English mock for EN/NL locales */
+export const SUPPLIER_SCREENSHOT_EN = "/assets/screenshots/supplier-evidence/dashboard-en.png";
+
 export function resolveModuleScreenshotPath(
   moduleKey: PlatformModuleKey,
   locale?: string
 ): string {
   if (moduleKey === "eudr" && locale && locale !== "tr") {
     return EUDR_SCREENSHOT_EN;
+  }
+  if (moduleKey === "supplierEvidence" && locale && locale !== "tr") {
+    return SUPPLIER_SCREENSHOT_EN;
   }
   return PLATFORM_MODULE_SCREENSHOTS[moduleKey];
 }

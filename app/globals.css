@@ -168,9 +168,9 @@
     font-weight: 700;
     line-height: 1.08;
     letter-spacing: -0.03em;
-    hyphens: auto;
+    hyphens: none;
     overflow-wrap: break-word;
-    word-break: break-word;
+    word-break: normal;
     min-width: 0;
     max-width: 100%;
     background: linear-gradient(
@@ -186,13 +186,7 @@
   }
 
   .company-hero-heading {
-    max-width: 18ch;
-  }
-
-  @media (min-width: 1024px) {
-    .company-hero-heading {
-      max-width: 22ch;
-    }
+    max-width: none;
   }
 
   .text-accent {

@@ -1610,8 +1610,41 @@
     border-bottom: 1px solid rgba(124, 58, 237, 0.1);
   }
 
-  .resource-hero-chip {
-    border-color: rgba(124, 58, 237, 0.2);
+  .section-resources-hero .page-hero-bottom {
+    padding-bottom: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    .section-resources-hero .page-hero-bottom {
+      padding-bottom: 1.25rem;
+    }
+  }
+
+  .resources-section-library {
+    margin-top: -0.125rem;
+  }
+
+  .resources-section-library .page-section-y {
+    padding-top: 1.25rem;
+    padding-bottom: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .resources-section-library .page-section-y {
+      padding-top: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .resources-section-library .page-section-y {
+      padding-top: 1.75rem;
+      padding-bottom: 2.5rem;
+    }
+  }
+
+  .section-resources-hero .section-wave-edge-compact {
+    height: 1.5rem;
+    opacity: 0.25;
   }
 
   .resource-library-head {

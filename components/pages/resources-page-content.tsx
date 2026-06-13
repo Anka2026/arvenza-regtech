@@ -154,7 +154,7 @@ export function ResourcesPageContent() {
             </div>
           </FadeIn>
         </PageContainer>
-        <SectionWaveEdge className="opacity-45" />
+        <SectionWaveEdge className="section-wave-edge-compact opacity-45" />
       </FullBleedSection>
 
       <FullBleedSection className="section-light resources-section-library">

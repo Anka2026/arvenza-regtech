@@ -18,6 +18,7 @@ const PATHS = [
   "/assets/screenshots/eudr/dashboard-en.png",
   "/assets/screenshots/dpp/dashboard.png",
   "/assets/screenshots/supplier-evidence/dashboard.png",
+  "/assets/screenshots/supplier-evidence/dashboard-en.png",
   "/assets/screenshots/esg-workspace/dashboard.png",
 ];
 

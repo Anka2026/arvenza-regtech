@@ -18,7 +18,7 @@ export function TrustBlockSection() {
     <FullBleedSection id="trust" ariaLabelledby="trust-heading" className="section-muted home-section-compact">
       <OrbitWaveMotif variant="muted" orbitAlign="center" />
       <PageContainer className="section-content">
-        <FadeIn immediate>
+        <FadeIn staticReveal>
           <SectionHeading
             id="trust-heading"
             eyebrow={t("eyebrow")}

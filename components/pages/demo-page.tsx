@@ -50,18 +50,18 @@ export function DemoPage() {
         <PageContainer className="section-content min-w-0 page-hero-bottom">
           <div className="grid min-w-0 grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-12 xl:gap-14">
             <div className="min-w-0 max-w-[580px]">
-              <FadeIn immediate>
+              <FadeIn staticReveal>
                 <p className="eyebrow-pill">{t("hero.eyebrow")}</p>
               </FadeIn>
-              <FadeIn immediate>
+              <FadeIn staticReveal>
                 <h1 id="demo-hero-heading" className="heading-hero-gradient mt-4 text-balance lg:mt-5">
                   {t("hero.title")}
                 </h1>
               </FadeIn>
-              <FadeIn immediate>
+              <FadeIn staticReveal>
                 <p className="body-lead-hero mt-4 lg:mt-5">{t("hero.description")}</p>
               </FadeIn>
-              <FadeIn immediate>
+              <FadeIn staticReveal>
                 <ul className="mt-5 flex flex-wrap gap-1.5" aria-label={t("hero.chipsAriaLabel")}>
                   {heroChipKeys.map((key) => (
                     <li key={key}>
@@ -73,7 +73,7 @@ export function DemoPage() {
                   ))}
                 </ul>
               </FadeIn>
-              <FadeIn immediate>
+              <FadeIn staticReveal>
                 <ul className="mt-6 space-y-2.5">
                   {heroBulletKeys.map((key) => (
                     <li key={key} className="flex items-start gap-2.5">
@@ -85,7 +85,7 @@ export function DemoPage() {
                   ))}
                 </ul>
               </FadeIn>
-              <FadeIn immediate>
+              <FadeIn staticReveal>
                 <div className="demo-hero-stat stat-capsule mt-7 max-w-full">
                   <span className="text-xs font-semibold uppercase tracking-[0.12em] text-[#7c3aed]">
                     {t("hero.statLabel")}
@@ -95,7 +95,7 @@ export function DemoPage() {
               </FadeIn>
             </div>
 
-            <FadeIn immediate direction="none" className="relative mx-auto w-full min-w-0 max-w-[540px] lg:mx-0 lg:max-w-none lg:justify-self-end">
+            <FadeIn staticReveal direction="none" className="relative mx-auto w-full min-w-0 max-w-[540px] lg:mx-0 lg:max-w-none lg:justify-self-end">
               <div className="demo-preview-stack relative min-w-0 overflow-hidden">
                 <div
                   className="pointer-events-none absolute -inset-6 rounded-[2rem] bg-[radial-gradient(circle,rgba(124,58,237,0.16),transparent_68%)] blur-2xl"
@@ -152,7 +152,7 @@ export function DemoPage() {
       <FullBleedSection ariaLabelledby="demo-form-heading" className="section-light demo-section-form">
         <OrbitWaveMotif variant="section" orbitAlign="right" />
         <PageContainer className="section-content min-w-0 page-section-y-tight">
-          <FadeIn>
+          <FadeIn staticReveal>
             <div className="demo-form-section-head">
               <h2 id="demo-form-heading" className="heading-section-compact">
                 {t("formSection.title")}
@@ -162,7 +162,7 @@ export function DemoPage() {
           </FadeIn>
 
           <div className="mt-6 grid min-w-0 grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-8 xl:gap-10">
-            <FadeIn>
+            <FadeIn staticReveal>
               <div className="demo-form-shell">
                 <ContactForm namespace="demo" variant="premium" />
               </div>
@@ -183,7 +183,7 @@ export function DemoPage() {
               </div>
             </FadeIn>
 
-            <FadeIn delay={0.08}>
+            <FadeIn staticReveal delay={0.08}>
               <aside className="demo-expectations-panel h-full">
                 <h3 className="text-lg font-semibold tracking-tight text-[#071225]">
                   {t("expectations.title")}
@@ -258,7 +258,7 @@ export function DemoPage() {
 
       <FullBleedSection ariaLabelledby="demo-coverage-heading" className="section-muted demo-section-coverage">
         <PageContainer className="section-content min-w-0 page-section-y-tight">
-          <FadeIn>
+          <FadeIn staticReveal>
             <div className="mx-auto max-w-2xl text-center">
               <h2 id="demo-coverage-heading" className="heading-section-compact">
                 {t("coverage.title")}
@@ -270,7 +270,7 @@ export function DemoPage() {
             {coverageKeys.map((key, index) => {
               const Icon = coverageIcons[index];
               return (
-                <FadeIn key={key} delay={index * 0.05}>
+                <FadeIn key={key} staticReveal delay={index * 0.05}>
                   <article className="demo-coverage-card">
                     <div className="demo-coverage-icon">
                       <Icon className="h-[18px] w-[18px] text-[#7c3aed]" aria-hidden="true" />
@@ -290,7 +290,7 @@ export function DemoPage() {
 
       <FullBleedSection ariaLabelledby="demo-audience-heading" className="section-light demo-section-audience">
         <PageContainer className="section-content min-w-0 page-section-y-tight">
-          <FadeIn>
+          <FadeIn staticReveal>
             <div className="demo-audience-band">
               <h2 id="demo-audience-heading" className="text-lg font-semibold tracking-tight text-[#071225] lg:text-xl">
                 {t("audience.title")}
@@ -315,7 +315,7 @@ export function DemoPage() {
       <FullBleedSection ariaLabelledby="demo-cta-heading" className="section-light demo-section-cta page-end-cap">
         <OrbitWaveMotif variant="cta" orbitAlign="center" />
         <PageContainer className="section-content min-w-0">
-          <FadeIn>
+          <FadeIn staticReveal>
             <div className="demo-cta-band premium-cta-band relative overflow-hidden rounded-[1.75rem] px-8 py-10 sm:px-12 sm:py-11 lg:px-14 lg:py-12">
               <div
                 className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.2),transparent_55%)]"

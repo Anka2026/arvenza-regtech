@@ -1693,7 +1693,7 @@
   },
   "companyPage": {
     "eyebrow": "Bedrijf",
-    "title": "Een RegTech-productmerk voor EU-duurzaamheidsworkflows",
+    "title": "Een RegTech-productmerk voor EU-duurzaamheid",
     "description": "Arvenza RegTech wordt beheerd door Anka Sustainability B.V., Nederland, en is ontworpen om leveranciersbewijs, productdata en regelgevingsgerichte berekeningsvereisten om te zetten in gestructureerde digitale workflows. Het product begint met CBAM Calculation Engine en breidt uit via duidelijk gelabelde pilot- en roadmapmodules rond hetzelfde bewijsmodel.",
     "cards": {
       "productBrand": {
@@ -2234,7 +2234,7 @@
     },
     "cbamComplianceConsole": {
       "eyebrow": "CBAM Compliance Console",
-      "title": "Operationele coördinatie voor CBAM-bewijs en rapportage",
+      "title": "CBAM-bewijs en rapportage coördineren",
       "description": "Een pilotcoördinatielaag voor het monitoren van leveranciersbewijsstatus, berekeningsgereedheid, opvolgacties en voortgang per rapportagecyclus in CBAM-workflows.",
       "chipsAriaLabel": "Console-hoogtepunten",
       "chips": {
