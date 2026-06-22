@@ -10,6 +10,7 @@ import {
   Scale,
   Search,
   TreePine,
+  Droplets,
 } from "lucide-react";
 
 export type ResourceCategoryKey =
@@ -31,7 +32,8 @@ export type ResourceKey =
   | "ppwrPackaging"
   | "eudrBrief"
   | "dppDataModelBrief"
-  | "esgEvidenceStructure";
+  | "esgEvidenceStructure"
+  | "waterEfficiencyChecklist";
 
 export type ResourceCtaAction = "checker" | "request" | "expand";
 
@@ -122,6 +124,13 @@ export const RESOURCE_LIBRARY: ResourceDefinition[] = [
     status: "inPreparation",
     icon: BarChart3,
     ctaAction: "expand",
+  },
+  {
+    key: "waterEfficiencyChecklist",
+    category: "checklists",
+    status: "availableOnRequest",
+    icon: Droplets,
+    ctaAction: "request",
   },
 ];
 

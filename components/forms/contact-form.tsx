@@ -193,7 +193,7 @@ export function ContactForm({ namespace = "contact", variant = "default", classN
                   {t("form.interestPlaceholder")}
                 </option>
                 {(
-                  ["cbam", "ppwr", "eudr", "dpp", "supplier", "esg", "general"] as const
+                  ["cbam", "ppwr", "eudr", "dpp", "supplier", "esg", "waterEfficiency", "general"] as const
                 ).map((i) => (
                   <option key={i} value={i}>
                     {t(`form.interests.${i}`)}

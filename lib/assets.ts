@@ -35,7 +35,7 @@ export const CBAM_SCREENSHOT_FOCUS: Record<
   sidebar: { objectPosition: "left center", objectFit: "contain" },
   kpi: { objectPosition: "36% 14%", objectFit: "cover" },
   chart: { objectPosition: "50% 58%", objectFit: "cover" },
-  calculation: { objectPosition: "38% 36%", objectFit: "cover" },
+  calculation: { objectPosition: "left top", objectFit: "contain" },
   insightRail: { objectPosition: "93% 46%", objectFit: "cover" },
   monitoring: { objectPosition: "38% 20%", objectFit: "cover" },
 };

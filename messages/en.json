@@ -64,6 +64,10 @@
       "esgReporting": {
         "title": "ESG Evidence & Reporting Workspace | Roadmap Module",
         "description": "Planned ESG evidence coordination, reporting inputs and documentation traceability workspace."
+      },
+      "waterEfficiency": {
+        "title": "Water Efficiency Management | Arvenza RegTech",
+        "description": "Structure water consumption data, water balance inputs, improvement actions and evidence documentation for Türkiye-specific water efficiency regulation workflows."
       }
     },
     "solutions": {
@@ -153,6 +157,9 @@
         },
         "esgReporting": {
           "title": "ESG Evidence & Reporting Workspace"
+        },
+        "waterEfficiency": {
+          "title": "Water Efficiency Management"
         }
       },
       "architectureLabel": "Platform architecture",
@@ -163,7 +170,8 @@
       },
       "earlyAccessLabel": "Early access capabilities",
       "viewSolutionsCta": "View all solutions",
-      "roadmapModulesLabel": "Roadmap modules"
+      "roadmapModulesLabel": "Roadmap modules",
+      "onRequestModulesLabel": "Available on request capabilities"
     },
     "solutionsMenu": {
       "featuredLabel": "Featured",
@@ -179,7 +187,8 @@
         "eudr": "EUDR Due Diligence & Traceability",
         "dpp": "Digital Product Passport Platform",
         "supplierEvidence": "Supplier Data Collection & Evidence Workflow",
-        "esgReporting": "ESG Evidence & Reporting Workspace"
+        "esgReporting": "ESG Evidence & Reporting Workspace",
+        "waterEfficiency": "Water Efficiency Management"
       }
     },
     "industriesMenu": {
@@ -1142,7 +1151,8 @@
         "dpp": "Digital Product Passport",
         "supplier": "Supplier Evidence",
         "esg": "ESG Reporting",
-        "general": "General Platform Overview"
+        "general": "General Platform Overview",
+        "waterEfficiency": "Water Efficiency Management"
       }
     },
     "expectations": {
@@ -1403,6 +1413,12 @@
         "description": "Planned ESG evidence coordination, reporting inputs and documentation traceability workspace.",
         "exploreCta": "View ESG workspace",
         "screenshotAlt": "ESG evidence and reporting workspace preview"
+      },
+      "waterEfficiency": {
+        "title": "Water Efficiency Management",
+        "description": "Structure facility-level water data, meter records and improvement actions for Türkiye water efficiency regulation workflows — Turkish product interface.",
+        "exploreCta": "Explore water efficiency module",
+        "screenshotAlt": "Water Efficiency Management dashboard preview"
       }
     },
     "cta": {
@@ -1446,6 +1462,11 @@
         "label": "Roadmap",
         "title": "Roadmap solution workflows",
         "description": "Planned use cases that extend the same supplier evidence and documentation logic into EUDR and Digital Product Passport readiness"
+      },
+      "onRequest": {
+        "label": "Available on request",
+        "title": "Additional capability workflows",
+        "description": "Extended resource-efficiency workflows available on request — structured data intake and evidence documentation without displacing the core CBAM product."
       }
     },
     "solutions": {
@@ -1617,6 +1638,27 @@
         "targetTeam": "ESG, sustainability reporting and compliance teams preparing evidence-led disclosures",
         "cta": "Follow roadmap",
         "secondaryCta": "View roadmap module"
+      },
+      "waterEfficiency": {
+        "title": "Water Efficiency Management",
+        "problem": "Türkiye-specific water efficiency regulation workflows require structured facility-level water data, evidence files and improvement action tracking.",
+        "approach": "Water Efficiency Management coordinates meter records, water balance inputs and improvement actions for Türkiye water efficiency regulation workflows — with a Turkish product interface.",
+        "capability": "Water Efficiency Management",
+        "workflowSteps": {
+          "step1": "Define facility scope",
+          "step2": "Collect meter data",
+          "step3": "Build balance inputs",
+          "step4": "Track improvement actions"
+        },
+        "features": {
+          "item1": "Facility water data",
+          "item2": "Evidence documentation",
+          "item3": "Action tracking"
+        },
+        "output": "Facility water overview and review-ready evidence package",
+        "targetTeam": "Sustainability, facility and environmental teams managing water efficiency evidence",
+        "cta": "Request access",
+        "secondaryCta": "View module"
       }
     },
     "maturity": {
@@ -1630,7 +1672,8 @@
         "eudr": "EUDR Due Diligence Workflows",
         "dpp": "Digital Product Passport Readiness",
         "supplierEvidence": "Supplier Evidence Workflows",
-        "esgReporting": "ESG Evidence & Reporting Workspace"
+        "esgReporting": "ESG Evidence & Reporting Workspace",
+        "waterEfficiency": "Water Efficiency Management"
       }
     },
     "cta": {
@@ -2091,6 +2134,17 @@
           "item2": "Customs classification and supplier documentation review"
         },
         "detail": "Request the checklist to structure scope assessment before your next reporting cycle."
+      },
+      "waterEfficiencyChecklist": {
+        "title": "Water Efficiency Data Collection Checklist",
+        "description": "A practical checklist for collecting meter readings, source records, water balance inputs and improvement action evidence.",
+        "format": "Checklist",
+        "cta": "Request checklist",
+        "valuePreview": {
+          "item1": "Meter readings and source records",
+          "item2": "Water balance inputs and improvement action evidence"
+        },
+        "detail": "Request the checklist to structure water efficiency data collection before workflow setup."
       }
     },
     "cnScopeChecker": {
@@ -2422,6 +2476,10 @@
         "productData": "Product data layer",
         "calculationMethodology": "Calculation and methodology layer",
         "documentationReporting": "Documentation and reporting layer"
+      },
+      "previewPlaceholder": {
+        "title": "Product preview",
+        "description": "Module screenshot available on request — preview shows current capability scope for Water Efficiency Management."
       }
     },
     "cbamComplianceConsole": {
@@ -3365,6 +3423,149 @@
           }
         }
       }
+    },
+    "waterEfficiency": {
+      "eyebrow": "Water Efficiency Management",
+      "title": "Water efficiency workflows for Türkiye regulation and facility-level evidence tracking",
+      "description": "Structure water consumption data, meter records, water balance inputs, improvement actions and supporting evidence for Türkiye-specific water efficiency regulation workflows.",
+      "category": "Resource efficiency",
+      "chipsAriaLabel": "Water efficiency highlights",
+      "chips": {
+        "item1": "Facility-level water data",
+        "item2": "Evidence documentation",
+        "item3": "Action tracking"
+      },
+      "screenshotAlt": "Water Efficiency Management dashboard preview",
+      "why": {
+        "title": "From water consumption records to traceable improvement actions",
+        "description": "Water efficiency work often depends on scattered meter readings, facility records, process-level assumptions and action plans. Arvenza structures these inputs into a repeatable workflow so teams can track water use, document evidence and monitor improvement actions in one place."
+      },
+      "capabilities": {
+        "title": "Core capabilities",
+        "description": "Structured facility-level water data, evidence and action workflows — available on request.",
+        "items": {
+          "item1": {
+            "title": "Water consumption data structure",
+            "description": "Organize consumption records by facility, source and reporting period."
+          },
+          "item2": {
+            "title": "Meter and source records",
+            "description": "Maintain meter readings and water source documentation in one archive."
+          },
+          "item3": {
+            "title": "Water balance preparation",
+            "description": "Prepare balance inputs from intake, use and discharge records."
+          },
+          "item4": {
+            "title": "Process-level allocation inputs",
+            "description": "Capture process-level allocation assumptions with traceable references."
+          },
+          "item5": {
+            "title": "Improvement action tracking",
+            "description": "Track planned and completed water efficiency actions with ownership."
+          },
+          "item6": {
+            "title": "Evidence file documentation",
+            "description": "Attach supporting files to meter records, actions and balance inputs."
+          },
+          "item7": {
+            "title": "Review and reporting readiness",
+            "description": "Prepare review-ready outputs for internal sign-off and reporting cycles."
+          }
+        }
+      },
+      "workflow": {
+        "title": "Water efficiency management workflow",
+        "description": "From facility definition through evidence preparation and review-ready outputs.",
+        "steps": {
+          "step1": {
+            "title": "Define facility and water sources",
+            "description": "Set facility scope, water sources and ownership for the workflow."
+          },
+          "step2": {
+            "title": "Collect meter and activity data",
+            "description": "Gather meter readings and activity data needed for balance preparation."
+          },
+          "step3": {
+            "title": "Build water balance inputs",
+            "description": "Structure intake, use and discharge inputs for balance review."
+          },
+          "step4": {
+            "title": "Track improvement actions",
+            "description": "Monitor planned actions, status updates and supporting evidence."
+          },
+          "step5": {
+            "title": "Prepare evidence and review outputs",
+            "description": "Assemble documentation and review-ready reporting packages."
+          }
+        }
+      },
+      "audience": {
+        "title": "Who it is for",
+        "items": {
+          "item1": {
+            "title": "Sustainability teams",
+            "description": "Groups coordinating water data and evidence across facilities."
+          },
+          "item2": {
+            "title": "Facility managers",
+            "description": "Teams responsible for meter records and on-site water use."
+          },
+          "item3": {
+            "title": "Environmental managers",
+            "description": "Functions overseeing environmental performance and improvement programs."
+          },
+          "item4": {
+            "title": "Water efficiency project teams",
+            "description": "Project groups running targeted water reduction initiatives."
+          },
+          "item5": {
+            "title": "Consultants managing client evidence files",
+            "description": "Advisors preparing structured evidence files for client review cycles."
+          }
+        }
+      },
+      "outputs": {
+        "title": "Workflow outputs",
+        "items": {
+          "item1": {
+            "title": "Facility water data overview",
+            "description": "Structured summary of consumption and source records by facility."
+          },
+          "item2": {
+            "title": "Meter and source record archive",
+            "description": "Searchable archive of meter readings and source documentation."
+          },
+          "item3": {
+            "title": "Water balance preparation file",
+            "description": "Prepared balance inputs ready for review and validation."
+          },
+          "item4": {
+            "title": "Improvement action tracker",
+            "description": "Status view of planned and completed efficiency actions."
+          },
+          "item5": {
+            "title": "Evidence documentation file",
+            "description": "Linked evidence files supporting balance and action records."
+          },
+          "item6": {
+            "title": "Review-ready reporting package",
+            "description": "Packaged outputs prepared for internal review and reporting cycles."
+          }
+        }
+      },
+      "architecture": {
+        "title": "How this module fits the Arvenza architecture",
+        "description": "Water Efficiency Management extends the Arvenza evidence model beyond carbon-focused workflows. It uses the same operating logic: structured data intake, evidence documentation, workflow ownership and reporting-ready outputs.",
+        "layerKey": "documentationReporting",
+        "dataStructured": "Facility water sources, meter records and consumption data structures",
+        "evidenceManaged": "Water balance inputs, improvement actions and supporting documentation",
+        "outputSupported": "Review-ready reporting packages and facility water overview files"
+      },
+      "cta": {
+        "title": "Request access to Water Efficiency Management"
+      },
+      "interfaceLanguageNote": "Interface currently available in Turkish for Türkiye water efficiency regulation workflows."
     }
   }
 }

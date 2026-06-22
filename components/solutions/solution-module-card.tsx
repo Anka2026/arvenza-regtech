@@ -11,6 +11,7 @@ import {
   TreePine,
   Users,
   BarChart3,
+  Droplets,
 } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { StatusPill } from "@/components/pages/shared/status-pill";
@@ -18,7 +19,7 @@ import { SolutionWorkflowRail, type SolutionWorkflowKey } from "@/components/sol
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-type SolutionStatus = "ready" | "pilot" | "comingSoon";
+type SolutionStatus = "ready" | "pilot" | "comingSoon" | "availableOnRequest";
 
 const FEATURE_KEYS = ["item1", "item2", "item3"] as const;
 
@@ -31,6 +32,7 @@ const SOLUTION_ICONS: Record<SolutionWorkflowKey, typeof Calculator> = {
   dpp: Fingerprint,
   supplierEvidence: Users,
   esgReporting: BarChart3,
+  waterEfficiency: Droplets,
 };
 
 const SOLUTION_HREF: Record<
@@ -43,6 +45,7 @@ const SOLUTION_HREF: Record<
   | "/platform/digital-product-passport"
   | "/platform/supplier-evidence"
   | "/platform/esg-workspace"
+  | "/platform/water-efficiency"
   | "/demo"
   | "/resources"
 > = {
@@ -54,12 +57,21 @@ const SOLUTION_HREF: Record<
   dpp: "/platform/digital-product-passport",
   supplierEvidence: "/platform/supplier-evidence",
   esgReporting: "/platform/esg-workspace",
+  waterEfficiency: "/platform/water-efficiency",
 };
 
-const STATUS_VARIANT: Record<SolutionStatus, "ready" | "pilot" | "comingSoon"> = {
+const STATUS_VARIANT: Record<SolutionStatus, "ready" | "pilot" | "comingSoon" | "available"> = {
   ready: "ready",
   pilot: "pilot",
   comingSoon: "comingSoon",
+  availableOnRequest: "available",
+};
+
+const STATUS_LABEL_KEY: Record<SolutionStatus, "ready" | "pilot" | "comingSoon" | "availableOnRequest"> = {
+  ready: "ready",
+  pilot: "pilot",
+  comingSoon: "comingSoon",
+  availableOnRequest: "availableOnRequest",
 };
 
 export interface SolutionModuleCardProps {
@@ -75,7 +87,12 @@ export function SolutionModuleCard({ solutionKey, status, featured = false }: So
   const href = SOLUTION_HREF[solutionKey];
   const productHref = href;
 
-  const primaryHref = status === "comingSoon" ? "/resources" : status === "pilot" ? "/demo" : href;
+  const primaryHref =
+    status === "comingSoon"
+      ? "/resources"
+      : status === "pilot" || status === "availableOnRequest"
+        ? "/demo"
+        : href;
   const secondaryHref = status === "ready" ? "/demo" : productHref;
 
   return (
@@ -85,6 +102,7 @@ export function SolutionModuleCard({ solutionKey, status, featured = false }: So
         status === "ready" && "solution-module-card-ready",
         status === "pilot" && "solution-module-card-pilot",
         status === "comingSoon" && "solution-module-card-roadmap",
+        status === "availableOnRequest" && "solution-module-card-on-request",
         featured && "solution-module-card-featured"
       )}
     >
@@ -102,7 +120,10 @@ export function SolutionModuleCard({ solutionKey, status, featured = false }: So
           </div>
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-center gap-2">
-              <StatusPill variant={STATUS_VARIANT[status]} label={tStatus(STATUS_VARIANT[status])} />
+              <StatusPill
+                variant={STATUS_VARIANT[status]}
+                label={tStatus(STATUS_LABEL_KEY[status])}
+              />
               {status === "ready" && (
                 <span className="solution-powered-chip">{t(`solutions.${solutionKey}.poweredBy`)}</span>
               )}

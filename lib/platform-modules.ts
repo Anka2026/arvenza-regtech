@@ -19,7 +19,8 @@ export type PlatformModuleKey =
   | "eudr"
   | "dpp"
   | "supplierEvidence"
-  | "esgReporting";
+  | "esgReporting"
+  | "waterEfficiency";
 
 export type PlatformModuleRoute =
   | "/platform"
@@ -30,7 +31,8 @@ export type PlatformModuleRoute =
   | "/platform/eudr"
   | "/platform/digital-product-passport"
   | "/platform/supplier-evidence"
-  | "/platform/esg-workspace";
+  | "/platform/esg-workspace"
+  | "/platform/water-efficiency";
 
 export type ProductScreenshotFocus =
   | "full"
@@ -64,7 +66,24 @@ export const PLATFORM_MODULE_SCREENSHOTS: Record<PlatformModuleKey, string> = {
   dpp: "/assets/screenshots/dpp/dashboard.png",
   supplierEvidence: "/assets/screenshots/supplier-evidence/dashboard.png",
   esgReporting: "/assets/screenshots/esg-workspace/dashboard.png",
+  waterEfficiency: "/assets/screenshots/water-efficiency/dashboard.png",
 };
+
+/** Modules that always use preview placeholder regardless of locale */
+export const PLATFORM_MODULES_PREVIEW_PLACEHOLDER: Partial<Record<PlatformModuleKey, boolean>> =
+  {};
+
+export function shouldUseModulePreviewPlaceholder(
+  moduleKey: PlatformModuleKey | undefined,
+  _locale?: string
+): boolean {
+  if (!moduleKey) return false;
+  return PLATFORM_MODULES_PREVIEW_PLACEHOLDER[moduleKey] === true;
+}
+
+/** Turkish-only product UI — same dashboard asset for all locales */
+export const WATER_EFFICIENCY_SCREENSHOT =
+  "/assets/screenshots/water-efficiency/dashboard.png";
 
 /** EUDR Turkish UI — English mock for EN/NL locales */
 export const EUDR_SCREENSHOT_EN = "/assets/screenshots/eudr/dashboard-en.png";
@@ -78,7 +97,10 @@ export const ESG_SCREENSHOT_EN = "/assets/screenshots/esg-workspace/dashboard-en
 export function resolveModuleScreenshotPath(
   moduleKey: PlatformModuleKey,
   locale?: string
-): string {
+): string | undefined {
+  if (moduleKey === "waterEfficiency") {
+    return WATER_EFFICIENCY_SCREENSHOT;
+  }
   if (moduleKey === "eudr" && locale && locale !== "tr") {
     return EUDR_SCREENSHOT_EN;
   }
@@ -100,6 +122,7 @@ export const PLATFORM_MODULE_SCREENSHOT_FOCUS: Record<PlatformModuleKey, Product
   dpp: "full",
   supplierEvidence: "full",
   esgReporting: "full",
+  waterEfficiency: "full",
 };
 
 export const PLATFORM_MODULE_THUMBNAIL_FOCUS: Record<PlatformModuleKey, ProductScreenshotFocus> = {
@@ -111,6 +134,7 @@ export const PLATFORM_MODULE_THUMBNAIL_FOCUS: Record<PlatformModuleKey, ProductS
   dpp: "thumbnail",
   supplierEvidence: "thumbnail",
   esgReporting: "thumbnail",
+  waterEfficiency: "thumbnail",
 };
 
 /** Screenshots that already include browser chrome in the asset — skip synthetic chrome wrapper. */
@@ -143,6 +167,8 @@ export interface PlatformModuleDefinition {
   /** i18n key under platformModules.* */
   i18nKey: Exclude<PlatformModuleKey, "cbamCalc"> | "cbamCalc";
   hubKey: string;
+  /** When false, skips the platform architecture section on the module detail page */
+  showArchitectureSection?: boolean;
 }
 
 const MODULE_DEFINITIONS: PlatformModuleDefinition[] = [
@@ -226,6 +252,17 @@ const MODULE_DEFINITIONS: PlatformModuleDefinition[] = [
     i18nKey: "esgReporting",
     hubKey: "esgReporting",
   },
+  {
+    key: "waterEfficiency",
+    slug: "water-efficiency",
+    route: "/platform/water-efficiency",
+    status: "availableOnRequest",
+    screenshot: PLATFORM_MODULE_SCREENSHOTS.waterEfficiency,
+    screenshotFocus: "full",
+    i18nKey: "waterEfficiency",
+    hubKey: "waterEfficiency",
+    showArchitectureSection: false,
+  },
 ];
 
 export const PLATFORM_MODULES = MODULE_DEFINITIONS;
@@ -266,7 +303,8 @@ export type PlatformNavModuleKey =
   | "eudr"
   | "dpp"
   | "supplierEvidence"
-  | "esgReporting";
+  | "esgReporting"
+  | "waterEfficiency";
 
 export function platformModuleHref(
   key: PlatformNavModuleKey | PlatformModuleKey
@@ -290,6 +328,7 @@ export const LEGACY_MODULE_KEY_ROUTES = {
   dpp: "/platform/digital-product-passport",
   supplier: "/platform/supplier-evidence",
   esg: "/platform/esg-workspace",
+  water: "/platform/water-efficiency",
 } as const satisfies Record<string, PlatformModuleRoute>;
 
 /** Map legacy ModuleKey (lib/assets) to platform module registry keys */
@@ -305,6 +344,7 @@ export const LEGACY_MODULE_KEY_TO_PLATFORM: Record<
   dpp: "dpp",
   supplier: "supplierEvidence",
   esg: "esgReporting",
+  water: "waterEfficiency",
 };
 
 export function legacyModuleHref(key: keyof typeof LEGACY_MODULE_KEY_ROUTES): PlatformModuleRoute {
@@ -320,6 +360,7 @@ export const ROADMAP_KEY_ROUTES: Record<string, PlatformModuleRoute> = {
   dpp: "/platform/digital-product-passport",
   supplier: "/platform/supplier-evidence",
   esgReporting: "/platform/esg-workspace",
+  waterEfficiency: "/platform/water-efficiency",
 };
 
 export function roadmapModuleHref(key: string): PlatformModuleRoute {
@@ -335,4 +376,5 @@ export const PLATFORM_MODULE_ANCHORS = {
   dpp: "digital-product-passport",
   supplierEvidence: "supplier-evidence-workflow",
   esgReporting: "esg-evidence-reporting",
+  waterEfficiency: "water-efficiency-management",
 } as const;

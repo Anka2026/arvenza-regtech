@@ -8,7 +8,7 @@ import { platformModuleHref, PLATFORM_MODULE_BY_KEY } from "@/lib/platform-modul
 import { moduleStatusNavKey } from "@/lib/module-status-display";
 
 const EARLY_ACCESS_KEYS = ["ppwr", "agriClimate"] as const;
-const ON_REQUEST_KEYS = ["cbamComplianceConsole", "supplierEvidence"] as const;
+const ON_REQUEST_KEYS = ["cbamComplianceConsole", "supplierEvidence", "waterEfficiency"] as const;
 const ROADMAP_KEYS = ["eudr", "dpp", "esgReporting"] as const;
 
 export function PlatformExpansionStrip() {

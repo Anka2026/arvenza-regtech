@@ -10,6 +10,7 @@
     "verify:screenshots": "node scripts/verify-screenshots.mjs",
     "verify": "npm run verify:screenshots && npm run verify:i18n",
     "verify:i18n": "node scripts/verify-i18n-keys.mjs",
+    "verify:routes": "node scripts/smoke-platform-routes.mjs",
     "build:cbam-cn-codes": "node scripts/build-cbam-cn-codes.mjs",
     "pages:build": "npx @cloudflare/next-on-pages"
   },

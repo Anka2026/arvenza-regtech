@@ -68,10 +68,11 @@ function FeatureVisualColumn({
 
   if (visual.type === "screenshot") {
     return (
-      <div className={cn(compact ? "max-w-sm" : "mx-auto w-full max-w-xl lg:max-w-none")}>
+      <div className={cn(compact ? "max-w-sm" : "w-full")}>
         <CbamProductShowcase
           variant="feature"
           focus={visual.focus ?? legacyFocus}
+          mockupSize={compact ? "feature" : "large"}
           alt={alt}
         />
       </div>

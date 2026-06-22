@@ -15,6 +15,8 @@ const EARLY_ACCESS_NAV_KEYS = ["cbamComplianceConsole", "ppwr", "agriClimate"] a
 
 const ROADMAP_NAV_KEYS = ["eudr", "dpp", "supplierEvidence", "esgReporting"] as const;
 
+const ON_REQUEST_NAV_KEYS = ["waterEfficiency"] as const;
+
 const SOLUTION_KEYS = [
   { key: "cbam", status: "ready" as const, href: "/platform/cbam" as const },
   { key: "cbamComplianceConsole", status: "pilot" as const, href: "/platform/cbam-console" as const },
@@ -124,6 +126,22 @@ export function PlatformDropdownPanel({ onNavigate, className }: PanelProps) {
                     {t(`modules.${key}.title`)}
                   </span>
                   <NavStatusBadge status="pilot" label={statusLabel(tNav, "pilot")} />
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#64748b]">
+            {t("onRequestModulesLabel")}
+          </p>
+          <ul className="mt-2 space-y-1">
+            {ON_REQUEST_NAV_KEYS.map((key) => (
+              <li key={key}>
+                <Link href={platformModuleHref(key)} onClick={onNavigate} className="nav-dropdown-row group">
+                  <span className="min-w-0 flex-1 text-sm font-medium text-[#071225] group-hover:text-[#7c3aed]">
+                    {t(`modules.${key}.title`)}
+                  </span>
+                  <NavStatusBadge status="available" label={tNav("status.availableOnRequest")} />
                 </Link>
               </li>
             ))}

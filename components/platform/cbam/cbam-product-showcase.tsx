@@ -1,6 +1,7 @@
 "use client";
 
 import { CbamProductScreenshot } from "@/components/ui/cbam-product-screenshot";
+import type { BrowserMockupProps } from "@/components/ui/browser-mockup";
 import type { CbamScreenshotFocus } from "@/lib/assets";
 import { cn } from "@/lib/utils";
 
@@ -8,6 +9,7 @@ interface CbamProductShowcaseProps {
   alt: string;
   focus?: CbamScreenshotFocus;
   variant?: "hero" | "feature";
+  mockupSize?: BrowserMockupProps["size"];
   priority?: boolean;
   className?: string;
 }
@@ -16,17 +18,19 @@ export function CbamProductShowcase({
   alt,
   focus = "full",
   variant = "feature",
+  mockupSize,
   priority = false,
   className,
 }: CbamProductShowcaseProps) {
   const isHero = variant === "hero";
   const screenshotFocus = isHero ? "full" : focus;
+  const size = mockupSize ?? (isHero ? "heroCompact" : "feature");
 
   return (
     <div
       className={cn(
         "relative w-full",
-        isHero ? "hero-product-stage mx-auto w-full max-w-[600px] lg:max-w-none" : "max-w-xl lg:max-w-none",
+        isHero ? "hero-product-stage mx-auto w-full max-w-[600px] lg:max-w-none" : "w-full lg:max-w-none",
         className
       )}
     >
@@ -49,7 +53,7 @@ export function CbamProductShowcase({
         <CbamProductScreenshot
           focus={screenshotFocus}
           alt={alt}
-          size={isHero ? "heroCompact" : "feature"}
+          size={size}
           priority={priority}
           elevated
           className={cn(

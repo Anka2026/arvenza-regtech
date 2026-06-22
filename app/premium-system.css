@@ -3349,6 +3349,27 @@
     }
   }
 
+  .product-interface-language-note {
+    max-width: 42rem;
+    border-radius: 0.625rem;
+    border: 1px solid rgba(124, 58, 237, 0.12);
+    background: linear-gradient(
+      135deg,
+      rgba(124, 58, 237, 0.04) 0%,
+      rgba(248, 250, 252, 0.92) 100%
+    );
+    padding: 0.625rem 0.875rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: #64748b;
+  }
+
+  @media (min-width: 1024px) {
+    .product-interface-language-note {
+      font-size: 0.8125rem;
+    }
+  }
+
   @media (max-width: 639px) {
     .nav-badge {
       max-width: 9rem;

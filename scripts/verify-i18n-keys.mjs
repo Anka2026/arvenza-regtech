@@ -33,6 +33,7 @@ const RESOURCE_KEYS = [
   "eudrBrief",
   "dppDataModelBrief",
   "esgEvidenceStructure",
+  "waterEfficiencyChecklist",
 ];
 
 const RESOURCE_FIELD_KEYS = RESOURCE_KEYS.flatMap((key) => [

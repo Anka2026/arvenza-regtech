@@ -16,6 +16,8 @@ export interface BrowserMockupProps {
   objectPosition?: string;
   /** When false, skips synthetic browser chrome (use for assets that already include chrome). */
   showChrome?: boolean;
+  /** Premium empty-state preview when screenshot asset is not yet available */
+  placeholder?: React.ReactNode;
   /** @deprecated Always uses dark chrome */
   darkChrome?: boolean;
 }
@@ -50,6 +52,7 @@ export function BrowserMockup({
   objectFit = "object-top",
   objectPosition,
   showChrome = true,
+  placeholder,
 }: BrowserMockupProps) {
   return (
     <div
@@ -86,15 +89,17 @@ export function BrowserMockup({
           aspectClass ?? sizeClasses[size]
         )}
       >
-        <SafeImage
-          src={src}
-          alt={alt}
-          fill
-          priority={priority}
-          objectFit={objectFit}
-          objectPosition={objectPosition}
-          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 65vw, 900px"
-        />
+        {placeholder ?? (
+          <SafeImage
+            src={src}
+            alt={alt}
+            fill
+            priority={priority}
+            objectFit={objectFit}
+            objectPosition={objectPosition}
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 65vw, 900px"
+          />
+        )}
       </div>
     </div>
   );

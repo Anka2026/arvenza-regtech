@@ -254,7 +254,7 @@ export function CbamPlatformPage() {
       <ProductFeatureSection
         id="calculation"
         featureKey="calculation"
-        visual={{ type: "screenshot", focus: "calculation" }}
+        visual={{ type: "screenshot", focus: "full" }}
         variant="dark"
         imageFirst
         visualScale="featured"

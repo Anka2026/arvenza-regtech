@@ -12,6 +12,7 @@ import {
   Sprout,
   TreePine,
   Users,
+  Droplets,
 } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { FullBleedSection, PageContainer } from "@/components/layout/page-container";
@@ -40,12 +41,13 @@ const MODULE_ICONS = {
   dpp: Fingerprint,
   supplierEvidence: Users,
   esgReporting: BarChart3,
+  waterEfficiency: Droplets,
 } as const;
 
-const CAPABILITY_KEYS = ["item1", "item2", "item3", "item4", "item5", "item6"] as const;
-const WORKFLOW_KEYS = ["step1", "step2", "step3", "step4"] as const;
-const AUDIENCE_KEYS = ["item1", "item2", "item3"] as const;
-const OUTPUT_KEYS = ["item1", "item2", "item3"] as const;
+const CAPABILITY_KEYS = ["item1", "item2", "item3", "item4", "item5", "item6", "item7"] as const;
+const WORKFLOW_KEYS = ["step1", "step2", "step3", "step4", "step5"] as const;
+const AUDIENCE_KEYS = ["item1", "item2", "item3", "item4", "item5"] as const;
+const OUTPUT_KEYS = ["item1", "item2", "item3", "item4", "item5", "item6"] as const;
 const CHIP_KEYS = ["item1", "item2", "item3"] as const;
 
 interface PlatformModulePageProps {
@@ -78,9 +80,21 @@ export function PlatformModulePage({ module }: PlatformModulePageProps) {
       ? tShared("availableOnRequestNotice")
       : tShared("earlyAccessNotice");
 
-  const whyTitle = t.has("why.title") ? t("why.title") : t("positioning.title");
-  const whyDescription = t.has("why.description") ? t("why.description") : t("positioning.description");
-  const audienceTitle = t.has("audience.title") ? t("audience.title") : t("useCases.title");
+  const whyTitle = t.has("why.title")
+    ? t("why.title")
+    : t.has("positioning.title")
+      ? t("positioning.title")
+      : "";
+  const whyDescription = t.has("why.description")
+    ? t("why.description")
+    : t.has("positioning.description")
+      ? t("positioning.description")
+      : "";
+  const audienceTitle = t.has("audience.title")
+    ? t("audience.title")
+    : t.has("useCases.title")
+      ? t("useCases.title")
+      : "";
   const layerKeys = {
     supplierEvidence: tShared("architectureLayers.supplierEvidence"),
     productData: tShared("architectureLayers.productData"),
@@ -90,6 +104,7 @@ export function PlatformModulePage({ module }: PlatformModulePageProps) {
   const architectureLayerKey = t.has("architecture.layerKey")
     ? (t("architecture.layerKey") as keyof typeof layerKeys)
     : "documentationReporting";
+  const showArchitectureSection = module.showArchitectureSection !== false;
 
   return (
     <div className="platform-module-page">
@@ -195,6 +210,9 @@ export function PlatformModulePage({ module }: PlatformModulePageProps) {
                   priority
                   className="relative w-full max-w-full shadow-dashboard-glow"
                 />
+                {module.key === "waterEfficiency" && t.has("interfaceLanguageNote") && (
+                  <p className="product-interface-language-note mt-3">{t("interfaceLanguageNote")}</p>
+                )}
               </div>
             </FadeIn>
           </div>
@@ -273,25 +291,30 @@ export function PlatformModulePage({ module }: PlatformModulePageProps) {
             />
           </FadeIn>
           <ol className="platform-workflow-steps list-none">
-            {WORKFLOW_KEYS.map((key, index) => (
-              <li key={key}>
-                <FadeIn delay={index * 0.04}>
-                  <article className="platform-workflow-step journey-step-compact">
-                    <div className="flex items-start gap-3">
-                      <span className="step-badge">{String(index + 1).padStart(2, "0")}</span>
-                      <div className="min-w-0 flex-1">
-                        <h3 className="text-sm font-semibold leading-snug text-[#071225] lg:text-[15px]">
-                          {t(`workflow.steps.${key}.title`)}
-                        </h3>
-                        <p className="mt-1.5 text-xs leading-relaxed text-[#64748b] lg:text-sm">
-                          {t(`workflow.steps.${key}.description`)}
-                        </p>
+            {WORKFLOW_KEYS.map((key, index) => {
+              if (!t.has(`workflow.steps.${key}.title`)) return null;
+              return (
+                <li key={key}>
+                  <FadeIn delay={index * 0.04}>
+                    <article className="platform-workflow-step journey-step-compact">
+                      <div className="flex items-start gap-3">
+                        <span className="step-badge">{String(index + 1).padStart(2, "0")}</span>
+                        <div className="min-w-0 flex-1">
+                          <h3 className="text-sm font-semibold leading-snug text-[#071225] lg:text-[15px]">
+                            {t(`workflow.steps.${key}.title`)}
+                          </h3>
+                          {t.has(`workflow.steps.${key}.description`) && (
+                            <p className="mt-1.5 text-xs leading-relaxed text-[#64748b] lg:text-sm">
+                              {t(`workflow.steps.${key}.description`)}
+                            </p>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  </article>
-                </FadeIn>
-              </li>
-            ))}
+                    </article>
+                  </FadeIn>
+                </li>
+              );
+            })}
           </ol>
         </PageContainer>
         <SectionWaveEdge />
@@ -308,22 +331,38 @@ export function PlatformModulePage({ module }: PlatformModulePageProps) {
             />
           </FadeIn>
           <div className="grid gap-3 lg:grid-cols-3">
-            {AUDIENCE_KEYS.map((key, i) => (
-              <FadeIn key={key} delay={i * 0.04}>
-                <article className="card-premium flex h-full flex-col p-4">
-                  <h3 className="text-sm font-semibold leading-snug text-[#071225] lg:text-[15px]">
-                    {t.has(`audience.items.${key}.title`)
-                      ? t(`audience.items.${key}.title`)
-                      : t(`useCases.items.${key}.title`)}
-                  </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-[#64748b] lg:text-sm">
-                    {t.has(`audience.items.${key}.description`)
-                      ? t(`audience.items.${key}.description`)
-                      : t(`useCases.items.${key}.description`)}
-                  </p>
-                </article>
-              </FadeIn>
-            ))}
+            {AUDIENCE_KEYS.map((key, i) => {
+              const audienceTitleKey = `audience.items.${key}.title`;
+              const useCaseTitleKey = `useCases.items.${key}.title`;
+              const hasTitle = t.has(audienceTitleKey) || t.has(useCaseTitleKey);
+              if (!hasTitle) return null;
+
+              const title = t.has(audienceTitleKey)
+                ? t(audienceTitleKey)
+                : t(useCaseTitleKey);
+              const audienceDescKey = `audience.items.${key}.description`;
+              const useCaseDescKey = `useCases.items.${key}.description`;
+              const description = t.has(audienceDescKey)
+                ? t(audienceDescKey)
+                : t.has(useCaseDescKey)
+                  ? t(useCaseDescKey)
+                  : null;
+
+              return (
+                <FadeIn key={key} delay={i * 0.04}>
+                  <article className="card-premium flex h-full flex-col p-4">
+                    <h3 className="text-sm font-semibold leading-snug text-[#071225] lg:text-[15px]">
+                      {title}
+                    </h3>
+                    {description && (
+                      <p className="mt-2 text-xs leading-relaxed text-[#64748b] lg:text-sm">
+                        {description}
+                      </p>
+                    )}
+                  </article>
+                </FadeIn>
+              );
+            })}
           </div>
         </PageContainer>
         <SectionWaveEdge />
@@ -363,7 +402,7 @@ export function PlatformModulePage({ module }: PlatformModulePageProps) {
         </FullBleedSection>
       )}
 
-      {t.has("architecture.title") && (
+      {showArchitectureSection && t.has("architecture.title") && (
         <FullBleedSection ariaLabelledby="module-architecture-heading" className="section-muted home-section-compact">
           <PageContainer className="section-content">
             <FadeIn>
@@ -398,30 +437,36 @@ export function PlatformModulePage({ module }: PlatformModulePageProps) {
                       {layerKeys[architectureLayerKey] ?? layerKeys.documentationReporting}
                     </dd>
                   </div>
-                  <div className="platform-architecture-fact card-glass p-4">
-                    <dt className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#64748b]">
-                      {tShared("architectureDataLabel")}
-                    </dt>
-                    <dd className="mt-1.5 text-sm leading-relaxed text-[#475569]">
-                      {t("architecture.dataStructured")}
-                    </dd>
-                  </div>
-                  <div className="platform-architecture-fact card-glass p-4">
-                    <dt className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#64748b]">
-                      {tShared("architectureEvidenceLabel")}
-                    </dt>
-                    <dd className="mt-1.5 text-sm leading-relaxed text-[#475569]">
-                      {t("architecture.evidenceManaged")}
-                    </dd>
-                  </div>
-                  <div className="platform-architecture-fact card-glass p-4">
-                    <dt className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#64748b]">
-                      {tShared("architectureOutputLabel")}
-                    </dt>
-                    <dd className="mt-1.5 text-sm leading-relaxed text-[#475569]">
-                      {t("architecture.outputSupported")}
-                    </dd>
-                  </div>
+                  {t.has("architecture.dataStructured") && (
+                    <div className="platform-architecture-fact card-glass p-4">
+                      <dt className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#64748b]">
+                        {tShared("architectureDataLabel")}
+                      </dt>
+                      <dd className="mt-1.5 text-sm leading-relaxed text-[#475569]">
+                        {t("architecture.dataStructured")}
+                      </dd>
+                    </div>
+                  )}
+                  {t.has("architecture.evidenceManaged") && (
+                    <div className="platform-architecture-fact card-glass p-4">
+                      <dt className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#64748b]">
+                        {tShared("architectureEvidenceLabel")}
+                      </dt>
+                      <dd className="mt-1.5 text-sm leading-relaxed text-[#475569]">
+                        {t("architecture.evidenceManaged")}
+                      </dd>
+                    </div>
+                  )}
+                  {t.has("architecture.outputSupported") && (
+                    <div className="platform-architecture-fact card-glass p-4">
+                      <dt className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#64748b]">
+                        {tShared("architectureOutputLabel")}
+                      </dt>
+                      <dd className="mt-1.5 text-sm leading-relaxed text-[#475569]">
+                        {t("architecture.outputSupported")}
+                      </dd>
+                    </div>
+                  )}
                 </dl>
               </div>
             </FadeIn>

@@ -100,6 +100,10 @@
       "esgReporting": {
         "title": "ESG Evidence & Reporting Workspace | Roadmapmodule",
         "description": "Geplande ESG-bewijscoordinatie, rapportage-inputs en documentatietraceerbaarheid workspace."
+      },
+      "waterEfficiency": {
+        "title": "Water-efficiëntiebeheer | Arvenza RegTech",
+        "description": "Structureer waterverbruiksgegevens, waterbalansinvoer, verbeteracties en bewijsdocumentatie voor workflows rond Turkse regelgeving voor water-efficiëntie."
       }
     }
   },
@@ -153,6 +157,9 @@
         },
         "esgReporting": {
           "title": "ESG-bewijs & rapportagewerkruimte"
+        },
+        "waterEfficiency": {
+          "title": "Water-efficiëntiebeheer"
         }
       },
       "architectureLabel": "Platformarchitectuur",
@@ -163,7 +170,8 @@
       },
       "earlyAccessLabel": "Capabilities in vroege toegang",
       "viewSolutionsCta": "Alle oplossingen bekijken",
-      "roadmapModulesLabel": "Roadmapmodules"
+      "roadmapModulesLabel": "Roadmapmodules",
+      "onRequestModulesLabel": "Beschikbaar op aanvraag-capabilities"
     },
     "solutionsMenu": {
       "featuredLabel": "Uitgelicht",
@@ -179,7 +187,8 @@
         "eudr": "EUDR Due Diligence & Traceerbaarheid",
         "dpp": "Digital Product Passport Platform",
         "supplierEvidence": "Leveranciersdata & Bewijsworkflow",
-        "esgReporting": "ESG-bewijs & Rapportagewerkruimte"
+        "esgReporting": "ESG-bewijs & Rapportagewerkruimte",
+        "waterEfficiency": "Water-efficiëntiebeheer"
       }
     },
     "industriesMenu": {
@@ -1145,7 +1154,8 @@
         "dpp": "Digital Product Passport",
         "supplier": "Supplier Evidence",
         "esg": "ESG-rapportage",
-        "general": "Algemeen Platform Overzicht"
+        "general": "Algemeen Platform Overzicht",
+        "waterEfficiency": "Water-efficiëntiebeheer"
       }
     },
     "expectations": {
@@ -1400,6 +1410,12 @@
         "description": "Geplande ESG-bewijscoördinatie, rapportage-inputs en documentatietraceerbaarheid.",
         "exploreCta": "ESG Evidence & Reporting Workspace-roadmap volgen",
         "screenshotAlt": "ESG evidence and reporting workspace dashboardvoorbeeld"
+      },
+      "waterEfficiency": {
+        "title": "Water-efficiëntiebeheer",
+        "description": "Structureer waterdata op locatieniveau, meterregistraties en verbeteracties voor workflows rond Turkse regelgeving voor water-efficiëntie — Turks productinterface.",
+        "exploreCta": "Water-efficiëntiemodule bekijken",
+        "screenshotAlt": "Water-efficiëntiebeheer dashboardvoorbeeld"
       }
     },
     "cta": {
@@ -1449,6 +1465,11 @@
         "label": "Roadmap",
         "title": "Roadmap oplossingsworkflows",
         "description": "Geplande use cases die dezelfde leveranciersbewijslagen uitbreiden naar EUDR- en Digital Product Passport-readiness"
+      },
+      "onRequest": {
+        "label": "Beschikbaar op aanvraag",
+        "title": "Aanvullende capability-workflows",
+        "description": "Uitbreidbare hulpbronnenefficiëntie-workflows beschikbaar op aanvraag — gestructureerde data-invoer en bewijsdocumentatie zonder het kern-CBAM-product te verdringen."
       }
     },
     "solutions": {
@@ -1620,6 +1641,27 @@
         "targetTeam": "ESG-, duurzaamheidsrapportage- en compliance-teams die op bewijs gebaseerde disclosures voorbereiden",
         "cta": "Roadmap volgen",
         "secondaryCta": "Roadmapmodule bekijken"
+      },
+      "waterEfficiency": {
+        "title": "Water-efficiëntiebeheer",
+        "problem": "Workflows rond Turkse regelgeving voor water-efficiëntie vereisen gestructureerde waterdata op locatieniveau, bewijsdossiers en opvolging van verbeteracties.",
+        "approach": "Water-efficiëntiebeheer coördineert meterregistraties, waterbalansinvoer en verbeteracties voor workflows rond Turkse regelgeving voor water-efficiëntie — met een Turks productinterface.",
+        "capability": "Water-efficiëntiebeheer",
+        "workflowSteps": {
+          "step1": "Locatiescope definiëren",
+          "step2": "Meterdata verzamelen",
+          "step3": "Balansinvoer opbouwen",
+          "step4": "Acties opvolgen"
+        },
+        "features": {
+          "item1": "Waterdata op locatieniveau",
+          "item2": "Bewijsdocumentatie",
+          "item3": "Actieopvolging"
+        },
+        "output": "Wateroverzicht per locatie en reviewgereed bewijspakket",
+        "targetTeam": "Duurzaamheids-, locatie- en milieuteams die water-efficiëntiebewijs beheren",
+        "cta": "Toegang aanvragen",
+        "secondaryCta": "Module bekijken"
       }
     },
     "maturity": {
@@ -1633,7 +1675,8 @@
         "eudr": "EUDR Due Diligence Workflows",
         "dpp": "Digital Product Passport Readiness",
         "supplierEvidence": "Leveranciersbewijsworkflows",
-        "esgReporting": "ESG-bewijs- en rapportagewerkruimte"
+        "esgReporting": "ESG-bewijs- en rapportagewerkruimte",
+        "waterEfficiency": "Water-efficiëntiebeheer"
       }
     },
     "cta": {
@@ -2094,6 +2137,17 @@
           "item2": "Douaneclassificatie en leveranciersdocumentatie"
         },
         "detail": "Vraag de checklist aan om scopebeoordeling te structureren vóór de volgende rapportagecyclus."
+      },
+      "waterEfficiencyChecklist": {
+        "title": "Checklist voor water-efficiëntiedata",
+        "description": "Een praktische checklist voor meterstanden, bronregistraties, waterbalansinvoer en bewijs voor verbeteracties.",
+        "format": "Checklist",
+        "cta": "Checklist aanvragen",
+        "valuePreview": {
+          "item1": "Meterstanden en bronregistraties",
+          "item2": "Waterbalansinvoer en bewijs voor verbeteracties"
+        },
+        "detail": "Vraag de checklist aan om water-efficiëntiedataverzameling te structureren vóór workflow-setup."
       }
     },
     "cnScopeChecker": {
@@ -2425,6 +2479,10 @@
         "productData": "Productdatalaag",
         "calculationMethodology": "Berekenings- en methodologielaag",
         "documentationReporting": "Documentatie- en rapportagelaag"
+      },
+      "previewPlaceholder": {
+        "title": "Productvoorbeeld",
+        "description": "Modulescreenshot beschikbaar op aanvraag — voorbeeld toont de huidige capability-scope voor Water-efficiëntiebeheer."
       }
     },
     "cbamComplianceConsole": {
@@ -3236,6 +3294,149 @@
           }
         }
       }
+    },
+    "waterEfficiency": {
+      "eyebrow": "Water-efficiëntiebeheer",
+      "title": "Water-efficiëntieworkflows voor Turkse regelgeving en bewijs op locatieniveau",
+      "description": "Structureer waterverbruiksgegevens, meterregistraties, waterbalansinvoer, verbeteracties en ondersteunend bewijs voor workflows rond Turkse regelgeving voor water-efficiëntie.",
+      "category": "Hulpbronnenefficiëntie",
+      "chipsAriaLabel": "Water-efficiëntie highlights",
+      "chips": {
+        "item1": "Waterdata op locatieniveau",
+        "item2": "Bewijsdocumentatie",
+        "item3": "Actieopvolging"
+      },
+      "screenshotAlt": "Water-efficiëntiebeheer dashboardvoorbeeld",
+      "why": {
+        "title": "Van waterverbruiksregistraties naar traceerbare verbeteracties",
+        "description": "Water-efficiëntiewerk steunt vaak op verspreide meterstanden, locatieregistraties, procesniveau-aannames en actieplannen. Arvenza structureert deze input in een herhaalbare workflow zodat teams watergebruik, bewijsdocumentatie en verbeteracties op één plek kunnen volgen."
+      },
+      "capabilities": {
+        "title": "Kernmogelijkheden",
+        "description": "Gestructureerde waterdata, bewijs- en actieworkflows op locatieniveau — beschikbaar op aanvraag.",
+        "items": {
+          "item1": {
+            "title": "Structuur voor waterverbruiksdata",
+            "description": "Organiseer verbruiksregistraties per locatie, bron en rapportageperiode."
+          },
+          "item2": {
+            "title": "Meter- en bronregistraties",
+            "description": "Beheer meterstanden en waterbron-documentatie in één archief."
+          },
+          "item3": {
+            "title": "Voorbereiding van waterbalans",
+            "description": "Bereid balansinvoer voor op basis van intake-, gebruiks- en lozingsregistraties."
+          },
+          "item4": {
+            "title": "Procesniveau-toerekeningsinput",
+            "description": "Leg procesniveau-toerekeningsaannames vast met traceerbare referenties."
+          },
+          "item5": {
+            "title": "Opvolging van verbeteracties",
+            "description": "Volg geplande en voltooide water-efficiëntieacties met eigenaarschap."
+          },
+          "item6": {
+            "title": "Documentatie van bewijsdossiers",
+            "description": "Koppel ondersteunende bestanden aan meterregistraties, acties en balansinvoer."
+          },
+          "item7": {
+            "title": "Review- en rapportagegereedheid",
+            "description": "Bereid reviewgereed output voor interne goedkeuring en rapportagecycli."
+          }
+        }
+      },
+      "workflow": {
+        "title": "Water-efficiëntiebeheer-workflow",
+        "description": "Van locatiedefinitie tot bewijsvoorbereiding en reviewgereed output.",
+        "steps": {
+          "step1": {
+            "title": "Definieer locatie en waterbronnen",
+            "description": "Stel locatiescope, waterbronnen en workflow-eigenaarschap vast."
+          },
+          "step2": {
+            "title": "Verzamel meter- en activiteitsdata",
+            "description": "Verzamel meterstanden en activiteitsdata voor balansvoorbereiding."
+          },
+          "step3": {
+            "title": "Bouw waterbalansinvoer op",
+            "description": "Structureer intake-, gebruiks- en lozingsinput voor balansreview."
+          },
+          "step4": {
+            "title": "Volg verbeteracties op",
+            "description": "Monitor geplande acties, statusupdates en ondersteunend bewijs."
+          },
+          "step5": {
+            "title": "Bereid bewijs en review-output voor",
+            "description": "Stel documentatie en reviewgereed rapportagepakketten samen."
+          }
+        }
+      },
+      "audience": {
+        "title": "Voor wie",
+        "items": {
+          "item1": {
+            "title": "Duurzaamheidsteams",
+            "description": "Teams die waterdata en bewijs over locaties coördineren."
+          },
+          "item2": {
+            "title": "Locatiemanagers",
+            "description": "Teams verantwoordelijk voor meterregistraties en watergebruik ter plaatse."
+          },
+          "item3": {
+            "title": "Milieumanagers",
+            "description": "Functies die milieuprestaties en verbeterprogramma's beheren."
+          },
+          "item4": {
+            "title": "Projectteams voor water-efficiëntie",
+            "description": "Projectgroepen die gerichte waterreductie-initiatieven uitvoeren."
+          },
+          "item5": {
+            "title": "Adviseurs die bewijsdossiers beheren",
+            "description": "Adviseurs die gestructureerde bewijsdossiers voor klantreviews voorbereiden."
+          }
+        }
+      },
+      "outputs": {
+        "title": "Workflow-output",
+        "items": {
+          "item1": {
+            "title": "Overzicht van waterdata per locatie",
+            "description": "Gestructureerd overzicht van verbruiks- en bronregistraties per locatie."
+          },
+          "item2": {
+            "title": "Archief van meter- en bronregistraties",
+            "description": "Doorzoekbaar archief van meterstanden en brondocumentatie."
+          },
+          "item3": {
+            "title": "Voorbereidingsbestand voor waterbalans",
+            "description": "Voorbereide balansinvoer klaar voor review en validatie."
+          },
+          "item4": {
+            "title": "Tracker voor verbeteracties",
+            "description": "Statusoverzicht van geplande en voltooide efficiëntieacties."
+          },
+          "item5": {
+            "title": "Bewijsdocumentatiedossier",
+            "description": "Gekoppelde bewijsbestanden ter ondersteuning van balans- en actieregistraties."
+          },
+          "item6": {
+            "title": "Reviewgereed rapportagepakket",
+            "description": "Verpakte output voorbereid voor interne review en rapportagecycli."
+          }
+        }
+      },
+      "architecture": {
+        "title": "Hoe deze module past binnen de Arvenza-architectuur",
+        "description": "Water-efficiëntiebeheer breidt het Arvenza-bewijsmodel uit voorbij koolstofgerichte workflows. Het gebruikt dezelfde operationele logica: gestructureerde data-invoer, bewijsdocumentatie, workflow-eigenaarschap en rapportageklare output.",
+        "layerKey": "documentationReporting",
+        "dataStructured": "Waterbronnen per locatie, meterregistraties en verbruiksdatastructuren",
+        "evidenceManaged": "Waterbalansinvoer, verbeteracties en ondersteunende documentatie",
+        "outputSupported": "Reviewgereed rapportagepakket en overzichtsbestanden per locatie"
+      },
+      "cta": {
+        "title": "Toegang aanvragen voor Water-efficiëntiebeheer"
+      },
+      "interfaceLanguageNote": "De interface is momenteel beschikbaar in het Turks voor workflows rond Turkse regelgeving voor water-efficiëntie."
     }
   }
 }

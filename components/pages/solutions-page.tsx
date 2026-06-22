@@ -12,6 +12,7 @@ import { SolutionsWorkflowDiagram } from "@/components/solutions/solutions-workf
 
 const HERO_CHIP_KEYS = ["item1", "item2", "item3"] as const;
 const PILOT_KEYS = ["cbamConsole", "ppwr", "agriClimate"] as const;
+const ON_REQUEST_KEYS = ["waterEfficiency"] as const;
 const ROADMAP_KEYS = ["eudr", "dpp", "supplierEvidence", "esgReporting"] as const;
 
 export function SolutionsPage() {
@@ -104,6 +105,32 @@ export function SolutionsPage() {
             {PILOT_KEYS.map((key, i) => (
               <FadeIn key={key} delay={0.04 + i * 0.03}>
                 <SolutionModuleCard solutionKey={key} status="pilot" />
+              </FadeIn>
+            ))}
+          </div>
+        </PageContainer>
+        <SectionWaveEdge />
+      </FullBleedSection>
+
+      <FullBleedSection className="section-light solutions-section-on-request">
+        <PageContainer className="section-content min-w-0 page-section-y">
+          <FadeIn>
+            <div className="solution-segment-head">
+              <span className="solution-segment-badge solution-segment-badge-pilot">
+                {t("sections.onRequest.label")}
+              </span>
+              <h2 className="mt-3 text-[clamp(1.125rem,1.5vw+0.5rem,1.375rem)] font-bold tracking-[-0.02em] text-[#071225]">
+                {t("sections.onRequest.title")}
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#64748b] lg:text-[15px]">
+                {t("sections.onRequest.description")}
+              </p>
+            </div>
+          </FadeIn>
+          <div className="solution-pilot-grid mt-6">
+            {ON_REQUEST_KEYS.map((key, i) => (
+              <FadeIn key={key} delay={0.04 + i * 0.03}>
+                <SolutionModuleCard solutionKey={key} status="availableOnRequest" />
               </FadeIn>
             ))}
           </div>

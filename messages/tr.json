@@ -100,6 +100,10 @@
       "esgReporting": {
         "title": "ESG Kanıt ve Raporlama Çalışma Alanı | Yol Haritası Modülü",
         "description": "Planlanan ESG kanıt koordinasyonu, raporlama girdileri ve dokümantasyon izlenebilirliği çalışma alanı."
+      },
+      "waterEfficiency": {
+        "title": "Su Verimliliği Yönetimi | Arvenza RegTech",
+        "description": "Su tüketim verilerini, su dengesi girdilerini, iyileştirme aksiyonlarını ve kanıt dokümantasyonunu Türkiye su verimliliği mevzuatı iş akışları için yapılandırın."
       }
     },
     "modules": {
@@ -158,6 +162,9 @@
         },
         "esgReporting": {
           "title": "ESG Kanıt & Raporlama Çalışma Alanı"
+        },
+        "waterEfficiency": {
+          "title": "Su Verimliliği Yönetimi"
         }
       },
       "architectureLabel": "Platform mimarisi",
@@ -168,7 +175,8 @@
       },
       "earlyAccessLabel": "Erken erişim yetenekleri",
       "viewSolutionsCta": "Tüm çözümleri inceleyin",
-      "roadmapModulesLabel": "Yol haritası modülleri"
+      "roadmapModulesLabel": "Yol haritası modülleri",
+      "onRequestModulesLabel": "Talep üzerine erişilebilir yetenekler"
     },
     "solutionsMenu": {
       "featuredLabel": "Öne Çıkan",
@@ -184,7 +192,8 @@
         "eudr": "EUDR Özen Yükümlülüğü & İzlenebilirlik",
         "dpp": "Digital Product Passport Platform",
         "supplierEvidence": "Tedarikçi Veri Toplama & Kanıt İş Akışı",
-        "esgReporting": "ESG Kanıt & Raporlama Çalışma Alanı"
+        "esgReporting": "ESG Kanıt & Raporlama Çalışma Alanı",
+        "waterEfficiency": "Su Verimliliği Yönetimi"
       }
     },
     "industriesMenu": {
@@ -1147,7 +1156,8 @@
         "dpp": "Dijital Ürün Pasaportu",
         "supplier": "Tedarikçi Kanıtı",
         "esg": "ESG Raporlama",
-        "general": "Genel Platform Tanıtımı"
+        "general": "Genel Platform Tanıtımı",
+        "waterEfficiency": "Su Verimliliği Yönetimi"
       }
     },
     "expectations": {
@@ -1402,6 +1412,12 @@
         "description": "Planlanan ESG kanıt koordinasyonu, raporlama girdileri ve dokümantasyon izlenebilirliği çalışma alanı.",
         "exploreCta": "ESG Kanıt ve Raporlama Çalışma Alanı yol haritasını inceleyin",
         "screenshotAlt": "ESG kanıt ve raporlama çalışma alanı pano önizlemesi"
+      },
+      "waterEfficiency": {
+        "title": "Su Verimliliği Yönetimi",
+        "description": "Tesis düzeyinde su verisini, sayaç kayıtlarını ve iyileştirme aksiyonlarını Türkiye su verimliliği mevzuatı iş akışları için yapılandırın — Türkçe ürün arayüzü.",
+        "exploreCta": "Su verimliliği modülünü inceleyin",
+        "screenshotAlt": "Su Verimliliği Yönetimi pano önizlemesi"
       }
     },
     "cta": {
@@ -1451,6 +1467,11 @@
         "label": "Yol Haritası",
         "title": "Yol haritası çözüm iş akışları",
         "description": "Aynı tedarikçi kanıtı mantığını EUDR ve Digital Product Passport hazırlığına taşıyan planlanan kullanım senaryoları"
+      },
+      "onRequest": {
+        "label": "Talep üzerine erişilebilir",
+        "title": "Ek yetenek iş akışları",
+        "description": "Talep üzerine erişilebilen kaynak verimliliği iş akışları — yapılandırılmış veri girişi ve kanıt dokümantasyonu; ana CBAM ürününün önüne geçmez."
       }
     },
     "solutions": {
@@ -1622,6 +1643,27 @@
         "targetTeam": "Kanıta dayalı açıklamalar hazırlayan ESG, sürdürülebilirlik raporlama ve uyum ekipleri",
         "cta": "Yol Haritasını Takip Edin",
         "secondaryCta": "Yol haritası modülünü inceleyin"
+      },
+      "waterEfficiency": {
+        "title": "Su Verimliliği Yönetimi",
+        "problem": "Türkiye su verimliliği mevzuatı iş akışları; tesis düzeyinde su verisi, kanıt dosyaları ve iyileştirme aksiyonu takibinin yapılandırılmasını gerektirir.",
+        "approach": "Su Verimliliği Yönetimi; sayaç kayıtlarını, su dengesi girdilerini ve iyileştirme aksiyonlarını Türkiye su verimliliği mevzuatı iş akışları için koordine eder — Türkçe ürün arayüzü.",
+        "capability": "Su Verimliliği Yönetimi",
+        "workflowSteps": {
+          "step1": "Tesis kapsamını tanımlayın",
+          "step2": "Sayaç verilerini toplayın",
+          "step3": "Denge girdilerini oluşturun",
+          "step4": "Aksiyonları takip edin"
+        },
+        "features": {
+          "item1": "Tesis düzeyinde su verisi",
+          "item2": "Kanıt dokümantasyonu",
+          "item3": "Aksiyon takibi"
+        },
+        "output": "Tesis su verisi özeti ve gözden geçirmeye hazır kanıt paketi",
+        "targetTeam": "Su verimliliği kanıtını yöneten sürdürülebilirlik, tesis ve çevre ekipleri",
+        "cta": "Erişim talep edin",
+        "secondaryCta": "Modülü inceleyin"
       }
     },
     "maturity": {
@@ -1635,7 +1677,8 @@
         "eudr": "EUDR Due Diligence Workflows",
         "dpp": "Digital Product Passport Readiness",
         "supplierEvidence": "Tedarikçi Kanıt İş Akışları",
-        "esgReporting": "ESG Kanıt ve Raporlama Çalışma Alanı"
+        "esgReporting": "ESG Kanıt ve Raporlama Çalışma Alanı",
+        "waterEfficiency": "Su Verimliliği Yönetimi"
       }
     },
     "cta": {
@@ -2096,6 +2139,17 @@
           "item2": "Gümrük sınıflandırması ve tedarikçi dokümantasyonu incelemesi"
         },
         "detail": "Bir sonraki raporlama dönemi öncesinde kapsam değerlendirmesini yapılandırmak için kontrol listesini talep edin."
+      },
+      "waterEfficiencyChecklist": {
+        "title": "Su Verimliliği Veri Toplama Kontrol Listesi",
+        "description": "Sayaç okumaları, kaynak kayıtları, su dengesi girdileri ve iyileştirme aksiyonu kanıtlarını toplamak için pratik kontrol listesi.",
+        "format": "Kontrol listesi",
+        "cta": "Kontrol listesini talep edin",
+        "valuePreview": {
+          "item1": "Sayaç okumaları ve kaynak kayıtları",
+          "item2": "Su dengesi girdileri ve iyileştirme aksiyonu kanıtları"
+        },
+        "detail": "İş akışı kurulumundan önce su verimliliği veri toplamayı yapılandırmak için kontrol listesini talep edin."
       }
     },
     "cnScopeChecker": {
@@ -2427,6 +2481,10 @@
         "productData": "Ürün verisi katmanı",
         "calculationMethodology": "Hesaplama ve metodoloji katmanı",
         "documentationReporting": "Dokümantasyon ve raporlama katmanı"
+      },
+      "previewPlaceholder": {
+        "title": "Ürün önizlemesi",
+        "description": "Modül ekran görüntüsü talep üzerine erişilebilir — önizleme Su Verimliliği Yönetimi için mevcut yetenek kapsamını gösterir."
       }
     },
     "cbamComplianceConsole": {
@@ -3370,6 +3428,149 @@
           }
         }
       }
+    },
+    "waterEfficiency": {
+      "eyebrow": "Su Verimliliği Yönetimi",
+      "title": "Türkiye su verimliliği mevzuatı için tesis düzeyinde kanıt ve aksiyon takibi",
+      "description": "Su tüketim verilerini, sayaç kayıtlarını, su dengesi girdilerini, iyileştirme aksiyonlarını ve destekleyici kanıtları Türkiye su verimliliği mevzuatı iş akışları için izlenebilir bir yönetim iş akışında yapılandırın.",
+      "category": "Kaynak verimliliği",
+      "chipsAriaLabel": "Su verimliliği vurguları",
+      "chips": {
+        "item1": "Tesis düzeyinde su verisi",
+        "item2": "Kanıt dokümantasyonu",
+        "item3": "Aksiyon takibi"
+      },
+      "screenshotAlt": "Su Verimliliği Yönetimi pano önizlemesi",
+      "why": {
+        "title": "Su tüketim kayıtlarından izlenebilir iyileştirme aksiyonlarına",
+        "description": "Su verimliliği çalışmaları çoğu zaman dağınık sayaç okumalarına, tesis kayıtlarına, proses düzeyi varsayımlara ve aksiyon planlarına dayanır. Arvenza bu girdileri tekrarlanabilir bir iş akışına dönüştürerek ekiplerin su kullanımını, kanıt dokümantasyonunu ve iyileştirme aksiyonlarını tek yerde takip etmesini sağlar."
+      },
+      "capabilities": {
+        "title": "Temel yetenekler",
+        "description": "Tesis düzeyinde yapılandırılmış su verisi, kanıt ve aksiyon iş akışları — talep üzerine erişilebilir.",
+        "items": {
+          "item1": {
+            "title": "Su tüketim verisi yapısı",
+            "description": "Tüketim kayıtlarını tesis, kaynak ve raporlama dönemine göre düzenleyin."
+          },
+          "item2": {
+            "title": "Sayaç ve kaynak kayıtları",
+            "description": "Sayaç okumalarını ve su kaynağı dokümantasyonunu tek arşivde tutun."
+          },
+          "item3": {
+            "title": "Su dengesi hazırlığı",
+            "description": "Giriş, kullanım ve deşarj kayıtlarından denge girdilerini hazırlayın."
+          },
+          "item4": {
+            "title": "Proses düzeyi dağıtım girdileri",
+            "description": "Proses düzeyi dağıtım varsayımlarını izlenebilir referanslarla kaydedin."
+          },
+          "item5": {
+            "title": "İyileştirme aksiyonu takibi",
+            "description": "Planlanan ve tamamlanan su verimliliği aksiyonlarını sahiplikle takip edin."
+          },
+          "item6": {
+            "title": "Kanıt dosyası dokümantasyonu",
+            "description": "Sayaç kayıtları, aksiyonlar ve denge girdilerine destekleyici dosyalar ekleyin."
+          },
+          "item7": {
+            "title": "Gözden geçirme ve raporlama hazırlığı",
+            "description": "İç onay ve raporlama döngüleri için gözden geçirmeye hazır çıktılar hazırlayın."
+          }
+        }
+      },
+      "workflow": {
+        "title": "Su verimliliği yönetim iş akışı",
+        "description": "Tesis tanımından kanıt hazırlığına ve gözden geçirmeye hazır çıktılara.",
+        "steps": {
+          "step1": {
+            "title": "Tesis ve su kaynaklarını tanımlayın",
+            "description": "Tesis kapsamını, su kaynaklarını ve iş akışı sahipliğini belirleyin."
+          },
+          "step2": {
+            "title": "Sayaç ve faaliyet verilerini toplayın",
+            "description": "Denge hazırlığı için gerekli sayaç okumalarını ve faaliyet verilerini toplayın."
+          },
+          "step3": {
+            "title": "Su dengesi girdilerini oluşturun",
+            "description": "Giriş, kullanım ve deşarj girdilerini denge incelemesi için yapılandırın."
+          },
+          "step4": {
+            "title": "İyileştirme aksiyonlarını takip edin",
+            "description": "Planlanan aksiyonları, durum güncellemelerini ve destekleyici kanıtları izleyin."
+          },
+          "step5": {
+            "title": "Kanıtları ve gözden geçirme çıktılarını hazırlayın",
+            "description": "Dokümantasyonu ve gözden geçirmeye hazır raporlama paketlerini oluşturun."
+          }
+        }
+      },
+      "audience": {
+        "title": "Kimler için",
+        "items": {
+          "item1": {
+            "title": "Sürdürülebilirlik ekipleri",
+            "description": "Tesisler genelinde su verisi ve kanıtı koordine eden gruplar."
+          },
+          "item2": {
+            "title": "Tesis yöneticileri",
+            "description": "Sayaç kayıtlarından ve saha su kullanımından sorumlu ekipler."
+          },
+          "item3": {
+            "title": "Çevre yöneticileri",
+            "description": "Çevresel performans ve iyileştirme programlarını yöneten birimler."
+          },
+          "item4": {
+            "title": "Su verimliliği proje ekipleri",
+            "description": "Hedefli su azaltma girişimlerini yürüten proje grupları."
+          },
+          "item5": {
+            "title": "Müşteri kanıt dosyalarını yöneten danışmanlar",
+            "description": "Müşteri inceleme döngüleri için yapılandırılmış kanıt dosyaları hazırlayan danışmanlar."
+          }
+        }
+      },
+      "outputs": {
+        "title": "İş akışı çıktıları",
+        "items": {
+          "item1": {
+            "title": "Tesis su verisi özeti",
+            "description": "Tesis bazında tüketim ve kaynak kayıtlarının yapılandırılmış özeti."
+          },
+          "item2": {
+            "title": "Sayaç ve kaynak kayıt arşivi",
+            "description": "Sayaç okumaları ve kaynak dokümantasyonu için aranabilir arşiv."
+          },
+          "item3": {
+            "title": "Su dengesi hazırlık dosyası",
+            "description": "İnceleme ve doğrulamaya hazır denge girdileri."
+          },
+          "item4": {
+            "title": "İyileştirme aksiyonu takip listesi",
+            "description": "Planlanan ve tamamlanan verimlilik aksiyonlarının durum görünümü."
+          },
+          "item5": {
+            "title": "Kanıt dokümantasyon dosyası",
+            "description": "Denge ve aksiyon kayıtlarını destekleyen kanıt dosyaları."
+          },
+          "item6": {
+            "title": "Gözden geçirmeye hazır raporlama paketi",
+            "description": "İç inceleme ve raporlama döngüleri için hazırlanmış paketlenmiş çıktılar."
+          }
+        }
+      },
+      "architecture": {
+        "title": "Bu modül Arvenza mimarisinde nereye oturur",
+        "description": "Su Verimliliği Yönetimi, Arvenza'nın kanıt modelini karbon odaklı iş akışlarının ötesine taşır. Aynı operasyon mantığını kullanır: yapılandırılmış veri girişi, kanıt dokümantasyonu, iş akışı sahipliği ve raporlamaya hazır çıktılar.",
+        "layerKey": "documentationReporting",
+        "dataStructured": "Tesis su kaynakları, sayaç kayıtları ve tüketim verisi yapıları",
+        "evidenceManaged": "Su dengesi girdileri, iyileştirme aksiyonları ve destekleyici dokümantasyon",
+        "outputSupported": "Gözden geçirmeye hazır raporlama paketleri ve tesis su verisi özet dosyaları"
+      },
+      "cta": {
+        "title": "Su Verimliliği Yönetimi için erişim talep edin"
+      },
+      "interfaceLanguageNote": "Arayüz Türkçe olarak sunulur; modül Türkiye su verimliliği mevzuatı iş akışları için geliştirilmiştir."
     }
   }
 }

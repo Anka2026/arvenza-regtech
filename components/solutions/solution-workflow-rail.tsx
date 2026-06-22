@@ -13,9 +13,10 @@ export type SolutionWorkflowKey =
   | "eudr"
   | "dpp"
   | "supplierEvidence"
-  | "esgReporting";
+  | "esgReporting"
+  | "waterEfficiency";
 
-type SolutionStatus = "ready" | "pilot" | "comingSoon";
+type SolutionStatus = "ready" | "pilot" | "comingSoon" | "availableOnRequest";
 
 interface SolutionWorkflowRailProps {
   solutionKey: SolutionWorkflowKey;
@@ -39,6 +40,7 @@ export function SolutionWorkflowRail({
         status === "ready" && "solution-workflow-rail-ready",
         status === "pilot" && "solution-workflow-rail-pilot",
         status === "comingSoon" && "solution-workflow-rail-roadmap",
+        status === "availableOnRequest" && "solution-workflow-rail-on-request",
         compact && "solution-workflow-rail-compact",
         className
       )}
